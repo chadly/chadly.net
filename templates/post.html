@@ -1,0 +1,31 @@
+<article class="post">
+    {{#with page}}
+    <header>
+		<h2>{{title}}</h2>
+		<time datetime="{{date format='YYYY-MM-DD'}}">{{date format='DD MMM YYYY'}}</time>
+    </header>
+
+    <section class="post-content">
+        {{{html}}}
+    </section>
+    {{/with}}
+
+    <footer>
+        {{#author contents page.metadata.author}}
+            <section class="author">
+                <h4>{{name}}</h4>
+                <p>{{bio}}</p>
+            </section>
+        {{/author}}
+
+		<section class="share">
+			<h4>Share this post</h4>
+			<a class="fa fa-twitter" href="http://twitter.com/share?text={{page.title}}&url={{url}}{{page.url}}" title="Twitter"
+			   onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;"></a>
+			<a class="fa fa-facebook" href="https://www.facebook.com/sharer/sharer.php?u={{url}}{{page.url}}" title="Facebook"
+			   onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;"></a>
+			<a class="fa fa-google-plus" href="https://plus.google.com/share?url={{url}}{{page.url}}" title="Google+"
+			   onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;"></a>
+		</section>
+    </footer>
+</article>

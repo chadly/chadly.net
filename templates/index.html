@@ -1,0 +1,8 @@
+<section class="post-list">
+	{{#posts contents}}
+	<article class="post-stub">
+		<time datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMM YYYY"}}</time>
+		<a href="{{url}}">{{title}}</a>
+	</article>
+	{{/posts}}
+</section>

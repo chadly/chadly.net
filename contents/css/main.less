@@ -1,0 +1,118 @@
+@import "../vendor/bootstrap/less/bootstrap.less";
+
+@header-color: #f8f8f9;
+@container-large-desktop: 800px + @grid-gutter-width;
+@container-desktop: 700px + @grid-gutter-width;
+@container-tablet: 600px + @grid-gutter-width;
+@footer-height: 60px;
+@font-size-base: 16px;
+@font-family-sans-serif: 'Droid Sans', Helvetica, Arial, sans-serif;
+
+html,
+body {
+	height: 100%;
+	/* The html and body elements cannot have any padding or margin. */
+}
+
+/* Wrapper for page content to push down footer */
+#wrap {
+	min-height: 100%;
+	height: auto;
+	/* Negative indent footer by its height */
+	margin: 0 auto -@footer-height;
+	/* Pad bottom by footer height */
+	padding: 0 0 @footer-height;
+}
+
+header.site {
+	#gradient > .vertical(darken(@brand-primary, 30%), darken(@brand-primary, 35%));
+
+	section {
+		&:extend(.container all);
+
+		padding-top: 20px;
+	}
+
+	.brand img {
+		float:left;
+		margin:0 20px 20px 0;
+		border-radius:50px;
+		width:100px;
+		height:100px;
+	}
+
+	a {
+		color: #f8f8f9;
+		text-decoration: none;
+	}
+}
+
+nav.site {
+	&:extend(.navbar all, .navbar-inverse all);
+	border-radius: 0;
+
+	section {
+		&:extend(.container all);
+	}
+}
+
+main.site {
+	&:extend(.container all);
+}
+
+footer.site {
+	height: @footer-height;
+	padding:15px 0;
+	#gradient > .vertical(darken(@brand-primary, 20%), darken(@brand-primary, 25%));
+	.text-muted();
+	text-align: center;
+	position: relative;
+
+	section {
+		&:extend(.container all);
+
+		.fa.fa-rss {
+			text-decoration: none;
+			width: 28px;
+			height: 28px;
+			position: absolute;
+			top: -14px;
+			left: 50%;
+			margin-left: -15px;
+			border: #EBF2F6 1px solid;
+			text-align: center;
+			line-height: 2.4rem;
+			border-radius: 50px;
+			background: #fff;
+			transition: box-shadow 0.5s;
+		}
+
+		.copyright {
+			display: block;
+			margin: 1rem 0;
+		}
+	}
+}
+
+.github-fork {
+	&:extend(.hidden-print);
+	position: absolute;
+	top: 0;
+	right: 0;
+	border: 0;
+}
+
+@import "blog.less";
+@import "code.less";
+
+@media screen and (max-width: @screen-sm-min) {
+	header.site .brand img {
+		float:none;
+		display:block;
+		max-width:50%;
+		margin-right:auto;
+		margin-left:auto;
+		width:auto;
+		height:auto;
+	}
+}
