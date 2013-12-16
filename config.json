@@ -25,10 +25,5 @@
   "markdown": {
     "smartLists": true,
     "smartypants": true
-  },
-  "handlebars": {
-	"layout": "layout.html",
-	"partialDir": "partials",
-	"helperDir": "helpers"
   }
 }
