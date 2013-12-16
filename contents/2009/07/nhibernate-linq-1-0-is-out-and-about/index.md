@@ -3,6 +3,7 @@ title: NHibernate.Linq 1.0 is out and about!
 author: chad
 date: 2009-07-27
 template: post.html
+nav: blog
 ---
 
 Working with the [recently released NHibernate.Linq](/nhibernate-linq-1-0-is-out-and-about) is not without its (many) pitfalls. In one of my current projects, we are using the specification pattern to build dynamic linq queries based off of persistable specification objects. This has led to more than one hair-pulling session on the limitations of the current NH Linq provider. For instance, did you know that this query will work just fine:

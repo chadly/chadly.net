@@ -3,6 +3,7 @@ title: Agile Software Development
 author: chad
 date: 2009-02-01
 template: post.html
+nav: blog
 ---
 
 I just ran across this [video presentation](http://www.balsamiq.com/blog/?p=375) with software development advice from Jason Fried - from 37Signals. It's not really anything I haven't heard before, it is coming from an interesting perspective though. Here are some highlights and things that jumped out at me:

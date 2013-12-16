@@ -3,6 +3,7 @@ title: Creating NHibernate Linq Query from arbitrary Criteria
 author: chad
 date: 2009-10-30
 template: post.html
+nav: blog
 ---
 
 I just added this gem to NHibernate.Linq (of the NHContrib variety – not to be confused with [that other one](http://blogs.imeta.co.uk/sstrong/archive/2009/10/22/791.aspx)). I’ll let the test speak for itself:

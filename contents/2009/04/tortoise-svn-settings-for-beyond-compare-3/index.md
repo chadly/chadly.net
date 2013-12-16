@@ -3,6 +3,7 @@ title: Tortoise SVN Settings for Beyond Compare 3
 author: chad
 date: 2009-04-13
 template: post.html
+nav: blog
 ---
 
 This is for future reference for me – for some reason this is a huge pain in the ass for me to find whenever I need it.

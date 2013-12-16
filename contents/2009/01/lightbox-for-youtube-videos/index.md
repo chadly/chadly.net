@@ -3,6 +3,7 @@ title: Lightbox for YouTube Videos
 author: chad
 date: 2009-01-29
 template: post.html
+nav: blog
 ---
 
 On one of my recent projects, I needed to embed YouTube videos on a page using a lightbox-type plugin.  Naturally, the first thing I do when confronted with something like this is to hit up Google.  I ended up finding a few different solutions.

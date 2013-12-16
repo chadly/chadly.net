@@ -3,6 +3,7 @@ title: Asp.Net MVC and Sealed Classes
 author: chad
 date: 2009-03-14
 template: post.html
+nav: blog
 ---
 
 I just created a project from the Asp.Net MVC default template (yes, I am a little late to this game – sorry, I have been living happily with Monorail) and ran across this in the `AccountController` class:

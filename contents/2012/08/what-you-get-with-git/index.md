@@ -3,6 +3,7 @@ title: What you get with Git
 author: chad
 date: 2012-08-28
 template: post.html
+nav: blog
 ---
 
 I recently broke down and decided to try and use Git for something. Practically every open source project I use has now moved to [GitHub](https://github.com/) and it was becoming hard to submit patches (or pull requests or whatever) without having a Git client on my machine.

@@ -3,6 +3,7 @@ title: Hello Universe
 author: chad
 date: 2009-01-25
 template: post.html
+nav: blog
 ---
 
 <small>…because "Hello World" is thinking too small.</small>

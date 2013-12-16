@@ -1,5 +1,6 @@
 {
   "template": "index.html",
   "title": "Chad Lee - Software Developer",
-  "description": "Woah buddy!"
+  "description": "Woah buddy!",
+  "nav": "blog"
 }

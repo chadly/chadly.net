@@ -3,6 +3,7 @@ title: Lazy Loading an Observable Array with Knockout JS
 author: chad
 date: 2012-09-12
 template: post.html
+nav: blog
 ---
 
 I recently had the need to lazy load a list of items using Knockout JS. Luckily, this problem [has already been solved](http://www.knockmeout.net/2011/06/lazy-loading-observable-in-knockoutjs.html)…mostly. I suggest you go read that post for the concept behind how lazy loading with Knockout works in general.

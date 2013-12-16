@@ -1,4 +1,5 @@
 {
   "template": "resume.html",
-  "title": "William Chad Lee, Senior Full Stack Developer"
+  "title": "William Chad Lee, Senior Full Stack Developer",
+  "nav": "resume"
 }
