@@ -30,6 +30,29 @@
 			   onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;"></a>
 		</section>
     </footer>
+
+    {{#if page.metadata.disqus}}
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        var disqus_shortname = '{{disqus}}';
+
+        {{#if page.metadata.disqus.identifier}}
+        var disqus_identifier = '{{page.metadata.disqus.identifier}}';
+        {{/if}}
+
+        {{#if page.metadata.disqus.url}}
+        var disqus_url = '{{page.metadata.disqus.url}}';
+        {{/if}}
+
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    {{/if}}
 </article>
 
 {{> footer}}

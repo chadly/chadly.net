@@ -1,5 +1,8 @@
 ---
-view: none
+title: About
+author: chad
+template: page.html
+nav: about
 ---
 
 Wintersmith is made by [Johan Nordberg][1] and licensed under the [MIT-license][2].

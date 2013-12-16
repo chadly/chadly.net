@@ -4,6 +4,8 @@ author: chad
 date: 2009-01-25
 template: post.html
 nav: blog
+disqus: 
+  url: http://chadly.net/hello-universe/
 ---
 
 <small>…because "Hello World" is thinking too small.</small>

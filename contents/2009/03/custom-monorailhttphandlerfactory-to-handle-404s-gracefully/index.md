@@ -3,6 +3,8 @@ title: Custom MonoRailHttpHandlerFactory to handle 404s gracefully
 author: chad
 date: 2009-03-10
 nav: blog
+disqus: 
+  url: http://chadly.net/custom-monorailhttphandlerfactory-to-handle-404s-gracefully/
 ---
 
 I need to display user-friendly 404 pages when a request is made for a controller that cannot be found. Monorail provides a built-in way to handle this. When faced with a request for a controller it cannot find, Monorail will look for a view named 404 in the rescues folder and render that. That is good enough for most people, I guess. It wasn't good enough for me. I needed my 404 view to use a layout (dynamically chosen based on some configuration settings) and to display some data.

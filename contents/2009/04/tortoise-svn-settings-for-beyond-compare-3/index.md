@@ -4,6 +4,8 @@ author: chad
 date: 2009-04-13
 template: post.html
 nav: blog
+disqus: 
+  url: http://chadly.net/tortoise-svn-settings-for-beyond-compare-3/
 ---
 
 This is for future reference for me – for some reason this is a huge pain in the ass for me to find whenever I need it.

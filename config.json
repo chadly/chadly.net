@@ -3,7 +3,8 @@
     "url": "http://localhost:8080",
     "name": "chadly.net",
     "owner": "Chad Lee",
-    "description": "Software Developer. Sometimes I write stuff."
+    "description": "Software Developer. Sometimes I write stuff.",
+    "disqus": "chadlynet"
   },
   "plugins": [
 	"wintersmith-less",
