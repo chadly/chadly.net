@@ -1,6 +1,6 @@
 {
   "locals": {
-    "url": "http://localhost:8080",
+    "url": "http://chadly.net",
     "name": "chadly.net",
     "owner": "Chad Lee",
     "description": "Software Developer. Sometimes I write stuff.",
