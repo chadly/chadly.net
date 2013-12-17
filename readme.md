@@ -7,6 +7,7 @@ Built with [Bootstrap](http://getbootstrap.com/) and [Wintersmith](https://githu
 Note: you will need [bower](http://bower.io/) and [grunt-cli](http://gruntjs.com/getting-started) installed to install and build web assets. Install them if you don't already have them.
 
 From the project directory, install dependencies using npm:
+
 ```bash
 npm install
 ```
@@ -15,16 +16,27 @@ Then build the web assets and preview the site:
 
 ```bash
 grunt dev
-wintersmith preview
 ```
 
-Connect at 'localhost:8080'.
+This will spin up a server running at `localhost:8080`.
+
+##How to Build
+
+In order to build the site to deploy to a static hosting provider, just run:
+
+```bash
+grunt dist
+```
+
+and copy the contents of `/build` to your provider.
 
 ##License
 
-The MIT License (MIT)
+All `.md` files (post contents) are Copyright &copy; William Chad Lee and should not be reused without my permission. Everything else is MIT Licensed.
 
-Copyright (c) 2013 William Chad Lee
+####The MIT License (MIT)
+
+Copyright &copy; 2013 William Chad Lee
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

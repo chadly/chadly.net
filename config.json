@@ -11,9 +11,10 @@
     "wintersmith-handlebars"
   ],
   "ignore": [
-	"vendor/bootstrap/less",
+	"vendor/**/*.less",
 	"css/blog.less",
-  "css/code.less"
+	"css/resume.less",
+	"css/code.less"
   ],
   "require": {
     "moment": "moment",

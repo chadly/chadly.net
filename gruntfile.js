@@ -22,11 +22,21 @@ module.exports = function (grunt) {
 				src: ["*.less"],
 				dest: "contents/vendor/bootswatch/"
 			}
+		},
+		wintersmith: {
+			build: {},
+			preview: {
+				options: {
+					action: "preview"
+				}
+			}
 		}
 	});
 
 	grunt.loadNpmTasks("grunt-contrib-copy");
+	grunt.loadNpmTasks("grunt-wintersmith");
 
-	grunt.registerTask("dev", ["copy"]);
+	grunt.registerTask("dev", ["copy", "wintersmith:preview"]);
+	grunt.registerTask("dist", ["copy", "wintersmith:build"]);
 	grunt.registerTask("default", ["dev"]);
 };
