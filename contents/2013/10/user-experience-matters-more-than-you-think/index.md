@@ -12,7 +12,7 @@ So there is this [new blog engine](http://ghost.org/) in town that [maybe you ha
 
 Well, apparently, when the internet heard about this idea for a new blogging engine, it collectively had an orgasm.
 
-![internet orgasm](grumpy-cat-orgasm.gif)
+![internet orgasm](grumpy-cat-orgasm.jpg)
 
 No, seriously, the entire internet creamed its pants…literally. So much so, that John O'Nolan convinced over 5000 people to give him over $300,000 with just a couple of pretty screenshots.
 
