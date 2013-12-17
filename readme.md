@@ -1,6 +1,6 @@
 # Personal Website
 
-Built with [Bootstrap](http://getbootstrap.com/) and [wintersmith](https://github.com/jnordberg/wintersmith).
+Built with [Bootstrap](http://getbootstrap.com/) and [Wintersmith](https://github.com/jnordberg/wintersmith).
 
 ##How to run
 
