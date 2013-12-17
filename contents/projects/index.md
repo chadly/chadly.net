@@ -5,4 +5,4 @@ template: page.html
 nav: projects
 ---
 
-Coming soon
+Coming soon…
