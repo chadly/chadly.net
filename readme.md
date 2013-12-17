@@ -18,7 +18,7 @@ Then build the web assets and preview the site:
 grunt dev
 ```
 
-This will spin up a server running at `localhost:8080`.
+This will spin up a server running at `localhost:8080`. The preview server uses `dev.json` for configuration.
 
 ##How to Build
 
@@ -28,7 +28,7 @@ In order to build the site to deploy to a static hosting provider, just run:
 grunt dist
 ```
 
-and copy the contents of `/build` to your provider.
+and copy the contents of `/build` to your provider. The `dist` task uses `prod.json` to configure the Wintersmith build.
 
 ##License
 
