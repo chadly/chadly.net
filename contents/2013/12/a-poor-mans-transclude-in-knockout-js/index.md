@@ -1,5 +1,5 @@
 ---
-title: A Poor Man's Transclude in knockout.js
+title: A Poor Man's Transclude in Knockout.js
 author: chad
 date: 2013-12-13
 template: post.html
@@ -36,6 +36,8 @@ After you create your awesome little directive, you can then do something like t
 ```
 
 If this doesn't make sense, I encourage you to read the newly updated (and much better than it used to be) [angular.js docs](http://docs.angularjs.org/guide/directive#creating-custom-directives_demo_creating-a-directive-that-wraps-other-elements) on this.
+
+### Transclude in Knockout.js
 
 Anyway, in [knockout.js](http://knockoutjs.com/), which is the library we are using on one of my projects, there is no such thing as transclude. You can still abstract away components like this, but you would do it with a binding handler.
 
