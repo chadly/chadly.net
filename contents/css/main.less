@@ -5,6 +5,17 @@
 @header-color: #f8f8f9;
 @footer-height: 50px;
 
+//override container sizes to be narrower
+@container-tablet:             ((600px + @grid-gutter-width));
+@container-sm:                 @container-tablet;
+@container-desktop:            ((700px + @grid-gutter-width));
+@container-md:                 @container-desktop;
+@container-large-desktop:      ((800px + @grid-gutter-width));
+@container-lg:                 @container-large-desktop;
+
+//increase font size
+@font-size-base: 16px;
+
 html,
 body {
 	height: 100%;
@@ -35,6 +46,10 @@ header.site {
 		border-radius: 50px;
 		width: 100px;
 		height: 100px;
+	}
+
+	h1 {
+		margin-top:10px;
 	}
 
 	a, h1 {
