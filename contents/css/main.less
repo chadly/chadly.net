@@ -1,9 +1,9 @@
 @import "../vendor/bootstrap/less/bootstrap.less";
+@import "../vendor/bootswatch/variables.less";
+@import "../vendor/bootswatch/bootswatch.less";
 
 @header-color: #f8f8f9;
-@footer-height: 60px;
-@font-size-base: 16px;
-@font-family-sans-serif: 'Droid Sans', Helvetica, Arial, sans-serif;
+@footer-height: 50px;
 
 html,
 body {
@@ -22,30 +22,29 @@ body {
 }
 
 header.site {
-	#gradient > .vertical(darken(@brand-primary, 30%), darken(@brand-primary, 35%));
+	#gradient > .horizontal(darken(@brand-primary, 10%), @brand-primary);
 
 	section {
 		&:extend(.container all);
-
 		padding-top: 20px;
 	}
 
 	.brand img {
-		float:left;
-		margin:0 20px 20px 0;
-		border-radius:50px;
-		width:100px;
-		height:100px;
+		float: left;
+		margin: 0 20px 20px 0;
+		border-radius: 50px;
+		width: 100px;
+		height: 100px;
 	}
 
-	a {
+	a, h1 {
 		color: #f8f8f9;
 		text-decoration: none;
 	}
 }
 
 nav.site {
-	&:extend(.navbar all, .navbar-inverse all);
+	&:extend(.navbar all, .navbar-default all);
 	border-radius: 0;
 
 	section {
@@ -59,9 +58,10 @@ main.site {
 
 footer.site {
 	height: @footer-height;
-	padding:15px 0;
-	#gradient > .vertical(darken(@brand-primary, 20%), darken(@brand-primary, 25%));
+	background-color: @gray-darker;
 	.text-muted();
+	font-size: @font-size-small;
+	padding: 10px 0 0 0;
 	text-align: center;
 	position: relative;
 
@@ -70,18 +70,19 @@ footer.site {
 
 		.fa.fa-rss {
 			text-decoration: none;
-			width: 28px;
-			height: 28px;
+			width: 30px;
+			height: 30px;
 			position: absolute;
 			top: -14px;
 			left: 50%;
 			margin-left: -15px;
-			border: #EBF2F6 1px solid;
+			
 			text-align: center;
-			line-height: 2.4rem;
+			line-height: 2.6rem;
 			border-radius: 50px;
-			background: #fff;
-			transition: box-shadow 0.5s;
+			background: @gray-darker;
+			color:#FF6600;
+			font-size: @font-size-large;
 		}
 
 		.copyright {
@@ -105,12 +106,12 @@ footer.site {
 
 @media screen and (max-width: @screen-sm-min) {
 	header.site .brand img {
-		float:none;
-		display:block;
-		max-width:50%;
-		margin-right:auto;
-		margin-left:auto;
-		width:auto;
-		height:auto;
+		float: none;
+		display: block;
+		max-width: 50%;
+		margin-right: auto;
+		margin-left: auto;
+		width: auto;
+		height: auto;
 	}
 }

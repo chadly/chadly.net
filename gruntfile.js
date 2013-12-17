@@ -15,6 +15,12 @@ module.exports = function (grunt) {
 					src: ["*.*"],
 					dest: "contents/vendor/bootstrap/fonts/"
 				}]
+			},
+			bootswatch: {
+				expand: true,
+				cwd: "bower_components/bootswatch/spacelab/",
+				src: ["*.less"],
+				dest: "contents/vendor/bootswatch/"
 			}
 		}
 	});

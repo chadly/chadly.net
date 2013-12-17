@@ -6,6 +6,7 @@
   ],
   "private": true,
   "dependencies": {
-    "bootstrap": "~3.0.3"
+    "bootstrap": "~3.0.3",
+	"bootswatch": "https://github.com/thomaspark/bootswatch.git#~3.0.2"
   }
 }
