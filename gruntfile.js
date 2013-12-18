@@ -24,10 +24,16 @@ module.exports = function (grunt) {
 			}
 		},
 		wintersmith: {
-			build: {},
+			build: {
+				options: {
+					action: "build",
+					config: "prod.json"
+				}
+			},
 			preview: {
 				options: {
-					action: "preview"
+					action: "preview",
+					config: "dev.json"
 				}
 			}
 		}

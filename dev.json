@@ -1,0 +1,30 @@
+{
+  "locals": {
+    "url": "http://localhost:8080",
+    "name": "Chad Lee",
+    "owner": "Chad Lee",
+    "description": "Software Developer. Sometimes I write stuff."
+  },
+  "plugins": [
+	"wintersmith-less",
+    "wintersmith-handlebars"
+  ],
+  "ignore": [
+	"vendor/**/*.less",
+	"css/blog.less",
+	"css/resume.less",
+	"css/code.less"
+  ],
+  "require": {
+    "moment": "moment",
+    "_": "underscore",
+    "typogr": "typogr"
+  },
+  "jade": {
+    "pretty": true
+  },
+  "markdown": {
+    "smartLists": true,
+    "smartypants": true
+  }
+}

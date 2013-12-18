@@ -4,7 +4,11 @@
     "name": "Chad Lee",
     "owner": "Chad Lee",
     "description": "Software Developer. Sometimes I write stuff.",
-    "disqus": "chadlynet"
+    "disqus": "chadlynet",
+	"analytics": {
+		"id": "UA-636144-7",
+		"domain": "chadly.net"
+	}
   },
   "plugins": [
 	"wintersmith-less",
