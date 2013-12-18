@@ -11,4 +11,4 @@ deploy:
     steps:
         - script:
             name: Azure FTP
-            code: find build -type f -exec curl -u $FTP_USERNAME:$FTP_PASSWORD --ftp-create-dirs -T {} $FTP_URL/{} \;
+            code: cd build && find . -type f -exec curl -u $FTP_USERNAME:$FTP_PASSWORD --ftp-create-dirs -T {} $FTP_URL/{} \;
