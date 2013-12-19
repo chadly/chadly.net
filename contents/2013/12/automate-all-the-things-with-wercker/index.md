@@ -50,7 +50,9 @@ Ah, Random Internet Person, you are wrong again.
 
 ![automate all the things](automate-all-the-things.jpg)
 
-If you are familiar with continuous integration at all (and if you are a developer and you aren't -- shame on you), [Wercker](http://wercker.com/) will feel right at home. You give it a build/deployment script and it will run your script for you everytime you push a change to a branch it is watching.
+[Wercker](http://wercker.com/) is a hosted <abbr title="Continuous Integration">CI</abbr> service that allows you to give it a build/deployment script that will automatically run everytime you push a change to a branch it is watching.
+
+I have dealt with my fair share of <abbr title="Continuous Integration">CI</abbr> servers in the past, [Teamcity](http://www.jetbrains.com/teamcity/) the one I am most familiar with. Wercker, compared to them, is much easier to get setup and running. I really like the fact that they are a hosted service -- nothing I have to install and run locally. The concept of running your build on [preconfigured boxes](http://devcenter.wercker.com/articles/boxes/) is also appealing in that it avoids problems with different environment setups.
 
 Luke Vivier has a [nice guide](http://luke.vivier.ca/wintersmith-with-wercker/) for setting up Wercker to deploy a Wintersmith site to Github Pages. I used his guide as a basis for setting up my workflow. However, I'm going to be publishing to Azure Websites, not Github Pages.
 
@@ -88,9 +90,11 @@ build:
             tasks: dist
 deploy:
     steps:
-        - script:
-            name: Azure FTP
-            code: cd build && find . -type f -exec curl -u $FTP_USERNAME:$FTP_PASSWORD --ftp-create-dirs -T {} $FTP_URL/{} \;
+        - wercker-labs/azure-ftp-deploy:
+            cwd: build/
+            publish-url: $FTP_URL
+            username: $FTP_USERNAME
+            password: $FTP_PASSWORD
 ```
 
 The first part of the file chooses which box I want to run my build/deployment on. Wercker has a good amount of "official" and community-contributed boxes. For this site, I'm using the `wercker/nodejs` box. The next part of the file describes the build steps:
@@ -101,11 +105,7 @@ The first part of the file chooses which box I want to run my build/deployment o
 
 3. Run my grunt `dist` task. This task uses [grunt-wintersmith](https://github.com/davidtucker/grunt-wintersmith) to actually build the site into the `/build` folder. I'm using grunt because I want to be able to run this build from my local machine as well as from Wercker. Wercker simply calls my existing grunt build script.
 
-The next part of the file describes the steps to deploy my site. It is a shell command to `cd` to the `/build` folder and then just FTP everything it finds. It uses the protected environment variables `FTP_USERNAME`, `FTP_PASSWORD`, and `FTP_URL` (configured in Wercker) so I don't have to commit sensitive information in my repo.
-
-<div class="alert alert-info">
-	<strong>Note:</strong> Wercker does provide a built-in [azure-ftp-deploy step](https://github.com/wercker-labs/step-azure-ftp-deploy), but as of now it [only supports FTPing your entire repository](https://github.com/wercker-labs/step-azure-ftp-deploy/issues/1) rather than a single subdirectory. Once that issue is resolved, that funky shell command can be replaced by one simple call to `azure-ftp-deploy`.
-</div>
+The next part of the file describes the steps to deploy my site. It uses an existing [azure-ftp-deploy step](https://github.com/wercker-labs/step-azure-ftp-deploy) to `cd` to the `/build` folder and then just FTP everything it finds. It uses the protected environment variables `FTP_USERNAME`, `FTP_PASSWORD`, and `FTP_URL` (configured in Wercker) so I don't have to commit sensitive information in my repo.
 
 Now, whenever I want to make changes to my site, it is just a matter of pushing to my master branch and in a couple of minutes, it is live. I am very happy with my new setup.
 
