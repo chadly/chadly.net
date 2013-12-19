@@ -66,7 +66,7 @@ Here is a quick rundown of how to get Wercker up and running publishing to Azure
 
 2. Add an application to your account and link it to your Github (or Bitbucket or wherever) repo.
 
-3. Create a wercker.yml file in your root (see mine below) with your build and deployment steps.
+3. Create a `wercker.yml` file in your root (see mine below) with your build and deployment steps.
 
 4. Setup a custom deployment in Wercker that will auto-deploy your master branch after every succesful build.
 
@@ -93,7 +93,7 @@ deploy:
             code: cd build && find . -type f -exec curl -u $FTP_USERNAME:$FTP_PASSWORD --ftp-create-dirs -T {} $FTP_URL/{} \;
 ```
 
-The first part of the file chooses which box I want to run my build/deployment on. Wercker has a good amount of "official" and community-contributed boxes. For this site, I'm using the `wercer/nodejs` box. The next part of the file describes the build steps:
+The first part of the file chooses which box I want to run my build/deployment on. Wercker has a good amount of "official" and community-contributed boxes. For this site, I'm using the `wercker/nodejs` box. The next part of the file describes the build steps:
 
 1. `sudo npm install bower -g` because my chosen box doesn't have it installed by default and I am using [Bower](http://bower.io/) to manage my web dependencies.
 
