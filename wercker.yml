@@ -9,6 +9,8 @@ build:
             tasks: dist
 deploy:
     steps:
-        - script:
-            name: Azure FTP
-            code: cd build && find . -type f -exec curl -u $FTP_USERNAME:$FTP_PASSWORD --ftp-create-dirs -T {} $FTP_URL/{} \;
+        - wercker-labs/azure-ftp-deploy:
+            cwd: build/
+            publish-url: $FTP_URL
+            username: $FTP_USERNAME
+            password: $FTP_PASSWORD
