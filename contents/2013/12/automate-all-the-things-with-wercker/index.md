@@ -1,7 +1,7 @@
 ---
 title: Automate All the Things with Wercker
 author: chad
-date: 2013-12-17
+date: 2013-12-18
 template: post.html
 nav: blog
 disqus: 
