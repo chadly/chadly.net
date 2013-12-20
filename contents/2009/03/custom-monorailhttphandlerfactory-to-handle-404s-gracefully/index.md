@@ -2,6 +2,7 @@
 title: Custom MonoRailHttpHandlerFactory to handle 404s gracefully
 author: chad
 date: 2009-03-10
+template: post.html
 nav: blog
 disqus: 
   url: http://chadly.net/custom-monorailhttphandlerfactory-to-handle-404s-gracefully/
