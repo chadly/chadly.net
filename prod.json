@@ -18,7 +18,9 @@
 	"vendor/**/*.less",
 	"css/blog.less",
 	"css/resume.less",
-	"css/code.less"
+	"css/code.less",
+	"css/layout.less",
+	"css/overrides.less"
   ],
   "require": {
     "moment": "moment",

@@ -2,10 +2,13 @@
 
 <article class="post">
     {{#with page}}
-    <header>
+	<header>
 		<h2>{{title}}</h2>
-		<time datetime="{{date format='YYYY-MM-DD'}}">{{date format='DD MMM YYYY'}}</time>
-    </header>
+		<time datetime="{{date format='YYYY-MM-DD'}}">
+			<i class="fa fa-calendar"></i>
+			{{date format='MMMM DD, YYYY'}}
+		</time>
+	</header>
 
     <section class="post-content">
         {{{html}}}
@@ -33,7 +36,7 @@
 
 	{{#if disqus}}
     {{#if page.metadata.disqus}}
-    <div id="disqus_thread"></div>
+    <div id="disqus_thread" class="post-comments"></div>
     <script type="text/javascript">
         var disqus_shortname = '{{disqus}}';
 
