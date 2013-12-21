@@ -1,6 +1,12 @@
 {{> header}}
 
+<section class="intro">
+	{{{contents.[intro.md].html}}}
+</section>
+
 <section class="post-list">
+	<h4>Read (Interesting?) Stuff</h4>
+
 	{{#posts contents}}
 	<article class="post-stub">
 		<time datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMM YYYY"}}</time>
