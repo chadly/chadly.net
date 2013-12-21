@@ -8,7 +8,6 @@ disqus:
   url: http://chadly.net/nhibernate-linq-1-0-is-out-and-about/
 ---
 
-Working with the [recently released NHibernate.Linq](/nhibernate-linq-1-0-is-out-and-about) is not without its (many) pitfalls. In one of my current projects, we are using the specification pattern to build dynamic linq queries based off of persistable specification objects. This has led to more than one hair-pulling session on the limitations of the current NH Linq provider. For instance, did you know that this query will work just fine:
 In case you haven't heard, NHibernate.Linq v1.0 has been released. This has been a long time in the making and Tuna has put the final touches on it to make it possible. You can get the binaries from the [NHibernate download area](http://sourceforge.net/projects/nhibernate/files/).
 
 Here are some informal release notes:
