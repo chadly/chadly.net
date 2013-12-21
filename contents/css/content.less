@@ -5,9 +5,15 @@
 }
 
 img.doge {
-	display: block;
 	border-radius: 50%;
-	margin: 1em auto;
+}
+
+.page, .post {
+	p img {
+		display: block;
+		margin: 0 auto;
+		max-width: 70%;
+	}
 }
 
 .post-stub {
@@ -36,12 +42,6 @@ img.doge {
 		time {
 			color: @text-muted;
 		}
-	}
-
-	p img {
-		display: block;
-		margin: 0 auto;
-		max-width: 70%;
 	}
 
 	.correction {

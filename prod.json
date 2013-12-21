@@ -16,7 +16,7 @@
   ],
   "ignore": [
 	"vendor/**/*.less",
-	"css/blog.less",
+	"css/content.less",
 	"css/resume.less",
 	"css/code.less",
 	"css/layout.less",
