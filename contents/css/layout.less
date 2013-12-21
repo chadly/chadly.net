@@ -1,3 +1,9 @@
+html,
+body {
+	height: 100%;
+	/* The html and body elements cannot have any padding or margin. */
+}
+
 /* Wrapper for page content to push down footer */
 #wrap {
 	min-height: 100%;
@@ -56,11 +62,11 @@ footer.site {
 	background-color: @gray-darker;
 	.text-muted();
 	font-size: @font-size-small;
-	padding: 15px;
 	text-align: center;
 
 	section {
 		&:extend(.container all);
+		padding:1em;
 	}
 }
 
