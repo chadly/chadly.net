@@ -1,0 +1,37 @@
+﻿.project-list {
+	.make-row();
+}
+
+article.project {
+	.make-lg-column(6);
+
+	padding: 1em;
+	border-top: 1px solid @gray;
+
+	h3 {
+		margin-top: 0;
+	}
+
+	img {
+		width: 100%;
+		display: block;
+		border-radius: 10px;
+	}
+
+	.project-role {
+		display: block;
+		margin: 1em 0;
+	}
+
+	.project-description {
+		clear: both;
+		padding: 1em 0;
+		border-top: 1px solid @hr-border;
+	}
+}
+
+@media screen and (min-width: @screen-lg-min) {
+	article.project img {
+		height: 150px;
+	}
+}

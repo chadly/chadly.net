@@ -1,8 +1,7 @@
 ---
-title: Projects I Work On
-author: chad
-template: page.html
+title: Projects
+template: projects.html
 nav: projects
 ---
 
-Coming soon…
+Here are some projects that I have created or contributed to.

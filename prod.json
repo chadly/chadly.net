@@ -20,7 +20,8 @@
 	"css/resume.less",
 	"css/code.less",
 	"css/layout.less",
-	"css/overrides.less"
+	"css/overrides.less",
+	"css/projects.less"
   ],
   "require": {
     "moment": "moment",
