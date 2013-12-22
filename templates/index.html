@@ -11,8 +11,24 @@
 	<article class="post-stub">
 		<time datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMM YYYY"}}</time>
 		<a href="{{url}}">{{title}}</a>
+		{{#if ../disqus}}
+		<a href="{{../../url}}{{url}}#disqus_thread" class="post-comment-count" title="Comments"></a>
+		{{/if}}
 	</article>
 	{{/posts}}
 </section>
+
+{{#if disqus}}
+<script type="text/javascript">
+	var disqus_shortname = '{{disqus}}';
+
+	(function () {
+		var s = document.createElement('script'); s.async = true;
+		s.type = 'text/javascript';
+		s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+		(document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+	}());
+</script>
+{{/if}}
 
 {{> footer}}

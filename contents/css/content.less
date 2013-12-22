@@ -26,7 +26,7 @@ img.frame {
 	time {
 		width: 7em;
 		display: inline-block;
-		color: @text-muted;
+		.text-muted;
 	}
 
 	a {
@@ -35,6 +35,19 @@ img.frame {
 
 		&:hover {
 			color: @link-hover-color;
+		}
+	}
+
+	.post-comment-count {
+		.text-muted;
+		font-size: (@font-size-small * 0.875);
+
+		&:before {
+			content: "(";
+		}
+
+		&:after {
+			content: ")";
 		}
 	}
 }
