@@ -39,9 +39,9 @@ With the [existing set of plugins](https://github.com/jnordberg/wintersmith/wiki
 > But how are you going to do things like post drafts without a blogging framework?
 > <small>Random Internet Person</small>
 
-For me as a developer, branching with git is very natural. And now that I am managing my site with git, it is very easy to branch off of master if I want to work on a post for a little while without publishing it. I can understand why a non-developer end-user would think I am crazy. But that is why things like Ghost still have a place. I still think it is the best blogging framework around. I just don't want to use one of those anymore.
+For me as a developer, branching with git is very natural. And now that I am managing my site with git, it is very easy to branch off of `master` if I want to work on a post for a little while without publishing it. I can understand why a non-developer end-user would think I am crazy. But that is why things like Ghost still have a place. I still think it is the best blogging framework around. I just don't want to use one of those anymore.
 
-Not to mention, Github has the [best features around](https://help.github.com/articles/github-flow-in-the-browser) for doing things with your repository straight from the browser. It is possible to create a branch and work on it for a little while and eventually merge it back to master all from the browser without ever having to clone the repository. Combine this with Github's Markdown editor with live previews and you got yourself a winner.
+Not to mention, Github has some of the [best features around](https://help.github.com/articles/github-flow-in-the-browser) for doing things with your repository directly from the browser. It is possible to create a branch, work on it for a little while, and eventually merge it back to `master` without ever having to clone the repository. Combine this with Github's Markdown editor with live previews and you got yourself a winner.
 
 > But now you have a build step for your blog. You will have to build your static site and push it to a hosting provider everytime you want to publish a post. That sounds like a pain in the ass.
 > <small>Random Internet Person</small>
@@ -72,7 +72,7 @@ Here is a quick rundown of how to get Wercker up and running publishing to Azure
 
 3. Create a `wercker.yml` file in your root (see mine below) with your build and deployment steps.
 
-4. Setup a custom deployment in Wercker that will auto-deploy your master branch after every succesful build.
+4. Setup a custom deployment in Wercker that will auto-deploy your `master` branch after every succesful build.
 
 5. Login to your Azure Management Portal and get your publish profile settings for the website you want to deploy to (`publishUrl`, `userName`, and `userPWD`).
 
@@ -109,6 +109,6 @@ The first part of the file chooses which box I want to run my build/deployment o
 
 The next part of the file describes the steps to deploy my site. It uses an existing [azure-ftp-deploy step](https://github.com/wercker-labs/step-azure-ftp-deploy) to `cd` to the `/build` folder and then just FTP everything it finds. It uses the protected environment variables `FTP_USERNAME`, `FTP_PASSWORD`, and `FTP_URL` (configured in Wercker) so I don't have to commit sensitive information in my repo.
 
-Now, whenever I want to make changes to my site, it is just a matter of pushing to my master branch and in a couple of minutes, it is live. I am very happy with my new setup.
+Now, whenever I want to make changes to my site, it is just a matter of pushing to my `master` branch and in a couple of minutes, it is live. I am very happy with my new setup.
 
 If you want to dig deeper into the code that runs all of this, checkout the [repo for this site on Github](https://github.com/chadly/chadly.net).
