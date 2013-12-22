@@ -11,4 +11,4 @@ I am currently working on creating efficient web frameworks and user experiences
 
 If you want to send me a message, you can always use [INTERNET MAIL](mailto:hello@chadly.net). It is a fast new way to communicate without having to use the post office.
 
-<img src="doge.jpg" alt="Doge" class="doge" title="much informative" />
+<img src="doge.jpg" alt="Doge" class="frame" title="much informative" />
