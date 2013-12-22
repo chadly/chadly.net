@@ -41,6 +41,8 @@ With the [existing set of plugins](https://github.com/jnordberg/wintersmith/wiki
 
 For me as a developer, branching with git is very natural. And now that I am managing my site with git, it is very easy to branch off of master if I want to work on a post for a little while without publishing it. I can understand why a non-developer end-user would think I am crazy. But that is why things like Ghost still have a place. I still think it is the best blogging framework around. I just don't want to use one of those anymore.
 
+Not to mention, Github has the [best features around](https://help.github.com/articles/github-flow-in-the-browser) for doing things with your repository straight from the browser. It is possible to create a branch and work on it for a little while and eventually merge it back to master all from the browser without ever having to clone the repository. Combine this with Github's Markdown editor with live previews and you got yourself a winner.
+
 > But now you have a build step for your blog. You will have to build your static site and push it to a hosting provider everytime you want to publish a post. That sounds like a pain in the ass.
 > <small>Random Internet Person</small>
 
