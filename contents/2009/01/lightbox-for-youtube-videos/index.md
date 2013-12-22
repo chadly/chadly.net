@@ -5,7 +5,7 @@ date: 2009-01-29
 template: post.html
 nav: blog
 disqus: 
-  url: http://chadly.net/lightbox-for-youtube-videos/
+  url: http://chadly.net/2009/01/lightbox-for-youtube-videos/
 jQueryNoConflict: true
 ---
 

@@ -5,7 +5,7 @@ date: 2009-04-20
 template: post.html
 nav: blog
 disqus: 
-  url: http://chadly.net/bdd-with-xunit-net/
+  url: http://chadly.net/2009/04/bdd-with-xunit-net/
 ---
 
 I've been looking a lot into Behavior Driven Development lately as a better way to structure my TDD tests. If you’ve never heard of BDD, check here for [an intro](http://www.lostechies.com/blogs/sean_chambers/archive/2008/12/07/starting-with-bdd-vs-starting-with-tdd.aspx) (or here for [another good one](http://codebetter.com/blogs/ian_cooper/archive/2009/03/31/seizing-the-bdd-nettle.aspx)). What it boils down to is a way to organize and name your tests in a way that makes it explicit what it is – an executable specification for what the code under test _should_ do.

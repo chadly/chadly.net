@@ -5,7 +5,7 @@ date: 2009-07-09
 template: post.html
 nav: blog
 disqus: 
-  url: http://chadly.net/we-make-shitty-software-and-so-do-you/
+  url: http://chadly.net/2009/07/we-make-shitty-software-and-so-do-you/
 ---
 
 I just ran across this [little gem](http://davenet.scripting.com/1995/09/03/wemakeshittysoftware) and it made me laugh:

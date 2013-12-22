@@ -5,7 +5,7 @@ date: 2009-07-27
 template: post.html
 nav: blog
 disqus: 
-  url: http://chadly.net/nhibernate-linq-1-0-is-out-and-about/
+  url: http://chadly.net/2009/07/nhibernate-linq-1-0-is-out-and-about/
 ---
 
 In case you haven't heard, NHibernate.Linq v1.0 has been released. This has been a long time in the making and Tuna has put the final touches on it to make it possible. You can get the binaries from the [NHibernate download area](http://sourceforge.net/projects/nhibernate/files/).

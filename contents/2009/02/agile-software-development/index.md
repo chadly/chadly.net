@@ -5,7 +5,7 @@ date: 2009-02-01
 template: post.html
 nav: blog
 disqus: 
-  url: http://chadly.net/agile-software-development-from-a-business-perspective/
+  url: http://chadly.net/2009/02/agile-software-development-from-a-business-perspective/
 ---
 
 I just ran across this [video presentation](http://www.balsamiq.com/blog/?p=375) with software development advice from Jason Fried - from 37Signals. It's not really anything I haven't heard before, it is coming from an interesting perspective though. Here are some highlights and things that jumped out at me:

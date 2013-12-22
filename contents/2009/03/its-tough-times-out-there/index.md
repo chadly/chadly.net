@@ -5,7 +5,7 @@ date: 2009-03-09
 template: post.html
 nav: blog
 disqus: 
-  url: http://chadly.net/its-tough-times-out-there/
+  url: http://chadly.net/2009/03/its-tough-times-out-there/
 ---
 
 "Times are tough" -- I've heard that phrase ten thousand times in the past few months. I am so sick of hearing about the economy and how bad everything is. I feel like much of it is a self-fulfilling prophecy -  a vicious feedback cycle that is perpetuated by how much everyone talks about it _all-the-freaking-time_.

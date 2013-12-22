@@ -5,7 +5,7 @@ date: 2013-12-13
 template: post.html
 nav: blog
 disqus: 
-  url: http://chadly.net/a-poor-mans-transclude-in-knockout-js/
+  url: http://chadly.net/2013/12/a-poor-mans-transclude-in-knockout-js/
 ---
 
 If you've ever used [angular.js](http://angularjs.org/), you might have come across the transclude feature. From the [angular.js docs](http://docs.angularjs.org/guide/directive#creating-custom-directives_demo_creating-a-directive-that-wraps-other-elements):
