@@ -1,5 +1,5 @@
 ---
-title: Custom MonoRailHttpHandlerFactory to handle 404s gracefully
+title: Handle MonoRail 404s gracefully
 author: chad
 date: 2009-03-10
 template: post.html
