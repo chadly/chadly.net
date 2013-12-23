@@ -13,7 +13,7 @@
             <link>{{../url}}{{url}}</link>
             <guid isPermaLink="true">{{../url}}{{url}}</guid>
             <pubDate>{{date format='ddd, DD MMM YYYY HH:mm:ss ZZ'}}</pubDate>
-            <author>{{#author ../contents metadata.author}}{{metadata.email}}{{/author}}</author>
+            <author>{{#author ../contents metadata.author}}{{metadata.email}} ({{metadata.name}}){{/author}}</author>
             <description>{{html}}</description>
         </item>
     {{/posts}}
