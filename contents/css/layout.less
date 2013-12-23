@@ -15,7 +15,7 @@ body {
 }
 
 .fa.fa-rss {
-	color:#FF6600;
+	color: #FF6600;
 }
 
 header.site {
@@ -35,7 +35,7 @@ header.site {
 	}
 
 	h1 {
-		margin-top:5px;
+		margin-top: 5px;
 	}
 
 	a, h1 {
@@ -53,6 +53,18 @@ nav.site {
 	}
 }
 
+@media screen and (max-width: @screen-md-max) {
+	nav.site {
+		font-size: @font-size-small;//floor(@font-size-base * 0.89);
+	}
+}
+
+@media screen and (max-width: @screen-sm-max) {
+	nav.site {
+		font-size: @font-size-extra-small;
+	}
+}
+
 main.site {
 	&:extend(.container all);
 }
@@ -66,7 +78,7 @@ footer.site {
 
 	section {
 		&:extend(.container all);
-		padding:1em;
+		padding: 1em;
 	}
 }
 
