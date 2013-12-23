@@ -1,5 +1,5 @@
 ---
-title: Creating NHibernate Linq Query from arbitrary Criteria
+title: Creating NHibernate Linq Query from Criteria
 author: chad
 date: 2009-10-30
 template: post.html
