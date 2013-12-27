@@ -1,4 +1,7 @@
 {
   "template": "robots.jade",
-  "filename": "robots.txt"
+  "filename": "robots.txt",
+  "disallow": [
+	"/errors"
+  ]
 }

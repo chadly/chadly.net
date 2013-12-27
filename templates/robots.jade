@@ -1,4 +1,8 @@
 ﻿- // robots.txt
 | User-agent: *
 | Allow: /
+each item in page.metadata.disallow
+  = '\n'
+  = 'Disallow: ' + item
+| 
 | Sitemap: #{locals.url}/sitemap.xml

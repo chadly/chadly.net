@@ -1,5 +1,9 @@
 <configuration>
 	<system.webServer>
+		<httpErrors>
+			<error statusCode="404" path="errors/404.html" responseMode="File" />
+		</httpErrors>
+
 		<rewrite>
 			<rules>
 				<rule name="Redirect from www subdomain">
