@@ -19,7 +19,8 @@ body {
 }
 
 header.site {
-	#gradient > .horizontal(darken(@brand-primary, 10%), @brand-primary);
+	&:extend(.noise);
+	background-color: darken(@brand-primary, 10%);
 
 	section {
 		&:extend(.container all);
@@ -55,7 +56,7 @@ nav.site {
 
 @media screen and (max-width: @screen-md-max) {
 	nav.site {
-		font-size: @font-size-small;//floor(@font-size-base * 0.89);
+		font-size: @font-size-small;
 	}
 }
 
@@ -70,6 +71,7 @@ main.site {
 }
 
 footer.site {
+	&:extend(.noise);
 	min-height: @footer-height;
 	background-color: @gray-darker;
 	.text-muted();
