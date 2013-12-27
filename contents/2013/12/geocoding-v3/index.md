@@ -16,7 +16,7 @@ If you are not familiar with it, it is a thin wrapper around three popular geoco
 
 The result is some long overdue fixes and some new features -- the most exciting of which is support for `async` tasks thanks to [Manuel Guilbault](https://github.com/manuel-guilbault). See the [full changelog](https://github.com/chadly/Geocoding.net/releases/tag/v3.0.0).
 
-Get it from [nuget](https://www.nuget.org/):
+Get it from [nuget](https://www.nuget.org/packages/Geocoding.net/):
 
 ```
 Install-Package Geocoding.net
