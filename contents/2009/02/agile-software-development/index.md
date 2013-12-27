@@ -4,7 +4,11 @@ author: chad
 date: 2009-02-01
 template: post.html
 nav: blog
-disqus: 
+redirects:
+  - /post/2009/02/01/Agile-Software-Development-from-a-Business-Perspective.aspx
+  - /agile-software-development-from-a-business-perspective/
+  - /2009/02/agile-software-development-from-a-business-perspective/
+disqus:
   url: http://chadly.net/2009/02/agile-software-development/
 ---
 

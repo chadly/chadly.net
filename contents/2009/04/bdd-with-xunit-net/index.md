@@ -4,6 +4,9 @@ author: chad
 date: 2009-04-20
 template: post.html
 nav: blog
+redirects:
+  - /post/2009/04/20/BDD-with-xUnit.aspx
+  - /bdd-with-xunit-net/
 disqus: 
   url: http://chadly.net/2009/04/bdd-with-xunit-net/
 ---

@@ -4,7 +4,11 @@ author: chad
 date: 2009-05-28
 template: post.html
 nav: blog
-disqus: 
+redirects:
+  - /post/2009/05/28/Dependency-Injection-with-NHibernate-and-Autofac.aspx
+  - /dependency-injection-with-nhibernate-and-autofac/
+  - /2009/05/dependency-injection-with-nhi/
+disqus:
   url: http://chadly.net/2009/05/dependency-injection-with-nhibernate-and-autofac/
 ---
 

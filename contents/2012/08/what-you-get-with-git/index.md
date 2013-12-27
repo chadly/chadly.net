@@ -4,7 +4,10 @@ author: chad
 date: 2012-08-28
 template: post.html
 nav: blog
-disqus: 
+redirects:
+  - /2012/08/the-wonderful-world-of-git/
+  - /what-you-get-with-git/
+disqus:
   url: http://chadly.net/2012/08/what-you-get-with-git/
 ---
 

@@ -4,7 +4,9 @@ author: chad
 date: 2012-09-12
 template: post.html
 nav: blog
-disqus: 
+redirects:
+  - /lazy-loading-an-observable-array-with-knockout-js/
+disqus:
   url: http://chadly.net/2012/09/lazy-loading-an-observable-array-with-knockout-js/
 ---
 

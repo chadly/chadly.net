@@ -4,6 +4,9 @@ author: chad
 date: 2009-10-30
 template: post.html
 nav: blog
+redirects:
+  - /post/2009/10/30/Creating-NHibernate-Linq-Query-from-arbitrary-Criteria.aspx
+  - /creating-nhibernate-linq-query-from-arbitrary-criteria/
 disqus: 
   url: http://chadly.net/2009/10/creating-nhibernate-linq-query-from-arbitrary-criteria/
 ---

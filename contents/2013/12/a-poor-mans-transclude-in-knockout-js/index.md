@@ -4,7 +4,9 @@ author: chad
 date: 2013-12-13
 template: post.html
 nav: blog
-disqus: 
+redirects:
+  - /a-poor-mans-transclude-in-knockout-js/
+disqus:
   url: http://chadly.net/2013/12/a-poor-mans-transclude-in-knockout-js/
 ---
 

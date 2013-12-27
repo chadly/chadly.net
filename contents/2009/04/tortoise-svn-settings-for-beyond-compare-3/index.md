@@ -4,6 +4,9 @@ author: chad
 date: 2009-04-13
 template: post.html
 nav: blog
+redirects:
+  - /post/2009/04/13/Tortoise-SVN-Settings-for-Beyond-Compare-3.aspx
+  - /tortoise-svn-settings-for-beyond-compare-3/
 disqus: 
   url: http://chadly.net/2009/04/tortoise-svn-settings-for-beyond-compare-3/
 ---

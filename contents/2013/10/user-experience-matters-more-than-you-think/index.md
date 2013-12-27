@@ -4,7 +4,9 @@ author: chad
 date: 2013-10-18
 template: post.html
 nav: blog
-disqus: 
+redirects:
+  - /user-experience-matters-more-than-you-think/
+disqus:
   url: http://chadly.net/2013/10/user-experience-matters-more-than-you-think/
 ---
 

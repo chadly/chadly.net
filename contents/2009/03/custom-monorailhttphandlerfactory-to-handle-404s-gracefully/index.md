@@ -4,7 +4,10 @@ author: chad
 date: 2009-03-10
 template: post.html
 nav: blog
-disqus: 
+redirects:
+  - /post/2009/03/10/Custom-MonorailHttpHandlerFactory-to-handle-404s-gracefully.aspx
+  - /custom-monorailhttphandlerfactory-to-handle-404s-gracefully/
+disqus:
   url: http://chadly.net/2009/03/custom-monorailhttphandlerfactory-to-handle-404s-gracefully/
 ---
 

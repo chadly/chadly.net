@@ -4,7 +4,10 @@ author: chad
 date: 2009-03-09
 template: post.html
 nav: blog
-disqus: 
+redirects:
+  - /post/2009/03/09/Its-Tough-Times-Out-There.aspx
+  - /its-tough-times-out-there/
+disqus:
   url: http://chadly.net/2009/03/its-tough-times-out-there/
 ---
 

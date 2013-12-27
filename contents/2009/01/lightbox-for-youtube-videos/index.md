@@ -4,7 +4,11 @@ author: chad
 date: 2009-01-29
 template: post.html
 nav: blog
-disqus: 
+redirects:
+  - /post/2009/01/29/Lightbox-for-YouTube-Videos.aspx
+  - /lightbox-for-youtube-videos/
+  - /demos/video-lightbox.html
+disqus:
   url: http://chadly.net/2009/01/lightbox-for-youtube-videos/
 jQueryNoConflict: true
 ---

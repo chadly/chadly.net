@@ -4,6 +4,9 @@ author: chad
 date: 2009-01-25
 template: post.html
 nav: blog
+redirects:
+  - /post/2009/01/25/Hello-Universe.aspx
+  - /hello-universe/
 disqus: 
   url: http://chadly.net/2009/01/hello-universe/
 ---

@@ -4,7 +4,10 @@ author: chad
 date: 2009-03-14
 template: post.html
 nav: blog
-disqus: 
+redirects:
+  - /post/2009/03/14/AspNet-MVC-and-Sealed-Classes.aspx
+  - /asp-net-mvc-and-sealed-classes/
+disqus:
   url: http://chadly.net/2009/03/asp-net-mvc-and-sealed-classes/
 ---
 

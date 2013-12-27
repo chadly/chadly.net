@@ -4,6 +4,9 @@ author: chad
 date: 2009-08-26
 template: post.html
 nav: blog
+redirects:
+  - /post/2009/08/26/The-Many-Pitfalls-of-NHibernateLinq.aspx
+  - /the-many-pitfalls-of-nhibernate-linq/
 disqus: 
   url: http://chadly.net/2009/08/the-many-pitfalls-of-nhibernate-linq/
 ---

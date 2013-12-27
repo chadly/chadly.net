@@ -4,6 +4,9 @@ author: chad
 date: 2009-07-27
 template: post.html
 nav: blog
+redirects:
+  - /post/2009/07/27/NHibernateLinq-10-is-out-and-about.aspx
+  - /nhibernate-linq-1-0-is-out-and-about/
 disqus: 
   url: http://chadly.net/2009/07/nhibernate-linq-1-0-is-out-and-about/
 ---
