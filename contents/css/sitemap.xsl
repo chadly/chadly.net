@@ -48,7 +48,7 @@
 				<h1>XML Sitemap</h1>
 				<div id="intro">
 					<p>
-						This is a XML Sitemap which should be processed by search engines like <a href="http://www.google.com/">Google</a>, <a href="http://search.msn.com/">MSN Search</a> and <a href="http://www.yahoo.com/">Yahoo</a>.<br/>
+						This is a XML Sitemap which should be processed by search engines.<br/>
 						You can find more information about XML sitemaps on <a href="http://sitemaps.org/">sitemaps.org</a>.
 					</p>
 				</div>
