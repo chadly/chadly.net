@@ -30,12 +30,13 @@ img.side {
 	margin: 0.5em 0;
 
 	time {
-		width: 7em;
-		display: inline-block;
+		float: left;
 		.text-muted;
 	}
 
 	a {
+		margin-left: 7em;
+		display: block;
 		text-decoration: none;
 		color: @text-color;
 
@@ -104,6 +105,11 @@ img.side {
 
 		time {
 			display: block;
+			float: none;
+		}
+
+		a {
+			margin: 0;
 		}
 	}
 }
