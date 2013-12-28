@@ -66,6 +66,13 @@ nav.site {
 	}
 }
 
+@media screen and (max-width: @screen-xs-max) {
+	nav.site {
+		//back to normal size once nav is collapsed
+		font-size: @font-size-base;
+	}
+}
+
 main.site {
 	&:extend(.container all);
 }
