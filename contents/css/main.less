@@ -3,9 +3,12 @@
 @import "../vendor/bootswatch/variables.less";
 @import "../vendor/bootswatch/bootswatch.less";
 
-@import "overrides.less";
+//override container sizes to be narrower
+@container-tablet:             ((600px + @grid-gutter-width));
+@container-desktop:            ((700px + @grid-gutter-width));
+@container-large-desktop:      ((800px + @grid-gutter-width));
+
 @import "layout.less";
 @import "content.less";
 @import "code.less";
-@import "resume.less";
 @import "projects.less";

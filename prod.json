@@ -17,7 +17,6 @@
   "ignore": [
 	"vendor/**/*.less",
 	"css/content.less",
-	"css/resume.less",
 	"css/code.less",
 	"css/layout.less",
 	"css/overrides.less",
