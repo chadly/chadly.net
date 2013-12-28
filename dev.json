@@ -14,7 +14,6 @@
 	"css/content.less",
 	"css/code.less",
 	"css/layout.less",
-	"css/overrides.less",
 	"css/projects.less"
   ],
   "require": {
