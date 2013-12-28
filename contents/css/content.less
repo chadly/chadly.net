@@ -34,18 +34,21 @@ img.side {
 		.text-muted;
 	}
 
-	a {
+	.post-title {
 		margin-left: 7em;
 		display: block;
-		text-decoration: none;
-		color: @text-color;
 
-		&:hover {
-			color: @link-hover-color;
+		a {
+			text-decoration: none;
+			color: @text-color;
+
+			&:hover {
+				color: @link-hover-color;
+			}
 		}
 	}
 
-	.post-comment-count {
+	a.post-comment-count {
 		.text-muted;
 		font-size: @font-size-extra-small;
 
@@ -108,7 +111,7 @@ img.side {
 			float: none;
 		}
 
-		a {
+		.post-title {
 			margin: 0;
 		}
 	}

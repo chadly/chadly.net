@@ -10,12 +10,15 @@
 	{{#posts contents}}
 	<article class="post-stub">
 		<time datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMM YYYY"}}</time>
-		<a href="{{url}}">{{title}}</a>
-		{{#if ../disqus}}
-		{{#if metadata.disqus}}
-		<a href="{{../../../url}}{{url}}#disqus_thread" class="post-comment-count" title="Comments" {{#if metadata.disqus.identifier}} data-disqus-identifier="{{metadata.disqus.identifier}}" {{/if}}></a>
-		{{/if}}
-		{{/if}}
+		<div class="post-title">
+			<a href="{{url}}">{{title}}</a>
+
+			{{#if ../disqus}}
+			{{#if metadata.disqus}}
+			<a href="{{../../../url}}{{url}}#disqus_thread" class="post-comment-count" title="Comments" {{#if metadata.disqus.identifier}} data-disqus-identifier="{{metadata.disqus.identifier}}" {{/if}}></a>
+			{{/if}}
+			{{/if}}
+		</div>
 	</article>
 	{{/posts}}
 </section>
