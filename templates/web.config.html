@@ -6,29 +6,30 @@
 
 		<rewrite>
 			<rules>
-				<rule name="Redirect from www subdomain">
-					<match url=".*"/>
-					<conditions logicalGrouping="MatchAny">
-						<add input="{HTTP_HOST}" pattern="^(www\.)(.*)$"/>
-					</conditions>
-					<action type="Redirect" url="{{url}}/{R:0}" redirectType="Permanent"/>
-				</rule>
-
-				<rule name="Redirect from azure alias">
-					<match url=".*"/>
-					<conditions logicalGrouping="MatchAny">
-						<add input="{HTTP_HOST}" pattern="^chadlynet.azurewebsites.net$"/>
-					</conditions>
-					<action type="Redirect" url="{{url}}/{R:0}" redirectType="Permanent"/>
-				</rule>
-
-				<rule name="Redirect from resume subdomain">
-					<match url=".*"/>
-					<conditions logicalGrouping="MatchAny">
-						<add input="{HTTP_HOST}" pattern="^resume.chadly.net$"/>
+				<rule name="Redirect from resume subdomain" patternSyntax="Wildcard">
+					<match url="*"/>
+					<conditions>
+						<add input="{HTTP_HOST}" pattern="resume.{{domain url}}"/>
 					</conditions>
 					<action type="Redirect" url="{{url}}/resume/" redirectType="Permanent"/>
 				</rule>
+
+				<rule name="Canonical Host Name" patternSyntax="Wildcard">
+					<match url="*" />
+					<conditions>
+						<add input="{HTTP_HOST}" pattern="{{domain url}}" negate="true" />
+					</conditions>
+					<action type="Redirect" url="{{url}}/{R:1}" redirectType="Permanent" />
+				</rule>
+
+				{{#posts contents}}
+				{{#each metadata.redirects}}
+				<rule name="old-posts-{{slugify ../this}}-{{@index}}">
+					<match url="^{{unslash this}}" />
+					<action type="Redirect" url="{{unslash ../url}}" redirectType="Permanent" />
+				</rule>
+				{{/each}}
+				{{/posts}}
 
 				<rule name="Add trailing slash">
 					<match url="(.*[^/])$" />
@@ -41,24 +42,20 @@
 					<action type="Redirect" redirectType="Permanent" url="{R:1}/" />
 				</rule>
 
+				<rule name="Convert to lower case">
+					<match url=".*[A-Z].*" ignoreCase="false" />
+					<action type="Redirect" url="{ToLower:{R:0}}" redirectType="Permanent" />
+				</rule>
+
 				<rule name="old_rss">
-					<match url="^rss/"/>
+					<match url="^rss/" />
 					<action type="Redirect" url="feed.xml" redirectType="Permanent"/>
 				</rule>
 
 				<rule name="old_paged_content">
 					<match url="^page/"/>
-					<action type="Redirect" url="/" appendQueryString="false" redirectType="Permanent"/>
+					<action type="Redirect" url="/" appendQueryString="false" redirectType="Permanent" />
 				</rule>
-
-				{{#posts contents}}
-				{{#each metadata.redirects}}
-				<rule name="old-posts-{{slugify ../this}}-{{@index}}">
-					<match url="^{{unslash this}}" />
-					<action type="Redirect" url="{{unslash ../url}}" redirectType="Permanent" />
-				</rule>
-				{{/each}}
-				{{/posts}}
 			</rules>
 		</rewrite>
 	</system.webServer>
