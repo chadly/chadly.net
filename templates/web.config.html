@@ -42,11 +42,6 @@
 					<action type="Redirect" redirectType="Permanent" url="{R:1}/" />
 				</rule>
 
-				<rule name="Convert to lower case">
-					<match url=".*[A-Z].*" ignoreCase="false" />
-					<action type="Redirect" url="{ToLower:{R:0}}" redirectType="Permanent" />
-				</rule>
-
 				<rule name="old_rss">
 					<match url="^rss/" />
 					<action type="Redirect" url="feed.xml" redirectType="Permanent"/>
@@ -55,6 +50,11 @@
 				<rule name="old_paged_content">
 					<match url="^page/"/>
 					<action type="Redirect" url="/" appendQueryString="false" redirectType="Permanent" />
+				</rule>
+
+				<rule name="Convert to lower case">
+					<match url=".*[A-Z].*" ignoreCase="false" />
+					<action type="Redirect" url="{ToLower:{R:0}}" redirectType="Permanent" />
 				</rule>
 			</rules>
 		</rewrite>
