@@ -17,7 +17,7 @@ Why, yes, Random Internet Person, I was. Please allow me to explain before inter
 
 ###Static Site Generator > Ghost?
 
-Ghost's user experience was the major reason it had such an impact on me. It really does have the nicest writing experience on the web. But when it comes down to it, I guess I found the whole idea of a blog engine in general to be restricing. As a web developer, I want to be able to easily work with pages and HTML and not necessarily be limited by a blog format. In the end, the major thing I really liked about Ghost was the fact that I could write posts in Markdown instead of some horrible WYSIWYG editor.
+Ghost's user experience was the major reason it had such an impact on me. It really does have the nicest writing experience on the web. But when it comes down to it, I guess I found the whole idea of a blog engine in general to be restricting. As a web developer, I want to be able to easily work with pages and HTML and not necessarily be limited by a blog format. In the end, the major thing I really liked about Ghost was the fact that I could write posts in Markdown instead of some horrible WYSIWYG editor.
 
 ###Enter Wintersmith
 
