@@ -2,7 +2,7 @@
 title: Automate All the Things with Wercker
 author: chad
 date: 2013-12-18
-template: post.html
+template: post.hbs
 nav: blog
 disqus: 
   identifier: /2013/12/automate-all-the-things-with-wercker

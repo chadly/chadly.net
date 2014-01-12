@@ -2,7 +2,7 @@
 title: Asp.Net MVC and Sealed Classes
 author: chad
 date: 2009-03-14
-template: post.html
+template: post.hbs
 nav: blog
 redirects:
   - /post/2009/03/14/AspNet-MVC-and-Sealed-Classes.aspx

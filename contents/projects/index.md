@@ -1,6 +1,6 @@
 ---
 title: Projects
-template: projects.html
+template: projects.hbs
 nav: projects
 ---
 

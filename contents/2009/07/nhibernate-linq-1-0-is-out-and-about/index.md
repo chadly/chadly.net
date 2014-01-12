@@ -2,7 +2,7 @@
 title: NHibernate.Linq 1.0 is out and about!
 author: chad
 date: 2009-07-27
-template: post.html
+template: post.hbs
 nav: blog
 redirects:
   - /post/2009/07/27/NHibernateLinq-10-is-out-and-about.aspx

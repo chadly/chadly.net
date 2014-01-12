@@ -2,7 +2,7 @@
 title: BDD with xUnit.net
 author: chad
 date: 2009-04-20
-template: post.html
+template: post.hbs
 nav: blog
 redirects:
   - /post/2009/04/20/BDD-with-xUnit.aspx

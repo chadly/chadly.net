@@ -2,7 +2,7 @@
 title: What you get with Git
 author: chad
 date: 2012-08-28
-template: post.html
+template: post.hbs
 nav: blog
 redirects:
   - /2012/08/the-wonderful-world-of-git/

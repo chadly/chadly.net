@@ -2,7 +2,7 @@
 title: Developing with Passion
 author: chad
 date: 2009-03-09
-template: post.html
+template: post.hbs
 nav: blog
 redirects:
   - /post/2009/03/29/Developing-with-Passion.aspx

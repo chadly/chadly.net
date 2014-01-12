@@ -2,7 +2,7 @@
 title: Creating NHibernate Linq Query from Criteria
 author: chad
 date: 2009-10-30
-template: post.html
+template: post.hbs
 nav: blog
 redirects:
   - /post/2009/10/30/Creating-NHibernate-Linq-Query-from-arbitrary-Criteria.aspx

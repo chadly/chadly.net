@@ -1,5 +1,5 @@
 {
-  "template": "resume.html",
+  "template": "resume.hbs",
   "title": "Senior Full Stack Developer",
   "nav": "resume"
 }

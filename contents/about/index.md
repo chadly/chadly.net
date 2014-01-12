@@ -1,7 +1,7 @@
 ---
 title: About Me
 author: chad
-template: page.html
+template: page.hbs
 nav: about
 ---
 

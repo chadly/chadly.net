@@ -2,7 +2,7 @@
 title: It's Tough Times Out There
 author: chad
 date: 2009-03-09
-template: post.html
+template: post.hbs
 nav: blog
 redirects:
   - /post/2009/03/09/Its-Tough-Times-Out-There.aspx

@@ -2,7 +2,7 @@
 title: Handle MonoRail 404s gracefully
 author: chad
 date: 2009-03-10
-template: post.html
+template: post.hbs
 nav: blog
 redirects:
   - /post/2009/03/10/Custom-MonorailHttpHandlerFactory-to-handle-404s-gracefully.aspx

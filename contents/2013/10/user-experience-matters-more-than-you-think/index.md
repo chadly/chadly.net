@@ -2,7 +2,7 @@
 title: User experience matters more than you think
 author: chad
 date: 2013-10-18
-template: post.html
+template: post.hbs
 nav: blog
 redirects:
   - /user-experience-matters-more-than-you-think/

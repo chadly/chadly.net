@@ -2,7 +2,7 @@
 title: Geocoding.net v3 Released
 author: chad
 date: 2013-12-27
-template: post.html
+template: post.hbs
 nav: blog
 disqus: 
   identifier: /2013/12/geocoding-v3

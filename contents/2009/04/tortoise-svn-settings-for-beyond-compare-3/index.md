@@ -2,7 +2,7 @@
 title: Tortoise SVN Settings for Beyond Compare 3
 author: chad
 date: 2009-04-13
-template: post.html
+template: post.hbs
 nav: blog
 redirects:
   - /post/2009/04/13/Tortoise-SVN-Settings-for-Beyond-Compare-3.aspx

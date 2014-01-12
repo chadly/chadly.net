@@ -2,7 +2,7 @@
 title: The Many Pitfalls of NHibernate.Linq
 author: chad
 date: 2009-08-26
-template: post.html
+template: post.hbs
 nav: blog
 redirects:
   - /post/2009/08/26/The-Many-Pitfalls-of-NHibernateLinq.aspx

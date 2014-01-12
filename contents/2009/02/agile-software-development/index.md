@@ -2,7 +2,7 @@
 title: Agile Software Development
 author: chad
 date: 2009-02-01
-template: post.html
+template: post.hbs
 nav: blog
 redirects:
   - /post/2009/02/01/Agile-Software-Development-from-a-Business-Perspective.aspx

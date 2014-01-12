@@ -2,7 +2,7 @@
 title: We make shitty software (and so do you!)
 author: chad
 date: 2009-07-09
-template: post.html
+template: post.hbs
 nav: blog
 redirects:
   - /post/2009/07/09/we-make-shitty-software-and-so-do-you.aspx

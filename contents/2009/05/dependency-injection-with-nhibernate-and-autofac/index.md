@@ -2,7 +2,7 @@
 title: Dependency Injection with NHibernate and Autofac
 author: chad
 date: 2009-05-28
-template: post.html
+template: post.hbs
 nav: blog
 redirects:
   - /post/2009/05/28/Dependency-Injection-with-NHibernate-and-Autofac.aspx

@@ -2,7 +2,7 @@
 title: Lightbox for YouTube Videos
 author: chad
 date: 2009-01-29
-template: post.html
+template: post.hbs
 nav: blog
 redirects:
   - /post/2009/01/29/Lightbox-for-YouTube-Videos.aspx

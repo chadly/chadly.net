@@ -2,7 +2,7 @@
 title: A Poor Man's Transclude in Knockout.js
 author: chad
 date: 2013-12-13
-template: post.html
+template: post.hbs
 nav: blog
 redirects:
   - /a-poor-mans-transclude-in-knockout-js/
