@@ -5,7 +5,7 @@ template: page.hbs
 nav: about
 ---
 
-Hello gentle internet traveller. I am Chad -- a software developer based out of New Orleans.
+Hello, gentle internet traveller. I am Chad -- a software developer based out of New Orleans.
 
 I am currently working on creating efficient web frameworks and user experiences at [Archon Information Systems](http://archoninfosys.com/). In my spare time, I often contribute to the [open source community](https://github.com/chadly).
 
