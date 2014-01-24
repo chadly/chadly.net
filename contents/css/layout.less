@@ -1,5 +1,5 @@
 @header-color: #f8f8f9;
-@footer-height: 48px;
+@footer-height: 41px;
 
 //increase font size
 @font-size-base: 18px;
@@ -65,25 +65,6 @@ nav.site {
 	}
 }
 
-@media screen and (max-width: @screen-md-max) {
-	nav.site {
-		font-size: @font-size-small;
-	}
-}
-
-@media screen and (max-width: @screen-sm-max) {
-	nav.site {
-		font-size: @font-size-extra-small;
-	}
-}
-
-@media screen and (max-width: @screen-xs-max) {
-	nav.site {
-		//back to normal size once nav is collapsed
-		font-size: @font-size-base;
-	}
-}
-
 main.site {
 	&:extend(.container all);
 }
@@ -93,7 +74,7 @@ footer.site {
 	min-height: @footer-height;
 	background-color: @gray-darker;
 	.text-muted();
-	font-size: @font-size-extra-small;
+	font-size: @font-size-small;
 	text-align: center;
 
 	section {
