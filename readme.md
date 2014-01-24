@@ -32,7 +32,7 @@ and copy the contents of `/build` to your provider. The `dist` task uses `prod.j
 
 ##License
 
-All `.md` files (post contents) are Copyright &copy; William Chad Lee and should not be reused without my permission. Everything else is MIT Licensed.
+All `.md` files (post contents) are licensed under [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-nc-sa/4.0/deed.en_US). Everything else is MIT Licensed.
 
 ####The MIT License (MIT)
 
