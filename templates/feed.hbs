@@ -1,21 +1,27 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>{{name}}</title>
-    <atom:link href="{{url}}/feed.xml" rel="self" type="application/rss+xml"></atom:link>
-    <link>{{url}}</link>
-    <description>{{description}}</description>
-    <generator>Wintersmith - https://github.com/jnordberg/wintersmith</generator>
-    <language>en</language>
-    {{#posts contents}}
-        <item>
-            <title>{{title}}</title>
-            <link>{{../url}}{{url}}</link>
-            <guid isPermaLink="true">{{../url}}{{url}}</guid>
-            <pubDate>{{date format='ddd, DD MMM YYYY HH:mm:ss ZZ'}}</pubDate>
-            <author>{{#author ../contents metadata.author}}{{metadata.email}} ({{metadata.name}}){{/author}}</author>
-            <description>{{html}}</description>
-        </item>
-    {{/posts}}
-</channel>
-</rss>
+<feed xmlns="http://www.w3.org/2005/Atom">
+	<title>{{name}}</title>
+	<subtitle>{{description}}</subtitle>
+	<link href="{{url}}/feed.xml" rel="self" />
+	<link href="{{url}}" />
+	<id>urn:uuid:{{id}}</id>
+	<updated>{{date format="YYYY-MM-DDTHH:mm:ssZ"}}</updated>
+
+	{{#posts contents}}
+	<entry>
+		<title>{{title}}</title>
+		<link href="{{../url}}{{url}}" />
+		<id>urn:uuid:{{id}}</id>
+		<updated>{{date format="YYYY-MM-DDTHH:mm:ssZ"}}</updated>
+		<author>
+			{{#author ../contents metadata.author}}
+			<name>{{metadata.name}}</name>
+			{{#if metadata.email}}
+			<email>{{metadata.email}}</email>
+			{{/if}}
+			{{/author}}
+		</author>
+		<summary>{{html}}</summary>
+	</entry>
+	{{/posts}}
+</feed>
