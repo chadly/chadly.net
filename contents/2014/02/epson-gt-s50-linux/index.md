@@ -1,4 +1,5 @@
 ---
+id: 10939e77-9455-414f-8fa2-31a22f9c4395
 title: Epson GT-S50 on Linux Mint
 author: chad
 date: 2014-02-02

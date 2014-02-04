@@ -1,4 +1,5 @@
 ---
+id: f78cf830-29af-41a0-817c-ecd2fd4126f6
 title: NHibernate.Linq 1.0 is out and about!
 author: chad
 date: 2009-07-27

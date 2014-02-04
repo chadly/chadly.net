@@ -1,4 +1,5 @@
 ---
+id: af60e945-99b0-4990-8637-d165e9c3a917
 title: Asp.Net MVC and Sealed Classes
 author: chad
 date: 2009-03-14

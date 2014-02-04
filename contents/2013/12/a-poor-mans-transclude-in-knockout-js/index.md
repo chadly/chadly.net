@@ -1,4 +1,5 @@
 ---
+id: ab5f0948-e244-48a3-b4e3-c0f379072792
 title: A Poor Man's Transclude in Knockout.js
 author: chad
 date: 2013-12-13

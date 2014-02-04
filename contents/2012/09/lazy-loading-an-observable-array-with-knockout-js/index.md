@@ -1,4 +1,5 @@
 ---
+id: 4d74eedf-49c4-43ce-9d57-5c845944761e
 title: Lazy Loading an Observable Array with Knockout JS
 author: chad
 date: 2012-09-12
