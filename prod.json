@@ -4,6 +4,9 @@
     "url": "http://chadly.net",
     "name": "Chad Lee",
     "description": "Software Developer. Sometimes I write stuff.",
+    "author": {
+      "name": "Chad Lee"
+	},
     "disqus": "chadlynet",
 	"analytics": {
 		"id": "UA-636144-7",

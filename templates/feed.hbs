@@ -14,12 +14,10 @@
 		<id>urn:uuid:{{metadata.id}}</id>
 		<updated>{{date format="YYYY-MM-DDTHH:mm:ssZ"}}</updated>
 		<author>
-			{{#author ../contents metadata.author}}
-			<name>{{metadata.name}}</name>
-			{{#if metadata.email}}
-			<email>{{metadata.email}}</email>
+			<name>{{../author.name}}</name>
+			{{#if ../author.email}}
+			<email>{{../../author.email}}</email>
 			{{/if}}
-			{{/author}}
 		</author>
 		<summary type="html">
 			{{html}}
