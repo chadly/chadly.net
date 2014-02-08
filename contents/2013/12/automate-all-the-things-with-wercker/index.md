@@ -61,7 +61,7 @@ Luke Vivier has a [nice guide](http://luke.vivier.ca/wintersmith-with-wercker/) 
 
 ###Why not Github Pages?
 
-This site has been through a number of frameworks -- [BlogEngine.net](http://www.dotnetblogengine.net/), [Wordpress](http://wordpress.org/), [Ghost](https://ghost.org/), and now [Wintersmith](http://wintersmith.io/). I have a lot of old "permanent" links that have changed and that I maintain `301 redirects` for. Github Pages doesn't support redirects without some not-so-nice hacks.
+This site has been through a number of frameworks -- [BlogEngine.net](http://www.dotnetblogengine.net/), [Wordpress](http://wordpress.org/), [Ghost](https://ghost.org/), and now [Wintersmith](http://wintersmith.io/). I have a lot of old "permanent" links that have changed and that I maintain `301` redirects for. Github Pages doesn't support redirects without some not-so-nice hacks.
 
 ###My Wercker Setup
 
