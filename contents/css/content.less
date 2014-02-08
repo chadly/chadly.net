@@ -4,26 +4,22 @@
 	border-bottom: solid 1px @hr-border;
 }
 
-img.frame {
-	border-radius: 50%;
-}
-
-img.side {
-	.pull-left;
-	display: block;
-	margin: 0 15px 15px 0;
-}
-
 .bitcoin {
 	&:extend(.label all, .label-success all);
 }
 
 .page, .post {
-	p img {
+	img {
 		display: block;
 		margin: 0 auto;
 		max-width: 70%;
 		border-radius: 10px;
+	}
+	
+	img.side {
+		.pull-left;
+		display: block;
+		margin: 0 15px 15px 0;
 	}
 }
 

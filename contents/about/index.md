@@ -13,4 +13,4 @@ If you want to send me a message, you can always use [INTERNET MAIL](mailto:blog
 
 Or you could tweet me [@wchadly](https://twitter.com/wchadly) -- you know, like a bird.
 
-<img src="doge.jpg" alt="Doge" class="frame" title="much informative" />
+![Doge](doge.jpg "much informative")
