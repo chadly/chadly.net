@@ -1,16 +1,16 @@
 {{> header}}
 
-<article class="post">
+<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 	{{#with page}}
 	<header>
-		<h2>{{title}}</h2>
-		<time datetime="{{date format='YYYY-MM-DD'}}">
+		<h2 itemprop="name headline">{{title}}</h2>
+		<time datetime="{{date format='YYYY-MM-DD'}}" itemprop="datePublished">
 			<i class="fa fa-calendar"></i>
 			{{date format='MMMM DD, YYYY'}}
 		</time>
 	</header>
 
-	<section class="post-content">
+	<section class="post-content" itemprop="articleBody">
 		{{{html}}}
 	</section>
 	{{/with}}

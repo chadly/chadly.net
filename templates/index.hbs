@@ -4,14 +4,14 @@
 	{{{contents.[intro.md].html}}}
 </section>
 
-<section class="post-list">
+<section class="post-list" itemscope itemtype="http://schema.org/Blog">
 	<h4>Read Stuff</h4>
 
 	{{#posts contents}}
-	<article class="post-stub">
-		<time datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMM YYYY"}}</time>
+	<article class="post-stub" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+		<time datetime="{{date format='YYYY-MM-DD'}}" itemprop="datePublished">{{date format="DD MMM YYYY"}}</time>
 		<div class="post-title">
-			<a href="{{url}}">{{title}}</a>
+			<a href="{{url}}" itemprop="url"><span itemprop="name headline">{{title}}</span></a>
 
 			{{#if ../disqus}}
 			{{#if metadata.disqus}}
