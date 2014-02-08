@@ -5,7 +5,8 @@
     "name": "Chad Lee",
     "description": "Software Developer. Sometimes I write stuff.",
     "author": {
-      "name": "Chad Lee"
+      "name": "Chad Lee",
+      "link": "https://plus.google.com/+ChadLee"
 	}
   },
   "plugins": [
