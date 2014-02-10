@@ -72,7 +72,7 @@ When it comes to resistance training, [less really is more](http://www.muscleand
 
 ###Get More Sleep
 
-All this physical activity means your body needs time to repair itself. Not only is sleep important to your physical health, but -- this may seem obvious -- it is enourmously important for your emotional and mental well-being as well. [New studies](http://www.nih.gov/researchmatters/october2013/10282013clear.htm) are coming out all the time showing how important sleep is to all areas of our lives.
+All this physical activity means your body needs time to repair itself. Not only is sleep important to your physical health, but -- this may seem obvious -- it is enormously important for your emotional and mental well-being as well. [New studies](http://www.nih.gov/researchmatters/october2013/10282013clear.htm) are coming out all the time showing how important sleep is to all areas of our lives.
 
 If you are [trying to lose weight](http://www.webmd.com/diet/features/lose-weight-while-sleeping) or [make a big decision](http://edition.cnn.com/2012/08/27/business/unconscious-mind-sleep-decision/) or really do _anything_, you need to get enough sleep. Seriously, this is probably the easiest thing to do that will bring [enormous benefits](http://newsinhealth.nih.gov/issue/apr2013/feature1). Get yourself a [good sleep routine](http://www.helpguide.org/life/sleep_tips.htm) and go comatose for 8-10 hours.
 
