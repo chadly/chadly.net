@@ -14,9 +14,7 @@
 			<a href="{{url}}" itemprop="name headline url">{{title}}</a>
 
 			{{#if ../disqus}}
-			{{#if metadata.disqus}}
-			<a href="{{../../../url}}{{url}}#disqus_thread" class="post-comment-count" title="Comments" {{#if metadata.disqus.identifier}} data-disqus-identifier="{{metadata.disqus.identifier}}" {{/if}}></a>
-			{{/if}}
+			<a href="{{../../../url}}{{url}}#disqus_thread" class="post-comment-count" title="Comments" {{#if metadata.disqus}} {{#if metadata.disqus.identifier}} data-disqus-identifier="{{metadata.disqus.identifier}}" {{/if}} {{else}} data-disqus-identifier="{{metadata.id}}" {{/if}}></a>
 			{{/if}}
 		</div>
 	</article>
