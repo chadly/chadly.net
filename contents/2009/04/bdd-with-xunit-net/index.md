@@ -1,7 +1,6 @@
 ---
 id: ee59cdde-0660-4ed7-875b-9d8b57b71ba1
 title: BDD with xUnit.net
-author: chad
 date: 2009-04-20
 template: post.hbs
 nav: blog

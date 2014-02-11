@@ -1,7 +1,6 @@
 ---
 id: 40f60499-f462-4bd2-958b-d8151bd07dcd
 title: Agile Software Development
-author: chad
 date: 2009-02-01
 template: post.hbs
 nav: blog

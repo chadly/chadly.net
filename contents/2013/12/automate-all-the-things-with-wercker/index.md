@@ -1,7 +1,6 @@
 ---
 id: afe08f26-06fc-46ff-a7fe-3f381f30e0ea
 title: Automate All the Things with Wercker
-author: chad
 date: 2013-12-18
 template: post.hbs
 nav: blog

@@ -1,6 +1,5 @@
 ---
 title: About Me
-author: chad
 template: page.hbs
 nav: about
 ---

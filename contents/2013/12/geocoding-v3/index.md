@@ -1,7 +1,6 @@
 ---
 id: 5a50c63f-f3ee-4a42-a34d-54d71baca567
 title: Geocoding.net v3 Released
-author: chad
 date: 2013-12-27
 template: post.hbs
 nav: blog

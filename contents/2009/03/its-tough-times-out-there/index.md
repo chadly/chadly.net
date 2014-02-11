@@ -1,7 +1,6 @@
 ---
 id: 2e212bd9-cdf3-48d4-8e05-9c8e6fabf286
 title: It's Tough Times Out There
-author: chad
 date: 2009-03-09
 template: post.hbs
 nav: blog

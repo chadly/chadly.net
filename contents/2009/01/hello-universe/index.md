@@ -1,7 +1,6 @@
 ---
 id: e6c920ca-8912-44f9-8235-5dfa07f86bd7
 title: Hello Universe
-author: chad
 date: 2009-01-25
 template: post.hbs
 nav: blog

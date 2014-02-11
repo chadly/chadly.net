@@ -1,7 +1,6 @@
 ---
 id: 06e7f186-fe7a-4d32-be34-68829f4c1278
 title: We make shitty software (and so do you!)
-author: chad
 date: 2009-07-09
 template: post.hbs
 nav: blog

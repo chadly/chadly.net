@@ -1,7 +1,6 @@
 ---
 id: 794c200f-46e8-456e-834a-c2242174da75
 title: Lightbox for YouTube Videos
-author: chad
 date: 2009-01-29
 template: post.hbs
 nav: blog

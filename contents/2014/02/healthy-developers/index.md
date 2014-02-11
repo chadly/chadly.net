@@ -1,7 +1,6 @@
 ---
 id: 6520f534-8538-461b-87cc-15de4ca9fc60
 title: A Good Developer is a Healthy Developer
-author: chad
 date: 2014-02-10
 template: post.hbs
 nav: blog
