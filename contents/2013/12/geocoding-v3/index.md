@@ -4,8 +4,6 @@ title: Geocoding.net v3 Released
 date: 2013-12-27
 template: post.hbs
 nav: blog
-disqus: 
-  identifier: /2013/12/geocoding-v3
 ---
 
 I decided to give my oft-neglected little project, [Geocoding.net](https://github.com/chadly/geocoding.net), some love the past couple of days since I have some time off from work.

@@ -6,8 +6,6 @@ template: post.hbs
 nav: blog
 redirects:
   - /a-poor-mans-transclude-in-knockout-js/
-disqus:
-  url: http://chadly.net/2013/12/a-poor-mans-transclude-in-knockout-js/
 ---
 
 If you've ever used [angular.js](http://angularjs.org/), you might have come across the transclude feature. From the [angular.js docs](http://docs.angularjs.org/guide/directive#creating-custom-directives_demo_creating-a-directive-that-wraps-other-elements):

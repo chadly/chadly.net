@@ -4,8 +4,6 @@ title: Epson GT-S50 on Linux Mint
 date: 2014-02-02
 template: post.hbs
 nav: blog
-disqus: 
-  identifier: /2014/02/epson-gt-s50-linux
 ---
 
 [This thread](http://ubuntuforums.org/showthread.php?t=2105342) helped me out the most when I was trying to get this working. I've outlined the steps below.

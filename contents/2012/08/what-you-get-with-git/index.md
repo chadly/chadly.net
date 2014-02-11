@@ -7,8 +7,6 @@ nav: blog
 redirects:
   - /2012/08/the-wonderful-world-of-git/
   - /what-you-get-with-git/
-disqus:
-  url: http://chadly.net/2012/08/what-you-get-with-git/
 ---
 
 I recently broke down and decided to try and use Git for something. Practically every open source project I use has now moved to [GitHub](https://github.com/) and it was becoming hard to submit patches (or pull requests or whatever) without having a Git client on my machine.
