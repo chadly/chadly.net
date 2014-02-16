@@ -1,0 +1,1 @@
+An expert software engineer specializing in behavior-driven development with a strong background in object-oriented design patterns and principles. Seeking to join a small team using Agile Development methodologies to produce high quality software utilizing modern technologies.
