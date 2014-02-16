@@ -24,7 +24,7 @@ tech:
   MS SQL Server:
 ---
 
-I mentor and coordinate with a small team of developers and QA to deliver web-based tax collection software to municipalities. Our public facing product is <a href="http://www.civicsource.com" target="_blank">CivicSource&reg; Auctioneer</a>, a website which facilitates auctions of delinquent taxes and property online. I came on board very early in the company's history and played a major role in architecting and building the software to its current state.
+I mentor and coordinate with a small team of developers and QA to deliver web-based tax collection software to municipalities. Our public facing product is [CivicSource&reg; Auctioneer](http://www.civicsource.com/), a website which facilitates auctions of delinquent taxes and property online. I came on board very early in the company's history and played a major role in architecting and building the software to its current state.
 
 Developing this software has provided many interesting technological challenges:
 
