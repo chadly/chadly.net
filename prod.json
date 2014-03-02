@@ -5,6 +5,7 @@
     "description": "Writings & projects by Chad Lee",
     "author": {
       "name": "Chad Lee",
+      "tagline": "Software Developer. Sometimes I write stuff.",
       "link": "https://plus.google.com/+ChadLee?rel=author"
 	},
     "disqus": "chadlynet",
