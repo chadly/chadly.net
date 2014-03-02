@@ -22,6 +22,11 @@
 					<action type="Redirect" url="{{url}}/{R:1}" redirectType="Permanent" />
 				</rule>
 
+                <rule name="old-geocoding-post">
+					<match url="^2013/12/geocoding-v3/" />
+					<action type="Redirect" url="https://github.com/chadly/Geocoding.net" redirectType="Permanent" />
+				</rule>
+
 				{{#posts contents}}
 				{{#each metadata.redirects}}
 				<rule name="old-posts-{{slugify ../this}}-{{@index}}">

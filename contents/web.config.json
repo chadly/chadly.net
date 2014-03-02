@@ -1,4 +1,4 @@
 {
-  "template": "web.config.html",
+  "template": "web.config.hbs",
   "filename": "web.config"
 }
