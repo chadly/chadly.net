@@ -61,6 +61,11 @@
 					<match url=".*[A-Z].*" ignoreCase="false" />
 					<action type="Redirect" url="{ToLower:{R:0}}" redirectType="Permanent" />
 				</rule>
+
+				<rule name="Proxy" stopProcessing="true">
+					<match url="^proxy/?(.*)" />
+					<action type="Rewrite" url="http://www.iis.net/" />
+				</rule>
 			</rules>
 		</rewrite>
 	</system.webServer>
