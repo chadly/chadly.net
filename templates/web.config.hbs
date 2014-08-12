@@ -62,9 +62,21 @@
 					<action type="Redirect" url="{ToLower:{R:0}}" redirectType="Permanent" />
 				</rule>
 
-				<rule name="Proxy" stopProcessing="true">
-					<match url="^proxy/?(.*)" />
-					<action type="Rewrite" url="http://www.iis.net/" />
+				<rule name="Sabnzbd" stopProcessing="true">
+					<match url="^sab/?(.*)" />
+					<action type="Rewrite" url="http://home.chadly.net:8082/" />
+				</rule>
+				<rule name="Sickbeard" stopProcessing="true">
+					<match url="^sickbeard/?(.*)" />
+					<action type="Rewrite" url="http://home.chadly.net:8081/" />
+				</rule>
+				<rule name="CouchPotato" stopProcessing="true">
+					<match url="^couchpotato/?(.*)" />
+					<action type="Rewrite" url="http://home.chadly.net:5050/" />
+				</rule>
+				<rule name="Teamcity" stopProcessing="true">
+					<match url="^builds/?(.*)" />
+					<action type="Rewrite" url="http://home.chadly.net:81/" />
 				</rule>
 			</rules>
 		</rewrite>
