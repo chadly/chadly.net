@@ -36,23 +36,6 @@
 				{{/each}}
 				{{/posts}}
 
-				<rule name="Sabnzbd" stopProcessing="true">
-					<match url="^sabnzbd/?(.*)" />
-					<action type="Rewrite" url="http://home.chadly.net:8082/sabnzbd/{R:1}" />
-				</rule>
-				<rule name="Sickbeard" stopProcessing="true">
-					<match url="^sickbeard/?(.*)" />
-					<action type="Rewrite" url="http://home.chadly.net:8081/{R:1}" />
-				</rule>
-				<rule name="CouchPotato" stopProcessing="true">
-					<match url="^couchpotato/?(.*)" />
-					<action type="Rewrite" url="http://home.chadly.net:5050/{R:1}" />
-				</rule>
-				<rule name="Teamcity" stopProcessing="true">
-					<match url="^builds/?(.*)" />
-					<action type="Rewrite" url="http://home.chadly.net:81/{R:1}" />
-				</rule>
-
 				<rule name="Add trailing slash">
 					<match url="(.*[^/])$" />
 					<conditions>
@@ -77,6 +60,23 @@
 				<rule name="Convert to lower case">
 					<match url=".*[A-Z].*" ignoreCase="false" />
 					<action type="Redirect" url="{ToLower:{R:0}}" redirectType="Permanent" />
+				</rule>
+
+				<rule name="Sabnzbd" stopProcessing="true">
+					<match url="^sabnzbd/?(.*)" />
+					<action type="Rewrite" url="http://home.chadly.net:8082/sabnzbd/{R:1}" />
+				</rule>
+				<rule name="Sickbeard" stopProcessing="true">
+					<match url="^sickbeard/?(.*)" />
+					<action type="Rewrite" url="http://home.chadly.net:8081/{R:1}" />
+				</rule>
+				<rule name="CouchPotato" stopProcessing="true">
+					<match url="^couchpotato/?(.*)" />
+					<action type="Rewrite" url="http://home.chadly.net:5050/{R:1}" />
+				</rule>
+				<rule name="Teamcity" stopProcessing="true">
+					<match url="^builds/?(.*)" />
+					<action type="Rewrite" url="http://home.chadly.net:81/{R:1}" />
 				</rule>
 			</rules>
 		</rewrite>
