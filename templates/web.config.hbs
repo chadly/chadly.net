@@ -65,9 +65,6 @@
 				<rule name="Sabnzbd" stopProcessing="true">
 					<match url="^sab/?(.*)" />
 					<action type="Rewrite" url="http://home.chadly.net:8082/" />
-					<serverVariables>
-						<set name="HTTP_ACCEPT_ENCODING" value="" />
-					</serverVariables>
 				</rule>
 				<rule name="Sickbeard" stopProcessing="true">
 					<match url="^sickbeard/?(.*)" />
@@ -81,26 +78,7 @@
 					<match url="^builds/?(.*)" />
 					<action type="Rewrite" url="http://home.chadly.net:81/" />
 				</rule>
-				<rule name="btsync-home" stopProcessing="true">
-					<match url="^btsync/?(.*)" />
-					<action type="Rewrite" url="http://home.chadly.net:8888/" />
-				</rule>
 			</rules>
-			<outboundRules>
-				<rule name="ReverseProxyOutboundRule1" preCondition="ResponseIsHtml1">
-					<match filterByTags="A, Area, Base, Form, Frame, Head, IFrame, Img, Input, Link, Script" pattern="^http(s)?://www.company1.com/(.*)" />
-					<action type="Rewrite" value="/company1/{R:2}" />
-				</rule>
-				<rule name="RewriteRelativePaths" preCondition="ResponseIsHtml1">
-					<match filterByTags="A, Area, Base, Form, Frame, Head, IFrame, Img, Input, Link, Script" pattern="^/(.*)" negate="false" />
-					<action type="Rewrite" value="/company1/{R:1}" />
-				</rule>
-				<preConditions>
-					<preCondition name="ResponseIsHtml1">
-						<add input="{RESPONSE_CONTENT_TYPE}" pattern="^text/html" />
-					</preCondition>
-				</preConditions>
-			</outboundRules>
 		</rewrite>
 	</system.webServer>
 </configuration>
