@@ -68,11 +68,11 @@
 				</rule>
 				<rule name="Sickbeard" stopProcessing="true">
 					<match url="^sickbeard/?(.*)" />
-					<action type="Rewrite" url="http://home.chadly.net:8081/{R:1}" />
+					<action type="Rewrite" url="http://home.chadly.net:8081/sickbeard/{R:1}" />
 				</rule>
 				<rule name="CouchPotato" stopProcessing="true">
 					<match url="^couchpotato/?(.*)" />
-					<action type="Rewrite" url="http://home.chadly.net:5050/{R:1}" />
+					<action type="Rewrite" url="http://home.chadly.net:5050/couchpotato/{R:1}" />
 				</rule>
 				<rule name="Teamcity" stopProcessing="true">
 					<match url="^builds/?(.*)" />
