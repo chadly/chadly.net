@@ -37,7 +37,7 @@
 				</rule>
 				<rule name="Teamcity" stopProcessing="true">
 					<match url="^builds/?(.*)" />
-					<action type="Rewrite" url="http://home.chadly.net:81/{R:1}" />
+					<action type="Rewrite" url="http://home.chadly.net:81/builds/{R:1}" />
 				</rule>
 
 				<!-- post redirects -->
