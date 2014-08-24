@@ -1,4 +1,9 @@
 <configuration>
+	<system.web>
+		<customErrors mode="Off" />
+		<httpRuntime requestPathInvalidCharacters="" />
+	</system.web>
+
 	<system.webServer>
 		<httpErrors>
 			<error statusCode="404" path="errors\404.html" responseMode="File" />
