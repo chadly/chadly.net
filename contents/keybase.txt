@@ -1,0 +1,65 @@
+==================================================================
+https://keybase.io/chadly
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://chadly.net
+  * I am chadly (https://keybase.io/chadly) on keybase.
+  * I have a public key with fingerprint E59D 6FA2 0BCB 4279 4F84  B506 C500 220C A66D 67BB
+
+To claim this, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "fingerprint": "e59d6fa20bcb42794f84b506c500220ca66d67bb",
+            "host": "keybase.io",
+            "key_id": "c500220ca66d67bb",
+            "uid": "085071e05b63415f4b2eab994ee1cb00",
+            "username": "chadly"
+        },
+        "service": {
+            "hostname": "chadly.net",
+            "protocol": "http:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1411520035,
+    "expire_in": 157680000,
+    "prev": "e7acd1d8ec4e719621657f1d94ce0f72d99f959ccbdb543348063d155b605ae9",
+    "seqno": 5,
+    "tag": "signature"
+}
+
+with the aforementioned key, yielding the PGP signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v1.0.5
+Comment: https://keybase.io/crypto
+
+yMHgAnicbVFbSBRRGN5d03C9ZDcjUomRomyTM7Nz5rKmZUksZUIgWWGsczmjY+vM
+OjujK7JPRZDrFmqsbUgQSRhEUiZtRSClRZQoIlRvmiAiaUUJWULNSD0EnZfD+f7v
+8v/nH85Isjnt6yaH1+cUx3Ltr4cWDFsllp3fivGq2IJ5WrGzaPWSZKUWaQFNVnTM
+gyHIipTEEYAXeJKgWVJiSB4CSoAAEAQQOIoSKZrnMRdWpwYthWnDc0FUKKsmZj58
+smii/+EbqwXAQEDjCECecpM4lEieQBzPsiRCuMADYBGDSFO4BmTZ1HGivwULuzAT
+a5IFZHVsBf9TL1SQbuoCmqqrguo38TpdD3gsmd4SsHjNiPf9cfDxsiKaM5uCJqQF
+ZVXBPLjJFHTZssRJHIcEAG7owlAoIGvIJ1sMSFMMMI8Vg5qsn6I5QcRFBgkkonGW
+InAK0hIusqSAgEQTIstKLGQFgRd5SLrdJAMot4hDc3AAOcRi1kyNiop5zCSdqzUt
+g3KtwumGhrDws6HqNTa705aS7LC2ZnOmZv3dZfTJ2hWnsLM9079879eGej2WuH0t
+sjQZ6B7tn9lXdnF0bNZbUjB1Y//uK7NPu9pujcZfnTmWzvZfT3z6dqf1rr95xREX
+P0bG8ieqjhDGng/ZsbQq+9sk+WisqyH+9WDKQl7i6pzxWIInwxW7wgPtex8Ozs2X
+LBXXn5gqqjmv5qVHf8yroeVLFad91VvOTTsuZM2klpc2Pjf6vIcKqFmmq7M3mjPN
+jkcyiw7/XBy/WT+lXo6OJCpL2wq7a5KzOhx533tcLzqZd0vDwiDuH3AvLl4PHdAi
+QWffxKb45o6V7aFT5ZNVGb1vNo7MGfc/lzz48vK9d0f5tkd9+d7cHub4RFrZ1t8X
+BQ5s
+=QEe+
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/chadly
+
+==================================================================
