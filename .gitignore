@@ -4,3 +4,4 @@
 /contents/vendor
 *.sln
 *.suo
+npm-debug.log
