@@ -1,4 +1,4 @@
-# Personal Website [![wercker status](https://app.wercker.com/status/018ddf56a1d54931d571ffb853353b65 "wercker status")](https://app.wercker.com/project/bykey/018ddf56a1d54931d571ffb853353b65)
+# Personal Website
 
 Built with [Bootstrap](http://getbootstrap.com/) and [Wintersmith](https://github.com/jnordberg/wintersmith).
 
