@@ -37,7 +37,7 @@ git difftool 4e560^^ --dir-diff
 #4e560 is your commit hash that you want to show a whole directory-diff on in BC
 ```
 
-Beyond Compare [has a bug](http://theo.im/blog/2012/10/27/directory-comparison-for-git-difftool/) that is not fixed as of v3.3.10 where you need to employ this workaround. If you don't do it, `bcomp.exe` will exit too early, and no files will be available to diff while you are viewing the directory diff.
+Beyond Compare [has a bug](http://theo.im/blog/2012/10/27/directory-comparison-for-git-difftool/) that is not fixed as of v3.3.12 where you need to employ this workaround. If you don't do it, `bcomp.exe` will exit too early, and no files will be available to diff while you are viewing the directory diff.
 
 Hopefully, this will be fixed in BC4.
 
