@@ -7,11 +7,11 @@ module.exports = function (grunt) {
 				files: [{
 					expand: true,
 					cwd: "bower_components/bootstrap/less/",
-					src: ["*.less"],
+					src: ["**/*.less"],
 					dest: "contents/vendor/bootstrap/less/"
 				}, {
 					expand: true,
-					cwd: "bower_components/bootstrap/dist/fonts/",
+					cwd: "bower_components/bootstrap/fonts/",
 					src: ["*.*"],
 					dest: "contents/vendor/bootstrap/fonts/"
 				}]
