@@ -9,6 +9,16 @@
 			<error statusCode="404" path="errors\404.html" responseMode="File" />
 		</httpErrors>
 
+		<!-- teamcity nuget feed ends with .svc, tell IIS to ignore this extension -->
+		<handlers>
+			<remove name="svc-Integrated" />
+			<remove name="svc-ISAPI-2.0" />
+			<remove name="svc-ISAPI-4.0_64bit" />
+			<remove name="svc-ISAPI-4.0_32bit" />
+			<remove name="svc-Integrated-4.0" />
+			<remove name="svc-ISAPI-2.0-64" />
+		</handlers>
+
 		<rewrite>
 			<rules>
 				<rule name="Redirect from resume subdomain" patternSyntax="Wildcard">
