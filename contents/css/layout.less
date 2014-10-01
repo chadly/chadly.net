@@ -8,7 +8,6 @@ html,
 body {
 	height: 100%;
 	/* The html and body elements cannot have any padding or margin. */
-	background-image: url(snow.png);
 }
 
 /* Wrapper for page content to push down footer */
@@ -26,8 +25,7 @@ body {
 }
 
 header.site {
-	&:extend(.noise);
-	background-color: darken(@brand-primary, 10%);
+	background-color: lighten(@body-bg, 5%);
 
 	section {
 		&:extend(.container all);
@@ -66,9 +64,8 @@ main.site {
 }
 
 footer.site {
-	&:extend(.noise);
 	min-height: @footer-height;
-	background-color: @gray-darker;
+	background-color: lighten(@body-bg, 5%);
 	.text-muted();
 	font-size: @font-size-small;
 	text-align: center;
