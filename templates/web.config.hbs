@@ -1,23 +1,12 @@
 <configuration>
 	<system.web>
 		<customErrors mode="Off" />
-		<httpRuntime requestPathInvalidCharacters="" />
 	</system.web>
 
 	<system.webServer>
 		<httpErrors>
 			<error statusCode="404" path="errors\404.html" responseMode="File" />
 		</httpErrors>
-
-		<!-- teamcity nuget feed ends with .svc, tell IIS to ignore this extension -->
-		<handlers>
-			<remove name="svc-Integrated" />
-			<remove name="svc-ISAPI-2.0" />
-			<remove name="svc-ISAPI-4.0_64bit" />
-			<remove name="svc-ISAPI-4.0_32bit" />
-			<remove name="svc-Integrated-4.0" />
-			<remove name="svc-ISAPI-2.0-64" />
-		</handlers>
 
 		<rewrite>
 			<rules>
@@ -49,10 +38,6 @@
 				<rule name="CouchPotato" stopProcessing="true">
 					<match url="^couchpotato/?(.*)" />
 					<action type="Rewrite" url="http://home.chadly.net:5050/couchpotato/{R:1}" />
-				</rule>
-				<rule name="Teamcity" stopProcessing="true">
-					<match url="^builds/?(.*)" />
-					<action type="Rewrite" url="http://home.chadly.net:81/builds/{R:1}" />
 				</rule>
 
 				<!-- post redirects -->
