@@ -2,9 +2,15 @@
 
 Built with [Bootstrap](http://getbootstrap.com/) and [Wintersmith](https://github.com/jnordberg/wintersmith).
 
+[Read a full introduction](http://chadly.net/2013/12/automate-all-the-things-with-wercker/) to how this site is built & deployed.
+
 ##How to run
 
-Note: you will need [bower](http://bower.io/) and [grunt-cli](http://gruntjs.com/getting-started) installed to install and build web assets. Install them if you don't already have them.
+Note: you will need [bower](http://bower.io/) and [grunt-cli](http://gruntjs.com/getting-started) installed to install and build web assets. Install them if you don't already have them:
+
+```bash
+npm install grunt-cli bower -g
+```
 
 From the project directory, install dependencies using npm:
 
