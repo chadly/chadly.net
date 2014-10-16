@@ -4,7 +4,7 @@ Built with [Bootstrap](http://getbootstrap.com/) and [Wintersmith](https://githu
 
 [Read a full introduction](http://chadly.net/2013/12/automate-all-the-things-with-wercker/) to how this site is built & deployed.
 
-##How to run
+## How to run
 
 Note: you will need [bower](http://bower.io/) and [grunt-cli](http://gruntjs.com/getting-started) installed to install and build web assets. Install them if you don't already have them:
 
@@ -26,7 +26,22 @@ grunt dev
 
 This will spin up a server running at `localhost:8080`. The preview server uses `dev.json` for configuration.
 
-##How to Build
+## Changing the Site Theme
+
+The site uses [Bootstrap](http://getbootstrap.com/) in combination with [Bootswatch](http://bootswatch.com/) for theming. Both are pulled in via [Bower](http://bower.io/). If you see a bootswatch theme you like and you want to switch the site to use that theme, simply change the relevant lines in `gruntfile.js`:
+
+```js
+bootswatch: {
+	expand: true,
+	cwd: "bower_components/bootswatch/darkly/",
+	src: ["*.less"],
+	dest: "contents/vendor/bootswatch/"
+}
+```
+
+These lines tell grunt which bootswatch theme to copy to the vendor folder. Change `darkly` to whatever other theme you want to try.
+
+## How to Build
 
 In order to build the site to deploy to a static hosting provider, just run:
 
@@ -36,11 +51,11 @@ grunt dist
 
 and copy the contents of `/build` to your provider. The `dist` task uses `prod.json` to configure the Wintersmith build.
 
-##License
+## License
 
 All `.md` files (post contents) are licensed under [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-nc-sa/4.0/deed.en_US). Everything else is MIT Licensed.
 
-####The MIT License (MIT)
+#### The MIT License (MIT)
 
 Copyright &copy; 2013 William Chad Lee
 
