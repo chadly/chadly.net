@@ -1,4 +1,5 @@
 @footer-height: 41px;
+@headerFooterColor: darken(@brand-primary, 10%);
 
 .noise {
 	background-image: url(noise.png);
@@ -25,7 +26,8 @@ body {
 }
 
 header.site {
-	background-color: lighten(@body-bg, 5%);
+	background-color: @headerFooterColor;
+	.noise();
 
 	section {
 		&:extend(.container all);
@@ -65,13 +67,18 @@ main.site {
 
 footer.site {
 	min-height: @footer-height;
-	background-color: lighten(@body-bg, 5%);
-	.text-muted();
+	background-color: @headerFooterColor;
+	.noise();
 	font-size: @font-size-small;
 
 	section {
 		&:extend(.container all);
 		padding: 1em;
+	}
+
+	color: #f8f8f9;
+	a {
+		color: #f8f8f9;
 	}
 }
 

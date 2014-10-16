@@ -18,7 +18,7 @@ module.exports = function (grunt) {
 			},
 			bootswatch: {
 				expand: true,
-				cwd: "bower_components/bootswatch/darkly/",
+				cwd: "bower_components/bootswatch/lumen/",
 				src: ["*.less"],
 				dest: "contents/vendor/bootswatch/"
 			}
