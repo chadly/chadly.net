@@ -14,7 +14,7 @@ Luckily, it is [pretty easy to move](http://askubuntu.com/a/257654). After you i
 
 ```bash
 sudo mv ~/.local/share/Steam /opt
-sudo chmod a+rwx /opt/Steam
+sudo chmod a+rwx /opt/Steam -R
 ```
 
 This moves your Steam folder out of `home` and into `opt`. Then it updates the permissions to allow everyone read/write/execute access. You may not need to do that last part, but I want to make sure I don't have any permissions issues when trying to install games.
