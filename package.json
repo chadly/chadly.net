@@ -1,17 +1,19 @@
 {
-  "private": true,
-  "scripts": {
-    "postinstall": "bower install"
-  },
-  "dependencies": {
-    "moment": "2.5.x",
-    "underscore": "1.5.x",
-    "typogr": "0.6.x",
-    "wintersmith-less": "~0.2.1",
-    "grunt": "~0.4.2",
-    "grunt-contrib-copy": "~0.5.0",
-    "wintersmith-handlebars": "0.0.5",
-    "grunt-wintersmith": "0.0.2"
-  },
-  "repository": "none"
+	"name": "chadly.net",
+	"version": "1.0.0",
+	"repository": "https://github.com/chadly/chadly.net.git",
+	"private": true,
+	"scripts": {
+		"postinstall": "bower install"
+	},
+	"dependencies": {
+		"moment": "2.5.x",
+		"underscore": "1.5.x",
+		"typogr": "0.6.x",
+		"wintersmith-less": "~0.2.1",
+		"grunt": "~0.4.2",
+		"grunt-contrib-copy": "~0.5.0",
+		"wintersmith-handlebars": "0.0.5",
+		"grunt-wintersmith": "0.0.2"
+	}
 }
