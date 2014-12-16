@@ -9,14 +9,14 @@
 		<priority>1.0</priority>
 	</url>
 
-	{{#posts contents}}
+	{{#each posts}}
 	<url>
 		<loc>{{../url}}{{url}}</loc>
 		<lastmod>{{date Date format='YYYY-MM-DD'}}</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.9</priority>
 	</url>
-	{{/posts}}
+	{{/each}}
 
 	<url>
 		<loc>{{url}}/about/</loc>

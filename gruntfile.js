@@ -40,6 +40,13 @@ module.exports = function (grunt) {
 					}
 				},
 				plugins: {
+					"metalsmith-collections": {
+						posts: {
+							pattern: "posts/**/*.md",
+							sortBy: "date",
+							reverse: true
+						}
+					},
 					"metalsmith-markdown": {
 						"smartypants": true,
 						"smartLists": true
@@ -55,7 +62,6 @@ module.exports = function (grunt) {
 							"date": require("./helpers/date"),
 							"domain": require("./helpers/domain"),
 							"nav": require("./helpers/nav"),
-							"posts": require("./helpers/posts"),
 							"projects": require("./helpers/projects"),
 							"resume": require("./helpers/resume"),
 							"slugify": require("./helpers/slugify"),
@@ -79,7 +85,5 @@ module.exports = function (grunt) {
 	grunt.loadNpmTasks("grunt-contrib-copy");
 	grunt.loadNpmTasks("grunt-metalsmith");
 
-	grunt.registerTask("dev", ["copy", "wintersmith:preview"]);
-	grunt.registerTask("dist", ["copy", "wintersmith:build"]);
-	grunt.registerTask("default", ["dev"]);
+	grunt.registerTask("default", ["copy", "metalsmith"]);
 };

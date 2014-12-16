@@ -6,7 +6,7 @@
 	<id>urn:uuid:{{id}}</id>
 	<updated>{{date format="YYYY-MM-DDTHH:mm:ssZ"}}</updated>
 
-	{{#posts contents}}
+	{{#each posts}}
 	<entry>
 		<title>{{title}}</title>
 		<link href="{{../url}}{{url}}" />
@@ -22,5 +22,5 @@
 			{{html}}
 		</summary>
 	</entry>
-	{{/posts}}
+	{{/each}}
 </feed>
