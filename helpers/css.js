@@ -1,5 +1,5 @@
 ﻿module.exports = function () {
-	if (this.page.metadata.nav === "resume") {
+	if (this.nav === "resume") {
 		return 'resume.css';
 	}
 
