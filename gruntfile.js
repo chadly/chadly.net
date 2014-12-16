@@ -33,11 +33,11 @@ module.exports = function (grunt) {
 						tagline: "Software Developer. Sometimes I write stuff.",
 						link: "https://plus.google.com/+ChadLee?rel=author"
 					},
-					disqus: "chadlynet",
-					analytics: {
-						"id": "UA-636144-7",
-						"domain": "chadly.net"
-					}
+					//disqus: "chadlynet",
+					//analytics: {
+					//	"id": "UA-636144-7",
+					//	"domain": "chadly.net"
+					//}
 				},
 				plugins: {
 					"metalsmith-collections": {
