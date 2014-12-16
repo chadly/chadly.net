@@ -51,6 +51,9 @@ module.exports = function (grunt) {
 						"smartypants": true,
 						"smartLists": true
 					},
+					"metalsmith-less": {
+						pattern: "css/**/*.less"
+					},
 					"metalsmith-templates": {
 						engine: "handlebars",
 						partials: {
@@ -79,11 +82,25 @@ module.exports = function (grunt) {
 				src: "contents",
 				dest: "build"
 			}
+		},
+		connect: {
+			options: {
+				port: 1337,
+				base: "build"
+			},
+			persist: {
+				options: {
+					keepalive: true,
+					open: "http://localhost:1337/"
+				}
+			}
 		}
 	});
 
 	grunt.loadNpmTasks("grunt-contrib-copy");
 	grunt.loadNpmTasks("grunt-metalsmith");
+	grunt.loadNpmTasks("grunt-contrib-connect");
 
 	grunt.registerTask("default", ["copy", "metalsmith"]);
+	grunt.registerTask("preview", ["default", "connect"]);
 };
