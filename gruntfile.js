@@ -23,24 +23,41 @@ module.exports = function (grunt) {
 				dest: "contents/vendor/bootswatch/"
 			}
 		},
-		wintersmith: {
-			build: {
-				options: {
-					action: "build",
-					config: "prod.json"
+		metalsmith: {
+			options: {
+				metadata: {
+					id: "541c5e94-6748-4c23-babe-3a1953e2e4da",
+					url: "http://chadly.net",
+					author: {
+						name: "Chad Lee",
+						tagline: "Software Developer. Sometimes I write stuff.",
+						link: "https://plus.google.com/+ChadLee?rel=author"
+					},
+					disqus: "chadlynet",
+					analytics: {
+						"id": "UA-636144-7",
+						"domain": "chadly.net"
+					}
+				},
+				plugins: {
+					"metalsmith-markdown": {
+						"smartypants": true,
+						"smartLists": true
+					},
+					"metalsmith-templates": {
+						engine: "handlebars"
+					}
 				}
 			},
-			preview: {
-				options: {
-					action: "preview",
-					config: "dev.json"
-				}
+			build: {
+				src: "contents",
+				dest: "build"
 			}
 		}
 	});
 
 	grunt.loadNpmTasks("grunt-contrib-copy");
-	grunt.loadNpmTasks("grunt-wintersmith");
+	grunt.loadNpmTasks("grunt-metalsmith");
 
 	grunt.registerTask("dev", ["copy", "wintersmith:preview"]);
 	grunt.registerTask("dist", ["copy", "wintersmith:build"]);
