@@ -45,7 +45,27 @@ module.exports = function (grunt) {
 						"smartLists": true
 					},
 					"metalsmith-templates": {
-						engine: "handlebars"
+						engine: "handlebars",
+						partials: {
+							"header": "header",
+							"footer": "footer"
+						},
+						"helpers": {
+							"css": require("./helpers/css"),
+							"date": require("./helpers/date"),
+							"domain": require("./helpers/domain"),
+							"nav": require("./helpers/nav"),
+							"posts": require("./helpers/posts"),
+							"projects": require("./helpers/projects"),
+							"resume": require("./helpers/resume"),
+							"slugify": require("./helpers/slugify"),
+							"stylize": require("./helpers/stylize"),
+							"unslash": require("./helpers/unslash")
+						}
+					},
+					"metalsmith-permalinks": {
+						pattern: ":date/:title",
+						date: "YYYY/MM"
 					}
 				}
 			},
