@@ -27,7 +27,7 @@ module.exports = function(grunt) {
 			options: {
 				metadata: {
 					id: "541c5e94-6748-4c23-babe-3a1953e2e4da",
-					url: "http://chadly.net",
+					url: "http://chadly.net/",
 					author: {
 						name: "Chad Lee",
 						tagline: "Software Developer. Sometimes I write stuff.",
@@ -60,6 +60,10 @@ module.exports = function(grunt) {
 							paths: ["contents/css/"]
 						}
 					},
+					"metalsmith-permalinks": {
+						pattern: ":date/:title",
+						date: "YYYY/MM"
+					},
 					"metalsmith-templates": {
 						engine: "handlebars",
 						partials: {
@@ -78,10 +82,6 @@ module.exports = function(grunt) {
 							"stylize": require("./helpers/stylize"),
 							"unslash": require("./helpers/unslash")
 						}
-					},
-					"metalsmith-permalinks": {
-						pattern: ":date/:title",
-						date: "YYYY/MM"
 					}
 				}
 			},
