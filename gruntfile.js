@@ -70,18 +70,7 @@ module.exports = function(grunt) {
 							"header": "header",
 							"footer": "footer"
 						},
-						"helpers": {
-							"css": require("./helpers/css"),
-							"date": require("./helpers/date"),
-							"domain": require("./helpers/domain"),
-							"log": require("./helpers/log"),
-							"nav": require("./helpers/nav"),
-							"projects": require("./helpers/projects"),
-							"resume": require("./helpers/resume"),
-							"slugify": require("./helpers/slugify"),
-							"stylize": require("./helpers/stylize"),
-							"unslash": require("./helpers/unslash")
-						}
+						helpers: require("./helpers")
 					}
 				}
 			},
@@ -110,6 +99,4 @@ module.exports = function(grunt) {
 
 	grunt.registerTask("default", ["copy", "metalsmith"]);
 	grunt.registerTask("preview", ["default", "connect"]);
-
-	console.log(require("path").join(__dirname, "contents/css/"));
 };
