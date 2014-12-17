@@ -1,6 +1,6 @@
 var path = require("path");
 
-module.exports = function (grunt) {
+module.exports = function(grunt) {
 	grunt.initConfig({
 		copy: {
 			bootstrap: {
@@ -52,7 +52,13 @@ module.exports = function (grunt) {
 						"smartLists": true
 					},
 					"metalsmith-less": {
-						pattern: "css/**/*.less"
+						pattern: [
+							"css/main.less",
+							"css/resume.less"
+						],
+						parse: {
+							paths: ["contents/css/"]
+						}
 					},
 					"metalsmith-templates": {
 						engine: "handlebars",
@@ -103,4 +109,6 @@ module.exports = function (grunt) {
 
 	grunt.registerTask("default", ["copy", "metalsmith"]);
 	grunt.registerTask("preview", ["default", "connect"]);
+
+	console.log(require("path").join(__dirname, "contents/css/"));
 };
