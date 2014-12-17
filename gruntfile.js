@@ -70,6 +70,7 @@ module.exports = function(grunt) {
 							"css": require("./helpers/css"),
 							"date": require("./helpers/date"),
 							"domain": require("./helpers/domain"),
+							"log": require("./helpers/log"),
 							"nav": require("./helpers/nav"),
 							"projects": require("./helpers/projects"),
 							"resume": require("./helpers/resume"),
