@@ -6,7 +6,7 @@ template: post.hbs
 nav: blog
 ---
 
-I was experiencing problems with banding in some games and during videos with the NVidia 331 drivers in Ubuntu. I decided to try the latest driver from NVidia for my card, `346.47` as of right now).
+I was experiencing problems with banding in some games and during videos with the NVidia 331 drivers in Ubuntu. I decided to try the latest driver from NVidia for my card, (`346.47` as of right now).
 
 <div class="alert alert-info">
 **Spoiler:** The latest driver solves the banding issues and is much more performant.
@@ -15,7 +15,7 @@ I was experiencing problems with banding in some games and during videos with th
 I ran the following to determine my exact graphics card:
 
 ```
-lspci | grep VGA
+$ lspci | grep VGA
 02:00.0 VGA compatible controller: NVIDIA Corporation GK106 [GeForce GTX 650 Ti Boost] (rev a1)
 ```
 
