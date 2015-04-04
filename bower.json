@@ -6,7 +6,7 @@
   ],
   "private": true,
   "dependencies": {
-    "bootstrap": "~3.2.0",
-	"bootswatch": "thomaspark/bootswatch#~3.2.0"
+    "bootstrap": "~3.3.4",
+	"bootswatch": "thomaspark/bootswatch#~3.3.4"
   }
 }
