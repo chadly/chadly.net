@@ -5,14 +5,13 @@ date: 2009-01-25
 template: post.hbs
 nav: blog
 cover: hidden-universe.jpg
+tagline: …because "Hello World" is thinking too small
 redirects:
   - /post/2009/01/25/Hello-Universe.aspx
   - /hello-universe/
 disqus:
   url: http://chadly.net/2009/01/hello-universe/
 ---
-
-<small>…because "Hello World" is thinking too small.</small>
 
 Hello to you and welcome to the mythical world of Chad's mind. You are embarking on a journey of wonderment and mystery through one of the most bizarre things you will possibly ever come across on your journey through life -- the mind of a Chad.
 
