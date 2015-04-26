@@ -1,7 +1,7 @@
 ---
 id: 0196f063-b198-436b-97fc-5bafee4bd4ed
 title: Publishing a React Component to npm
-tagline: Or…the unexpected virtue of precompilation
+tagline: Or…the unexpected virtue of prepublishing
 cover: react.svg
 headerClass: invert
 date: 2015-04-25
