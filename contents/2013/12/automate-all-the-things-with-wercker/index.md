@@ -4,7 +4,9 @@ title: Automate All the Things with Wercker
 date: 2013-12-18
 template: post.hbs
 nav: blog
-disqus: 
+cover: wercker.jpg
+headerClass: invert
+disqus:
   identifier: /2013/12/automate-all-the-things-with-wercker
 ---
 
