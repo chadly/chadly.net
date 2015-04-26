@@ -4,10 +4,11 @@ title: Hello Universe
 date: 2009-01-25
 template: post.hbs
 nav: blog
+cover: hidden-universe.jpg
 redirects:
   - /post/2009/01/25/Hello-Universe.aspx
   - /hello-universe/
-disqus: 
+disqus:
   url: http://chadly.net/2009/01/hello-universe/
 ---
 
