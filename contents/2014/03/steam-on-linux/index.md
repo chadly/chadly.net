@@ -3,6 +3,7 @@ id: 09bd061f-6a09-44a4-92e0-a5371eae8e2d
 title: Moving Steam Folder Out of Home in Linux
 date: 2014-03-01
 template: post.hbs
+cover: steam.jpg
 nav: blog
 ---
 

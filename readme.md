@@ -28,21 +28,6 @@ grunt dev
 
 This will spin up a server running at `localhost:8080`. The preview server uses `dev.json` for configuration.
 
-### Changing the Site Theme
-
-The site uses [Bootstrap](http://getbootstrap.com/) in combination with [Bootswatch](http://bootswatch.com/) for theming. Both are pulled in via [Bower](http://bower.io/). If you see a bootswatch theme you like and you want to switch the site to use that theme, simply change the relevant lines in `gruntfile.js`:
-
-```js
-bootswatch: {
-	expand: true,
-	cwd: "bower_components/bootswatch/darkly/",
-	src: ["*.less"],
-	dest: "contents/vendor/bootswatch/"
-}
-```
-
-These lines tell grunt which bootswatch theme to copy to the vendor folder. Change `darkly` to whatever other theme you want to try.
-
 ### Building for Deployment
 
 In order to build the site to deploy to a static hosting provider, just run:

@@ -15,8 +15,8 @@ module.exports = function (context, options) {
 	}
 
 	var f = options.hash.format || 'MMM Do, YYYY',
-        timeago = options.hash.timeago,
-        date;
+		timeago = options.hash.timeago,
+		date;
 
 
 	if (timeago) {

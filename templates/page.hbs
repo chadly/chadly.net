@@ -1,15 +1,30 @@
 {{> header}}
 
-<article class="page">
-    {{#with page}}
-    <header>
-		<h2>{{title}}</h2>
-    </header>
+<header style="background-image: url({{cover page.metadata.cover}})" class="{{page.metadata.headerClass}}">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-8 col-md-offset-2">
+				<section>
+					{{#with page}}
+						<h1>{{title}}</h1>
+						{{#if metadata.tagline}}
+							<h2>{{metadata.tagline}}</h2>
+						{{/if}}
+					{{/with}}
+				</section>
+			</div>
+		</div>
+	</div>
+</header>
 
-    <section class="page-content">
-        {{{html}}}
-    </section>
-    {{/with}}
-</article>
+<main class="site" role="main">
+    <article class="page">
+        {{#with page}}
+        <section class="page-content">
+            {{{html}}}
+        </section>
+        {{/with}}
+    </article>
+</main>
 
 {{> footer}}

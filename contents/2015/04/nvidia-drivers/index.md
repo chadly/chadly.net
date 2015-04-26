@@ -3,6 +3,7 @@ id: bce0bcab-1070-4de5-886f-058372e881af
 title: Installing NVidia Drivers for GTX 650 Ti Boost in Ubuntu 14.04
 date: 2015-04-04
 template: post.hbs
+cover: nvidia.png
 nav: blog
 ---
 

@@ -4,6 +4,7 @@ title: What you get with Git
 date: 2012-08-28
 template: post.hbs
 nav: blog
+cover: git.jpg
 redirects:
   - /2012/08/the-wonderful-world-of-git/
   - /what-you-get-with-git/

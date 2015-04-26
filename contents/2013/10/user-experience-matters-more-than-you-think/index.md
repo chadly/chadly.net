@@ -4,6 +4,8 @@ title: User experience matters more than you think
 date: 2013-10-18
 template: post.hbs
 nav: blog
+headerClass: invert
+cover: space-shuttle-control-panel.jpg
 redirects:
   - /user-experience-matters-more-than-you-think/
 ---

@@ -15,12 +15,6 @@ module.exports = function (grunt) {
 					src: ["*.*"],
 					dest: "contents/vendor/bootstrap/fonts/"
 				}]
-			},
-			bootswatch: {
-				expand: true,
-				cwd: "bower_components/bootswatch/lumen/",
-				src: ["*.less"],
-				dest: "contents/vendor/bootswatch/"
 			}
 		},
 		wintersmith: {
