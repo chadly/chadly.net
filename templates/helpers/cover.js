@@ -1,6 +1,6 @@
 module.exports = function (photo) {
 	if (!photo) {
-		return "/milky-way.jpg";
+		return "/bg.jpg";
 	}
 
 	return photo;

@@ -4,7 +4,7 @@ title: Hello Universe
 date: 2009-01-25
 template: post.hbs
 nav: blog
-cover: hidden-universe.jpg
+cover: milky-way.jpg
 tagline: …because "Hello World" is thinking too small
 redirects:
   - /post/2009/01/25/Hello-Universe.aspx
