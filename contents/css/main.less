@@ -23,3 +23,24 @@
 @import "content.less";
 @import "code.less";
 @import "projects.less";
+
+//I don't know why this isn't the default
+.alert a {
+	&:extend(.alert .alert-link all);
+}
+
+.alert-info a {
+	&:extend(.alert-info .alert-link all);
+}
+
+.alert-warning a {
+	&:extend(.alert-warning .alert-link all);
+}
+
+.alert-success a {
+	&:extend(.alert-success .alert-link all);
+}
+
+.alert-danger a {
+	&:extend(.alert-danger .alert-link all);
+}
