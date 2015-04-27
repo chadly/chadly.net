@@ -17,7 +17,7 @@ If you want to see the code for a component doing everything that is described h
 
 Evan Hahn has a good article on the technical details of [how to make an npm baby](http://evanhahn.com/make-an-npm-baby/). Go read that if you are a noob (like I was).
 
-#### Publishing `JSX` to npm
+### Dealing with your `JSX`
 
 When you are publishing a React component, you are probably using [JSX](https://facebook.github.io/react/docs/jsx-in-depth.html) to build your component. `JSX` compiles to javascript, but node won't be able to `require` it by default unless the consumer of your package does something to support it. You, as the component author, should strive to make it as easy as possible for someone to use your package. They should be able to just `npm install`, `require` your package, and be on their merry way through their own code again. Nobody wants to sit and have to figure out / debug someone else's code if they don't have to.
 
@@ -71,10 +71,10 @@ But, npm will use the `.gitignore` to decide which things to publish. You _want_
 
 Yeah, not much to that. It is pretty much the opposite of your `.gitignore`. JSX source is in your repo; compiled JS in the published package.
 
-### Step 2: Market your component
+### Market your component
 
 To make your component more discoverable, [fill in the `description` and `keywords` fields](http://browsenpm.org/package.json) in your `package.json`. Make sure to include the `react-component` keyword in order to get your component to show up on [react-components.com](http://react-components.com/).
 
-### Step 3: Profit
+### Profit?
 
 Now that your open source component is available on npm for all to easily use, sit back, relax & wait for the benjamins to come rolling in.
