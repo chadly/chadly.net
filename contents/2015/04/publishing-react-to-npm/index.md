@@ -52,10 +52,6 @@ One thing Evan doesn't talk about in [his post](http://evanhahn.com/make-an-npm-
 
 Assuming you ran `npm install react-tools --save-dev` in your package (to get the `jsx` binary), you can now run `npm run build` in your package to compile to JS at any time. That command will also automatically be run before you publish to npm.
 
-<div class="alert alert-info">
-	If you are publishing your component on Windows, this method may or may not work. There are [other task runners](http://ponyfoo.com/articles/choose-grunt-gulp-or-npm) you can use here in the `prepublish` step depending on your needs. Whichever task runner you use, the point is to have a command set up to automatically compile your source before publishing to npm.
-</div>
-
 Now that you have your JSX compiling automatically, you probably don't want to commit the output of that build script to source control. You will want to add it to your `.gitignore`:
 
 ```
