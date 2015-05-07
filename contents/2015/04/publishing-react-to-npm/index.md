@@ -37,7 +37,7 @@ There is an easy fix for this. Browserify will look in a component's `package.js
 
 #### Option 2
 
-But what if your consumer isn't using your browserify. What if they are using [webpack](http://webpack.github.io/)? What if they are a total hipster and using something you never even heard of?
+But what if your consumer isn't using browserify. What if they are using [webpack](http://webpack.github.io/)? What if they are a total hipster and using something you never even heard of?
 
 Call me old fashioned, but I think if your package is in npm, it should already be compiled down to javascript from whatever language your source is in ([JSX](https://facebook.github.io/react/docs/jsx-in-depth.html), [CoffeeScript](http://coffeescript.org/), [TypeScript](http://www.typescriptlang.org/), whatever). It is the easiest option for your consumer.
 
