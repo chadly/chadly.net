@@ -1,5 +1,5 @@
 ---
-sort: 3
+sort: 30
 title: Software Developer
 company: The Software Group
 location: Dallas, TX
