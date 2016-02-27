@@ -11,7 +11,7 @@ I've been using [elementary OS Luna](http://elementaryos.org/) lately, an Ubuntu
 
 I followed the [guide on linuxtv.org](http://www.linuxtv.org/wiki/index.php/Hauppauge_WinTV-HVR-2200). Here are the steps that I ran to get my setup working.
 
-###Download Firmware
+### Download Firmware
 
 ```bash
 wget http://www.steventoth.net/linux/hvr22xx/22xxdrv_27086.zip
@@ -30,7 +30,7 @@ sudo cp v4l-saa7164-1.0.3.fw /lib/firmware/3.2.0-59-generic
 sudo cp dvb-fe-tda10048-1.0.fw /lib/firmware/3.2.0-59-generic
 ```
 
-###Download More Firmware
+### Download More Firmware
 
 I then followed some of the directions under the _Making it Work Easily_ section:
 
@@ -59,7 +59,7 @@ sudo nano /etc/modprobe.d/options
 
 The file should contain `options saa7164 card=7`. Replace the `card=7` part with whatever your `dmesg` output said.
 
-###Install Tvheadend
+### Install Tvheadend
 
 Restart your computer and your hardware should now be working. Next, you'll want to install [Tvheadend](https://tvheadend.org/) backend TV server:
 
@@ -77,7 +77,7 @@ Once you install Tvheadend, you can access the web UI from `localhost:9981`. Go 
 
 It should start scanning and picking up channels. Once services start showing up on your _Services_ tab, you can click on _Map All_ to map the services to TV channels.
 
-###Install XBMC
+### Install XBMC
 
 Now that you have the backend TV server setup, you'll need a client to connect to it.
 
@@ -91,6 +91,6 @@ Open XBMC, and navigate to _Settings_ <i class="fa fa-arrow-right"></i> _Add Ons
 
 Finally, go to the XBMC menu home screen and click on _Live TV_ and watch something.
 
-###Easy?
+### Easy?
 
 Yeah, this was kind of a pain-in-the-ass to get setup. Once you know what to do, it is mostly straight-forward but it is definitely not the ease of setting up TV in Windows Media Center. This solution, however, is much more robust in that I can now share live TV with any device on the network. Once it is all running, it is a very nice setup.

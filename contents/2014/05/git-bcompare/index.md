@@ -8,7 +8,7 @@ nav: blog
 
 [Beyond Compare](http://www.scootersoftware.com/) has been my [favorite comparison tool for a while now](/2009/04/tortoise-svn-settings-for-beyond-compare-3/). It is cross-platform and makes diffs and 3-way merges very easy to understand and visualize.
 
-###[Git for Linux](http://www.scootersoftware.com/support.php?zz=kb_vcs#gitlinux)
+### [Git for Linux](http://www.scootersoftware.com/support.php?zz=kb_vcs#gitlinux)
 
 To get it working on any linux flavor is pretty straight forward. Run these commands from terminal:
 
@@ -21,7 +21,7 @@ git config --global merge.tool bc3
 git config --global mergetool.bc3 trustExitCode true
 ```
 
-###[Git for Windows](http://www.scootersoftware.com/support.php?zz=kb_vcs#gitwindows)
+### [Git for Windows](http://www.scootersoftware.com/support.php?zz=kb_vcs#gitwindows)
 
 On Windows, it is a little more work. In addition to the above, you need to tell git the path to `bcomp.exe`:
 
@@ -41,7 +41,7 @@ Beyond Compare [has a bug](http://theo.im/blog/2012/10/27/directory-comparison-f
 
 Hopefully, this will be fixed in BC4.
 
-###Using It
+### Using It
 
 Once you have it setup, you can easily run
 
