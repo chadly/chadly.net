@@ -6,16 +6,16 @@ I hereby claim:
 
   * I am an admin of http://chadly.net
   * I am chadly (https://keybase.io/chadly) on keybase.
-  * I have a public key with fingerprint E59D 6FA2 0BCB 4279 4F84  B506 C500 220C A66D 67BB
+  * I have a public key ASBTKACyrzJ1v6PUsnKg5_bHIcPfYpvQKGi7pM000zuVmQo
 
-To claim this, I am signing this object:
+To do so, I am signing this object:
 
 {
     "body": {
         "key": {
-            "fingerprint": "e59d6fa20bcb42794f84b506c500220ca66d67bb",
+            "eldest_kid": "0120532800b2af3275bfa3d4b272a0e7f6c721c3df629bd02868bba4cd34d33b95990a",
             "host": "keybase.io",
-            "key_id": "c500220ca66d67bb",
+            "kid": "0120532800b2af3275bfa3d4b272a0e7f6c721c3df629bd02868bba4cd34d33b95990a",
             "uid": "085071e05b63415f4b2eab994ee1cb00",
             "username": "chadly"
         },
@@ -26,36 +26,25 @@ To claim this, I am signing this object:
         "type": "web_service_binding",
         "version": 1
     },
-    "ctime": 1411520035,
-    "expire_in": 157680000,
-    "prev": "e7acd1d8ec4e719621657f1d94ce0f72d99f959ccbdb543348063d155b605ae9",
-    "seqno": 5,
+    "client": {
+        "name": "keybase.io go client",
+        "version": "1.0.15"
+    },
+    "ctime": 1462110718,
+    "expire_in": 504576000,
+    "merkle_root": {
+        "ctime": 1462110621,
+        "hash": "038abd2d223cefc37fa987bfe9a3f251280fd0bb24473a610adb2e7be03f9fdb9248d97e053a18e6f6a8ecb5b97ce24257ef327b81a211150cddb519085b3015",
+        "seqno": 454541
+    },
+    "prev": "c5b0c3d708380c951ac4e46753c7bd0362f0f45df7800b23b1aee99e9b0ceb06",
+    "seqno": 22,
     "tag": "signature"
 }
 
-with the aforementioned key, yielding the PGP signature:
+which yields the signature:
 
------BEGIN PGP MESSAGE-----
-Version: Keybase OpenPGP v1.0.5
-Comment: https://keybase.io/crypto
-
-yMHgAnicbVFbSBRRGN5d03C9ZDcjUomRomyTM7Nz5rKmZUksZUIgWWGsczmjY+vM
-OjujK7JPRZDrFmqsbUgQSRhEUiZtRSClRZQoIlRvmiAiaUUJWULNSD0EnZfD+f7v
-8v/nH85Isjnt6yaH1+cUx3Ltr4cWDFsllp3fivGq2IJ5WrGzaPWSZKUWaQFNVnTM
-gyHIipTEEYAXeJKgWVJiSB4CSoAAEAQQOIoSKZrnMRdWpwYthWnDc0FUKKsmZj58
-smii/+EbqwXAQEDjCECecpM4lEieQBzPsiRCuMADYBGDSFO4BmTZ1HGivwULuzAT
-a5IFZHVsBf9TL1SQbuoCmqqrguo38TpdD3gsmd4SsHjNiPf9cfDxsiKaM5uCJqQF
-ZVXBPLjJFHTZssRJHIcEAG7owlAoIGvIJ1sMSFMMMI8Vg5qsn6I5QcRFBgkkonGW
-InAK0hIusqSAgEQTIstKLGQFgRd5SLrdJAMot4hDc3AAOcRi1kyNiop5zCSdqzUt
-g3KtwumGhrDws6HqNTa705aS7LC2ZnOmZv3dZfTJ2hWnsLM9079879eGej2WuH0t
-sjQZ6B7tn9lXdnF0bNZbUjB1Y//uK7NPu9pujcZfnTmWzvZfT3z6dqf1rr95xREX
-P0bG8ieqjhDGng/ZsbQq+9sk+WisqyH+9WDKQl7i6pzxWIInwxW7wgPtex8Ozs2X
-LBXXn5gqqjmv5qVHf8yroeVLFad91VvOTTsuZM2klpc2Pjf6vIcKqFmmq7M3mjPN
-jkcyiw7/XBy/WT+lXo6OJCpL2wq7a5KzOhx533tcLzqZd0vDwiDuH3AvLl4PHdAi
-QWffxKb45o6V7aFT5ZNVGb1vNo7MGfc/lzz48vK9d0f5tkd9+d7cHub4RFrZ1t8X
-BQ5s
-=QEe+
------END PGP MESSAGE-----
+g6Rib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgUygAsq8ydb+j1LJyoOf2xyHD32Kb0Chou6TNNNM7lZkKp3BheWxvYWTFAvB7ImJvZHkiOnsia2V5Ijp7ImVsZGVzdF9raWQiOiIwMTIwNTMyODAwYjJhZjMyNzViZmEzZDRiMjcyYTBlN2Y2YzcyMWMzZGY2MjliZDAyODY4YmJhNGNkMzRkMzNiOTU5OTBhIiwiaG9zdCI6ImtleWJhc2UuaW8iLCJraWQiOiIwMTIwNTMyODAwYjJhZjMyNzViZmEzZDRiMjcyYTBlN2Y2YzcyMWMzZGY2MjliZDAyODY4YmJhNGNkMzRkMzNiOTU5OTBhIiwidWlkIjoiMDg1MDcxZTA1YjYzNDE1ZjRiMmVhYjk5NGVlMWNiMDAiLCJ1c2VybmFtZSI6ImNoYWRseSJ9LCJzZXJ2aWNlIjp7Imhvc3RuYW1lIjoiY2hhZGx5Lm5ldCIsInByb3RvY29sIjoiaHR0cDoifSwidHlwZSI6IndlYl9zZXJ2aWNlX2JpbmRpbmciLCJ2ZXJzaW9uIjoxfSwiY2xpZW50Ijp7Im5hbWUiOiJrZXliYXNlLmlvIGdvIGNsaWVudCIsInZlcnNpb24iOiIxLjAuMTUifSwiY3RpbWUiOjE0NjIxMTA3MTgsImV4cGlyZV9pbiI6NTA0NTc2MDAwLCJtZXJrbGVfcm9vdCI6eyJjdGltZSI6MTQ2MjExMDYyMSwiaGFzaCI6IjAzOGFiZDJkMjIzY2VmYzM3ZmE5ODdiZmU5YTNmMjUxMjgwZmQwYmIyNDQ3M2E2MTBhZGIyZTdiZTAzZjlmZGI5MjQ4ZDk3ZTA1M2ExOGU2ZjZhOGVjYjViOTdjZTI0MjU3ZWYzMjdiODFhMjExMTUwY2RkYjUxOTA4NWIzMDE1Iiwic2Vxbm8iOjQ1NDU0MX0sInByZXYiOiJjNWIwYzNkNzA4MzgwYzk1MWFjNGU0Njc1M2M3YmQwMzYyZjBmNDVkZjc4MDBiMjNiMWFlZTk5ZTliMGNlYjA2Iiwic2Vxbm8iOjIyLCJ0YWciOiJzaWduYXR1cmUifaNzaWfEQGTWjSpqFMU/8ymtvVDHXUeAB4Ks04MPm7wcXjlko/EDjSlaauxcwdHiLF5SoBRqybthxk2IbBG+fItTvY2ZMQCoc2lnX3R5cGUgo3RhZ80CAqd2ZXJzaW9uAQ==
 
 And finally, I am proving ownership of this host by posting or
 appending to this document.
