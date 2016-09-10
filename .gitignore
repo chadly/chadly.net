@@ -2,6 +2,4 @@
 /bower_components
 /node_modules
 /contents/vendor
-*.sln
-*.suo
 npm-debug.log
