@@ -8,22 +8,16 @@ Built with [Bootstrap](http://getbootstrap.com/) and [Wintersmith](https://githu
 
 ### Running Locally
 
-Note: you will need [bower](http://bower.io/) and [grunt-cli](http://gruntjs.com/getting-started) installed to install and build web assets. Install them if you don't already have them:
-
-```bash
-npm install grunt-cli bower -g
-```
-
 From the project directory, install dependencies using npm:
 
-```bash
+```
 npm install
 ```
 
 Then build the web assets and preview the site:
 
-```bash
-grunt dev
+```
+npm start
 ```
 
 This will spin up a server running at `localhost:8080`. The preview server uses `dev.json` for configuration.
@@ -32,8 +26,8 @@ This will spin up a server running at `localhost:8080`. The preview server uses 
 
 In order to build the site to deploy to a static hosting provider, just run:
 
-```bash
-grunt dist
+```
+npm run build
 ```
 
 and copy the contents of `/build` to your provider. The `dist` task uses `prod.json` to configure the Wintersmith build.
