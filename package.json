@@ -2,13 +2,17 @@
   "name": "chadlynet",
   "version": "0.0.0",
   "private": true,
+  "author": "Chad Lee",
   "license": "MIT",
   "scripts": {
     "build": "grunt dist",
     "start": "grunt dev",
     "postinstall": "bower install"
   },
-  "repository": "none",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chadly/chadly.net.git"
+  },
   "devDependencies": {
     "bower": "^1.7.9",
     "grunt": "~0.4.2",
