@@ -1,6 +1,6 @@
 module.exports = function (photo) {
 	if (!photo) {
-		return "/lake.jpg";
+		return "/lodyas.png";
 	}
 
 	return photo;
