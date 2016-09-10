@@ -13,5 +13,8 @@
     "wintersmith-handlebars": "0.0.5",
     "grunt-wintersmith": "0.0.2"
   },
-  "repository": "none"
+  "repository": "none",
+  "devDependencies": {
+    "bower": "^1.7.9"
+  }
 }
