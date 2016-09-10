@@ -5,7 +5,7 @@
   "author": "Chad Lee",
   "license": "MIT",
   "scripts": {
-    "build": "grunt dist",
+    "build": "rimraf build && grunt dist",
     "start": "grunt dev",
     "postinstall": "bower install"
   },
@@ -20,6 +20,7 @@
     "grunt-contrib-copy": "1.0.x",
     "grunt-wintersmith": "0.0.x",
     "moment": "2.14.x",
+    "rimraf": "2.5.x",
     "typogr": "0.6.x",
     "underscore": "1.8.x",
     "wintersmith-handlebars": "0.0.x",
