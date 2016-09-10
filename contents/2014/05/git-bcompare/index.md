@@ -6,6 +6,11 @@ template: post.hbs
 nav: blog
 ---
 
+<div class="alert alert-warning">
+	<strong>Update:</strong>
+	[See updated post for Beyond Compare 4](/2016/09/git-bcompare/).
+</div>
+
 [Beyond Compare](http://www.scootersoftware.com/) has been my [favorite comparison tool for a while now](/2009/04/tortoise-svn-settings-for-beyond-compare-3/). It is cross-platform and makes diffs and 3-way merges very easy to understand and visualize.
 
 ### [Git for Linux](http://www.scootersoftware.com/support.php?zz=kb_vcs#gitlinux)
