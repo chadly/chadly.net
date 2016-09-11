@@ -1,71 +1,87 @@
-{{> header}}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
-<h2>{{page.title}}</h2>
+	<title>{{#if page.metadata.title}}{{page.title}} - {{/if}}{{author.name}}</title>
 
-<section class="resume">
-	<h3>Profile</h3>
-	<article>
-		{{{contents.resume.[profile.md].html}}}
-	</article>
-</section>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<section class="resume">
-	<h3>Qualifications</h3>
-	<article>
-		{{{contents.resume.[qualifications.md].html}}}
-	</article>
-</section>
+	<link rel="icon" type="image/png" href="/terminal.png" />
 
-<section class="resume">
-	<h3>Experience</h3>
-	<article>
-		{{#resume contents}}
-		<section class="sub">
-			<h4>{{title}}</h4>
-			<h5>
-				{{#if metadata.company.url}}
-					<a href="{{metadata.company.url}}" target="_blank">{{metadata.company.name}}</a>
-				{{else}}
-					{{metadata.company}}
-				{{/if}}
-				{{#if metadata.location}}
-					-
-					{{#if metadata.location.url}}
-						<a href="{{metadata.location.url}}" target="_blank">{{metadata.location.name}}</a>
-					{{else}}
-						{{metadata.location}}
-					{{/if}}
-				{{/if}}
-			</h5>
-			<h6 class="timeframe{{#if metadata.isCurrent}}-current{{/if}}">{{metadata.timeframe}}</h6>
-			
-			{{{html}}}
+	<link rel="stylesheet" type="text/css" href="/css/resume.css" />
+	<link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" />
+</head>
+<body>
+	<div class="container">
+		<h1>{{author.name}}: {{page.title}}</h1>
 
-			<p>Primary technologies used:</p>
-			<ul class="technologies">
-				{{#each metadata.tech}}
-					{{#if this}}
-						<li><a href="{{this}}" target="_blank">{{@key}}</a></li>
-					{{else}}
-						<li><span>{{@key}}</span></li>
-					{{/if}}
-				{{/each}}
-			</ul>
+		<section class="resume">
+			<h3>Profile</h3>
+			<article>
+				{{{contents.resume.[profile.md].html}}}
+			</article>
 		</section>
-		{{/resume}}
-	</article>
-</section>
 
-<section class="resume">
-	<h3>Education</h3>
-	<article>
-		{{#with contents.resume.[education.json]}}
-		<h4>{{metadata.school}}</h4>
-		<h5>{{metadata.degree}}</h5>
-		<h6>{{metadata.gpa}}</h6>
-		<h6 class="timeframe">{{metadata.timeframe}}</h6>
-		{{/with}}
-	</article>
-</section>
+		<section class="resume">
+			<h3>Qualifications</h3>
+			<article>
+				{{{contents.resume.[qualifications.md].html}}}
+			</article>
+		</section>
 
-{{> footer}}
+		<section class="resume">
+			<h3>Experience</h3>
+			<article>
+				{{#resume contents}}
+				<section class="sub">
+					<h4>{{title}}</h4>
+					<h5>
+						{{#if metadata.company.url}}
+							<a href="{{metadata.company.url}}" target="_blank">{{metadata.company.name}}</a>
+						{{else}}
+							{{metadata.company}}
+						{{/if}}
+						{{#if metadata.location}}
+							-
+							{{#if metadata.location.url}}
+								<a href="{{metadata.location.url}}" target="_blank">{{metadata.location.name}}</a>
+							{{else}}
+								{{metadata.location}}
+							{{/if}}
+						{{/if}}
+					</h5>
+					<h6 class="timeframe{{#if metadata.isCurrent}}-current{{/if}}">{{metadata.timeframe}}</h6>
+
+					{{{html}}}
+
+					<p>Primary technologies used:</p>
+					<ul class="technologies">
+						{{#each metadata.tech}}
+							{{#if this}}
+								<li><a href="{{this}}" target="_blank">{{@key}}</a></li>
+							{{else}}
+								<li><span>{{@key}}</span></li>
+							{{/if}}
+						{{/each}}
+					</ul>
+				</section>
+				{{/resume}}
+			</article>
+		</section>
+
+		<section class="resume">
+			<h3>Education</h3>
+			<article>
+				{{#with contents.resume.[education.json]}}
+				<h4>{{metadata.school}}</h4>
+				<h5>{{metadata.degree}}</h5>
+				<h6>{{metadata.gpa}}</h6>
+				<h6 class="timeframe">{{metadata.timeframe}}</h6>
+				{{/with}}
+			</article>
+		</section>
+	</div>
+</body>
+</html>

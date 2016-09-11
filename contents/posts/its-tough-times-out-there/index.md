@@ -4,6 +4,8 @@ title: It's Tough Times Out There
 date: 2009-03-09
 template: post.hbs
 nav: blog
+cover: storm.jpg
+headerClass: invert
 redirects:
   - /post/2009/03/09/Its-Tough-Times-Out-There.aspx
   - /its-tough-times-out-there/

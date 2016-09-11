@@ -4,6 +4,8 @@ title: Lightbox for YouTube Videos
 date: 2009-01-29
 template: post.hbs
 nav: blog
+cover: youtube-on-wood.jpg
+headerClass: invert
 redirects:
   - /post/2009/01/29/Lightbox-for-YouTube-Videos.aspx
   - /lightbox-for-youtube-videos/

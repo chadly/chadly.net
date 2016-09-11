@@ -21,31 +21,23 @@
 </head>
 <body>
 	<div id="wrap">
-		<header class="site">
-			<section>
-				<a href="/" class="brand">
-					<img src="/me.jpg" alt="It's me!" />
-					<h1>{{{stylize author.name}}}</h1>
-					<p>{{author.tagline}}</p>
-				</a>
-			</section>
-		</header>
-
-		<nav class="site">
+		<nav class="site navbar navbar-default navbar-fixed-top">
 			<section>
 				<div class="navbar-header">
 					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-		              <span class="sr-only">Toggle navigation</span>
-		              <span class="icon-bar"></span>
-		              <span class="icon-bar"></span>
-		              <span class="icon-bar"></span>
-		            </button>
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+
+					<a href="/" class="navbar-brand">{{name}}</a>
 				</div>
 
 				<div class="collapse navbar-collapse">
-					<ul class="nav navbar-nav">
-						<li {{{nav 'blog'}}}><a href="/"><i class="fa fa-book"></i> Words</a></li>
-						<li {{{nav 'about'}}}><a href="/about/"><i class="fa fa-user"></i> About</a></li>
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="/"><i class="fa fa-book"></i> Words</a></li>
+						<li><a href="/about/"><i class="fa fa-user"></i> About</a></li>
 						<li><a href="https://github.com/chadly"><i class="fa fa-github"></i> Github</a></li>
 						<li><a href="https://twitter.com/wchadly"><i class="fa fa-twitter"></i> Twitter</a></li>
 						<li><a href="https://keybase.io/chadly"><i class="fa fa-key"></i> Keybase</a></li>
@@ -54,5 +46,3 @@
 				</div>
 			</section>
 		</nav>
-
-		<main class="site" role="main">

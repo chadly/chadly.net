@@ -4,6 +4,8 @@ title: User experience matters more than you think
 date: 2013-10-18
 template: post.hbs
 nav: blog
+headerClass: invert
+cover: space-shuttle-control-panel.jpg
 redirects:
   - /user-experience-matters-more-than-you-think/
 ---
@@ -24,7 +26,7 @@ I've been a proponent lately of designing systems/applications from the top down
 
 Take ghost for example, they spent a lot of time on their post editor and it shows. It _really is_ the "best writing experience on the web." As of right now, there is not much to ghost _besides_ the post editor. Once you get it running though, you can see that a lot of thought went into how users use software like this and they implemented something really nice. It is so good, that people all over the internet paid money for it on just a screenshot.
 
-As you may or may not have realized, I, too, have drunk the koolaid and am running ghost on this site via Azure websites with [help from Jeremiah Billmann](http://www.jbillmann.com/installing-ghost-on-azure-web-sites/). It is very clean and elegant. Hype validated.
+As you may or may not have realized, I, too, have drunk the koolaid and am ~~running ghost on this site~~ ([not anymore](/2013/12/automate-all-the-things-with-wercker/)) via Azure websites with [help from Jeremiah Billmann](http://www.jbillmann.com/installing-ghost-on-azure-web-sites/). It is very clean and elegant. Hype validated.
 
 It is written in nodeJS which I have been spending more and more time with lately. Now I can get some hipster cred when someone asks me "Cool blog, is this Wordpress or something?" I can respond "Nah dude, this is in node," while skateboarding off into the sunset, doing mad flips and stuff.
 

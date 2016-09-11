@@ -1,37 +1,52 @@
 {{> header}}
 
-<section class="intro">
-	{{{contents}}}
-</section>
-
-<section class="post-list" itemscope itemtype="http://schema.org/Blog">
-	<h4>Read Stuff</h4>
-
-	{{#each posts}}
-	<article class="post-stub" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
-		<time datetime="{{date format='YYYY-MM-DD'}}" itemprop="datePublished">{{date format="DD MMM YYYY"}}</time>
-		<div class="post-title">
-			<a href="{{path}}" itemprop="name headline url">{{title}}</a>
-
-			{{#if ../disqus}}
-			<a href="{{../../../url}}{{path}}#disqus_thread" class="post-comment-count" title="Comments" {{#if metadata.disqus}} {{#if metadata.disqus.identifier}} data-disqus-identifier="{{metadata.disqus.identifier}}" {{/if}} {{else}} data-disqus-identifier="{{metadata.id}}" {{/if}}></a>
-			{{/if}}
+<header style="background-image: url({{cover cover}})" class="{{headerClass}}">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-8 col-md-offset-2">
+				<section>
+						<h1>{{{author.name}}}</h1>
+						<h2>{{author.tagline}}</h2>
+				</section>
+			</div>
 		</div>
-	</article>
-	{{/each}}
-</section>
+	</div>
+</header>
 
-{{#if disqus}}
-<script type="text/javascript">
-	var disqus_shortname = '{{disqus}}';
+<main class="site" role="main">
+	<section class="intro">
+		{{{contents}}}
+	</section>
 
-	(function () {
-		var s = document.createElement('script'); s.async = true;
-		s.type = 'text/javascript';
-		s.src = '//' + disqus_shortname + '.disqus.com/count.js';
-		(document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
-	}());
-</script>
-{{/if}}
+	<section class="post-list" itemscope itemtype="http://schema.org/Blog">
+		<h4>Read Stuff</h4>
+
+		{{#each posts}}
+			<article class="post-stub" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+				<time datetime="{{date format='YYYY-MM-DD'}}" itemprop="datePublished">{{date format="DD MMM YYYY"}}</time>
+				<div class="post-title">
+				<a href="{{path}}/" itemprop="name headline url">{{title}}</a>
+
+					{{#if ../disqus}}
+				<a href="{{../../../url}}{{path}}/#disqus_thread" class="post-comment-count" title="Comments" {{#if metadata.disqus}} {{#if metadata.disqus.identifier}} data-disqus-identifier="{{metadata.disqus.identifier}}" {{/if}} {{else}} data-disqus-identifier="{{metadata.id}}" {{/if}}></a>
+					{{/if}}
+				</div>
+			</article>
+		{{/each}}
+	</section>
+
+	{{#if disqus}}
+	<script type="text/javascript">
+		var disqus_shortname = '{{disqus}}';
+
+		(function () {
+			var s = document.createElement('script'); s.async = true;
+			s.type = 'text/javascript';
+			s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+			(document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+		}());
+	</script>
+	{{/if}}
+</main>
 
 {{> footer}}

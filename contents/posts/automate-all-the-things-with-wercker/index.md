@@ -4,7 +4,9 @@ title: Automate All the Things with Wercker
 date: 2013-12-18
 template: post.hbs
 nav: blog
-disqus: 
+cover: wercker.jpg
+headerClass: invert
+disqus:
   identifier: /2013/12/automate-all-the-things-with-wercker
 ---
 
@@ -15,11 +17,11 @@ I recently decided to switch my site over from [Ghost](https://ghost.org/) to [W
 
 Why, yes, Random Internet Person, I was. Please allow me to explain before interrupting.
 
-###Static Site Generator > Ghost?
+### Static Site Generator > Ghost?
 
 Ghost's user experience was the major reason it had such an impact on me. It really does have the nicest writing experience on the web. But when it comes down to it, I guess I found the whole idea of a blog engine in general to be restricting. As a web developer, I want to be able to easily work with pages and HTML and not necessarily be limited by a blog format. In the end, the major thing I really liked about Ghost was the fact that I could write posts in Markdown instead of some horrible WYSIWYG editor.
 
-###Enter Wintersmith
+### Enter Wintersmith
 
 Why not get the best of both worlds? A framework that allows me to be a web developer but at the same time gives me the ease of use of working with Markdown.
 
@@ -48,7 +50,7 @@ Not to mention, Github has some of the [best features around](https://help.githu
 
 Ah, Random Internet Person, you are wrong again.
 
-###Wercker to the Rescue
+### Wercker to the Rescue
 
 ![automate all the things](automate-all-the-things.jpg)
 
@@ -58,11 +60,11 @@ I have dealt with my fair share of <abbr title="Continuous Integration">CI</abbr
 
 Luke Vivier has a [nice guide](http://luke.vivier.ca/wintersmith-with-wercker/) for setting up Wercker to deploy a Wintersmith site to Github Pages. I used his guide as a basis for setting up my workflow. However, I'm going to be publishing to Azure Websites, not Github Pages.
 
-###Why not Github Pages?
+### Why not Github Pages?
 
 This site has been through a number of frameworks -- [BlogEngine.net](http://www.dotnetblogengine.net/), [Wordpress](http://wordpress.org/), [Ghost](https://ghost.org/), and now [Wintersmith](http://wintersmith.io/). I have a lot of old "permanent" links that have changed and that I maintain `301` redirects for. Github Pages doesn't support redirects without some not-so-nice hacks.
 
-###My Wercker Setup
+### My Wercker Setup
 
 Here is a quick rundown of how to get Wercker up and running publishing to Azure:
 

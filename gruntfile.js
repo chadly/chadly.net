@@ -15,12 +15,6 @@ module.exports = function(grunt) {
 					src: ["*.*"],
 					dest: "contents/vendor/bootstrap/fonts/"
 				}]
-			},
-			bootswatch: {
-				expand: true,
-				cwd: "bower_components/bootswatch/lumen/",
-				src: ["*.less"],
-				dest: "contents/vendor/bootswatch/"
 			}
 		},
 		metalsmith: {
@@ -28,6 +22,7 @@ module.exports = function(grunt) {
 				metadata: {
 					id: "541c5e94-6748-4c23-babe-3a1953e2e4da",
 					url: "http://chadly.net/",
+					name: "chadly.net",
 					author: {
 						name: "Chad Lee",
 						tagline: "Software Developer. Sometimes I write stuff.",

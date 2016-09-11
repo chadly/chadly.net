@@ -1,57 +1,67 @@
 {{> header}}
 
-<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
-	<header>
-		<h2 itemprop="name headline">{{title}}</h2>
-		<time datetime="{{date format='YYYY-MM-DD'}}" itemprop="datePublished">
-			<i class="fa fa-calendar"></i>
-			{{date format='MMMM DD, YYYY'}}
-		</time>
-	</header>
+<header style="background-image: url({{cover cover}})" class="{{headerClass}}">
+	<div class="container">
+		<section>
+				<h1>{{title}}</h1>
+				{{#if tagline}}
+					<h2>{{tagline}}</h2>
+				{{/if}}
 
-	<section class="post-content" itemprop="articleBody">
-		{{{contents}}}
-	</section>
+				<time datetime="{{date format='YYYY-MM-DD'}}" itemprop="datePublished">
+					<i class="fa fa-calendar"></i>
+					{{date format='MMMM DD, YYYY'}}
+				</time>
+		</section>
+	</div>
+</header>
 
-	<footer>
-		<section class="share">
-			<h4>Share this post</h4>
+<main class="site" role="main">
+	<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+		<section class="post-content" itemprop="articleBody">
+			{{{contents}}}
+		</section>
+
+		<footer>
+			<section class="share">
+				<h4>Share this post</h4>
 			<a class="icon fa fa-twitter" href="http://twitter.com/share?text={{title}}&url={{url}}{{path}}" title="Twitter" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;"></a>
 			<a class="icon fa fa-facebook" href="https://www.facebook.com/sharer/sharer.php?u={{url}}{{path}}" title="Facebook" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;"></a>
 			<a class="icon fa fa-google-plus" href="https://plus.google.com/share?url={{url}}{{path}}" title="Google+" onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;"></a>
 			<a class="icon" href="http://news.ycombinator.com/submitlink?u={{url}}{{path}}&t={{title}}" title="Hacker News" onclick="window.open(this.href, 'google-plus-share', 'width=580,height=530');return false;">Y</a>
-		</section>
-	</footer>
+			</section>
+		</footer>
 
-	{{#if disqus}}
-	<div id="disqus_thread" class="post-comments"></div>
-	<script type="text/javascript">
-		var disqus_shortname = '{{disqus}}';
+		{{#if disqus}}
+		<div id="disqus_thread" class="post-comments"></div>
+		<script type="text/javascript">
+			var disqus_shortname = '{{disqus}}';
 		        var disqus_title = '{{title}}';
 
 		        {{#if disqus.identifier}}
 		        var disqus_identifier = '{{disqus.identifier}}';
-				{{else}}
+					{{else}}
 					{{#if disqus.url}}
 					var disqus_url = '{{disqus.url}}';
-					{{else}}
+						{{else}}
 					var disqus_identifier = '{{id}}';
-					{{/if}}
-		        {{/if}}
+						{{/if}}
+			        {{/if}}
 
-		        (function() {
-		            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-		            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-		            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-		        })();
-	</script>
-	<noscript>Please enable JavaScript to view the
-		<a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
-	</noscript>
-	<a href="http://disqus.com" class="dsq-brlink">comments powered by
-		<span class="logo-disqus">Disqus</span>
-	</a>
-	{{/if}}
-</article>
+			        (function() {
+			            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+			            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+			            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+			        })();
+		</script>
+		<noscript>Please enable JavaScript to view the
+			<a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+		</noscript>
+		<a href="http://disqus.com" class="dsq-brlink">comments powered by
+			<span class="logo-disqus">Disqus</span>
+		</a>
+		{{/if}}
+	</article>
+</main>
 
 {{> footer}}

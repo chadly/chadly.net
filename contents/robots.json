@@ -1,7 +1,0 @@
-{
-  "template": "robots.jade",
-  "filename": "robots.txt",
-  "disallow": [
-	"/errors"
-  ]
-}

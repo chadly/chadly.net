@@ -1,5 +1,5 @@
 ---
-sort: 4
+sort: 40
 title: Software Consultant
 company: LaVista Tech, LLC.
 timeframe: Jan 2005 - Present (part-time)

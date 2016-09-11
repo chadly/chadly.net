@@ -1,13 +1,22 @@
 {{> header}}
 
-<article class="page">
-    <header>
-		<h2>{{title}}</h2>
-    </header>
+<header style="background-image: url({{cover cover}})" class="{{headerClass}}">
+	<div class="container">
+		<section>
+				<h1>{{title}}</h1>
+				{{#if tagline}}
+					<h2>{{tagline}}</h2>
+				{{/if}}
+		</section>
+	</div>
+</header>
 
-    <section class="page-content">
-        {{{contents}}}
-    </section>
-</article>
+<main class="site" role="main">
+	<article class="page">
+		<section class="page-content">
+			{{{contents}}}
+		</section>
+	</article>
+</main>
 
 {{> footer}}

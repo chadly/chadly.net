@@ -9,8 +9,8 @@
 	{{#each posts}}
 	<entry>
 		<title>{{title}}</title>
-		<link href="{{../url}}{{url}}" />
-		<id>urn:uuid:{{metadata.id}}</id>
+		<link href="{{../url}}{{path}}/" />
+		<id>urn:uuid:{{id}}</id>
 		<updated>{{date format="YYYY-MM-DDTHH:mm:ssZ"}}</updated>
 		<author>
 			<name>{{../author.name}}</name>
@@ -19,7 +19,7 @@
 			{{/if}}
 		</author>
 		<summary type="html">
-			{{html}}
+			{{contents}}
 		</summary>
 	</entry>
 	{{/each}}

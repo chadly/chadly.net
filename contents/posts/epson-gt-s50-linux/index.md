@@ -10,7 +10,7 @@ I'm a bit anal when it comes to digitizing all of my important paperwork. Back w
 
 In Mint, it _can_ be just as easy. It just took me a little bit to get my workflow setup with a different set of software.
 
-###Install Scanner Drivers
+### Install Scanner Drivers
 
 [This thread](http://ubuntuforums.org/showthread.php?t=2105342) helped me out the most when I was trying to get this working. I've outlined the steps below.
 
@@ -29,11 +29,11 @@ This was the part I missed on my first go around. Go back to the original search
 
 After that, you should be able to use any scanner application with your scanner. If the scanner still doesn't show up, you may have to reboot.
 
-###Post Processing Scans
+### Post Processing Scans
 
 I've been using [gscan2pdf](http://gscan2pdf.sourceforge.net/) to replace my Acrobat workflow. The process is very similar. Under the covers, it uses [unpaper](http://unpaper.berlios.de/) and [tesseract](https://code.google.com/p/tesseract-ocr/) for cleaning up and OCRing the scans respectively.
 
-####Installation
+#### Installation
 
 In order to get [past this bug](https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=700108), I had to make sure I was using gscan2pdf's PPA in order to get the latest version. Run the following to get the app installed with its dependencies:
 
@@ -46,7 +46,7 @@ sudo apt-get install tesseract-ocr
 sudo apt-get install unpaper
 ```
 
-####Workflow
+#### Workflow
 
 After opening gscan2pdf, click the `Scan` button which opens a scan dialog very similar to the one Adobe Acrobat uses. In order to get duplex scanning working properly, I had to make sure the following settings were set under `Page Options`:
 
