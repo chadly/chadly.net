@@ -41,8 +41,11 @@ Metalsmith(__dirname)
 			"css/main.less",
 			"css/resume.less"
 		],
-		parse: {
-			paths: ["contents/css/"]
+		render: {
+			paths: [
+				"contents/css/",
+				"node_modules"
+			]
 		}
 	}))
 	.use(permalinks({

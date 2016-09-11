@@ -13,16 +13,16 @@
     "url": "https://github.com/chadly/chadly.net.git"
   },
   "devDependencies": {
-    "bootstrap": "^3.3.4",
-    "handlebars": "^2.0.0",
-    "http-server": "^0.9.0",
-    "metalsmith": "^2.2.0",
-    "metalsmith-collections": "^0.6.0",
-    "metalsmith-drafts": "0.0.1",
-    "metalsmith-less": "^1.0.2",
-    "metalsmith-markdown": "^0.2.1",
-    "metalsmith-permalinks": "^0.4.0",
-    "metalsmith-templates": "^0.6.0",
-    "moment": "^2.8.4"
+    "bootstrap": "3.3.x",
+    "handlebars": "2.0.x",
+    "http-server": "0.9.x",
+    "metalsmith": "2.2.x",
+    "metalsmith-collections": "0.7.x",
+    "metalsmith-drafts": "0.0.x",
+    "metalsmith-less": "2.0.x",
+    "metalsmith-markdown": "0.2.x",
+    "metalsmith-permalinks": "0.5.x",
+    "metalsmith-templates": "0.7.x",
+    "moment": "2.14.x"
   }
 }
