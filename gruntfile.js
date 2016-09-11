@@ -2,21 +2,6 @@ var path = require("path");
 
 module.exports = function(grunt) {
 	grunt.initConfig({
-		copy: {
-			bootstrap: {
-				files: [{
-					expand: true,
-					cwd: "bower_components/bootstrap/less/",
-					src: ["**/*.less"],
-					dest: "contents/vendor/bootstrap/less/"
-				}, {
-					expand: true,
-					cwd: "bower_components/bootstrap/fonts/",
-					src: ["*.*"],
-					dest: "contents/vendor/bootstrap/fonts/"
-				}]
-			}
-		},
 		metalsmith: {
 			options: {
 				metadata: {
@@ -88,10 +73,9 @@ module.exports = function(grunt) {
 		}
 	});
 
-	grunt.loadNpmTasks("grunt-contrib-copy");
 	grunt.loadNpmTasks("grunt-metalsmith");
 	grunt.loadNpmTasks("grunt-contrib-connect");
 
-	grunt.registerTask("default", ["copy", "metalsmith"]);
+	grunt.registerTask("default", ["metalsmith"]);
 	grunt.registerTask("preview", ["default", "connect"]);
 };
