@@ -4,6 +4,13 @@ Built with [Bootstrap](http://getbootstrap.com/) and [Wintersmith](https://githu
 
 [Read a full introduction](http://chadly.net/2013/12/automate-all-the-things-with-wercker/) to how this site is built & deployed.
 
+## TODO
+
+* Fix permalinks (using title rather than folder name)
+* resume ([use this](https://github.com/hacksalot/HackMyResume), why not?)
+* get rid of grunt
+* Use [cleanblog template](https://github.com/BlackrockDigital/startbootstrap-clean-blog)
+
 ## How to Use
 
 ### Running Locally
