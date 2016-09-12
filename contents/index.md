@@ -1,5 +1,6 @@
 ---
-template: index.hbs
+template: layout.hbs
+rtemplate: home.jsx
 nav: blog
 ---
 

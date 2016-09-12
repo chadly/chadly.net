@@ -3,9 +3,8 @@ var collections = require("metalsmith-collections");
 var markdown = require("metalsmith-markdown");
 var less = require("metalsmith-less");
 var permalinks = require("metalsmith-permalinks");
+var reactTemplates = require("metalsmith-react-templates");
 var templates = require("metalsmith-templates");
-
-var templateHelpers = require("./helpers");
 
 Metalsmith(__dirname)
 	.source("contents")
@@ -52,13 +51,12 @@ Metalsmith(__dirname)
 		pattern: ":date/:title",
 		date: "YYYY/MM"
 	}))
+	.use(reactTemplates({
+		directory: "templates",
+		defaultTemplate: null
+	}))
 	.use(templates({
-		engine: "handlebars",
-		partials: {
-			"header": "header",
-			"footer": "footer"
-		},
-		helpers: templateHelpers
+		engine: "handlebars"
 	}))
 	.build(function(err) {
 		if (err) throw err;
