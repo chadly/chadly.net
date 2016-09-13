@@ -1,6 +1,7 @@
 ---
 title: About Me
-template: page.hbs
+template: layout.hbs
+rtemplate: page.jsx
 nav: about
 ---
 
