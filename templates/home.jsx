@@ -7,24 +7,23 @@ const Home = ({
 	metadata: {
 		author,
 		name,
-		disqus
+		url,
+		disqus,
+		posts
 	},
-	contents: intro,
-	posts
+	contents: intro
 }) => {
 	return (
 		<div>
 			<Navigation siteName={name} />
 			<Hero title={author.name} description={author.tagline} />
 
-			<main class="site" role="main">
-				<section class="intro">
-					{intro}
-				</section>
+			<main className="site" role="main">
+				<section className="intro" dangerouslySetInnerHTML={{ __html: intro }} />
 
-				<section class="post-list" itemscope itemtype="http://schema.org/Blog">
+				<section className="post-list" itemscope itemtype="http://schema.org/Blog">
 					<h4>Read Stuff</h4>
-					<Posts posts={posts} />
+					<Posts posts={posts} siteUrl={url} enableDisqus={!!disqus} />
 				</section>
 
 				{/*

@@ -11,9 +11,11 @@ const Post = ({
 		url
 	},
 	title,
+	tagline,
 	date,
 	contents,
-	path
+	path,
+	cover
 }) => {
 	const fullUrl = `${url}${path}/`;
 
@@ -25,26 +27,24 @@ const Post = ({
 	return (
 		<div>
 			<Navigation siteName={name} />
-			<Hero title={title} description={date} />
+			<Hero title={title} description={tagline} date={date} cover={cover} />
 
-			<main class="site" role="main">
-				<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
-					<section class="post-content" itemprop="articleBody">
-						{contents}
-					</section>
+			<main className="site" role="main">
+				<article className="post" itemscope itemtype="http://schema.org/BlogPosting">
+					<section className="post-content" itemprop="articleBody" dangerouslySetInnerHTML={{ __html: contents }} />
 
 					<footer>
-						<section class="share">
+						<section className="share">
 							<h4>Share this post</h4>
-							<a class="icon fa fa-twitter" href={twitterLink} title="Twitter" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;"></a>
-							<a class="icon fa fa-facebook" href={fbLink} title="Facebook" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;"></a>
-							<a class="icon fa fa-google-plus" href={gplusLink} title="Google+" onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;"></a>
-							<a class="icon" href={hnLink} title="Hacker News" onclick="window.open(this.href, 'hn-share', 'width=580,height=530');return false;">Y</a>
+							<a className="icon fa fa-twitter" href={twitterLink} title="Twitter" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;"></a>
+							<a className="icon fa fa-facebook" href={fbLink} title="Facebook" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;"></a>
+							<a className="icon fa fa-google-plus" href={gplusLink} title="Google+" onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;"></a>
+							<a className="icon" href={hnLink} title="Hacker News" onclick="window.open(this.href, 'hn-share', 'width=580,height=530');return false;">Y</a>
 						</section>
 					</footer>
 
 					{/*{{#if disqus}}
-					<div id="disqus_thread" class="post-comments"></div>
+					<div id="disqus_thread" className="post-comments"></div>
 					<script type="text/javascript">
 						var disqus_shortname = '{{disqus}}';
 							var disqus_title = '{{title}}';
@@ -68,8 +68,8 @@ const Post = ({
 					<noscript>Please enable JavaScript to view the
 						<a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
 					</noscript>
-					<a href="http://disqus.com" class="dsq-brlink">comments powered by
-						<span class="logo-disqus">Disqus</span>
+					<a href="http://disqus.com" className="dsq-brlink">comments powered by
+						<span className="logo-disqus">Disqus</span>
 					</a>
 					{{/if}}*/}
 				</article>

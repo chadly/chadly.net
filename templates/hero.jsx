@@ -2,7 +2,7 @@ import React from "react";
 import moment from "moment";
 
 const Hero = ({
-	cover,
+	cover = "/lodyas.png",
 	headerClass,
 	title,
 	description,
@@ -11,20 +11,20 @@ const Hero = ({
 	const descEl = description ? <h2>{description}</h2> : null;
 	const dateEl = date ? (
 		<time datetime={moment(date).format("YYYY-MM-DD")} itemprop="datePublished">
-			<i class="fa fa-calendar"></i>
+			<i className="fa fa-calendar"></i>
 			{moment(date).format("YYYY-MM-DD")}
 		</time>
 	) : null;
 
 	const style = {
-		"backgroundImage": "url(lodyas.png)"
+		"backgroundImage": `url(${cover})`
 	};
 
 	return (
-		<header style={style} class={headerClass}>
-			<div class="container">
-				<div class="row">
-					<div class="col-md-8 col-md-offset-2">
+		<header style={style} className={headerClass}>
+			<div className="container">
+				<div className="row">
+					<div className="col-md-8 col-md-offset-2">
 						<section>
 							<h1>{title}</h1>
 							{descEl}
