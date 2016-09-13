@@ -2,6 +2,7 @@ import React from "react";
 import Hero from "./hero";
 import Navigation from "./nav";
 import Posts from "./posts";
+import DisqusCommentCounts from "./disqus/comment-counts";
 
 const Home = ({
 	metadata: {
@@ -13,6 +14,8 @@ const Home = ({
 	},
 	contents: intro
 }) => {
+	const disqusMarkup = disqus ? <DisqusCommentCounts shortName={disqus} /> : null;
+
 	return (
 		<div>
 			<Navigation siteName={name} />
@@ -26,20 +29,7 @@ const Home = ({
 					<Posts posts={posts} siteUrl={url} enableDisqus={!!disqus} />
 				</section>
 
-				{/*
-				{{#if disqus}}
-				<script type="text/javascript">
-					var disqus_shortname = '{{disqus}}';
-
-					(function () {
-						var s = document.createElement('script'); s.async = true;
-						s.type = 'text/javascript';
-						s.src = '//' + disqus_shortname + '.disqus.com/count.js';
-						(document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
-					}());
-				</script>
-				{{/if}}
-				*/}
+				{disqusMarkup}
 			</main>
 		</div>
 	);
