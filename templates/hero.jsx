@@ -10,10 +10,10 @@ const Hero = ({
 }) => {
 	const descEl = description ? <h2>{description}</h2> : null;
 	const dateEl = date ? (
-		<time datetime={moment(date).format("YYYY-MM-DD")} itemprop="datePublished">
+		<time dateTime={moment(date).utc().format("YYYY-MM-DD")} itemProp="datePublished">
 			<i className="fa fa-calendar"></i>
 			{" "}
-			{moment(date).format("MMMM DD, YYYY")}
+			{moment(date).utc().format("MMMM DD, YYYY")}
 		</time>
 	) : null;
 

@@ -35,8 +35,8 @@ const Post = ({
 			<Hero title={title} description={tagline} date={date} cover={cover} />
 
 			<main className="site" role="main">
-				<article className="post" itemscope itemtype="http://schema.org/BlogPosting">
-					<section className="post-content" itemprop="articleBody" dangerouslySetInnerHTML={{ __html: contents }} />
+				<article className="post" itemScope itemType="http://schema.org/BlogPosting">
+					<section className="post-content" itemProp="articleBody" dangerouslySetInnerHTML={{ __html: contents }} />
 
 					<footer>
 						<section className="share">

@@ -15,12 +15,12 @@ const Posts = ({ siteUrl, posts, enableDisqus }) => {
 	return (
 		<div>
 			{posts.map(post => {
-				const date = moment(post.date);
+				const date = moment(post.date).utc();
 				return (
-					<article key={post.id} className="post-stub" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
-						<time datetime={date.format("YYYY-MM-DD")} itemprop="datePublished">{date.format("DD MMM YYYY")}</time>
+					<article key={post.id} className="post-stub" itemProp="blogPost" itemScope itemType="http://schema.org/BlogPosting">
+						<time dateTime={date.format("YYYY-MM-DD")} itemProp="datePublished">{date.format("DD MMM YYYY")}</time>
 						<div className="post-title">
-							<a href={post.path + "/"} itemprop="name headline url">{post.title}</a>
+							<a href={post.path + "/"} itemProp="name headline url">{post.title}</a>
 							{commentCount(post)}
 						</div>
 					</article>
