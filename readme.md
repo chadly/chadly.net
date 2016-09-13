@@ -1,8 +1,6 @@
 # Personal Website
 
-Built with [Bootstrap](http://getbootstrap.com/) and [Wintersmith](https://github.com/jnordberg/wintersmith).
-
-[Read a full introduction](http://chadly.net/2013/12/automate-all-the-things-with-wercker/) to how this site is built & deployed.
+> Built with [Bootstrap](http://getbootstrap.com/) and [Metalsmith](http://www.metalsmith.io/).
 
 ## TODO
 
@@ -27,17 +25,17 @@ Then build the web assets and preview the site:
 npm start
 ```
 
-This will spin up a server running at `localhost:8080`. The preview server uses `dev.json` for configuration.
+This will spin up a server running at `localhost:8080`. The preview server uses `site.dev.json` for configuration.
 
 ### Building for Deployment
 
 In order to build the site to deploy to a static hosting provider, just run:
 
 ```
-npm run build
+npm run dist
 ```
 
-and copy the contents of `/build` to your provider. The `dist` task uses `prod.json` to configure the Wintersmith build.
+and copy the contents of `/build` to your provider. The `dist` task merges `site.dev.json` & `site.prod.json` to configure Metalsmith metadata.
 
 ## License
 

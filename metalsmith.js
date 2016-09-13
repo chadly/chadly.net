@@ -6,24 +6,15 @@ var permalinks = require("metalsmith-permalinks");
 var reactTemplates = require("metalsmith-react-templates");
 var templates = require("metalsmith-templates");
 
+const isProd = process.argv.length >= 3 && process.argv[2] === "dist";
+
+let metadata = require("./site.dev.json");
+metadata = isProd ? Object.assign({}, metadata, require("./site.prod.json")) : metadata;
+
 Metalsmith(__dirname)
 	.source("contents")
 	.destination("build")
-	.metadata({
-		id: "541c5e94-6748-4c23-babe-3a1953e2e4da",
-		url: "http://chadly.net/",
-		name: "chadly.net",
-		author: {
-			name: "Chad Lee",
-			tagline: "Software Developer. Sometimes I write stuff.",
-			link: "https://plus.google.com/+ChadLee?rel=author"
-		},
-		//disqus: "chadlynet",
-		//analytics: {
-		//	"id": "UA-636144-7",
-		//	"domain": "chadly.net"
-		//}
-	})
+	.metadata(metadata)
 	.use(collections({
 		posts: {
 			pattern: "posts/**/*.md",

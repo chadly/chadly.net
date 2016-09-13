@@ -5,8 +5,9 @@
   "author": "Chad Lee",
   "license": "MIT",
   "scripts": {
-    "build": "rimraf build && node metalsmith.js",
-    "start": "npm run build && http-server build -p 1337 -o -c-1"
+    "dist": "rimraf build && node metalsmith.js dist",
+    "debug": "rimraf build && node metalsmith.js",
+    "start": "npm run debug && http-server build -p 1337 -o -c-1"
   },
   "repository": {
     "type": "git",
