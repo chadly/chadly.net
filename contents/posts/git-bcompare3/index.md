@@ -7,6 +7,7 @@ rtemplate: post.jsx
 nav: blog
 redirects:
   - /2014/05/git-bcompare/
+  - /2014/05/git-bcompare3/
 ---
 
 <div class="alert alert-warning">

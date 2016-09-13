@@ -8,6 +8,8 @@ date: 2015-04-25
 template: layout.hbs
 rtemplate: post.jsx
 nav: blog
+redirects:
+  - /2015/04/publishing-react-to-npm/
 ---
 
 I recently had the need to publish a [React](http://facebook.github.io/react/) component to [npm](https://www.npmjs.com/) and had trouble finding any best practices on the subject. So, I decided to make some up. The ideas here can really be applied to any npm package targeted at a browser environment, but I'm dealing with React specifically.

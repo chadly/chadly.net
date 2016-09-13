@@ -6,6 +6,8 @@ template: layout.hbs
 rtemplate: post.jsx
 cover: nvidia.png
 nav: blog
+redirects:
+  - /2015/04/nvidia-drivers/
 ---
 
 I was experiencing problems with banding in some games and during videos with the NVidia 331 drivers in Ubuntu. I decided to try the latest driver from NVidia for my card, (`346.47` as of right now).

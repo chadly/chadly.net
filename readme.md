@@ -2,13 +2,6 @@
 
 > Built with [Bootstrap](http://getbootstrap.com/) and [Metalsmith](http://www.metalsmith.io/).
 
-## TODO
-
-* Fix permalinks (using title rather than folder name)
-* resume ([use this](https://github.com/hacksalot/HackMyResume), why not?)
-* get rid of grunt
-* Use [cleanblog template](https://github.com/BlackrockDigital/startbootstrap-clean-blog)
-
 ## How to Use
 
 ### Running Locally
@@ -43,7 +36,7 @@ All `.md` files (post contents) are licensed under [Creative Commons Attribution
 
 #### The MIT License (MIT)
 
-Copyright &copy; 2013 William Chad Lee
+Copyright &copy; 2013 - 2016 William Chad Lee
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

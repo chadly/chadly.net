@@ -7,6 +7,7 @@ rtemplate: post.jsx
 nav: blog
 redirects:
   - /2016/09/git-bcompare/
+  - /2016/09/git-bcompare4/
 ---
 
 I've finally upgraded to [Beyond Compare 4](http://www.scootersoftware.com/) and I want to document how I set it up for myself. I've [previously done this with version 3](/2014/05/git-bcompare/) and it has gotten easier since then.

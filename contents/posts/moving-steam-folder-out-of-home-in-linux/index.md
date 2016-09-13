@@ -6,6 +6,8 @@ template: layout.hbs
 rtemplate: post.jsx
 cover: steam.jpg
 nav: blog
+redirects:
+  - /2014/03/steam-on-linux/
 ---
 
 I like to switch distros from time to time and remembering all of my little system tweaks becomes...problematic over time. Hence, I am documenting this for myself. Maybe it will benefit you too, dear reader.

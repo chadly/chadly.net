@@ -6,6 +6,8 @@ template: layout.hbs
 rtemplate: post.jsx
 cover: elementaryos.png
 nav: blog
+redirects:
+  - /2014/03/live-tv-in-linux/
 ---
 
 I've been using [elementary OS Luna](http://elementaryos.org/) lately, an Ubuntu derivative, and I really like it so far. It is very smooth and lightweight. Anyway, since I had to reinstall my OS, I've needed to setup all of my hardware again. Here is how I got my [WinTV-HVR2250](http://hauppauge.com/site/products/data_hvr2250.html) working.
