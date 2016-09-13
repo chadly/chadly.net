@@ -28,7 +28,7 @@
     "metalsmith-permalinks": "0.5.x",
     "metalsmith-react-templates": "4.1.x",
     "metalsmith-templates": "0.7.x",
-    "moment": "2.14.x",
+    "moment": "2.15.x",
     "react": "15.3.x",
     "react-dom": "15.3.x"
   }
