@@ -56,7 +56,8 @@ Metalsmith(__dirname)
 		defaultTemplate: null
 	}))
 	.use(templates({
-		engine: "handlebars"
+		engine: "handlebars",
+		helpers: require("./helpers")
 	}))
 	.build(function(err) {
 		if (err) throw err;
