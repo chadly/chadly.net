@@ -2,7 +2,8 @@
 id: ee59cdde-0660-4ed7-875b-9d8b57b71ba1
 title: BDD with xUnit.net
 date: 2009-04-20
-template: post.hbs
+template: layout.hbs
+rtemplate: post.jsx
 nav: blog
 redirects:
   - /post/2009/04/20/BDD-with-xUnit.aspx

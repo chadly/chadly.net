@@ -2,7 +2,8 @@
 id: 1c45c5b3-23dd-4c50-9983-66dc816b3333
 title: Configuring Beyond Compare 4 with Git
 date: 2016-09-10
-template: post.hbs
+template: layout.hbs
+rtemplate: post.jsx
 nav: blog
 redirects:
   - /2016/09/git-bcompare/

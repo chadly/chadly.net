@@ -2,7 +2,8 @@
 id: ab5f0948-e244-48a3-b4e3-c0f379072792
 title: A Poor Man's Transclude in Knockout.js
 date: 2013-12-13
-template: post.hbs
+template: layout.hbs
+rtemplate: post.jsx
 nav: blog
 redirects:
   - /a-poor-mans-transclude-in-knockout-js/

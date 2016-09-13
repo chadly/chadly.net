@@ -5,7 +5,8 @@ tagline: Or…the unexpected virtue of prepublishing
 cover: react.svg
 headerClass: invert
 date: 2015-04-25
-template: post.hbs
+template: layout.hbs
+rtemplate: post.jsx
 nav: blog
 ---
 

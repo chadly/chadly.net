@@ -2,7 +2,8 @@
 id: 8a5944db-888f-43a1-8266-5fae230ee6be
 title: Developing with Passion
 date: 2009-03-09
-template: post.hbs
+template: layout.hbs
+rtemplate: post.jsx
 nav: blog
 redirects:
   - /post/2009/03/29/Developing-with-Passion.aspx

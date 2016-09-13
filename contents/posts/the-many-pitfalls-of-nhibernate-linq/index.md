@@ -2,7 +2,8 @@
 id: e6c4b1ab-4605-4264-a90f-30b1feb26684
 title: The Many Pitfalls of NHibernate.Linq
 date: 2009-08-26
-template: post.hbs
+template: layout.hbs
+rtemplate: post.jsx
 nav: blog
 redirects:
   - /post/2009/08/26/The-Many-Pitfalls-of-NHibernateLinq.aspx

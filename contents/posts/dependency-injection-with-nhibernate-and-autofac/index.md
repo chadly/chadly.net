@@ -2,7 +2,8 @@
 id: 9aa9f480-9332-4bf1-8994-9449f2420f06
 title: Dependency Injection with NHibernate and Autofac
 date: 2009-05-28
-template: post.hbs
+template: layout.hbs
+rtemplate: post.jsx
 nav: blog
 redirects:
   - /post/2009/05/28/Dependency-Injection-with-NHibernate-and-Autofac.aspx

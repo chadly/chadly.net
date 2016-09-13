@@ -2,7 +2,8 @@
 id: 794c200f-46e8-456e-834a-c2242174da75
 title: Lightbox for YouTube Videos
 date: 2009-01-29
-template: post.hbs
+template: layout.hbs
+rtemplate: post.jsx
 nav: blog
 cover: youtube-on-wood.jpg
 headerClass: invert
