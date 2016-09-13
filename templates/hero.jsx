@@ -12,7 +12,8 @@ const Hero = ({
 	const dateEl = date ? (
 		<time datetime={moment(date).format("YYYY-MM-DD")} itemprop="datePublished">
 			<i className="fa fa-calendar"></i>
-			{moment(date).format("YYYY-MM-DD")}
+			{" "}
+			{moment(date).format("MMMM DD, YYYY")}
 		</time>
 	) : null;
 
@@ -23,15 +24,11 @@ const Hero = ({
 	return (
 		<header style={style} className={headerClass}>
 			<div className="container">
-				<div className="row">
-					<div className="col-md-8 col-md-offset-2">
-						<section>
-							<h1>{title}</h1>
-							{descEl}
-							{dateEl}
-						</section>
-					</div>
-				</div>
+				<section>
+					<h1>{title}</h1>
+					{descEl}
+					{dateEl}
+				</section>
 			</div>
 		</header>
 	);
