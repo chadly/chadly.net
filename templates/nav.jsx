@@ -1,26 +1,7 @@
-﻿<!DOCTYPE html>
-<html>
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+import React from "react";
 
-	<title>{{#if title}}{{title}} - {{/if}}{{author.name}}</title>
-	<meta name="description" content="{{author.tagline}}" />
-
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-	<link rel="icon" type="image/png" href="/terminal.png" />
-	<link rel="alternate" type="application/atom+xml" href="/feed.xml" title="{{author.name}}" />
-
-	<link rel="stylesheet" type="text/css" href="/css/{{css}}" />
-	<link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" />
-
-	{{#if author.link}}
-	<link rel="author" href="{{author.link}}" />
-	{{/if}}
-</head>
-<body>
-	<div id="wrap">
+const Navigation = ({ siteName }) => {
+	return (
 		<nav class="site navbar navbar-default navbar-fixed-top">
 			<section>
 				<div class="navbar-header">
@@ -31,7 +12,7 @@
 						<span class="icon-bar"></span>
 					</button>
 
-					<a href="/" class="navbar-brand">{{name}}</a>
+					<a href="/" class="navbar-brand">{siteName}</a>
 				</div>
 
 				<div class="collapse navbar-collapse">
@@ -46,3 +27,7 @@
 				</div>
 			</section>
 		</nav>
+	);
+};
+
+module.exports = Navigation;
