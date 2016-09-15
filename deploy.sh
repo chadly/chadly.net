@@ -108,11 +108,16 @@ if [ -e "package.json" ]; then
   eval $NPM_CMD install
   eval $NPM_CMD update
   eval $NPM_CMD prune
+  exitWithMessageOnError "npm failed"
+fi
+
+echo 3. Run build script
+if [ -e "package.json" ]; then
   eval $NPM_CMD run dist
   exitWithMessageOnError "npm failed"
 fi
 
-echo 3. KuduSync
+echo 4. KuduSync
 if [[ "$IN_PLACE_DEPLOYMENT" -ne "1" ]]; then
   "$KUDU_SYNC_CMD" -v 50 -f "$DEPLOYMENT_SOURCE/build" -t "$DEPLOYMENT_TARGET" -n "$NEXT_MANIFEST_PATH" -p "$PREVIOUS_MANIFEST_PATH" -i ".git;.hg;.deployment;deploy.sh"
   exitWithMessageOnError "Kudu Sync failed"
