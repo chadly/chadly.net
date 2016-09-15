@@ -108,7 +108,7 @@ if [ -e "package.json" ]; then
   eval $NPM_CMD install
   eval $NPM_CMD update
   eval $NPM_CMD prune
-  eval $NPM_CMD run build
+  eval $NPM_CMD run dist
   exitWithMessageOnError "npm failed"
 fi
 

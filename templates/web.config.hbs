@@ -32,14 +32,14 @@
 					<action type="Redirect" url="https://github.com/chadly/Geocoding.net" redirectType="Permanent" />
 				</rule>
 
-				{{#posts contents}}
-				{{#each metadata.redirects}}
-				<rule name="old-posts-{{slugify ../this}}-{{@index}}">
+				{{#each posts}}
+				{{#each redirects}}
+				<rule name="old-posts-{{@../index}}-{{@index}}">
 					<match url="^{{unslash this}}" />
-					<action type="Redirect" url="{{unslash ../url}}" redirectType="Permanent" />
+					<action type="Redirect" url="{{unslash ../path}}/" redirectType="Permanent" />
 				</rule>
 				{{/each}}
-				{{/posts}}
+				{{/each}}
 
 				<!-- URL cleanup -->
 				<rule name="Add trailing slash">
