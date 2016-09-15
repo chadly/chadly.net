@@ -1,7 +1,8 @@
 ---
 id: 577777ee-5b8a-4e4b-8488-8e24d85af7ab
 title: Configuring Beyond Compare 3 with Git
-date: 2014-05-29
+created: 2014-05-29
+updated: 2016-09-10
 template: layout.hbs
 rtemplate: post.jsx
 nav: blog
@@ -11,8 +12,8 @@ redirects:
 ---
 
 <div class="alert alert-warning">
-	<strong>Update:</strong>
-	[See updated post for Beyond Compare 4](/2016/09/git-bcompare/).
+	<strong>Updated:</strong>
+	[See updated post for Beyond Compare 4](/2016/09/configuring-beyond-compare-4-with-git/).
 </div>
 
 [Beyond Compare](http://www.scootersoftware.com/) has been my [favorite comparison tool for a while now](/2009/04/tortoise-svn-settings-for-beyond-compare-3/). It is cross-platform and makes diffs and 3-way merges very easy to understand and visualize.

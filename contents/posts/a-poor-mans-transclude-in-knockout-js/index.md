@@ -1,7 +1,7 @@
 ---
 id: ab5f0948-e244-48a3-b4e3-c0f379072792
 title: A Poor Man's Transclude in Knockout.js
-date: 2013-12-13
+created: 2013-12-13
 template: layout.hbs
 rtemplate: post.jsx
 nav: blog
@@ -57,7 +57,7 @@ ko.bindingHandlers.myTooltip = {
 		//let knockout know that we'll manually bind the child HTML of our element
 		return { controlsDescendantBindings: true };
 	},
-	update: function (element, valueAccessor, allBindingsAccessor, model) {
+	updated: function (element, valueAccessor, allBindingsAccessor, model) {
 		//get a unique template name from the caller
 		var name = ko.utils.unwrapObservable(valueAccessor());
 

@@ -1,7 +1,7 @@
 ---
 id: 9aa9f480-9332-4bf1-8994-9449f2420f06
 title: Dependency Injection with NHibernate and Autofac
-date: 2009-05-28
+created: 2009-05-28
 template: layout.hbs
 rtemplate: post.jsx
 nav: blog
@@ -33,5 +33,5 @@ Then just enjoy the DI goodness integrated with NHibernate. If any type NHibern
 <span class="correction">The code can be found here.  I am going to contact the Autofac guys and see about putting this into the Autofac.Contrib project.</span>
 
 <div class="alert alert-warning">
-	<strong>Update:</strong> This is now included in the [Autofac.Contrib project](http://code.google.com/p/autofac/downloads/list) – [check it out here](http://code.google.com/p/autofac/source/browse/#svn/trunk/contrib/Source/AutofacContrib.NHibernate).
+	<strong>Updated:</strong> This is now included in the [Autofac.Contrib project](http://code.google.com/p/autofac/downloads/list) – [check it out here](http://code.google.com/p/autofac/source/browse/#svn/trunk/contrib/Source/AutofacContrib.NHibernate).
 </div>

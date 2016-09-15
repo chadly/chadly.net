@@ -14,7 +14,8 @@ const Post = ({
 	id,
 	title,
 	tagline,
-	date,
+	created,
+	updated,
 	contents,
 	path,
 	cover,
@@ -32,7 +33,7 @@ const Post = ({
 	return (
 		<div>
 			<Navigation siteName={name} />
-			<Hero title={title} description={tagline} date={date} cover={cover} />
+			<Hero title={title} description={tagline} created={created} updated={updated} cover={cover} />
 
 			<main className="site" role="main">
 				<article className="post" itemScope itemType="http://schema.org/BlogPosting">

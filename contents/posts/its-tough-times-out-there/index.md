@@ -1,7 +1,7 @@
 ---
 id: 2e212bd9-cdf3-48d4-8e05-9c8e6fabf286
 title: It's Tough Times Out There
-date: 2009-03-09
+created: 2009-03-09
 template: layout.hbs
 rtemplate: post.jsx
 nav: blog

@@ -12,10 +12,11 @@ const Post = ({
 	},
 	title,
 	tagline,
-	date,
 	contents,
 	path,
-	cover
+	cover,
+	created,
+	updated
 }) => {
 	const fullUrl = `${url}${path}/`;
 
@@ -27,7 +28,7 @@ const Post = ({
 	return (
 		<div>
 			<Navigation siteName={name} />
-			<Hero title={title} description={tagline} cover={cover} />
+			<Hero title={title} description={tagline} cover={cover} created={created} updated={updated} />
 
 			<main className="site" role="main">
 				<article className="page">

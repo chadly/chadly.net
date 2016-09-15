@@ -7,10 +7,12 @@ module.exports = function (context, options) {
 		options = context;
 		context = undefined;
 
-		// set to date by default, if it's available
+		// set to updated date or created date by default, if it's available
 		// otherwise, this will print the current date
-		if (this.date) {
-			context = this.date;
+		if (this.updated) {
+			context = this.updated;
+		} else if (this.created) {
+			context = this.created;
 		}
 	}
 

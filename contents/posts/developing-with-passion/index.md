@@ -1,7 +1,7 @@
 ---
 id: 8a5944db-888f-43a1-8266-5fae230ee6be
 title: Developing with Passion
-date: 2009-03-09
+created: 2009-03-09
 template: layout.hbs
 rtemplate: post.jsx
 nav: blog

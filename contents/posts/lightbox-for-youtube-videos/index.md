@@ -1,7 +1,7 @@
 ---
 id: 794c200f-46e8-456e-834a-c2242174da75
 title: Lightbox for YouTube Videos
-date: 2009-01-29
+created: 2009-01-29
 template: layout.hbs
 rtemplate: post.jsx
 nav: blog
@@ -47,7 +47,7 @@ This has the great advantage of gracefully scaling down for browsers with javasc
 You can see a <a href="http://www.youtube.com/watch?v=rP-2ksWFk4o" rel="fancyvideo">demo of it here</a> and get the [files here](fancybox-with-video.zip).  (By the way, the video in the demo is me fighting with myself via dog weaponage.  I crack myself up…)
 
 <div class="alert alert-warning">
-	<strong>Update:</strong>
+	<strong>Updated:</strong>
 	[Fancybox](http://fancyapps.com/fancybox/) now supports Youtube videos natively negating the need for the modified fancybox files here.
 </div>
 

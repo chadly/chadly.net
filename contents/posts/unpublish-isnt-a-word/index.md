@@ -2,7 +2,7 @@
 id: 24589153-72d6-445c-b7b0-857548c16557
 title: Unpublish Isn't a Word
 cover: tangled.jpg
-date: 2016-03-24
+created: 2016-03-24
 template: layout.hbs
 rtemplate: post.jsx
 nav: blog

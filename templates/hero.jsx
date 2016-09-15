@@ -10,18 +10,30 @@ const rando = random();
 
 const Hero = ({
 	cover,
-	headerClass,
 	title,
 	description,
-	date
+	created,
+	updated
 }) => {
 	const descEl = description ? <h2>{description}</h2> : null;
-	const dateEl = date ? (
-		<time dateTime={moment(date).utc().format("YYYY-MM-DD")} itemProp="datePublished">
-			<i className="fa fa-calendar"></i>
+
+	const updatedEl = updated ? (
+		<time dateTime={moment(updated).utc().format("YYYY-MM-DD")} itemProp="dateModified">
+			Updated on
 			{" "}
-			{moment(date).utc().format("MMMM DD, YYYY")}
+			{moment(updated).utc().format("MMMM DD, YYYY")}
 		</time>
+	) : null;
+
+	const createdEl = created ? (
+		<div>
+			<time dateTime={moment(created).utc().format("YYYY-MM-DD")} itemProp="datePublished">
+				Published on
+				{" "}
+				{moment(created).utc().format("MMMM DD, YYYY")}
+			</time>
+			{updatedEl}
+		</div>
 	) : null;
 
 	if (!cover) {
@@ -34,12 +46,12 @@ const Hero = ({
 	};
 
 	return (
-		<header style={style} className={headerClass}>
+		<header style={style} className="site">
 			<div className="container">
 				<section>
 					<h1>{title}</h1>
 					{descEl}
-					{dateEl}
+					{createdEl}
 				</section>
 			</div>
 		</header>

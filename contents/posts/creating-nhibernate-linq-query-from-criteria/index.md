@@ -1,7 +1,7 @@
 ---
 id: e94cf2f8-6941-44b3-b1d4-f6cdc2cfcbbd
 title: Creating NHibernate Linq Query from Criteria
-date: 2009-10-30
+created: 2009-10-30
 template: layout.hbs
 rtemplate: post.jsx
 nav: blog

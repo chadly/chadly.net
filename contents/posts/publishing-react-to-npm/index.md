@@ -4,7 +4,7 @@ title: Publishing a React Component to npm
 tagline: Or…the unexpected virtue of prepublishing
 cover: react.svg
 headerClass: invert
-date: 2015-04-25
+created: 2015-04-25
 template: layout.hbs
 rtemplate: post.jsx
 nav: blog

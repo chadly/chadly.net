@@ -1,7 +1,7 @@
 ---
 id: e6c920ca-8912-44f9-8235-5dfa07f86bd7
 title: Hello Universe
-date: 2009-01-25
+created: 2009-01-25
 template: layout.hbs
 rtemplate: post.jsx
 nav: blog

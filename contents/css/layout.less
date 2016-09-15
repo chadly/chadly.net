@@ -25,7 +25,7 @@ body {
 	color: #FF6600;
 }
 
-header {
+header.site {
 	background-color: @headerFooterColor;
 	background: no-repeat center center;
 	background-attachment: scroll;
@@ -46,12 +46,13 @@ header {
 	time {
 		display: block;
 		font-size: @font-size-small;
+		font-style: italic;
 	}
 
 	margin-bottom: 50px;
 }
 
-header.invert {
+header.site.invert {
 	h1, h2, time {
 		text-shadow:
 			-1px -1px 0 @gray-darker,

@@ -1,7 +1,7 @@
 ---
 id: f4ae1c04-bb88-4f45-855a-6f65e4a6152c
 title: User experience matters more than you think
-date: 2013-10-18
+created: 2013-10-18
 template: layout.hbs
 rtemplate: post.jsx
 nav: blog

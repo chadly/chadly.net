@@ -15,7 +15,7 @@ const Posts = ({ siteUrl, posts, enableDisqus }) => {
 	return (
 		<div>
 			{posts.map(post => {
-				const date = moment(post.date).utc();
+				const date = moment(post.created).utc();
 				return (
 					<article key={post.id} className="post-stub" itemProp="blogPost" itemScope itemType="http://schema.org/BlogPosting">
 						<time dateTime={date.format("YYYY-MM-DD")} itemProp="datePublished">{date.format("DD MMM YYYY")}</time>

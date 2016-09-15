@@ -1,7 +1,7 @@
 ---
 id: dd868a5d-fee3-40c0-b65c-2ae422f51d6a
 title: What you get with Git
-date: 2012-08-28
+created: 2012-08-28
 template: layout.hbs
 rtemplate: post.jsx
 nav: blog

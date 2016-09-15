@@ -1,7 +1,7 @@
 ---
 id: 10939e77-9455-414f-8fa2-31a22f9c4395
 title: Scanning & OCR with Epson GT-S50 on Linux Mint
-date: 2014-02-16
+created: 2014-02-16
 template: layout.hbs
 rtemplate: post.jsx
 nav: blog

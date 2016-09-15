@@ -1,7 +1,7 @@
 ---
 id: 0233b618-721f-45a8-9265-d35be6aeb7f0
 title: Live TV with Hauppauge WinTV-HVR2250 in Elementary OS
-date: 2014-03-02
+created: 2014-03-02
 template: layout.hbs
 rtemplate: post.jsx
 cover: elementaryos.png

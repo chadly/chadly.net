@@ -1,7 +1,7 @@
 ---
 id: a2a39796-65b8-4b63-8a2c-3f8070466350
 title: Handle MonoRail 404s gracefully
-date: 2009-03-10
+created: 2009-03-10
 template: layout.hbs
 rtemplate: post.jsx
 nav: blog

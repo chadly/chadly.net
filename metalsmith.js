@@ -18,7 +18,7 @@ Metalsmith(__dirname)
 	.use(collections({
 		posts: {
 			pattern: "posts/**/*.md",
-			sortBy: "date",
+			sortBy: "created",
 			reverse: true
 		}
 	}))
@@ -39,7 +39,7 @@ Metalsmith(__dirname)
 		}
 	}))
 	.use(permalinks({
-		pattern: ":date/:title",
+		pattern: ":created/:title",
 		date: "YYYY/MM"
 	}))
 	.use(reactTemplates({
