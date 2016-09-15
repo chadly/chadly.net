@@ -15,7 +15,7 @@
 					<conditions>
 						<add input="{HTTP_HOST}" pattern="resume.{{domain url}}"/>
 					</conditions>
-					<action type="Redirect" url="{{url}}/resume/" redirectType="Permanent"/>
+					<action type="Redirect" url="{{url}}resume/" redirectType="Permanent"/>
 				</rule>
 
 				<rule name="Canonical Host Name" patternSyntax="Wildcard">
@@ -23,7 +23,7 @@
 					<conditions>
 						<add input="{HTTP_HOST}" pattern="{{domain url}}" negate="true" />
 					</conditions>
-					<action type="Redirect" url="{{url}}/{R:1}" redirectType="Permanent" />
+					<action type="Redirect" url="{{url}}{R:1}" redirectType="Permanent" />
 				</rule>
 
 				<!-- post redirects -->
