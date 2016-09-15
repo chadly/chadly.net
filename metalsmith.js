@@ -1,10 +1,10 @@
-var Metalsmith = require("metalsmith");
-var collections = require("metalsmith-collections");
-var markdown = require("metalsmith-markdown");
-var less = require("metalsmith-less");
-var permalinks = require("metalsmith-permalinks");
-var reactTemplates = require("metalsmith-react-templates");
-var templates = require("metalsmith-templates");
+import Metalsmith from "metalsmith";
+import collections from "metalsmith-collections";
+import markdown from "metalsmith-markdown";
+import less from "metalsmith-less";
+import permalinks from "metalsmith-permalinks";
+import reactTemplates from "metalsmith-react-templates";
+import templates from "metalsmith-templates";
 
 const isProd = process.argv.length >= 3 && process.argv[2] === "dist";
 
@@ -50,6 +50,6 @@ Metalsmith(__dirname)
 		engine: "handlebars",
 		helpers: require("./helpers")
 	}))
-	.build(function(err) {
+	.build(err => {
 		if (err) throw err;
 	});
