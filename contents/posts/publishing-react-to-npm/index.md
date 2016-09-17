@@ -7,7 +7,6 @@ headerClass: invert
 created: 2015-04-25
 template: layout.hbs
 rtemplate: post.jsx
-nav: blog
 redirects:
   - /2015/04/publishing-react-to-npm/
 ---

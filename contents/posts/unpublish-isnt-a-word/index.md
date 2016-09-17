@@ -5,7 +5,6 @@ cover: tangled.jpg
 created: 2016-03-24
 template: layout.hbs
 rtemplate: post.jsx
-nav: blog
 redirects:
   - /2016/03/unpublish-isnt-a-word/
 ---

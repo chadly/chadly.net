@@ -4,7 +4,6 @@ title: What you get with Git
 created: 2012-08-28
 template: layout.hbs
 rtemplate: post.jsx
-nav: blog
 cover: git.jpg
 redirects:
   - /2012/08/the-wonderful-world-of-git/

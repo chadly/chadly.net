@@ -5,7 +5,6 @@ created: 2014-03-01
 template: layout.hbs
 rtemplate: post.jsx
 cover: steam.jpg
-nav: blog
 redirects:
   - /2014/03/steam-on-linux/
 ---

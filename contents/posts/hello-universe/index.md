@@ -4,7 +4,6 @@ title: Hello Universe
 created: 2009-01-25
 template: layout.hbs
 rtemplate: post.jsx
-nav: blog
 cover: milky-way.jpg
 tagline: …because "Hello World" is thinking too small
 redirects:

@@ -4,7 +4,6 @@ title: We make shitty software (and so do you!)
 created: 2009-07-09
 template: layout.hbs
 rtemplate: post.jsx
-nav: blog
 redirects:
   - /post/2009/07/09/we-make-shitty-software-and-so-do-you.aspx
   - /we-make-shitty-software-and-so-do-you/

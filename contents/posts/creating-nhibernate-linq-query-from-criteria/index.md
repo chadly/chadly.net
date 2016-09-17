@@ -4,7 +4,6 @@ title: Creating NHibernate Linq Query from Criteria
 created: 2009-10-30
 template: layout.hbs
 rtemplate: post.jsx
-nav: blog
 redirects:
   - /post/2009/10/30/Creating-NHibernate-Linq-Query-from-arbitrary-Criteria.aspx
   - /creating-nhibernate-linq-query-from-arbitrary-criteria/

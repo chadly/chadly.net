@@ -5,7 +5,6 @@ created: 2015-04-04
 template: layout.hbs
 rtemplate: post.jsx
 cover: nvidia.png
-nav: blog
 redirects:
   - /2015/04/nvidia-drivers/
 ---

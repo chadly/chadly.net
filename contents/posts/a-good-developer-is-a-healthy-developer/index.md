@@ -4,7 +4,6 @@ title: A Good Developer is a Healthy Developer
 created: 2014-02-10
 template: layout.hbs
 rtemplate: post.jsx
-nav: blog
 redirects:
   - /2014/02/healthy-developers/
 ---

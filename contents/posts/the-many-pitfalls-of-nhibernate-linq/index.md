@@ -4,7 +4,6 @@ title: The Many Pitfalls of NHibernate.Linq
 created: 2009-08-26
 template: layout.hbs
 rtemplate: post.jsx
-nav: blog
 redirects:
   - /post/2009/08/26/The-Many-Pitfalls-of-NHibernateLinq.aspx
   - /the-many-pitfalls-of-nhibernate-linq/

@@ -4,7 +4,6 @@ title: User experience matters more than you think
 created: 2013-10-18
 template: layout.hbs
 rtemplate: post.jsx
-nav: blog
 headerClass: invert
 cover: space-shuttle-control-panel.jpg
 redirects:

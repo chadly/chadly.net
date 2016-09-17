@@ -4,7 +4,6 @@ title: Dependency Injection with NHibernate and Autofac
 created: 2009-05-28
 template: layout.hbs
 rtemplate: post.jsx
-nav: blog
 redirects:
   - /post/2009/05/28/Dependency-Injection-with-NHibernate-and-Autofac.aspx
   - /dependency-injection-with-nhibernate-and-autofac/

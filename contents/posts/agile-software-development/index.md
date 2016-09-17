@@ -4,7 +4,6 @@ title: Agile Software Development
 created: 2009-02-01
 template: layout.hbs
 rtemplate: post.jsx
-nav: blog
 redirects:
   - /post/2009/02/01/Agile-Software-Development-from-a-Business-Perspective.aspx
   - /agile-software-development-from-a-business-perspective/

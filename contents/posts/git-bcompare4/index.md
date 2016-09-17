@@ -4,7 +4,6 @@ title: Configuring Beyond Compare 4 with Git
 created: 2016-09-10
 template: layout.hbs
 rtemplate: post.jsx
-nav: blog
 redirects:
   - /2016/09/git-bcompare/
   - /2016/09/git-bcompare4/

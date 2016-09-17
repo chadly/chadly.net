@@ -2,7 +2,6 @@
 title: About Me
 template: layout.hbs
 rtemplate: page.jsx
-nav: about
 ---
 
 Hello, gentle internet traveller. I am Chad -- a software developer based out of New Orleans.

@@ -4,7 +4,6 @@ title: Lazy Loading an Observable Array with Knockout JS
 created: 2012-09-12
 template: layout.hbs
 rtemplate: post.jsx
-nav: blog
 redirects:
   - /lazy-loading-an-observable-array-with-knockout-js/
 ---

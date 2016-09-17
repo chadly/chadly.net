@@ -4,7 +4,6 @@ title: Handle MonoRail 404s gracefully
 created: 2009-03-10
 template: layout.hbs
 rtemplate: post.jsx
-nav: blog
 redirects:
   - /post/2009/03/10/Custom-MonorailHttpHandlerFactory-to-handle-404s-gracefully.aspx
   - /custom-monorailhttphandlerfactory-to-handle-404s-gracefully/

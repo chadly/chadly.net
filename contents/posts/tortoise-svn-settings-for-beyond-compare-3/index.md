@@ -4,7 +4,6 @@ title: Tortoise SVN Settings for Beyond Compare 3
 created: 2009-04-13
 template: layout.hbs
 rtemplate: post.jsx
-nav: blog
 redirects:
   - /post/2009/04/13/Tortoise-SVN-Settings-for-Beyond-Compare-3.aspx
   - /tortoise-svn-settings-for-beyond-compare-3/

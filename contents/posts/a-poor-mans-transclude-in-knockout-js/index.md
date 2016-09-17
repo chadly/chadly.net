@@ -4,7 +4,6 @@ title: A Poor Man's Transclude in Knockout.js
 created: 2013-12-13
 template: layout.hbs
 rtemplate: post.jsx
-nav: blog
 redirects:
   - /a-poor-mans-transclude-in-knockout-js/
   - /2013/12/a-poor-mans-transclude-in-knockout-js/

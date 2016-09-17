@@ -5,7 +5,6 @@ created: 2014-05-29
 updated: 2016-09-10
 template: layout.hbs
 rtemplate: post.jsx
-nav: blog
 redirects:
   - /2014/05/git-bcompare/
   - /2014/05/git-bcompare3/

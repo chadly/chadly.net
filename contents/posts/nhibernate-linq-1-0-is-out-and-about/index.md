@@ -4,7 +4,6 @@ title: NHibernate.Linq 1.0 is out and about!
 created: 2009-07-27
 template: layout.hbs
 rtemplate: post.jsx
-nav: blog
 redirects:
   - /post/2009/07/27/NHibernateLinq-10-is-out-and-about.aspx
   - /nhibernate-linq-1-0-is-out-and-about/

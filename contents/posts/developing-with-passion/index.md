@@ -4,7 +4,6 @@ title: Developing with Passion
 created: 2009-03-09
 template: layout.hbs
 rtemplate: post.jsx
-nav: blog
 redirects:
   - /post/2009/03/29/Developing-with-Passion.aspx
   - /developing-with-passion/

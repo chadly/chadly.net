@@ -4,7 +4,6 @@ title: BDD with xUnit.net
 created: 2009-04-20
 template: layout.hbs
 rtemplate: post.jsx
-nav: blog
 redirects:
   - /post/2009/04/20/BDD-with-xUnit.aspx
   - /bdd-with-xunit-net/

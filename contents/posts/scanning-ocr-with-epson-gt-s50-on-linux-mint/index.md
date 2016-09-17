@@ -4,7 +4,6 @@ title: Scanning & OCR with Epson GT-S50 on Linux Mint
 created: 2014-02-16
 template: layout.hbs
 rtemplate: post.jsx
-nav: blog
 redirects:
   - /2014/02/epson-gt-s50-linux/
 ---

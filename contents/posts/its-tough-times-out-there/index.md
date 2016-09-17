@@ -4,7 +4,6 @@ title: It's Tough Times Out There
 created: 2009-03-09
 template: layout.hbs
 rtemplate: post.jsx
-nav: blog
 cover: storm.jpg
 headerClass: invert
 redirects:

@@ -4,7 +4,6 @@ title: Asp.Net MVC and Sealed Classes
 created: 2009-03-14
 template: layout.hbs
 rtemplate: post.jsx
-nav: blog
 redirects:
   - /post/2009/03/14/AspNet-MVC-and-Sealed-Classes.aspx
   - /asp-net-mvc-and-sealed-classes/

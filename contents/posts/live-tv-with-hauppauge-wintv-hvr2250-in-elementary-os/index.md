@@ -5,7 +5,6 @@ created: 2014-03-02
 template: layout.hbs
 rtemplate: post.jsx
 cover: elementaryos.png
-nav: blog
 redirects:
   - /2014/03/live-tv-in-linux/
 ---
