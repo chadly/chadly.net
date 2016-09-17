@@ -4,8 +4,7 @@ title: User experience matters more than you think
 created: 2013-10-18
 template: layout.hbs
 rtemplate: post.jsx
-headerClass: invert
-cover: space-shuttle-control-panel.jpg
+cover: space-shuttle-control-panel-dark-blur.jpg
 redirects:
   - /user-experience-matters-more-than-you-think/
 ---

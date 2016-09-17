@@ -4,8 +4,7 @@ title: Lightbox for YouTube Videos
 created: 2009-01-29
 template: layout.hbs
 rtemplate: post.jsx
-cover: youtube-on-wood.jpg
-headerClass: invert
+cover: youtube-on-wood-dark.jpg
 redirects:
   - /post/2009/01/29/Lightbox-for-YouTube-Videos.aspx
   - /lightbox-for-youtube-videos/

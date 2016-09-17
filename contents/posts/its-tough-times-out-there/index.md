@@ -4,8 +4,7 @@ title: It's Tough Times Out There
 created: 2009-03-09
 template: layout.hbs
 rtemplate: post.jsx
-cover: storm.jpg
-headerClass: invert
+cover: storm-clouds.jpg
 redirects:
   - /post/2009/03/09/Its-Tough-Times-Out-There.aspx
   - /its-tough-times-out-there/

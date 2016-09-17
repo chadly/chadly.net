@@ -4,8 +4,6 @@ title: Automate All the Things with Wercker
 created: 2013-12-18
 template: layout.hbs
 rtemplate: post.jsx
-cover: wercker.jpg
-headerClass: invert
 disqus:
   identifier: /2013/12/automate-all-the-things-with-wercker
 ---
