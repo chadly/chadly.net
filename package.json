@@ -32,6 +32,7 @@
     "metalsmith-react-templates": "4.1.x",
     "metalsmith-templates": "0.7.x",
     "moment": "2.15.x",
+    "random-js": "^1.0.8",
     "react": "15.3.x",
     "react-dom": "15.3.x"
   },

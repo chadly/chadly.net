@@ -1,8 +1,15 @@
 import React from "react";
 import moment from "moment";
 
+import fs from "fs";
+import path from "path";
+import random from "random-js";
+
+const covers = fs.readdirSync(path.join(__dirname, "../contents/covers/"));
+const rando = random();
+
 const Hero = ({
-	cover = "/lodyas.png",
+	cover,
 	headerClass,
 	title,
 	description,
@@ -16,6 +23,11 @@ const Hero = ({
 			{moment(date).utc().format("MMMM DD, YYYY")}
 		</time>
 	) : null;
+
+	if (!cover) {
+		const index = rando.integer(1, covers.length) - 1; 
+		cover = `/covers/${covers[index]}`;
+	}
 
 	const style = {
 		"backgroundImage": `url(${cover})`

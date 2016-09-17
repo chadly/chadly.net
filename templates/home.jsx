@@ -12,14 +12,15 @@ const Home = ({
 		disqus,
 		posts
 	},
-	contents: intro
+	contents: intro,
+	cover
 }) => {
 	const disqusMarkup = disqus ? <DisqusCommentCounts shortName={disqus} /> : null;
 
 	return (
 		<div>
 			<Navigation siteName={name} />
-			<Hero title={author.name} description={author.tagline} />
+			<Hero title={author.name} description={author.tagline} cover={cover} />
 
 			<main className="site" role="main">
 				<section className="intro" dangerouslySetInnerHTML={{ __html: intro }} />
