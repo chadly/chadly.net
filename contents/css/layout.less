@@ -165,9 +165,8 @@ main.site {
 }
 
 footer.site {
+	border-top: #eee solid 1px;
 	min-height: @footer-height;
-	background-color: @headerFooterColor;
-	.noise();
 	font-size: @font-size-small;
 
 	section {
@@ -175,9 +174,9 @@ footer.site {
 		padding: 1em;
 	}
 
-	color: #f8f8f9;
+	.text-muted();
 	a {
-		color: #f8f8f9;
+		.text-muted();
 	}
 }
 
