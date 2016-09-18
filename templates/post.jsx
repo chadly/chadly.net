@@ -18,8 +18,7 @@ const Post = ({
 	updated,
 	contents,
 	path,
-	cover,
-	disqus
+	cover
 }) => {
 	const fullUrl = `${url}${path}/`;
 
@@ -28,7 +27,7 @@ const Post = ({
 	const gplusLink = `https://plus.google.com/share?url=${fullUrl}`;
 	const hnLink = `http://news.ycombinator.com/submitlink?u=${fullUrl}&t=${title}`;
 
-	const comments = disqusShortName ? <Comments shortName={disqusShortName} id={disqus || id} title={title} /> : null;
+	const comments = disqusShortName ? <Comments shortName={disqusShortName} id={id} title={title} /> : null;
 
 	return (
 		<div>
