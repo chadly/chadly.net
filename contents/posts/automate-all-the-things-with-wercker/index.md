@@ -4,8 +4,7 @@ title: Automate All the Things with Wercker
 created: 2013-12-18
 template: layout.hbs
 rtemplate: post.jsx
-disqus:
-  identifier: /2013/12/automate-all-the-things-with-wercker
+disqus: /2013/12/automate-all-the-things-with-wercker
 ---
 
 I recently decided to switch my site over from [Ghost](https://ghost.org/) to [Wintersmith](http://wintersmith.io/), a static site generator.

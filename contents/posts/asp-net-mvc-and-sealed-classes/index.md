@@ -7,8 +7,6 @@ rtemplate: post.jsx
 redirects:
   - /post/2009/03/14/AspNet-MVC-and-Sealed-Classes.aspx
   - /asp-net-mvc-and-sealed-classes/
-disqus:
-  url: http://chadly.net/2009/03/asp-net-mvc-and-sealed-classes/
 ---
 
 I just created a project from the Asp.Net MVC default template (yes, I am a little late to this game – sorry, I have been living happily with Monorail) and ran across this in the `AccountController` class:

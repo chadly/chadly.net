@@ -8,7 +8,7 @@ const Posts = ({ siteUrl, posts, enableDisqus }) => {
 		}
 
 		const commentPath = siteUrl + post.path + "/#disqus_thread";
-		const identifier = post.disqus && post.disqus.identifier ? post.disqus.identifier : post.id;
+		const identifier = post.disqus || post.id;
 		return <a href={commentPath} className="post-comment-count" title="Comments" data-disqus-identifier={identifier}></a>;
 	};
 

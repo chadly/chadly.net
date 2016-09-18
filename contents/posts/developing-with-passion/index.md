@@ -7,8 +7,6 @@ rtemplate: post.jsx
 redirects:
   - /post/2009/03/29/Developing-with-Passion.aspx
   - /developing-with-passion/
-disqus: 
-  url: http://chadly.net/2009/03/developing-with-passion/
 ---
 
 I was going through my feed reader today catching up on some of the blogs I read and I came across [this post](http://devlicio.us/blogs/casey/archive/2009/03/29/job-satisfaction-and-making-the-world-a-better-place.aspx) from Casey Charlton. I was pretty astonished when I read it - this coming from [Mr. DDD](http://dddstepbystep.com/). Not only that, but this is the [second reference](http://twitter.com/jeremydmiller/status/1389628577) I've seen to software developers not being happy with software development in the past few days.

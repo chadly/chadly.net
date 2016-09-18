@@ -3,20 +3,13 @@ import React from "react";
 const Comments = ({
 	shortName,
 	id,
-	title,
-	identifier,
-	url
+	title
 }) => {
-	const disqusIdentifier = identifier ?
-		`var disqus_identifier = '${identifier}';` :
-		url ?  `var disqus_url = '${url}';` :
-		`var disqus_identifier = '${id}';`;
-
 	const disqusMarkup = `
 		<script type="text/javascript">
 			var disqus_shortname = '${shortName}';
 			var disqus_title = '${title}';
-			${disqusIdentifier}
+			var disqus_identifier = '${id}';
 
 			(function() {
 				var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;

@@ -7,8 +7,6 @@ rtemplate: post.jsx
 redirects:
   - /post/2009/04/13/Tortoise-SVN-Settings-for-Beyond-Compare-3.aspx
   - /tortoise-svn-settings-for-beyond-compare-3/
-disqus: 
-  url: http://chadly.net/2009/04/tortoise-svn-settings-for-beyond-compare-3/
 ---
 
 This is for future reference for me – for some reason this is a huge pain in the ass for me to find whenever I need it.

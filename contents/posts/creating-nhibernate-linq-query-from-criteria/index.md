@@ -8,8 +8,6 @@ redirects:
   - /post/2009/10/30/Creating-NHibernate-Linq-Query-from-arbitrary-Criteria.aspx
   - /creating-nhibernate-linq-query-from-arbitrary-criteria/
   - /2009/10/creating-nhibernate-linq-query-from-arbitrary-criteria/
-disqus: 
-  url: http://chadly.net/2009/10/creating-nhibernate-linq-query-from-arbitrary-criteria/
 ---
 
 I just added this gem to NHibernate.Linq (of the NHContrib variety – not to be confused with [that other one](http://blogs.imeta.co.uk/sstrong/archive/2009/10/22/791.aspx)). I’ll let the test speak for itself:
