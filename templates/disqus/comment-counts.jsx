@@ -5,7 +5,7 @@ const CommentCounts = ({
 }) => {
 	const markup = `
 		<script type="text/javascript">
-			var disqus_shortname = '${shortName}';
+			var disqus_shortname = "${shortName}";
 
 			(function () {
 				var s = document.createElement('script'); s.async = true;

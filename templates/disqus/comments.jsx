@@ -7,9 +7,9 @@ const Comments = ({
 }) => {
 	const disqusMarkup = `
 		<script type="text/javascript">
-			var disqus_shortname = '${shortName}';
-			var disqus_title = '${title}';
-			var disqus_identifier = '${id}';
+			var disqus_shortname = "${shortName}";
+			var disqus_title = "${title}";
+			var disqus_identifier = "${id}";
 
 			(function() {
 				var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
