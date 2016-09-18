@@ -69,7 +69,7 @@ The point is that you need to work with what you got. Look around you and improv
 
 #### Less is More
 
-When it comes to resistance training, [less really is more](http://www.muscleandstrength.com/articles/buiding-muscle-why-less-is-more.html). If you focus on [compound, full-body movements](http://sportsmedicine.about.com/od/strengthtraining/a/compound_ex.htm), you can build overall strength very quickly without living in the gym. It doesn't take much stimulation for your body to start adapting. Err on the side of working out too little rather than overtraining. After all, you are only breaking down your muscles when training -- sleep is when all the magic happens.
+When it comes to resistance training, [less really is more](http://www.muscleandstrength.com/articles/buiding-muscle-why-less-is-more.html). If you focus on [compound, full-body movements](https://www.verywell.com/which-is-better-compound-or-isolation-exercises-3120718), you can build overall strength very quickly without living in the gym. It doesn't take much stimulation for your body to start adapting. Err on the side of working out too little rather than overtraining. After all, you are only breaking down your muscles when training -- sleep is when all the magic happens.
 
 ### Get More Sleep
 
