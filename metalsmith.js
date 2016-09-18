@@ -1,6 +1,6 @@
 import Metalsmith from "metalsmith";
 import collections from "metalsmith-collections";
-import markdown from "metalsmith-markdown";
+import markdown from "./markdown";
 import less from "metalsmith-less";
 import permalinks from "metalsmith-permalinks";
 import reactTemplates from "metalsmith-react-templates";
@@ -22,10 +22,7 @@ Metalsmith(__dirname)
 			reverse: true
 		}
 	}))
-	.use(markdown({
-		smartypants: true,
-		smartLists: true
-	}))
+	.use(markdown)
 	.use(less({
 		pattern: [
 			"css/main.less",
