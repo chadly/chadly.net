@@ -21,6 +21,7 @@ const Posts = ({ siteUrl, posts, enableDisqus }) => {
 						<time dateTime={date.format("YYYY-MM-DD")} itemProp="datePublished">{date.format("DD MMM YYYY")}</time>
 						<div className="post-title">
 							<a href={post.path + "/"} itemProp="name headline url">{post.title}</a>
+							{" "}
 							{commentCount(post)}
 						</div>
 					</article>
