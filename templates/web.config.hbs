@@ -10,14 +10,6 @@
 
 		<rewrite>
 			<rules>
-				<rule name="Redirect from resume subdomain" patternSyntax="Wildcard">
-					<match url="*"/>
-					<conditions>
-						<add input="{HTTP_HOST}" pattern="resume.{{domain url}}"/>
-					</conditions>
-					<action type="Redirect" url="{{url}}resume/" redirectType="Permanent"/>
-				</rule>
-
 				<rule name="Canonical Host Name" patternSyntax="Wildcard">
 					<match url="*" />
 					<conditions>
