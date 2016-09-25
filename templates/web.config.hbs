@@ -10,14 +10,6 @@
 
 		<rewrite>
 			<rules>
-				<rule name="Canonical Host Name" patternSyntax="Wildcard">
-					<match url="*" />
-					<conditions>
-						<add input="{HTTP_HOST}" pattern="{{domain url}}" negate="true" />
-					</conditions>
-					<action type="Redirect" url="{{url}}{R:1}" redirectType="Permanent" />
-				</rule>
-
 				<!-- post redirects -->
 				<rule name="old-geocoding-post">
 					<match url="^2013/12/geocoding-v3/" />
@@ -28,7 +20,7 @@
 				{{#each redirects}}
 				<rule name="old-posts-{{@../index}}-{{@index}}">
 					<match url="^{{unslash this}}" />
-					<action type="Redirect" url="{{unslash ../path}}/" redirectType="Permanent" />
+					<action type="Redirect" url="{{../../url}}{{unslash ../path}}/" redirectType="Permanent" />
 				</rule>
 				{{/each}}
 				{{/each}}
@@ -42,22 +34,22 @@
 						<add input="{REQUEST_FILENAME}" pattern="(.*?)\.html$" negate="true" />
 						<add input="{REQUEST_FILENAME}" pattern="(.*?)\.xml$" negate="true" />
 					</conditions>
-					<action type="Redirect" redirectType="Permanent" url="{R:1}/" />
+					<action type="Redirect" redirectType="Permanent" url="{{url}}{R:1}/" />
 				</rule>
 
 				<rule name="old_rss">
 					<match url="^rss/" />
-					<action type="Redirect" url="feed.xml" redirectType="Permanent"/>
+					<action type="Redirect" url="{{url}}feed.xml" redirectType="Permanent"/>
 				</rule>
 
 				<rule name="old_paged_content">
 					<match url="^page/"/>
-					<action type="Redirect" url="/" appendQueryString="false" redirectType="Permanent" />
+					<action type="Redirect" url="{{url}}" appendQueryString="false" redirectType="Permanent" />
 				</rule>
 
 				<rule name="Convert to lower case">
 					<match url=".*[A-Z].*" ignoreCase="false" />
-					<action type="Redirect" url="{ToLower:{R:0}}" redirectType="Permanent" />
+					<action type="Redirect" url="{{url}}{ToLower:{R:0}}" redirectType="Permanent" />
 				</rule>
 			</rules>
 		</rewrite>
