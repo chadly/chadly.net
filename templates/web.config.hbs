@@ -57,6 +57,9 @@
 		<staticContent>
 			<mimeMap fileExtension=".svg" mimeType="image/svg+xml" />
 			<mimeMap fileExtension=".svgz" mimeType="image/svg+xml" />
+
+			<!-- set cache for everything to 12 hours -->
+			<clientCache cacheControlMode="UseMaxAge" cacheControlMaxAge="12:00:00" />
 		</staticContent>
 	</system.webServer>
 </configuration>
