@@ -11,13 +11,9 @@ redirects:
 
 So there is this [new blog engine](http://ghost.org/) in town that [maybe you have heard of](http://www.kickstarter.com/projects/johnonolan/ghost-just-a-blogging-platform)? If not, don't fret, I only heard about it when they made their [public release](http://blog.ghost.org/public-launch/) just a few days ago.
 
-Well, apparently, when the internet heard about this idea for a new blogging engine, it collectively had an orgasm.
+Well, apparently, when the internet heard about this idea for a new blogging engine, it went insane. John O'Nolan convinced over 5000 people to give him over $300,000 with just a couple of pretty screenshots.
 
-![internet orgasm](grumpy-cat-orgasm.jpg)
-
-No, seriously, the entire internet creamed its pants…literally. So much so, that John O'Nolan convinced over 5000 people to give him over $300,000 with just a couple of pretty screenshots.
-
-I joke, yet I'm astounded how much money this little open-source-project-that-could has made. I think what has gotten a lot of people excited is the focus on the user experience. If you have tried to setup a Wordpress blog recently, it can be quite daunting to someone who "just wants to blog." The promise Ghost makes with its pretty screenshots is an experience that doesn't suck. And apparently, we deal with [so much shitty software](/we-make-shitty-software-and-so-do-you/) everyday, that this resonated with a lot of people.
+I joke, yet I'm astounded how much money this little open-source-project-that-could has made. I think what has gotten a lot of people excited is the focus on the user experience. If you have tried to setup a Wordpress blog recently, it can be quite daunting to someone who "just wants to blog." The promise Ghost makes with its pretty screenshots is an experience that doesn't suck. And apparently, we deal with [so much shitty software](/2009/07/we-make-shitty-software-and-so-do-you/) everyday, that this resonated with a lot of people.
 
 I have traditionally been a "backend guy" (if that is a thing) focusing on things like <abbr title="Domain Driven Design">DDD</abbr>, <abbr title="Behavior Driven Development">BDD</abbr>, messaging with distributed systems, etc. - you know, "backend" stuff. I always thought these things were more important than things like the user interface. I'm slowly coming to realize just how wrong that idea is.
 
