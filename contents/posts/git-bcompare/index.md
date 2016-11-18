@@ -2,7 +2,7 @@
 id: 577777ee-5b8a-4e4b-8488-8e24d85af7ab
 title: Configuring Beyond Compare with Git
 created: 2014-05-29
-updated: 2016-09-18
+updated: 2016-11-18
 template: layout.hbs
 rtemplate: post.jsx
 redirects:
@@ -49,6 +49,23 @@ git config --global mergetool.bc.path "c:/program files/beyond compare 4/bcomp.e
 ```
 
 You don't need to do anything special to get directory diffs working on Windows.
+
+#### [Git for Visual Studio](http://www.scootersoftware.com/support.php?zz=kb_vcs#visualstudio-git)
+
+Visual Studio includes a builtin diff viewer that is pretty nice. However, I don't find it as useful as I do Beyond Compare. Not to mention, it doesn't support 3-way merge. Instead of using your global git config, it forces you to change the git config file in the repo. Specifically, you need to open `git/config` in the repo and add the following:
+
+```
+[diff]
+	tool = bc4
+[difftool "bc4"]
+	cmd = \"C:\\Program Files\\Beyond Compare 4\\BComp.exe\" \"$LOCAL\" \"$REMOTE\"
+[merge]
+	tool = bc4
+[mergetool "bc4"]
+	cmd = \"C:\\Program Files\\Beyond Compare 4\\BComp.exe\" \"$REMOTE\" \"$LOCAL\" \"$BASE\" \"$MERGED\"
+```
+
+Now, among other things, you can right-click files in VS and choose _Compare with Unmodified_ to open Beyond Compare.
 
 ### Configuring Beyond Compare 3
 
