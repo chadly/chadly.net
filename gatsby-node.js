@@ -6,6 +6,8 @@ exports.createPages = ({ graphql, actions }) => {
 
   return new Promise((resolve, reject) => {
     const blogPost = path.resolve('./src/templates/blog-post.js')
+    const lightbox = path.resolve('./src/templates/light-box-youtube.js')
+
     resolve(
       graphql(
         `
@@ -30,7 +32,7 @@ exports.createPages = ({ graphql, actions }) => {
         posts.forEach((post, index) => {
           createPage({
             path: `/${post.node.slug}/`,
-            component: blogPost,
+            component: post.node.slug == "lightbox-for-youtube-videos" ? lightbox:blogPost,
             context: {
               slug: post.node.slug
             },

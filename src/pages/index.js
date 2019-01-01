@@ -13,8 +13,6 @@ const RootIndex = ({ data,location }) => {
   const posts = get(data, 'allContentfulBlogPost.edges')
   const [author] = get(data, 'allContentfulPerson.edges')
 
-  console.log(posts)
-
   return (
     <Layout location={location} title={siteTitle}>
       <SEO
@@ -22,19 +20,19 @@ const RootIndex = ({ data,location }) => {
         keywords={[`blog`, `gatsby`, `javascript`, `react`]}
       />
       {/* <Bio /> */}
-      {posts.map(({ node:{slug,title, tagLine,publishDate} }) => (
+      {posts.map(({ node:{slug,title, tagLine, publishDate} }) => (
           <div key={slug}>
             <h3
               style={{
                 marginBottom: rhythm(1 / 4),
               }}
             >
-              <Link style={{ boxShadow: `none` }} to={slug}>
+              <Link style={{ boxShadow: `none` }} to={`${slug}/`}>
                 {title}
               </Link>
             </h3>
             <small>{publishDate}</small>
-            <p>{tagLine}</p>
+            <p dangerouslySetInnerHTML={{__html: get(tagLine, "childMarkdownRemark.html")}} />
           </div>
         ))}
     </Layout>
@@ -56,13 +54,7 @@ export const pageQuery = graphql`
           title
           slug
           publishDate(formatString: "MMMM Do, YYYY")
-          tags
-          heroImage {
-            fluid(maxWidth: 350, maxHeight: 196, resizingBehavior: SCALE) {
-             ...GatsbyContentfulFluid_tracedSVG
-            }
-          }
-          description {
+          tagLine {
             childMarkdownRemark {
               html
             }

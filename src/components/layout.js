@@ -1,7 +1,11 @@
 import React from 'react'
 import { Link } from 'gatsby'
+import Helmet from "react-helmet";
 
 import { rhythm, scale } from '../utils/typography'
+
+import "./prism.css";
+import "./bs-alerts.css";
 
 class Layout extends React.Component {
   render() {
@@ -61,6 +65,10 @@ class Layout extends React.Component {
           padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
         }}
       >
+        <Helmet>
+          <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.css" />
+        </Helmet>
+
         {header}
         {children}
         <footer>
