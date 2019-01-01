@@ -33,13 +33,13 @@ module.exports = {
 		siteUrl: "https://www.chadly.net"
 	},
 	plugins: [
+		"gatsby-plugin-sharp",
 		{
 			resolve: "gatsby-transformer-remark",
 			options: {
 				plugins: ["gatsby-remark-prismjs", "gatsby-remark-reading-time"]
 			}
 		},
-		"gatsby-transformer-sharp",
 		"gatsby-plugin-react-helmet",
 		{
 			resolve: "gatsby-plugin-typography",
@@ -47,7 +47,6 @@ module.exports = {
 				pathToConfigModule: "src/typography"
 			}
 		},
-		"gatsby-plugin-sharp",
 		{
 			resolve: "gatsby-source-contentful",
 			options: contentfulConfig
