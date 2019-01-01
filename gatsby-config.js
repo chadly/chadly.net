@@ -29,27 +29,29 @@ module.exports = {
 	siteMetadata: {
 		title: "Chad Lee",
 		description: "hello",
-		author: "Chad"
+		author: "Chad",
+		siteUrl: "https://www.chadly.net"
 	},
 	plugins: [
 		{
-			resolve: `gatsby-transformer-remark`,
+			resolve: "gatsby-transformer-remark",
 			options: {
-				plugins: [`gatsby-remark-prismjs`]
+				plugins: ["gatsby-remark-prismjs"]
 			}
 		},
 		"gatsby-transformer-sharp",
 		"gatsby-plugin-react-helmet",
 		{
-			resolve: `gatsby-plugin-typography`,
+			resolve: "gatsby-plugin-typography",
 			options: {
-				pathToConfigModule: `src/utils/typography`
+				pathToConfigModule: "src/utils/typography"
 			}
 		},
 		"gatsby-plugin-sharp",
 		{
 			resolve: "gatsby-source-contentful",
 			options: contentfulConfig
-		}
+		},
+		"gatsby-plugin-sitemap"
 	]
 };
