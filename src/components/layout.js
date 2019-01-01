@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "gatsby";
 import Helmet from "react-helmet";
 
-import { rhythm, scale } from "../utils/typography";
+import { rhythm, scale } from "../typography";
 
 import "./prism.css";
 import "./bs-alerts.css";

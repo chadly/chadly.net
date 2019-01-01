@@ -1,10 +1,11 @@
 import React from "react";
-import { Link, graphql } from "gatsby";
+import { graphql } from "gatsby";
 
 // import Bio from "../components/bio";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
-import { rhythm } from "../utils/typography";
+
+import PostStub from "../post/stub";
 
 import { get } from "lodash";
 
@@ -20,24 +21,8 @@ const RootIndex = ({ data, location }) => {
 				keywords={[`blog`, `gatsby`, `javascript`, `react`]}
 			/>
 			{/* <Bio /> */}
-			{posts.map(({ node: { slug, title, tagLine, publishDate } }) => (
-				<div key={slug}>
-					<h3
-						style={{
-							marginBottom: rhythm(1 / 4)
-						}}
-					>
-						<Link style={{ boxShadow: `none` }} to={`${slug}/`}>
-							{title}
-						</Link>
-					</h3>
-					<small>{publishDate}</small>
-					<p
-						dangerouslySetInnerHTML={{
-							__html: get(tagLine, "childMarkdownRemark.html")
-						}}
-					/>
-				</div>
+			{posts.map(({ node }) => (
+				<PostStub key={node.slug} {...node} />
 			))}
 		</Layout>
 	);
@@ -57,10 +42,14 @@ export const pageQuery = graphql`
 				node {
 					title
 					slug
-					publishDate(formatString: "MMMM Do, YYYY")
-					tagLine {
+					publishDate(formatString: "YYYY-MM-DD")
+					body {
 						childMarkdownRemark {
-							html
+							fields {
+								readingTime {
+									text
+								}
+							}
 						}
 					}
 				}

@@ -36,7 +36,7 @@ module.exports = {
 		{
 			resolve: "gatsby-transformer-remark",
 			options: {
-				plugins: ["gatsby-remark-prismjs"]
+				plugins: ["gatsby-remark-prismjs", "gatsby-remark-reading-time"]
 			}
 		},
 		"gatsby-transformer-sharp",
@@ -44,7 +44,7 @@ module.exports = {
 		{
 			resolve: "gatsby-plugin-typography",
 			options: {
-				pathToConfigModule: "src/utils/typography"
+				pathToConfigModule: "src/typography"
 			}
 		},
 		"gatsby-plugin-sharp",
@@ -52,6 +52,7 @@ module.exports = {
 			resolve: "gatsby-source-contentful",
 			options: contentfulConfig
 		},
+		"gatsby-plugin-jss",
 		"gatsby-plugin-sitemap",
 		"gatsby-plugin-robots-txt"
 	]
