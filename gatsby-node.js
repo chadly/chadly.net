@@ -3,47 +3,39 @@
 
 const path = require("path");
 
-exports.createPages = ({ graphql, actions }) => {
-	const { createPage } = actions;
+exports.createPages = async ({ graphql, actions: { createPage } }) => {
+	const blogPost = path.resolve("./src/templates/blog-post.js");
+	const lightbox = path.resolve("./src/templates/light-box-youtube.js");
 
-	return new Promise((resolve, reject) => {
-		const blogPost = path.resolve("./src/templates/blog-post.js");
-		const lightbox = path.resolve("./src/templates/light-box-youtube.js");
-
-		resolve(
-			graphql(
-				`
-					{
-						allContentfulBlogPost {
-							edges {
-								node {
-									title
-									slug
-								}
-							}
+	const result = await graphql(
+		`
+			{
+				allContentfulBlogPost {
+					edges {
+						node {
+							title
+							slug
 						}
 					}
-				`
-			).then(result => {
-				if (result.errors) {
-					console.log(result.errors);
-					reject(result.errors);
 				}
+			}
+		`
+	);
 
-				const posts = result.data.allContentfulBlogPost.edges;
-				posts.forEach(post => {
-					createPage({
-						path: `/${post.node.slug}/`,
-						component:
-							post.node.slug == "lightbox-for-youtube-videos"
-								? lightbox
-								: blogPost,
-						context: {
-							slug: post.node.slug
-						}
-					});
-				});
-			})
-		);
+	if (result.errors) {
+		console.log(result.errors);
+		throw result.errors;
+	}
+
+	const posts = result.data.allContentfulBlogPost.edges;
+	posts.forEach(post => {
+		createPage({
+			path: `/${post.node.slug}/`,
+			component:
+				post.node.slug == "lightbox-for-youtube-videos" ? lightbox : blogPost,
+			context: {
+				slug: post.node.slug
+			}
+		});
 	});
 };
