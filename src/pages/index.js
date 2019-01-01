@@ -1,34 +1,42 @@
 import React from 'react'
-import { graphql } from 'gatsby'
-import get from 'lodash/get'
-import Helmet from 'react-helmet'
-import Hero from '../components/hero'
-import Layout from '../components/layout'
-import ArticlePreview from '../components/article-preview'
+import { Link, graphql } from 'gatsby'
+
+import Bio from '../components/Bio'
+import Layout from '../components/Layout'
+import SEO from '../components/seo'
+import { rhythm } from '../utils/typography'
+
+import {get} from "lodash";
 
 const RootIndex = ({ data,location }) => {
   const siteTitle = get(data, 'site.siteMetadata.title')
   const posts = get(data, 'allContentfulBlogPost.edges')
   const [author] = get(data, 'allContentfulPerson.edges')
 
+  console.log(posts)
+
   return (
-    <Layout location={location} >
-      <div style={{ background: '#fff' }}>
-        <Helmet title={siteTitle} />
-        <Hero data={author.node} />
-        <div className="wrapper">
-          <h2 className="section-headline">Recent articles</h2>
-          <ul className="article-list">
-            {posts.map(({ node }) => {
-              return (
-                <li key={node.slug}>
-                  <ArticlePreview article={node} />
-                </li>
-              )
-            })}
-          </ul>
-        </div>
-      </div>
+    <Layout location={location} title={siteTitle}>
+      <SEO
+        title="All posts"
+        keywords={[`blog`, `gatsby`, `javascript`, `react`]}
+      />
+      {/* <Bio /> */}
+      {posts.map(({ node:{slug,title, tagLine,publishDate} }) => (
+          <div key={slug}>
+            <h3
+              style={{
+                marginBottom: rhythm(1 / 4),
+              }}
+            >
+              <Link style={{ boxShadow: `none` }} to={slug}>
+                {title}
+              </Link>
+            </h3>
+            <small>{publishDate}</small>
+            <p>{tagLine}</p>
+          </div>
+        ))}
     </Layout>
   )
 }
@@ -37,6 +45,11 @@ export default RootIndex
 
 export const pageQuery = graphql`
   query HomeQuery {
+    site {
+      siteMetadata {
+        title
+      }
+    }
     allContentfulBlogPost(sort: { fields: [publishDate], order: DESC }) {
       edges {
         node {
