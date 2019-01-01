@@ -1,19 +1,17 @@
 module.exports = {
-  "env": {
-    "browser": true,
-    "es6": true,
+  env: {
+    browser: true,
+    es6: true,
+    node: true
   },
-  "plugins": [
-    "react",
+  extends: [
+    "civicsource"
   ],
-  "globals": {
-    "graphql": false,
+  rules:{
+    "react/jsx-no-bind": false
   },
-  "parserOptions": {
-    "sourceType": "module",
-    "ecmaFeatures": {
-      "experimentalObjectRestSpread": true,
-      "jsx": true,
-    },
+  parser: "babel-eslint",
+  parserOptions: {
+    ecmaVersion: 8
   }
 }
