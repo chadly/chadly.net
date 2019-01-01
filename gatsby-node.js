@@ -5,7 +5,6 @@ const path = require("path");
 
 exports.createPages = async ({ graphql, actions: { createPage } }) => {
 	const blogPost = path.resolve("./src/templates/blog-post.js");
-	const lightbox = path.resolve("./src/templates/light-box-youtube.js");
 
 	const result = await graphql(
 		`
@@ -31,8 +30,7 @@ exports.createPages = async ({ graphql, actions: { createPage } }) => {
 	posts.forEach(post => {
 		createPage({
 			path: `/${post.node.slug}/`,
-			component:
-				post.node.slug == "lightbox-for-youtube-videos" ? lightbox : blogPost,
+			component: blogPost,
 			context: {
 				slug: post.node.slug
 			}
