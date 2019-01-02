@@ -67,6 +67,63 @@ module.exports = {
 		},
 		"gatsby-plugin-jss",
 		"gatsby-plugin-sitemap",
-		"gatsby-plugin-robots-txt"
+		"gatsby-plugin-robots-txt",
+		{
+			resolve: `gatsby-plugin-feed`,
+			options: {
+				query: `
+				{
+					site {
+						siteMetadata {
+							title
+							description
+							siteUrl
+							site_url: siteUrl
+						}
+					}
+				}`,
+				feeds: [
+					{
+						serialize: ({ query: { site, allContentfulBlogPost } }) => {
+							return allContentfulBlogPost.edges.map(edge => {
+								const url = `${site.siteMetadata.siteUrl}/${edge.node.slug}/`;
+
+								return Object.assign({}, edge.node, {
+									description: edge.node.body.childMarkdownRemark.excerpt,
+									date: edge.node.publishDate,
+									url,
+									guid: url,
+									custom_elements: [
+										{
+											"content:encoded": edge.node.body.childMarkdownRemark.html
+										}
+									]
+								});
+							});
+						},
+						query: `
+						{
+							allContentfulBlogPost(limit: 1000, sort: { fields: [publishDate], order: DESC }) {
+								edges {
+									node {
+										title
+										slug
+										publishDate(formatString: "YYYY-MM-DD")
+										body {
+											childMarkdownRemark {
+												excerpt
+												html
+											}
+										}
+									}
+								}
+							}
+						}`,
+						output: "/rss.xml",
+						title: "Gatsby RSS Feed"
+					}
+				]
+			}
+		}
 	]
 };

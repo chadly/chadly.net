@@ -13,12 +13,14 @@
   "scripts": {
     "start": "gatsby develop",
     "lint": "eslint --ext .js,.jsx --ignore-pattern public --ignore-pattern static .",
-    "build": "gatsby build"
+    "build": "gatsby build",
+    "serve": "gatsby build && gatsby serve"
   },
   "dependencies": {
     "gatsby": "^2.0.82",
     "gatsby-image": "^2.0.25",
     "gatsby-plugin-catch-links": "^2.0.9",
+    "gatsby-plugin-feed": "^2.0.11",
     "gatsby-plugin-jss": "^2.0.5",
     "gatsby-plugin-react-helmet": "^3.0.5",
     "gatsby-plugin-robots-txt": "^1.3.0",
