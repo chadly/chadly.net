@@ -3,20 +3,24 @@ import { Link, StaticQuery, graphql } from "gatsby";
 import Helmet from "react-helmet";
 import injectSheet from "react-jss";
 
-import { rhythm } from "../typography";
+import { rhythm, scale } from "../typography";
 
 import "./prism.css";
 import "./bs-alerts.css";
 
-const Layout = ({ children, classes }) => {
-	return (
-		<StaticQuery
-			query={layoutQuery}
-			render={({
-				site: {
-					siteMetadata: { title }
-				}
-			}) => (
+const Layout = ({ children, classes }) => (
+	<StaticQuery
+		query={layoutQuery}
+		render={({
+			site: {
+				siteMetadata: { title, description }
+			}
+		}) => (
+			<>
+				<h1 className={classes.siteTitle} title={description}>
+					<Link to="/">{title}</Link>
+				</h1>
+
 				<div className={classes.container}>
 					<Helmet>
 						<link
@@ -25,20 +29,16 @@ const Layout = ({ children, classes }) => {
 						/>
 					</Helmet>
 
-					<h1 className={classes.siteTitle}>
-						<Link to={`/`}>{title}</Link>
-					</h1>
-
 					{children}
 
 					<footer>
 						© 2018, Built with <a href="https://www.gatsbyjs.org">Gatsby</a>
 					</footer>
 				</div>
-			)}
-		/>
-	);
-};
+			</>
+		)}
+	/>
+);
 
 const styles = {
 	container: {
@@ -48,6 +48,11 @@ const styles = {
 		padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`
 	},
 	siteTitle: {
+		float: "left",
+		border: "none",
+		margin: rhythm(0.3),
+		...scale(0.2),
+
 		"& a": {
 			boxShadow: `none`,
 			textDecoration: `none`,
@@ -63,6 +68,7 @@ const layoutQuery = graphql`
 		site {
 			siteMetadata {
 				title
+				description
 			}
 		}
 	}
