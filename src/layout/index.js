@@ -3,7 +3,9 @@ import { Link, StaticQuery, graphql } from "gatsby";
 import Helmet from "react-helmet";
 import injectSheet from "react-jss";
 
-import { rhythm, scale } from "../typography";
+import moment from "moment";
+
+import { rhythm, scale, border } from "../typography";
 
 import "./prism.css";
 import "./bs-alerts.css";
@@ -31,8 +33,10 @@ const Layout = ({ children, classes }) => (
 
 					{children}
 
-					<footer>
-						© 2018, Built with <a href="https://www.gatsbyjs.org">Gatsby</a>
+					<footer className={classes.footer}>
+						{title} © {moment().format("YYYY")}. Built with{" "}
+						<a href="https://www.gatsbyjs.org">Gatsby</a> &amp;{" "}
+						<a href="https://www.contentful.com/">Contentful</a>.
 					</footer>
 				</div>
 			</>
@@ -58,6 +62,11 @@ const styles = {
 			textDecoration: `none`,
 			color: `inherit`
 		}
+	},
+	footer: {
+		borderTop: border,
+		marginTop: rhythm(1),
+		...scale(-0.5)
 	}
 };
 
