@@ -1,33 +1,38 @@
 import React from "react";
 import Img from "gatsby-image";
 import injectSheet from "react-jss";
-import { rhythm } from "./typography";
+import { rhythm, scale } from "./typography";
 
 import { get } from "lodash";
 
-const Author = ({ data, classes }) => (
-	<div className={classes.container}>
-		<Img
-			alt={data.name}
-			className={classes.profileImg}
-			fixed={data.image.fixed}
-		/>
-		<div className={classes.meta}>
-			<h3>{data.name}</h3>
-			<div
-				className={classes.bio}
-				dangerouslySetInnerHTML={{
-					__html: get(data, "shortBio.childMarkdownRemark.html")
-				}}
+const Author = ({ author, classes }) => {
+	if (!author) return null;
+
+	return (
+		<div className={classes.container}>
+			<Img
+				alt={author.name}
+				className={classes.profileImg}
+				fixed={author.image.fixed}
 			/>
+			<div className={classes.meta}>
+				<h3>{author.name}</h3>
+				<div
+					className={classes.bio}
+					dangerouslySetInnerHTML={{
+						__html: get(author, "shortBio.childMarkdownRemark.html")
+					}}
+				/>
+			</div>
 		</div>
-	</div>
-);
+	);
+};
 
 const styles = {
 	container: {
 		display: "flex",
-		marginBottom: rhythm(1.5)
+		marginBottom: rhythm(1.5),
+		...scale(-0.25)
 	},
 	profileImg: {
 		marginRight: rhythm(1),

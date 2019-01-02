@@ -1,7 +1,7 @@
 import React from "react";
 import { graphql } from "gatsby";
 
-import Layout from "../components/layout";
+import Layout from "../layout";
 import SEO from "../components/seo";
 
 import Author from "../author";
@@ -9,15 +9,14 @@ import PostStub from "../post/stub";
 
 import { get } from "lodash";
 
-const RootIndex = ({ data, location }) => {
-	const siteTitle = get(data, "site.siteMetadata.title");
+const RootIndex = ({ data }) => {
 	const posts = get(data, "allContentfulBlogPost.edges");
 	const [author] = get(data, "allContentfulPerson.edges");
 
 	return (
-		<Layout location={location} title={siteTitle}>
+		<Layout>
 			<SEO />
-			<Author data={author.node} />
+			<Author author={author.node} />
 			{posts.map(({ node }) => (
 				<PostStub key={node.slug} {...node} />
 			))}
@@ -29,11 +28,6 @@ export default RootIndex;
 
 export const pageQuery = graphql`
 	query HomeQuery {
-		site {
-			siteMetadata {
-				title
-			}
-		}
 		allContentfulBlogPost(sort: { fields: [publishDate], order: DESC }) {
 			edges {
 				node {

@@ -4,15 +4,15 @@ import injectSheet from "react-jss";
 import moment from "moment";
 
 import Assets from "./assets";
-import Layout from "../components/layout";
+import Layout from "../layout";
 import SEO from "../components/seo";
+import Author from "../author";
 import { rhythm, scale } from "../typography";
 
 import { get } from "lodash";
 
-const BlogPostTemplate = ({ data, location, classes }) => {
+const BlogPostTemplate = ({ data, classes }) => {
 	const post = get(data, "contentfulBlogPost");
-	const siteTitle = get(data, "site.siteMetadata.title");
 
 	const readingTime = get(
 		post,
@@ -21,7 +21,7 @@ const BlogPostTemplate = ({ data, location, classes }) => {
 	const publishDate = moment(get(post, "publishDate"), "YYYY-MM-DD");
 
 	return (
-		<Layout location={location} title={siteTitle}>
+		<Layout>
 			<SEO title={post.title} />
 			<Assets assets={post.assets} />
 
@@ -47,13 +47,12 @@ const BlogPostTemplate = ({ data, location, classes }) => {
 							__html: post.body.childMarkdownRemark.html
 						}}
 					/>
-
-					<footer>
-						{/* <Bio /> */}
-						bio
-					</footer>
 				</article>
 			</main>
+
+			<footer className={classes.postFooter}>
+				<Author author={post.author} />
+			</footer>
 		</Layout>
 	);
 };
@@ -78,6 +77,11 @@ const styles = {
 			display: "inline"
 		}
 	},
+	postFooter: {
+		borderTop: "1px solid hsla(0,0%,0%,0.07)",
+		paddingTop: rhythm(1),
+		marginTop: rhythm(1)
+	},
 	readingTime: {
 		float: "right",
 		...scale(-0.4)
@@ -99,6 +103,25 @@ export const pageQuery = graphql`
 						readingTime {
 							text
 						}
+					}
+				}
+			}
+			author {
+				name
+				shortBio {
+					childMarkdownRemark {
+						html
+					}
+				}
+				github
+				twitter
+				keybase
+				image {
+					fixed(width: 100) {
+						width
+						height
+						src
+						srcSet
 					}
 				}
 			}
