@@ -73,6 +73,9 @@ const styles = {
 			display: "block",
 			maxWidth: "100%",
 			margin: "10px auto"
+		},
+		"& div.footnotes li p": {
+			display: "inline"
 		}
 	},
 	readingTime: {
