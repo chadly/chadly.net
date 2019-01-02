@@ -13,3 +13,9 @@ steps:
   inputs:
     rootFolderOrFile: '$(System.DefaultWorkingDirectory)/public'
     includeRootFolder: false
+
+- task: AzureRmWebAppDeployment@3
+  inputs:
+    azureSubscription: 'Personal'
+    WebAppName: 'chadstatic'
+    Package: $(System.ArtifactsDirectory)/**/*.zip
