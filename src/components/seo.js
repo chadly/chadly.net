@@ -3,32 +3,26 @@ import PropTypes from "prop-types";
 import Helmet from "react-helmet";
 import { StaticQuery, graphql } from "gatsby";
 
-function SEO({ description, lang, meta, keywords, title }) {
+function SEO({ lang, meta, keywords, title }) {
 	return (
 		<StaticQuery
 			query={detailsQuery}
 			render={data => {
-				const metaDescription =
-					description || data.site.siteMetadata.description;
 				return (
 					<Helmet
 						htmlAttributes={{
 							lang
 						}}
-						title={title}
-						titleTemplate={`%s | ${data.site.siteMetadata.title}`}
+						title={
+							title ||
+							`${data.site.siteMetadata.title} | ${
+								data.site.siteMetadata.description
+							}`
+						}
 						meta={[
-							{
-								name: `description`,
-								content: metaDescription
-							},
 							{
 								property: `og:title`,
 								content: title
-							},
-							{
-								property: `og:description`,
-								content: metaDescription
 							},
 							{
 								property: `og:type`,
@@ -40,15 +34,11 @@ function SEO({ description, lang, meta, keywords, title }) {
 							},
 							{
 								name: `twitter:creator`,
-								content: data.site.siteMetadata.author
+								content: data.site.siteMetadata.author.name
 							},
 							{
 								name: `twitter:title`,
 								content: title
-							},
-							{
-								name: `twitter:description`,
-								content: metaDescription
 							}
 						]
 							.concat(
@@ -75,7 +65,7 @@ SEO.propTypes = {
 	lang: PropTypes.string,
 	meta: PropTypes.array,
 	keywords: PropTypes.arrayOf(PropTypes.string),
-	title: PropTypes.string.isRequired
+	title: PropTypes.string
 };
 
 export default SEO;
@@ -86,7 +76,9 @@ const detailsQuery = graphql`
 			siteMetadata {
 				title
 				description
-				author
+				author {
+					name
+				}
 			}
 		}
 	}

@@ -27,9 +27,18 @@ if (!spaceId || !accessToken) {
 
 module.exports = {
 	siteMetadata: {
-		title: "Chad Lee",
-		description: "hello",
-		author: "Chad",
+		title: "chadly.net",
+		description: "Personal blog by Chad Lee",
+		author: {
+			name: "Chad Lee",
+			blurb:
+				"Technical Lead at CivicSource.com, OSS developer, beginner dad, novice human.",
+			social: {
+				github: "chadly",
+				twitter: "wchadly",
+				keybase: "chadly"
+			}
+		},
 		siteUrl: "https://www.chadly.net"
 	},
 	plugins: [

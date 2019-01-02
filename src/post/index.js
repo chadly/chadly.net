@@ -4,7 +4,6 @@ import injectSheet from "react-jss";
 import moment from "moment";
 
 import Assets from "./assets";
-// import Bio from '../components/Bio'
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 import { rhythm, scale } from "../typography";
@@ -23,7 +22,7 @@ const BlogPostTemplate = ({ data, location, classes }) => {
 
 	return (
 		<Layout location={location} title={siteTitle}>
-			<SEO title={`${post.title} | ${siteTitle}`} description={post.tagLine} />
+			<SEO title={post.title} />
 			<Assets assets={post.assets} />
 
 			<header className={classes.postHeader}>

@@ -1,10 +1,10 @@
 import React from "react";
 import { graphql } from "gatsby";
 
-// import Bio from "../components/bio";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 
+import Author from "../author";
 import PostStub from "../post/stub";
 
 import { get } from "lodash";
@@ -12,15 +12,12 @@ import { get } from "lodash";
 const RootIndex = ({ data, location }) => {
 	const siteTitle = get(data, "site.siteMetadata.title");
 	const posts = get(data, "allContentfulBlogPost.edges");
-	// const [author] = get(data, "allContentfulPerson.edges");
+	const [author] = get(data, "allContentfulPerson.edges");
 
 	return (
 		<Layout location={location} title={siteTitle}>
-			<SEO
-				title="All posts"
-				keywords={[`blog`, `gatsby`, `javascript`, `react`]}
-			/>
-			{/* <Bio /> */}
+			<SEO />
+			<Author data={author.node} />
 			{posts.map(({ node }) => (
 				<PostStub key={node.slug} {...node} />
 			))}
@@ -50,6 +47,31 @@ export const pageQuery = graphql`
 									text
 								}
 							}
+						}
+					}
+				}
+			}
+		}
+		allContentfulPerson(
+			filter: { contentful_id: { eq: "15jwOBqpxqSAOy2eOO4S0m" } }
+		) {
+			edges {
+				node {
+					name
+					shortBio {
+						childMarkdownRemark {
+							html
+						}
+					}
+					github
+					twitter
+					keybase
+					image {
+						fixed(width: 100) {
+							width
+							height
+							src
+							srcSet
 						}
 					}
 				}
