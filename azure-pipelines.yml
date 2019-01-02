@@ -8,3 +8,8 @@ steps:
   env:
     CONTENTFUL_SPACE_ID: $(CONTENTFUL_SPACE_ID)
     CONTENTFUL_DELIVERY_TOKEN: $(CONTENTFUL_DELIVERY_TOKEN)
+
+- task: ArchiveFiles@2
+  inputs:
+    rootFolderOrFile: '$(System.DefaultWorkingDirectory)/public'
+    includeRootFolder: false
