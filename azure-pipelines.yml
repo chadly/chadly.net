@@ -5,3 +5,6 @@ steps:
 - script: yarn install
 - script: yarn run lint
 - script: yarn run build
+  env:
+    CONTENTFUL_SPACE_ID: $(CONTENTFUL_SPACE_ID)
+    CONTENTFUL_DELIVERY_TOKEN: $(CONTENTFUL_DELIVERY_TOKEN)
