@@ -1,6 +1,8 @@
 import Typography from "typography";
 import Github from "typography-theme-github";
 
+Github.baseFontSize = "18px"; // was 16px
+
 const typography = new Typography(Github);
 
 // Hot reload typography in development.
