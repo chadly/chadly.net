@@ -7,7 +7,7 @@ import Assets from "./assets";
 import Layout from "../layout";
 import SEO from "../components/seo";
 import Author from "../author";
-import { rhythm, scale } from "../typography";
+import { rhythm, scale, border } from "../typography";
 
 import { get } from "lodash";
 
@@ -78,7 +78,7 @@ const styles = {
 		}
 	},
 	postFooter: {
-		borderTop: "1px solid hsla(0,0%,0%,0.07)",
+		borderTop: border,
 		paddingTop: rhythm(1),
 		marginTop: rhythm(1)
 	},

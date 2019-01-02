@@ -1,7 +1,7 @@
 import React from "react";
 import Img from "gatsby-image";
 import injectSheet from "react-jss";
-import { rhythm, scale } from "./typography";
+import { rhythm, scale, smallScreenMediaQuery } from "./typography";
 
 import { get } from "lodash";
 
@@ -32,7 +32,11 @@ const styles = {
 	container: {
 		display: "flex",
 		marginBottom: rhythm(1.5),
-		...scale(-0.25)
+		...scale(-0.25),
+		[smallScreenMediaQuery]: {
+			display: "block",
+			textAlign: "center"
+		}
 	},
 	profileImg: {
 		marginRight: rhythm(1),

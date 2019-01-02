@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "gatsby";
 
 import injectSheet from "react-jss";
-import { rhythm, scale } from "../typography";
+import { rhythm, scale, smallScreenMediaQuery, border } from "../typography";
 
 import moment from "moment";
 
@@ -55,12 +55,28 @@ const styles = {
 			bottom: 0,
 			left: 0
 		},
+		[smallScreenMediaQuery]: {
+			borderBottom: border,
+			padding: {
+				top: rhythm(0.25),
+				bottom: rhythm(0.25),
+				left: 0,
+				right: 0
+			}
+		},
 		"& time": {
 			float: "left",
-			color: "#6c757d"
+			color: "#6c757d",
+			[smallScreenMediaQuery]: {
+				float: "none",
+				display: "block"
+			}
 		},
 		"& header": {
-			marginLeft: rhythm(5)
+			marginLeft: rhythm(5),
+			[smallScreenMediaQuery]: {
+				marginLeft: 0
+			}
 		},
 		"& footer": {
 			color: "#6c757d",
@@ -68,7 +84,10 @@ const styles = {
 				left: rhythm(5),
 				top: rhythm(-0.25)
 			},
-			...scale(-0.4)
+			...scale(-0.4),
+			[smallScreenMediaQuery]: {
+				marginLeft: 0
+			}
 		}
 	}
 };
