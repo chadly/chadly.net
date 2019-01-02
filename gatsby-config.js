@@ -46,9 +46,14 @@ module.exports = {
 		{
 			resolve: "gatsby-transformer-remark",
 			options: {
-				plugins: ["gatsby-remark-prismjs", "gatsby-remark-reading-time"]
+				plugins: [
+					"gatsby-remark-autolink-headers",
+					"gatsby-remark-prismjs",
+					"gatsby-remark-reading-time"
+				]
 			}
 		},
+		"gatsby-plugin-catch-links",
 		"gatsby-plugin-react-helmet",
 		{
 			resolve: "gatsby-plugin-typography",
