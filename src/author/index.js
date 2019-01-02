@@ -1,7 +1,9 @@
 import React from "react";
 import Img from "gatsby-image";
 import injectSheet from "react-jss";
-import { rhythm, scale, smallScreenMediaQuery } from "./typography";
+import { rhythm, scale, smallScreenMediaQuery } from "../typography";
+
+import Social from "./social";
 
 import { get } from "lodash";
 
@@ -23,6 +25,7 @@ const Author = ({ author, classes }) => {
 						__html: get(author, "shortBio.childMarkdownRemark.html")
 					}}
 				/>
+				<Social author={author} />
 			</div>
 		</div>
 	);
