@@ -9,6 +9,9 @@ import SEO from "../components/seo";
 import Author from "../author";
 import { rhythm, scale, border } from "../typography";
 
+import CanonicalLink, {
+	calculate as calculateCanonicalUrl
+} from "../canonical";
 import Comments from "./comments";
 
 import { get } from "lodash";
@@ -17,7 +20,6 @@ const BlogPostTemplate = ({ data, classes }) => {
 	const post = get(data, "contentfulBlogPost");
 	const disqusShortName = get(data, "site.siteMetadata.disqus");
 	const siteUrl = get(data, "site.siteMetadata.siteUrl");
-	const url = `${siteUrl}/${post.slug}/`;
 
 	const readingTime = get(
 		post,
@@ -29,6 +31,7 @@ const BlogPostTemplate = ({ data, classes }) => {
 		<Layout>
 			<SEO title={post.title} />
 			<Assets assets={post.assets} />
+			<CanonicalLink siteUrl={siteUrl} slug={post.slug} />
 
 			<header className={classes.postHeader}>
 				<h1>{post.title}</h1>
@@ -61,7 +64,7 @@ const BlogPostTemplate = ({ data, classes }) => {
 				<Comments
 					shortName={disqusShortName}
 					id={post.id}
-					url={url}
+					url={calculateCanonicalUrl({ siteUrl, slug: post.slug })}
 					title={post.title}
 				/>
 			</footer>

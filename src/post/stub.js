@@ -4,6 +4,8 @@ import { Link } from "gatsby";
 import injectSheet from "react-jss";
 import { rhythm, scale, smallScreenMediaQuery, border } from "../typography";
 
+import { calculate as calculateCanonicalUrl } from "../canonical";
+
 import moment from "moment";
 
 const PostStub = ({
@@ -35,7 +37,7 @@ const PostStub = ({
 				{publishDateMoment.format("DD MMM YYYY")}
 			</time>
 			<header>
-				<Link to={`${slug}/`} itemProp="name headline url">
+				<Link to={calculateCanonicalUrl({ slug })} itemProp="name headline url">
 					{title}
 				</Link>
 			</header>

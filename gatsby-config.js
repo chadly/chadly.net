@@ -1,6 +1,8 @@
 /* eslint-disable no-console */
 /* eslint-disable import/no-commonjs */
 
+const calculateCanonicalUrl = require("./src/canonical/calculate");
+
 let contentfulConfig;
 
 try {
@@ -87,7 +89,10 @@ module.exports = {
 					{
 						serialize: ({ query: { site, allContentfulBlogPost } }) => {
 							return allContentfulBlogPost.edges.map(edge => {
-								const url = `${site.siteMetadata.siteUrl}/${edge.node.slug}/`;
+								const url = calculateCanonicalUrl({
+									siteUrl: site.siteMetadata.siteUrl,
+									slug: edge.node.slug
+								});
 
 								return Object.assign({}, edge.node, {
 									description: edge.node.body.childMarkdownRemark.excerpt,
