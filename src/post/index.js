@@ -9,10 +9,15 @@ import SEO from "../components/seo";
 import Author from "../author";
 import { rhythm, scale, border } from "../typography";
 
+import Comments from "./comments";
+
 import { get } from "lodash";
 
 const BlogPostTemplate = ({ data, classes }) => {
 	const post = get(data, "contentfulBlogPost");
+	const disqusShortName = get(data, "site.siteMetadata.disqus");
+	const siteUrl = get(data, "site.siteMetadata.siteUrl");
+	const url = `${siteUrl}/${post.slug}/`;
 
 	const readingTime = get(
 		post,
@@ -52,6 +57,13 @@ const BlogPostTemplate = ({ data, classes }) => {
 
 			<footer className={classes.postFooter}>
 				<Author author={post.author} />
+
+				<Comments
+					shortName={disqusShortName}
+					id={post.id}
+					url={url}
+					title={post.title}
+				/>
 			</footer>
 		</Layout>
 	);
@@ -92,7 +104,15 @@ export default injectSheet(styles)(BlogPostTemplate);
 
 export const pageQuery = graphql`
 	query BlogPostBySlug($slug: String!) {
+		site {
+			siteMetadata {
+				disqus
+				siteUrl
+			}
+		}
 		contentfulBlogPost(slug: { eq: $slug }) {
+			id
+			slug
 			title
 			publishDate(formatString: "YYYY-MM-DD")
 			assets

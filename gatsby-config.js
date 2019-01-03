@@ -39,7 +39,8 @@ module.exports = {
 				keybase: "chadly"
 			}
 		},
-		siteUrl: "https://www.chadly.net"
+		siteUrl: "https://www.chadly.net",
+		disqus: process.env.DISQUS_SHORTNAME || ""
 	},
 	plugins: [
 		"gatsby-plugin-sharp",
