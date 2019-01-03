@@ -28,12 +28,14 @@ exports.createPages = async ({ graphql, actions: { createPage } }) => {
 
 	const posts = result.data.allContentfulBlogPost.edges;
 	posts.forEach(post => {
-		createPage({
-			path: `/${post.node.slug}/`,
-			component: blogPost,
-			context: {
-				slug: post.node.slug
-			}
-		});
+		if (post.slug != "knockout-inline-confirm") {
+			createPage({
+				path: `/${post.node.slug}/`,
+				component: blogPost,
+				context: {
+					slug: post.node.slug
+				}
+			});
+		}
 	});
 };
