@@ -1,5 +1,5 @@
 import React from "react";
-import Disqus from "disqus-react";
+import Disqus from "react-disqus-comments";
 
 const Comments = ({ shortName, url, id, title }) => {
 	if (!shortName) return null;
@@ -7,14 +7,7 @@ const Comments = ({ shortName, url, id, title }) => {
 	return (
 		<>
 			<hr />
-			<Disqus.DiscussionEmbed
-				shortname={shortName}
-				config={{
-					url,
-					identifier: id,
-					title
-				}}
-			/>
+			<Disqus shortname={shortName} url={url} identifier={id} title={title} />
 		</>
 	);
 };
