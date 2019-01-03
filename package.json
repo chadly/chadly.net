@@ -12,8 +12,8 @@
   },
   "scripts": {
     "start": "gatsby develop",
-    "lint": "eslint --ext .js,.jsx --ignore-pattern public --ignore-pattern static .",
-    "build": "gatsby build",
+    "lint": "eslint --ignore-pattern public --ignore-pattern static .",
+    "build": "yarn run lint && gatsby build",
     "serve": "gatsby build && gatsby serve"
   },
   "dependencies": {
