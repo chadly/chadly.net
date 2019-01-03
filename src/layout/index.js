@@ -52,12 +52,13 @@ const styles = {
 		marginLeft: `auto`,
 		marginRight: `auto`,
 		maxWidth: rhythm(24),
-		padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`
+		padding: `${rhythm(1.5)} ${rhythm(0.75)}`
 	},
 	siteTitle: {
 		float: "left",
 		border: "none",
-		margin: rhythm(0.3),
+		margin: 0,
+		padding: `${rhythm(0.3)} ${rhythm(0.75)}`,
 		...scale(0.2),
 
 		"& a": {
