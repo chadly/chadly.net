@@ -31,6 +31,12 @@ export default KnockoutInlineConfirmPost;
 
 export const pageQuery = graphql`
 	query KnockoutPost {
+		site {
+			siteMetadata {
+				disqus
+				siteUrl
+			}
+		}
 		contentfulBlogPost(slug: { eq: "knockout-inline-confirm" }) {
 			title
 			publishDate(formatString: "YYYY-MM-DD")
