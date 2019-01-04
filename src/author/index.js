@@ -1,5 +1,4 @@
 import React from "react";
-import Img from "gatsby-image";
 import injectSheet from "react-jss";
 import { rhythm, scale, smallScreenMediaQuery } from "../typography";
 
@@ -12,10 +11,10 @@ const Author = ({ author, classes }) => {
 
 	return (
 		<div className={classes.container}>
-			<Img
+			<img
+				src={get(author, "image.fixed.src")}
 				alt={author.name}
 				className={classes.profileImg}
-				fixed={author.image.fixed}
 			/>
 			<div className={classes.meta}>
 				<h3>{author.name}</h3>
@@ -46,7 +45,13 @@ const styles = {
 		boxShadow: "0 0 0 6px hsla(0,0%,100%,.1)",
 		background: "#e3e9ed",
 		borderRadius: "100%",
-		objectFit: "cover"
+		objectFit: "cover",
+		width: rhythm(4.5),
+		height: rhythm(4.5),
+		[smallScreenMediaQuery]: {
+			display: "block",
+			margin: `${rhythm(0.5)} auto`
+		}
 	},
 	meta: {
 		"& h3": {

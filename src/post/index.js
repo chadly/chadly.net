@@ -140,11 +140,8 @@ export const pageQuery = graphql`
 				twitter
 				keybase
 				image {
-					fixed(width: 100) {
-						width
-						height
+					fixed {
 						src
-						srcSet
 					}
 				}
 			}
