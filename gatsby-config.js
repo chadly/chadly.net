@@ -35,7 +35,6 @@ const siteMetadata = {
 };
 
 const plugins = [
-	"gatsby-plugin-sharp",
 	{
 		resolve: "gatsby-transformer-remark",
 		options: {
