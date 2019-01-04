@@ -39,7 +39,7 @@ export const pageQuery = graphql`
 		}
 		contentfulBlogPost(slug: { eq: "knockout-inline-confirm" }) {
 			title
-			publishDate(formatString: "YYYY-MM-DD")
+			publishDate
 			assets
 			body {
 				childMarkdownRemark {

@@ -42,7 +42,7 @@ export const pageQuery = graphql`
 				node {
 					title
 					slug
-					publishDate(formatString: "YYYY-MM-DD")
+					publishDate
 					body {
 						childMarkdownRemark {
 							fields {
