@@ -30,16 +30,6 @@ if (!spaceId || !accessToken) {
 const siteMetadata = {
 	title: "chadly.net",
 	description: "Personal blog by Chad Lee",
-	author: {
-		name: "Chad Lee",
-		blurb:
-			"Technical Lead at CivicSource.com, OSS developer, beginner dad, novice human.",
-		social: {
-			github: "chadly",
-			twitter: "wchadly",
-			keybase: "chadly"
-		}
-	},
 	siteUrl: "https://www.chadly.net",
 	disqus: process.env.DISQUS_SHORTNAME || ""
 };

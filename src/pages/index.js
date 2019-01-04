@@ -2,7 +2,7 @@ import React from "react";
 import { graphql } from "gatsby";
 
 import Layout from "../layout";
-import SEO from "../components/seo";
+import Seo from "../seo";
 
 import Author from "../author";
 import PostStub from "../post/stub";
@@ -17,7 +17,7 @@ const RootIndex = ({ data }) => {
 
 	return (
 		<Layout>
-			<SEO />
+			<Seo />
 			<CanonicalLink siteUrl={siteUrl} />
 
 			<Author author={author.node} />

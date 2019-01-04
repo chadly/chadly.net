@@ -5,7 +5,7 @@ import moment from "moment";
 
 import Assets from "./assets";
 import Layout from "../layout";
-import SEO from "../components/seo";
+import Seo from "../seo";
 import Author from "../author";
 import { rhythm, scale, border } from "../typography";
 
@@ -29,7 +29,7 @@ const BlogPostTemplate = ({ data, classes }) => {
 
 	return (
 		<Layout>
-			<SEO title={post.title} />
+			<Seo title={post.title} author={post.author} />
 			<Assets assets={post.assets} />
 			<CanonicalLink siteUrl={siteUrl} slug={post.slug} />
 
