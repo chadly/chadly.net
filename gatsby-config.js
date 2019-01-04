@@ -42,7 +42,8 @@ const plugins = [
 			plugins: [
 				"gatsby-remark-autolink-headers",
 				"gatsby-remark-prismjs",
-				"gatsby-remark-reading-time"
+				"gatsby-remark-reading-time",
+				"gatsby-remark-smartypants"
 			]
 		}
 	},

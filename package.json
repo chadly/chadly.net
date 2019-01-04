@@ -31,6 +31,7 @@
     "gatsby-remark-autolink-headers": "^2.0.12",
     "gatsby-remark-prismjs": "^3.2.0",
     "gatsby-remark-reading-time": "^1.0.1",
+    "gatsby-remark-smartypants": "^2.0.7",
     "gatsby-source-contentful": "^2.0.22",
     "gatsby-transformer-remark": "^2.1.19",
     "knockout": "^3.4.2",
