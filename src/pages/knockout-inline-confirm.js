@@ -44,6 +44,7 @@ export const pageQuery = graphql`
 			body {
 				childMarkdownRemark {
 					html
+					excerpt
 					fields {
 						readingTime {
 							text

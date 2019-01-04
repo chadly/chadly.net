@@ -29,7 +29,11 @@ const BlogPostTemplate = ({ data, classes }) => {
 
 	return (
 		<Layout>
-			<Seo title={post.title} author={post.author} />
+			<Seo
+				title={post.title}
+				author={post.author}
+				description={post.body.childMarkdownRemark.excerpt}
+			/>
 			<Assets assets={post.assets} />
 			<CanonicalLink siteUrl={siteUrl} slug={post.slug} />
 
@@ -122,6 +126,7 @@ export const pageQuery = graphql`
 			body {
 				childMarkdownRemark {
 					html
+					excerpt
 					fields {
 						readingTime {
 							text
