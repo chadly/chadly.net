@@ -1,7 +1,6 @@
 import React from "react";
 import { graphql } from "gatsby";
 import injectSheet from "react-jss";
-import moment from "moment";
 
 import Assets from "./assets";
 import Layout from "../layout";
@@ -25,7 +24,6 @@ const BlogPostTemplate = ({ data, classes }) => {
 		post,
 		"body.childMarkdownRemark.fields.readingTime.text"
 	);
-	const publishDate = moment(get(post, "publishDate"), "YYYY-MM-DD");
 
 	return (
 		<Layout>
@@ -40,11 +38,8 @@ const BlogPostTemplate = ({ data, classes }) => {
 			<header className={classes.postHeader}>
 				<h1>{post.title}</h1>
 				<div>
-					<time
-						dateTime={publishDate.format("YYYY-MM-DD")}
-						itemProp="datePublished"
-					>
-						Published on {publishDate.format("MMMM DD, YYYY")}
+					<time dateTime={post.publishDate} itemProp="datePublished">
+						Published on {post.publishDateFormatted}
 					</time>
 
 					<span className={classes.readingTime}>{readingTime}</span>
@@ -122,6 +117,7 @@ export const pageQuery = graphql`
 			slug
 			title
 			publishDate
+			publishDateFormatted: publishDate(formatString: "MMMM DD, YYYY")
 			assets
 			body {
 				childMarkdownRemark {
