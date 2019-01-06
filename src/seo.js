@@ -34,6 +34,12 @@ const Seo = ({ lang, title, description, author }) => (
 					{get(author, "twitter") ? (
 						<meta name="twitter:creator" content={`@${author.twitter}`} />
 					) : null}
+					{get(author, "image.fixed.src") ? (
+						<meta
+							name="twitter:image"
+							content={get(author, "image.fixed.src")}
+						/>
+					) : null}
 					<meta name="twitter:title" content={title} />
 					<meta name="twitter:description" content={desc} />
 				</Helmet>
@@ -61,6 +67,11 @@ const detailsQuery = graphql`
 				node {
 					name
 					twitter
+					image {
+						fixed {
+							src
+						}
+					}
 				}
 			}
 		}
