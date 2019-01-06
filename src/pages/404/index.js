@@ -1,10 +1,10 @@
-/* eslint-disable filenames/match-regex */
-
 import React from "react";
 import injectSheet from "react-jss";
 import { Link, graphql } from "gatsby";
 
-import { scale } from "../typography";
+import { scale } from "../../typography";
+
+import img404 from "./oatmeal-tumbeast-404.png";
 
 const NotFoundPage = ({
 	data: {
@@ -21,7 +21,7 @@ const NotFoundPage = ({
 
 		<Link to="/">
 			<img
-				src="/img/oatmeal-tumbeast-404.png"
+				src={img404}
 				alt="404 Page Not Found"
 				title="Go to the front page →"
 				className={classes.image}
