@@ -4,7 +4,7 @@ import { StaticQuery, graphql } from "gatsby";
 
 import { get } from "lodash";
 
-const Seo = ({ lang, title, description, author }) => (
+const Seo = ({ title, description, author }) => (
 	<StaticQuery
 		query={detailsQuery}
 		render={data => {
@@ -21,7 +21,7 @@ const Seo = ({ lang, title, description, author }) => (
 			const desc = description || siteDesc;
 
 			return (
-				<Helmet htmlAttributes={{ lang }}>
+				<Helmet htmlAttributes={{ lang: "en" }}>
 					<title>{title}</title>
 
 					<meta name="description" content={desc} />
@@ -37,7 +37,7 @@ const Seo = ({ lang, title, description, author }) => (
 					{get(author, "image.file.url") ? (
 						<meta
 							name="twitter:image"
-							content={get(author, "image.file.url")}
+							content={conformMetaUrl(get(author, "image.file.url"))}
 						/>
 					) : null}
 					<meta name="twitter:title" content={title} />
@@ -48,9 +48,11 @@ const Seo = ({ lang, title, description, author }) => (
 	/>
 );
 
-Seo.defaultProps = {
-	lang: "en"
-};
+function conformMetaUrl(url) {
+	if (url.startsWith("https:")) return url;
+	if (url.startsWith("http:")) return url;
+	return `https:${url}`;
+}
 
 export default Seo;
 
