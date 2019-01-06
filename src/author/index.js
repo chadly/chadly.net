@@ -12,7 +12,7 @@ const Author = ({ author, classes }) => {
 	return (
 		<div className={classes.container}>
 			<img
-				src={get(author, "image.fixed.src")}
+				src={get(author, "image.file.url")}
 				alt={author.name}
 				className={classes.profileImg}
 			/>

@@ -141,8 +141,8 @@ export const pageQuery = graphql`
 				twitter
 				keybase
 				image {
-					fixed {
-						src
+					file {
+						url
 					}
 				}
 			}

@@ -34,10 +34,10 @@ const Seo = ({ lang, title, description, author }) => (
 					{get(author, "twitter") ? (
 						<meta name="twitter:creator" content={`@${author.twitter}`} />
 					) : null}
-					{get(author, "image.fixed.src") ? (
+					{get(author, "image.file.url") ? (
 						<meta
 							name="twitter:image"
-							content={get(author, "image.fixed.src")}
+							content={get(author, "image.file.url")}
 						/>
 					) : null}
 					<meta name="twitter:title" content={title} />
@@ -68,8 +68,8 @@ const detailsQuery = graphql`
 					name
 					twitter
 					image {
-						fixed {
-							src
+						file {
+							url
 						}
 					}
 				}

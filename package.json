@@ -14,7 +14,7 @@
     "start": "gatsby develop",
     "lint": "eslint --ignore-pattern public --ignore-pattern static .",
     "build": "yarn run lint && gatsby build",
-    "serve": "gatsby build && gatsby serve"
+    "preview": "gatsby build && gatsby serve"
   },
   "dependencies": {
     "gatsby": "^2.0.82",
