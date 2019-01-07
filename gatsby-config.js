@@ -35,6 +35,7 @@ const siteMetadata = {
 };
 
 const plugins = [
+	"gatsby-plugin-favicon",
 	{
 		resolve: "gatsby-transformer-remark",
 		options: {
