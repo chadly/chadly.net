@@ -132,4 +132,6 @@ if (process.env.GOOGLE_ANALYTICS_TRACKING_ID) {
 	});
 }
 
+plugins.push("gatsby-plugin-netlify"); // needs to be last
+
 module.exports = { siteMetadata, plugins };
