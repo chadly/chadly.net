@@ -1,27 +1,13 @@
-/* eslint-disable no-console */
 /* eslint-disable import/no-commonjs */
-
+require("dotenv").config();
 const calculateCanonicalUrl = require("./src/canonical/calculate");
 
-let contentfulConfig;
-
-try {
-	// Load the Contentful config from the .contentful.json
-	contentfulConfig = require("./.contentful");
-} catch (_) {
-	console.log("using contentful config from environment variables");
-}
-
-// Overwrite the Contentful config with environment variables if they exist
-contentfulConfig = {
-	spaceId: process.env.CONTENTFUL_SPACE_ID || contentfulConfig.spaceId,
-	accessToken:
-		process.env.CONTENTFUL_DELIVERY_TOKEN || contentfulConfig.accessToken
+const contentfulConfig = {
+	spaceId: process.env.CONTENTFUL_SPACE_ID,
+	accessToken: process.env.CONTENTFUL_DELIVERY_TOKEN
 };
 
-const { spaceId, accessToken } = contentfulConfig;
-
-if (!spaceId || !accessToken) {
+if (!contentfulConfig.spaceId || !contentfulConfig.accessToken) {
 	throw new Error(
 		"Contentful spaceId and the delivery token need to be provided."
 	);

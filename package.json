@@ -11,7 +11,7 @@
     "url": "git+https://github.com/chadly/chadly.net.git"
   },
   "scripts": {
-    "start": "gatsby develop",
+    "start": "node setup.js && gatsby develop",
     "lint": "eslint --ignore-pattern public --ignore-pattern static .",
     "build": "yarn run lint && gatsby build",
     "preview": "gatsby build && gatsby serve"
@@ -50,6 +50,7 @@
   },
   "devDependencies": {
     "babel-eslint": "^10.0.1",
+    "dotenv": "^6.2.0",
     "eslint": "^5.11.1",
     "eslint-config-civicsource": "^10.0.0",
     "prettier": "^1.15.3"
