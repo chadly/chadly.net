@@ -39,9 +39,6 @@ Github.overrideThemeStyles = () => ({
 		color: "inherit",
 		borderLeftColor: "inherit",
 		opacity: "0.8"
-	},
-	"blockquote.translation": {
-		fontSize: "1em"
 	}
 });
 
