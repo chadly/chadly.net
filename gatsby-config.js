@@ -1,17 +1,5 @@
 /* eslint-disable import/no-commonjs */
-require("dotenv").config();
 const calculateCanonicalUrl = require("./src/canonical/calculate");
-
-const contentfulConfig = {
-	spaceId: process.env.CONTENTFUL_SPACE_ID,
-	accessToken: process.env.CONTENTFUL_DELIVERY_TOKEN
-};
-
-if (!contentfulConfig.spaceId || !contentfulConfig.accessToken) {
-	throw new Error(
-		"Contentful spaceId and the delivery token need to be provided."
-	);
-}
 
 const siteMetadata = {
 	title: "chadly.net",
@@ -42,8 +30,11 @@ const plugins = [
 		}
 	},
 	{
-		resolve: "gatsby-source-contentful",
-		options: contentfulConfig
+		resolve: "gatsby-source-filesystem",
+		options: {
+			name: "pages",
+			path: `${__dirname}/src/pages`
+		}
 	},
 	"gatsby-plugin-jss",
 	"gatsby-plugin-sitemap",
