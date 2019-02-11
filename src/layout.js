@@ -51,7 +51,7 @@ const styles = {
 	container: {
 		marginLeft: `auto`,
 		marginRight: `auto`,
-		maxWidth: rhythm(24),
+		maxWidth: ({ width = 30 }) => rhythm(width),
 		padding: `${rhythm(1.5)} ${rhythm(0.75)}`
 	},
 	siteTitle: {

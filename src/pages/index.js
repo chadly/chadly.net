@@ -16,7 +16,7 @@ const RootIndex = ({ data }) => {
 	const siteUrl = get(data, "site.siteMetadata.siteUrl");
 
 	return (
-		<Layout>
+		<Layout width={24}>
 			<Seo />
 			<CanonicalLink siteUrl={siteUrl} />
 
