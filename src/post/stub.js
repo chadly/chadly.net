@@ -60,7 +60,7 @@ const styles = {
 		},
 		"& time": {
 			float: "left",
-			color: "#6c757d",
+			color: "var(--textMuted)",
 			[smallScreenMediaQuery]: {
 				float: "none",
 				display: "block"
@@ -73,7 +73,7 @@ const styles = {
 			}
 		},
 		"& footer": {
-			color: "#6c757d",
+			color: "var(--textMuted)",
 			margin: {
 				left: rhythm(5),
 				top: rhythm(-0.25)

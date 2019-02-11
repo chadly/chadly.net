@@ -18,7 +18,7 @@ const Layout = ({ children, classes }) => (
 				siteMetadata: { title, description }
 			}
 		}) => (
-			<>
+			<div className={classes.root}>
 				<h1 className={classes.siteTitle} title={description}>
 					<Link to="/">{title}</Link>
 				</h1>
@@ -42,12 +42,15 @@ const Layout = ({ children, classes }) => (
 						<a href="https://www.contentful.com/">Contentful</a>.
 					</footer>
 				</div>
-			</>
+			</div>
 		)}
 	/>
 );
 
 const styles = {
+	root: {
+		color: "var(--textNormal)"
+	},
 	container: {
 		marginLeft: `auto`,
 		marginRight: `auto`,
