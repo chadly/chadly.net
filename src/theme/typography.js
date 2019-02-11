@@ -28,6 +28,9 @@ Github.overrideThemeStyles = () => ({
 	h1: {
 		borderBottomColor: "var(--hr)"
 	},
+	"h1, h2, h3, h4": {
+		color: "var(--textTitle)"
+	},
 	// TODO: why tho
 	"h1 code, h2 code, h3 code, h4 code, h5 code, h6 code": {
 		fontSize: "inherit"
