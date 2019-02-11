@@ -5,7 +5,7 @@ import injectSheet from "react-jss";
 
 import moment from "moment";
 
-import { rhythm, scale, border } from "./theme/typography";
+import { rhythm, scale } from "./theme/typography";
 
 const Layout = ({ children, classes }) => (
 	<StaticQuery
@@ -68,7 +68,7 @@ const styles = {
 		}
 	},
 	footer: {
-		borderTop: border,
+		borderTop: "1px solid var(--hr)",
 		marginTop: rhythm(1),
 		...scale(-0.5)
 	}

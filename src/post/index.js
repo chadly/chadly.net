@@ -6,7 +6,7 @@ import Assets from "./assets";
 import Layout from "../layout";
 import Seo from "../seo";
 import Author from "../author";
-import { rhythm, scale, border } from "../theme/typography";
+import { rhythm, scale } from "../theme/typography";
 
 import CanonicalLink, {
 	calculate as calculateCanonicalUrl
@@ -95,7 +95,7 @@ const styles = {
 		}
 	},
 	postFooter: {
-		borderTop: border,
+		borderTop: "1px solid var(--hr)",
 		paddingTop: rhythm(1),
 		marginTop: rhythm(1)
 	},

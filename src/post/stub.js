@@ -2,12 +2,7 @@ import React from "react";
 import { Link } from "gatsby";
 
 import injectSheet from "react-jss";
-import {
-	rhythm,
-	scale,
-	smallScreenMediaQuery,
-	border
-} from "../theme/typography";
+import { rhythm, scale, smallScreenMediaQuery } from "../theme/typography";
 
 import { calculate as calculateCanonicalUrl } from "../canonical";
 
@@ -55,7 +50,7 @@ const styles = {
 			left: 0
 		},
 		[smallScreenMediaQuery]: {
-			borderBottom: border,
+			borderBottom: "1px solid var(--hr)",
 			padding: {
 				top: rhythm(0.25),
 				bottom: rhythm(0.25),

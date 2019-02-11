@@ -57,4 +57,3 @@ export const rhythm = typography.rhythm;
 export const scale = typography.scale;
 
 export const smallScreenMediaQuery = "@media (max-width:700px)";
-export const border = "1px solid hsla(0,0%,0%,0.07)";
