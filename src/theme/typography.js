@@ -38,6 +38,13 @@ Github.overrideThemeStyles = () => ({
 	blockquote: {
 		color: "inherit",
 		borderLeftColor: "inherit",
+		marginTop: typography.rhythm(1),
+		marginRight: typography.rhythm(1),
+		marginBottom: typography.rhythm(1),
+		marginLeft: typography.rhythm(-0.75),
+		paddingLeft: typography.rhythm(0.65),
+		...typography.scale(0.3),
+		fontStyle: "italic",
 		opacity: "0.8"
 	}
 });
