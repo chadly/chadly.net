@@ -32,7 +32,8 @@ const NotFoundPage = ({
 
 const styles = {
 	container: {
-		textAlign: "center"
+		textAlign: "center",
+		color: "var(--textNormal)"
 	},
 	siteTitle: {
 		border: "none",
