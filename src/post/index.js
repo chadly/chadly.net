@@ -37,9 +37,9 @@ const BlogPostTemplate = ({ data, classes }) => {
 
 			<header className={classes.postHeader}>
 				<h1>{post.title}</h1>
-				<div>
+				<div className={classes.meta}>
 					<time dateTime={post.publishDate} itemProp="datePublished">
-						Published on {post.publishDateFormatted}
+						{post.publishDateFormatted}
 					</time>
 
 					<span className={classes.readingTime}>{readingTime}</span>
@@ -80,6 +80,9 @@ const styles = {
 		"& time": {
 			...scale(-0.4)
 		}
+	},
+	meta: {
+		color: "var(--textMuted)"
 	},
 	postBody: {
 		"& img": {
