@@ -1,6 +1,6 @@
 import React from "react";
 import injectSheet from "react-jss";
-import { rhythm } from "../typography";
+import { rhythm } from "../theme/typography";
 
 const AuthorSocial = ({ author: { github, twitter, keybase }, classes }) => {
 	if (!github && !twitter && !keybase) {

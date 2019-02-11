@@ -5,10 +5,7 @@ import injectSheet from "react-jss";
 
 import moment from "moment";
 
-import { rhythm, scale, border } from "../typography";
-
-import "./prism.css";
-import "./bs-alerts.css";
+import { rhythm, scale, border } from "./theme/typography";
 
 const Layout = ({ children, classes }) => (
 	<StaticQuery

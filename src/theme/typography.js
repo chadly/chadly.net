@@ -1,6 +1,9 @@
 import Typography from "typography";
 import Github from "typography-theme-github";
-import "./layout/global.css";
+
+import "./global.css";
+import "./prism.css";
+import "./bs-alerts.css";
 
 Github.overrideThemeStyles = () => ({
 	a: {

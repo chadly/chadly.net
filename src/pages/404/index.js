@@ -2,7 +2,7 @@ import React from "react";
 import injectSheet from "react-jss";
 import { Link, graphql } from "gatsby";
 
-import { scale } from "../../typography";
+import { scale } from "../../theme/typography";
 
 import img404 from "./oatmeal-tumbeast-404.png";
 

@@ -1,6 +1,6 @@
 import React from "react";
 import injectSheet from "react-jss";
-import { rhythm, scale, smallScreenMediaQuery } from "../typography";
+import { rhythm, scale, smallScreenMediaQuery } from "../theme/typography";
 
 import Social from "./social";
 

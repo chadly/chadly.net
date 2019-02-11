@@ -2,7 +2,12 @@ import React from "react";
 import { Link } from "gatsby";
 
 import injectSheet from "react-jss";
-import { rhythm, scale, smallScreenMediaQuery, border } from "../typography";
+import {
+	rhythm,
+	scale,
+	smallScreenMediaQuery,
+	border
+} from "../theme/typography";
 
 import { calculate as calculateCanonicalUrl } from "../canonical";
 

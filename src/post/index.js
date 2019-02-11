@@ -6,7 +6,7 @@ import Assets from "./assets";
 import Layout from "../layout";
 import Seo from "../seo";
 import Author from "../author";
-import { rhythm, scale, border } from "../typography";
+import { rhythm, scale, border } from "../theme/typography";
 
 import CanonicalLink, {
 	calculate as calculateCanonicalUrl
