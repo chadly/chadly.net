@@ -2,7 +2,6 @@ import React from "react";
 import { graphql } from "gatsby";
 import injectSheet from "react-jss";
 
-import Assets from "./assets";
 import Layout from "../layout";
 import Seo from "../seo";
 import Author from "../author";
@@ -16,30 +15,22 @@ import Comments from "./comments";
 import { get } from "lodash";
 
 const BlogPostTemplate = ({ data, classes }) => {
-	const post = get(data, "contentfulBlogPost");
+	const post = get(data, "markdownRemark");
 	const disqusShortName = get(data, "site.siteMetadata.disqus");
 	const siteUrl = get(data, "site.siteMetadata.siteUrl");
 
-	const readingTime = get(
-		post,
-		"body.childMarkdownRemark.fields.readingTime.text"
-	);
+	const readingTime = get(post, "fields.readingTime.text");
 
 	return (
 		<Layout>
-			<Seo
-				title={post.title}
-				author={post.author}
-				description={post.body.childMarkdownRemark.excerpt}
-			/>
-			<Assets assets={post.assets} />
-			<CanonicalLink siteUrl={siteUrl} slug={post.slug} />
+			<Seo title={post.frontmatter.title} description={post.excerpt} />
+			<CanonicalLink siteUrl={siteUrl} slug={post.fields.slug} />
 
 			<header className={classes.postHeader}>
-				<h1>{post.title}</h1>
+				<h1>{post.frontmatter.title}</h1>
 				<div className={classes.meta}>
-					<time dateTime={post.publishDate} itemProp="datePublished">
-						{post.publishDateFormatted}
+					<time dateTime={post.frontmatter.date} itemProp="datePublished">
+						{post.frontmatter.dateFormatted}
 					</time>
 
 					<span className={classes.readingTime}>{readingTime}</span>
@@ -51,14 +42,14 @@ const BlogPostTemplate = ({ data, classes }) => {
 					<section
 						itemProp="articleBody"
 						dangerouslySetInnerHTML={{
-							__html: post.body.childMarkdownRemark.html
+							__html: post.html
 						}}
 					/>
 				</article>
 			</main>
 
 			<footer className={classes.postFooter}>
-				<Author author={post.author} />
+				<Author />
 
 				<Comments
 					shortName={disqusShortName}
@@ -115,38 +106,21 @@ export const pageQuery = graphql`
 				siteUrl
 			}
 		}
-		contentfulBlogPost(slug: { eq: $slug }) {
+		markdownRemark(fields: { slug: { eq: $slug } }) {
 			id
-			slug
-			title
-			publishDate
-			publishDateFormatted: publishDate(formatString: "MMMM DD, YYYY")
-			assets
-			body {
-				childMarkdownRemark {
-					html
-					excerpt
-					fields {
-						readingTime {
-							text
-						}
-					}
-				}
+			frontmatter {
+				title
+				date
+				dateFormatted: date(formatString: "MMMM DD, YYYY")
 			}
-			author {
-				name
-				shortBio {
-					childMarkdownRemark {
-						html
-					}
-				}
-				github
-				twitter
-				keybase
-				image {
-					file {
-						url
-					}
+			fields {
+				slug
+			}
+			html
+			excerpt
+			fields {
+				readingTime {
+					text
 				}
 			}
 		}

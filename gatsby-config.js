@@ -5,7 +5,14 @@ const siteMetadata = {
 	title: "chadly.net",
 	description: "Personal blog by Chad Lee",
 	siteUrl: "https://www.chadly.net",
-	disqus: process.env.DISQUS_SHORTNAME || ""
+	disqus: process.env.DISQUS_SHORTNAME || "",
+	author: {
+		name: "Chad Lee",
+		description: "Writer of code. Doer of things. Maker of stuff.",
+		github: "chadly",
+		twitter: "wchadly",
+		keybase: "chadly"
+	}
 };
 
 const plugins = [
