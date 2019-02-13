@@ -1,20 +1,12 @@
 /* eslint-disable import/no-commonjs */
 const calculateCanonicalUrl = require("./src/canonical/calculate");
 
-const {
-	NODE_ENV,
-	URL: NETLIFY_SITE_URL = "https://www.chadly.net",
-	DEPLOY_PRIME_URL: NETLIFY_DEPLOY_URL = NETLIFY_SITE_URL,
-	CONTEXT: NETLIFY_ENV = NODE_ENV
-} = process.env;
-
-const isNetlifyProduction = NETLIFY_ENV === "production";
-const siteUrl = isNetlifyProduction ? NETLIFY_SITE_URL : NETLIFY_DEPLOY_URL;
+const { NODE_ENV, CONTEXT: NETLIFY_ENV = NODE_ENV } = process.env;
 
 const siteMetadata = {
 	title: "chadly.net",
 	description: "Personal blog by Chad Lee",
-	siteUrl,
+	siteUrl: "https://www.chadly.net",
 	disqus: process.env.DISQUS_SHORTNAME || "",
 	githubLink: "https://github.com/chadly/chadly.net",
 	author: {
