@@ -40,7 +40,8 @@ const plugins = [
 				{
 					resolve: "gatsby-remark-images",
 					options: {
-						maxWidth: 833 // max width of content container in px
+						maxWidth: 833, // max width of content container in px
+						linkImagesToOriginal: false
 					}
 				}
 			]
