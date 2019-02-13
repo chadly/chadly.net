@@ -1,5 +1,5 @@
 /* eslint-disable import/no-commonjs */
-// const calculateCanonicalUrl = require("./src/canonical/calculate");
+const calculateCanonicalUrl = require("./src/canonical/calculate");
 
 const {
 	NODE_ENV,
@@ -84,67 +84,78 @@ const plugins = [
 				}
 			}
 		}
-	}
-	// {
-	// 	resolve: `gatsby-plugin-feed`,
-	// 	options: {
-	// 		query: `
-	// 		{
-	// 			site {
-	// 				siteMetadata {
-	// 					title
-	// 					description
-	// 					siteUrl
-	// 					site_url: siteUrl
-	// 				}
-	// 			}
-	// 		}`,
-	// 		feeds: [
-	// 			{
-	// 				serialize: ({ query: { site, allContentfulBlogPost } }) => {
-	// 					return allContentfulBlogPost.edges.map(edge => {
-	// 						const url = calculateCanonicalUrl({
-	// 							siteUrl: site.siteMetadata.siteUrl,
-	// 							slug: edge.node.slug
-	// 						});
+	},
+	{
+		resolve: `gatsby-plugin-feed`,
+		options: {
+			query: `
+			{
+				site {
+					siteMetadata {
+						title
+						description
+						siteUrl
+						site_url: siteUrl
+					}
+				}
+			}`,
+			feeds: [
+				{
+					serialize: ({ query: { site, allMarkdownRemark } }) => {
+						return allMarkdownRemark.edges.map(
+							({
+								node: {
+									frontmatter: { id, title, date },
+									fields: { slug },
+									excerpt,
+									html
+								}
+							}) => {
+								const url = calculateCanonicalUrl({
+									siteUrl: site.siteMetadata.siteUrl,
+									slug: slug
+								});
 
-	// 						return Object.assign({}, edge.node, {
-	// 							description: edge.node.body.childMarkdownRemark.excerpt,
-	// 							date: edge.node.publishDate,
-	// 							url,
-	// 							guid: url,
-	// 							custom_elements: [
-	// 								{
-	// 									"content:encoded": edge.node.body.childMarkdownRemark.html
-	// 								}
-	// 							]
-	// 						});
-	// 					});
-	// 				},
-	// 				query: `
-	// 				{
-	// 					allContentfulBlogPost(limit: 1000, sort: { fields: [publishDate], order: DESC }) {
-	// 						edges {
-	// 							node {
-	// 								title
-	// 								slug
-	// 								publishDate(formatString: "YYYY-MM-DD")
-	// 								body {
-	// 									childMarkdownRemark {
-	// 										excerpt
-	// 										html
-	// 									}
-	// 								}
-	// 							}
-	// 						}
-	// 					}
-	// 				}`,
-	// 				output: "/rss.xml",
-	// 				title: siteMetadata.title
-	// 			}
-	// 		]
-	// 	}
-	// }
+								return {
+									title,
+									description: excerpt,
+									date: date,
+									url,
+									guid: id,
+									custom_elements: [
+										{
+											"content:encoded": html
+										}
+									]
+								};
+							}
+						);
+					},
+					query: `
+					{
+						allMarkdownRemark(limit: 1000, sort: { fields: [frontmatter___date], order: DESC }) {
+							edges {
+								node {
+									frontmatter {
+										id
+										title
+										date(formatString: "YYYY-MM-DD")
+									}
+									fields {
+										slug
+									}
+									html
+									excerpt
+								}
+							}
+						}
+					}`,
+					output: "/rss.xml",
+					title: siteMetadata.title
+				}
+			]
+		}
+	}
 ];
 
 if (process.env.GOOGLE_ANALYTICS_TRACKING_ID) {
