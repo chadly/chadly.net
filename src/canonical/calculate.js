@@ -1,4 +1,5 @@
 /* eslint-disable import/no-commonjs */
+const uri = require("urijs");
 
 module.exports = function calculateCanonicalUrl({ siteUrl, slug }) {
 	if (!siteUrl && !slug) {
@@ -13,7 +14,9 @@ module.exports = function calculateCanonicalUrl({ siteUrl, slug }) {
 		return appendSlashTo(siteUrl);
 	}
 
-	return `${appendSlashTo(siteUrl)}${appendSlashTo(slug)}`;
+	return uri(appendSlashTo(slug))
+		.origin(siteUrl)
+		.toString();
 };
 
 function appendSlashTo(val) {

@@ -55,6 +55,7 @@
     "gatsby-remark-smartypants": "^2.0.8",
     "gatsby-source-filesystem": "^2.0.20",
     "gatsby-transformer-remark": "^2.2.4",
-    "prettier": "^1.16.4"
+    "prettier": "^1.16.4",
+    "urijs": "^1.19.1"
   }
 }
