@@ -16,6 +16,7 @@ const siteMetadata = {
 };
 
 const plugins = [
+	"gatsby-plugin-sharp",
 	"gatsby-plugin-favicon",
 	{
 		resolve: "gatsby-transformer-remark",
@@ -25,7 +26,13 @@ const plugins = [
 				"gatsby-remark-autolink-headers",
 				"gatsby-remark-prismjs",
 				"gatsby-remark-reading-time",
-				"gatsby-remark-smartypants"
+				"gatsby-remark-smartypants",
+				{
+					resolve: "gatsby-remark-images",
+					options: {
+						maxWidth: 833 // max width of content container in px
+					}
+				}
 			]
 		}
 	},
