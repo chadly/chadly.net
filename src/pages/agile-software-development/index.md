@@ -15,7 +15,7 @@ Functional specs don't work. They are abstractions of the software that you are 
 ## Red Flag Words
 A lot of "red flag words" can lead to a project going awry. "Need" is a big one. Most of the time, the client has no idea what he actually _needs_ (see image below). Don't let the client/stakeholder steer you in the wrong direction.
 
-![software development](//images.ctfassets.net/tzzj042liag9/ffF06bPnd66ckU4uiYaim/fb475cc3d764b81110535faedcfaa3f7/software_development.jpg)
+![software development](./software_development.jpg)
 
 "Easy" is another one -- "oh just get this-and-this done, it should be easy." Or one that I have heard myself - "Why can't you just, you know, clickity-click it and get it done?" It leads to animosity and sets people up for failure. (I know my wife has experienced this first-hand at her job…)
 
