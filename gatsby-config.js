@@ -1,10 +1,20 @@
 /* eslint-disable import/no-commonjs */
 // const calculateCanonicalUrl = require("./src/canonical/calculate");
 
+const {
+	NODE_ENV,
+	URL: NETLIFY_SITE_URL = "https://www.chadly.net",
+	DEPLOY_PRIME_URL: NETLIFY_DEPLOY_URL = NETLIFY_SITE_URL,
+	CONTEXT: NETLIFY_ENV = NODE_ENV
+} = process.env;
+
+const isNetlifyProduction = NETLIFY_ENV === "production";
+const siteUrl = isNetlifyProduction ? NETLIFY_SITE_URL : NETLIFY_DEPLOY_URL;
+
 const siteMetadata = {
 	title: "chadly.net",
 	description: "Personal blog by Chad Lee",
-	siteUrl: "https://www.chadly.net",
+	siteUrl,
 	disqus: process.env.DISQUS_SHORTNAME || "",
 	author: {
 		name: "Chad Lee",
@@ -53,7 +63,27 @@ const plugins = [
 	},
 	"gatsby-plugin-jss",
 	"gatsby-plugin-sitemap",
-	"gatsby-plugin-robots-txt"
+	{
+		resolve: "gatsby-plugin-robots-txt",
+		options: {
+			resolveEnv: () => NETLIFY_ENV,
+			env: {
+				production: {
+					policy: [{ userAgent: "*" }]
+				},
+				"branch-deploy": {
+					policy: [{ userAgent: "*", disallow: ["/"] }],
+					sitemap: null,
+					host: null
+				},
+				"deploy-preview": {
+					policy: [{ userAgent: "*", disallow: ["/"] }],
+					sitemap: null,
+					host: null
+				}
+			}
+		}
+	}
 	// {
 	// 	resolve: `gatsby-plugin-feed`,
 	// 	options: {
