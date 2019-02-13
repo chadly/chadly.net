@@ -48,18 +48,18 @@ sudo apt-get install unpaper
 
 After opening gscan2pdf, click the `Scan` button which opens a scan dialog very similar to the one Adobe Acrobat uses. In order to get duplex scanning working properly, I had to make sure the following settings were set under `Page Options`:
 
-![screen1](//images.ctfassets.net/tzzj042liag9/2EpBVyABtqAswyUsws8S0c/996822725c45e9803191610258192d0e/screen1.png)
+![screen1](./screen1.png)
 
 Then navigate to `Optional Equipment` and set `ADF Mode` to `Duplex` and make sure `ADF Auto Scan` is checked:
 
-![screen2](//images.ctfassets.net/tzzj042liag9/1qTr97LqO42S2cMeWAeWoK/9a0aaf09d1c0ad767a980cebdb24dacb/screen2.png)
+![screen2](./screen2.png)
 
 After that, it has some nice post-processing options provided via unpaper and tesseract:
 
-![screen3](//images.ctfassets.net/tzzj042liag9/36xq0GfdOoos6QCWKA8a2m/347d317efd2ead459a91afc70eab49f0/screen3.png)
+![screen3](./screen3.png)
 
 You might want to play with the white and black threshold filters depending on what you are scanning:
 
-![screen4](//images.ctfassets.net/tzzj042liag9/5yv5WlGKgoiICSEAQK4WKM/050f3f8345496fa53ceb22b2869420a5/screen4.png)
+![screen4](./screen4.png)
 
 Once you tweak your settings to your liking, click `Scan` and you will have all your pages loaded in the app. From there, you can crop and/or clean up the pages more before you save it to PDF.

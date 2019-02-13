@@ -4,7 +4,6 @@ title: A Good Developer is a Healthy Developer
 date: '2014-02-10'
 ---
 
-
 > Start with the foundation.
 
 That's what any sane person will tell you when you go to build a building. It's common sense. You can't build a skyscraper on some weirdly shaped dirt -- you have to first lay a strong foundation.
@@ -28,7 +27,7 @@ So, how does one stay healthy while sitting on one's ass for so long each day? S
 
 Standing desks are all the rage these days because everyone knows that [sitting is killing us](http://www.lifehack.org/articles/lifestyle/why-sitting-is-killing-you.html). There are [plenty of ways](http://kellianderson.com/blog/desk.html) to [make a nice standing desk](http://lifehacker.com/5929765/make-yourself-a-standing-desk-this-weekend) out of your current workspace. It doesn't even have to look nice.
 
-![standing-desk](//images.ctfassets.net/tzzj042liag9/5FH5eHqeRywEgWWoOQIYy6/93fd90a38cec6b8c7ad96f9094d510a5/standing-desk.jpg)
+![standing-desk](./standing-desk.jpg)
 
 Go find a random box and put your keyboard on top of it. It works for me. Find something that works for you.
 
@@ -56,7 +55,7 @@ You don't have to be a "gym rat" or a "meathead" to care about your body and wan
 
 Since I work on the 17<sup>th</sup> floor of a high-rise, some coworkers and I have begun carrying 5 gallon water jugs (~80 lb) up the stairs twice a week.
 
-![carrying water upstairs](//images.ctfassets.net/tzzj042liag9/3Km5aqwF6EYI2waS6sKa22/525b4de8ab00c57d016e7e41aec40d69/stairs.jpg)
+![carrying water upstairs](./stairs.jpg)
 
 Heh, it's less crazy than it looks...
 

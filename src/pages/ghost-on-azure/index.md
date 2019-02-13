@@ -13,6 +13,7 @@ This site now runs on [Ghost](https://ghost.org/) in [Azure](https://azure.micro
 4. Enjoy static site performance on dynamically generated content
 
 ## Background
+
 I used to run this site on [Ghost a few years ago](/user-experience-matters-more-than-you-think/) when it first came out. I [switched it to use a static site generator](/automate-all-the-things-with-wercker/) shortly after that mostly because I thought it would be a fun little project (also performance and security and all that nonsense).
 
 ### Why the Switch Back?
@@ -99,29 +100,29 @@ I briefly played around with trying to get everything to work with the new [MySQ
 
 Once you login to your free Azure account, you will want to click on _App Services_:
 
-![app services](//images.ctfassets.net/tzzj042liag9/60pj9x39MQgGyAMweYaauq/24c970a65c7974d36cebce04852462ea/app-service-1.PNG)
+![app services](./app-service-1.png)
 
 And then from there click on _+ Add_ and choose a _Web App_:
 
-![web app](//images.ctfassets.net/tzzj042liag9/5ejLYQmAn6SUS0QWuSGoAQ/290488d8b7f902d093f23add1b5dba62/app-service-2.PNG)
+![web app](./app-service-2.png)
 
 You can then choose your app name and make sure to choose the _Free Plan_:
 
-![app service free plan](//images.ctfassets.net/tzzj042liag9/2Ec1kk8CWMEAuOwQIEiEKE/bebae0c27049c980107906578bcbacdd/app-service-3.PNG)
+![app service free plan](./app-service-3.png)
 
 As of this writing, Azure defaults the node version that will run your app to some old-ass version. You'll need to update it to the latest LTS version so that Ghost will run properly. Click on your new app service and then on _Application Settings_. Scroll down and make sure the `WEBSITE_NODE_DEFAULT_VERSION` is set to `8.9.4` (the latest LTS at the time of this writing):
 
-![node version](//images.ctfassets.net/tzzj042liag9/17ZOEFefM0SgYS8gOEkeys/e1a80c344158fa862f209545c37c8b81/node_version.PNG)
+![node version](./node_version.png)
 
 With the correct node version in place, you'll next want to setup deployment for your site. I like using the Github integration so that anytime I push to a particular branch, it will automatically redeploy the site. It will also `npm install` any dependencies during deployment.
 
 Navigate to _Deployment Options_ to choose your source:
 
-![deployment-source](//images.ctfassets.net/tzzj042liag9/24lCuYfQRaOU4QOAoe8uuA/61fe4c1f41321e9aefe768d460b7849d/deployment-source.PNG)
+![deployment-source](./deployment-source.png)
 
 From there, I chose Github and filled in all my settings:
 
-![deployment-github](//images.ctfassets.net/tzzj042liag9/5VnzXsGhb2O6wCwWcqKgeI/b6baba52fa37201085a602e45a420250/deployment-github.PNG)
+![deployment-github](./deployment-github.png)
 
 I set my repo up with a few branches for easier maintenance. The `ghost` branch is where I commit the [Ghost releases as they come out](https://github.com/TryGhost/Ghost/releases/latest) unchanged. The `azure` branch is where I made only the changes necessary to get it running on Azure. I rebase this branch off of `ghost` as new releases come out. I then create a separate branch for each site I deploy. e.g. I created a `chadlynet` branch for this site and I create other branches for family members that want their own sites. This way I can make theme customizations and tweaks to individual sites and rebase those changes off of the `azure` branch.
 
@@ -129,7 +130,7 @@ I set my repo up with a few branches for easier maintenance. The `ghost` branch 
 
 Once your site is deployed, you will want to set some environment variables. You can set [any of these options](https://docs.ghost.org/v1.0.0/docs/config), but the main one we want to set is `url`. Click on _Application Settings_ under your app service and then scroll down to _App Settings_. You will want to set `url` (casing matters) to the URL of your site:
 
-![URL app setting](//images.ctfassets.net/tzzj042liag9/3uC99Gk2Te8IyYyImeGW0U/6e731f036f4950163f6da388fb7dda91/app-setting.PNG)
+![URL app setting](./app-setting.png)
 
 Make sure to _Save_ after setting that setting.
 
@@ -171,11 +172,11 @@ There is a little more nuance to this [concerning ETags and things; more on that
 
 To setup the CDN, you will want to click on the _+ New_ icon and search for / choose CDN:
 
-![choose cdn](//images.ctfassets.net/tzzj042liag9/7bnZHqzJQcO6oKc6su6IwY/8118a0ea48d52b70cb6ee3af3a63cae3/choose-cdn.PNG)
+![choose cdn](./choose-cdn.png)
 
 From there, fill in your settings making sure to choose _Standard Verizon_ as the pricing tier. As of this writing, Verizon is the only provider that supports SSL on custom domains. This is supposedly "coming soon" to Akamai, but it is not here yet.
 
-![create cdn](//images.ctfassets.net/tzzj042liag9/2cP8bSoArWEEYk6sAicSKC/8555c60ae23916c14815a53e9b27ecdb/create-cdn-1.PNG)
+![create cdn](./create-cdn-1.png)
 
 You'll also want to choose _Web App_ as the origin type and choose your existing web app you created previously. You can include the CDN in the same resource group as your web app to make it easier to manage going forward.
 
@@ -183,15 +184,15 @@ After you create your CDN, it takes Verizon 6 hours or so to get off their ass a
 
 If you aren't into books, while you wait, you can also setup your custom domain. In your CDN profile, click on _Endpoints_ and then choose the existing endpoint we just setup. From there, click on _+ Custom Domain_. You'll have to setup a `CNAME` to _whatever.azureedge.net_ for your domain.
 
-![endpoint](//images.ctfassets.net/tzzj042liag9/3FL5oJg5VSiSyg0M8mkaqM/8224591d9c4732db7950a3521b671529/endpoint.PNG)
+![endpoint](./endpoint.png)
 
 Again, the domain takes way longer to propagate than you think it should. While you are in there, you might as well [take advantage of the free SSL](https://docs.microsoft.com/en-us/azure/cdn/cdn-custom-ssl) that you can get with your domain. Click the custom domain you setup and enable HTTPS:
 
-![ssl](//images.ctfassets.net/tzzj042liag9/6pPTPti400y4eacAkkc6ia/e2190d38835c6b8510904a7745e7db84/ssl.PNG)
+![ssl](./ssl.png)
 
 They will send an email to a [bunch of different addresses](https://docs.microsoft.com/en-us/azure/cdn/cdn-custom-ssl#step-2-domain-validation) associated with your domain. Click the link on one of those emails to confirm and setup the SSL.
 
-![ssl3](//images.ctfassets.net/tzzj042liag9/33B67hiTnGOMoiWgiUGYEU/f16d1f03fc58c408299d3302a583ef08/ssl3.PNG)
+![ssl3](./ssl3.png)
 
 Once that is done, it will take some time to propagate throughout the CDN network.
 
@@ -212,7 +213,7 @@ You explicitly don't want to setup `301` redirects from your web app to the cano
 
 Once I had all of this setup for this site, I decided to perform an experiment. I went to the public facing homepage to prime the CDN cache. I then went into the Azure portal and stopped the underlying app service. So, effectively, this site at the _azurewebistes.net_ domain started returning `503`s and became unavailable. I then refreshed the page on the public facing (CDN) site and everything still worked fine. Then, just to be sure, I opened dev tools and disabled the client cache and refreshed the page again. The server returned a string of beautiful `200`s like nothing was wrong.
 
-![200s](//images.ctfassets.net/tzzj042liag9/2oG8Nr4JY8G04q60Mi4g6y/cc347295b0b7da1a7a9b1e565fec7e04/200s.PNG)
+![200s](./200s.png)
 
 In other words, when everything is running normally, even if this site gets slammed, very little traffic will make it through to the actual Ghost app. The global CDN will relieve all that pressure from the web app and keep the site loading fast for everyone.
 

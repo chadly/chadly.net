@@ -23,7 +23,7 @@ git config --global mergetool.bc trustExitCode true
 
 In order to get directory diffs working (e.g. `git difftool --dir-diff`), I had to tweak the settings a little bit. By default, git uses symlinks to do the directory diff and BC4 will not follow those by default yielding something that looks like this:
 
-![broken directory diff](//images.ctfassets.net/tzzj042liag9/3bTHZI3QNigc0O828G86mU/c240bffb1d4c7ed4917e634d2f57b4f7/dir-diffs.png)
+![broken directory diff](./dir-diffs.png)
 
 There are a couple of ways to fix this ([courtesy of StackOverflow](http://stackoverflow.com/a/35319884/316108)). The approach I like is updating Beyond Compare to follow the symlinks.
 

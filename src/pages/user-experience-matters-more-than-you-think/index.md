@@ -20,6 +20,6 @@ As you may or may not have realized, I, too, have drunk the koolaid and am runni
 
 It is written in nodeJS which I have been spending more and more time with lately. Now I can get some hipster cred when someone asks me "Cool blog, is this Wordpress or something?" I can respond "Nah dude, this is in node," while skateboarding off into the sunset, doing mad flips and stuff.
 
-![skateboarding off into the sunset with node](//images.ctfassets.net/tzzj042liag9/1tMVBzkNfa2aUgYYEuUcaC/2ce4a0dccb850e2ceb621c62f7152cca/skateboard.jpg)
+![skateboarding off into the sunset with node](./skateboard.jpg)
 
 Just imagine Jesse Pinkman saying it…

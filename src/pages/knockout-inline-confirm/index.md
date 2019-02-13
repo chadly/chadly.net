@@ -6,11 +6,11 @@ date: '2014-02-02'
 
 The good old native confirmation dialog -- have you ever been writing a web app and found yourself using one of these?
 
-![Are you really sure you want to do that? No, but really, think about it before you just quickly dismiss this popup without reading it.](//images.ctfassets.net/tzzj042liag9/Rutf67GTkIageWAwK4CKU/e9493cbc09d38a289a588d184c58e306/confirm.png)
+![Are you really sure you want to do that? No, but really, think about it before you just quickly dismiss this popup without reading it.](./confirm.png)
 
 The tried-and-true `confirm("are you sure?")` is easy to code yet horrible for your user experience. 90%<sup>[citation needed]</sup> of users will ignore the carefully crafted message in your dialog and just press OK. If you are going to do a confirmation dialog, you should do it like Github does it:
 
-![github confirmation dialog](//images.ctfassets.net/tzzj042liag9/4CFXa3IAqkWGw6oeSmuCMi/fcae75aa1fe30f24e923216286825e5d/github-confirm.png)
+![github confirmation dialog](./github-confirm.png)
 
 This dialog forces the user to type out exactly what they are about to do. For an irreversible action, a dialog like this is ideal since the user _has_ to think about what they are doing in order to continue.
 
