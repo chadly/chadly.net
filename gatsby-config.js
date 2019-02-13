@@ -16,6 +16,7 @@ const siteMetadata = {
 	description: "Personal blog by Chad Lee",
 	siteUrl,
 	disqus: process.env.DISQUS_SHORTNAME || "",
+	githubLink: "https://github.com/chadly/chadly.net",
 	author: {
 		name: "Chad Lee",
 		description: "Writer of code. Doer of things. Maker of stuff.",

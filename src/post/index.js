@@ -11,9 +11,16 @@ import CanonicalLink, {
 	calculate as calculateCanonicalUrl
 } from "../canonical";
 import Comments from "./comments";
+import EditPageLink from "./edit-page-link";
 
 const BlogPostTemplate = ({ data, classes }) => {
-	const { post, disqusShortName, siteUrl } = massage(data);
+	const {
+		post,
+		disqusShortName,
+		siteUrl,
+		githubLink,
+		fileAbsolutePath
+	} = massage(data);
 
 	return (
 		<Layout>
@@ -27,7 +34,13 @@ const BlogPostTemplate = ({ data, classes }) => {
 						{post.dateFormatted}
 					</time>
 
-					<span className={classes.readingTime}>{post.readingTime}</span>
+					<div className={classes.readingTime}>
+						{post.readingTime} |{" "}
+						<EditPageLink
+							githubLink={githubLink}
+							fileAbsolutePath={fileAbsolutePath}
+						/>
+					</div>
 				</div>
 			</header>
 
@@ -64,10 +77,11 @@ function massage({
 		excerpt,
 		fields: {
 			readingTime: { text: readingTime }
-		}
+		},
+		fileAbsolutePath
 	},
 	site: {
-		siteMetadata: { disqus: disqusShortName, siteUrl }
+		siteMetadata: { disqus: disqusShortName, siteUrl, githubLink }
 	}
 }) {
 	return {
@@ -82,7 +96,9 @@ function massage({
 			readingTime
 		},
 		disqusShortName,
-		siteUrl
+		siteUrl,
+		githubLink,
+		fileAbsolutePath
 	};
 }
 
@@ -128,6 +144,7 @@ export const pageQuery = graphql`
 			siteMetadata {
 				disqus
 				siteUrl
+				githubLink
 			}
 		}
 		markdownRemark(fields: { slug: { eq: $slug } }) {
@@ -147,6 +164,7 @@ export const pageQuery = graphql`
 					text
 				}
 			}
+			fileAbsolutePath
 		}
 	}
 `;
