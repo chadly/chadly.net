@@ -12,28 +12,22 @@ import CanonicalLink, {
 } from "../canonical";
 import Comments from "./comments";
 
-import { get } from "lodash";
-
 const BlogPostTemplate = ({ data, classes }) => {
-	const post = get(data, "markdownRemark");
-	const disqusShortName = get(data, "site.siteMetadata.disqus");
-	const siteUrl = get(data, "site.siteMetadata.siteUrl");
-
-	const readingTime = get(post, "fields.readingTime.text");
+	const { post, disqusShortName, siteUrl } = massage(data);
 
 	return (
 		<Layout>
-			<Seo title={post.frontmatter.title} description={post.excerpt} />
-			<CanonicalLink siteUrl={siteUrl} slug={post.fields.slug} />
+			<Seo title={post.title} description={post.excerpt} />
+			<CanonicalLink siteUrl={siteUrl} slug={post.slug} />
 
 			<header className={classes.postHeader}>
-				<h1>{post.frontmatter.title}</h1>
+				<h1>{post.title}</h1>
 				<div className={classes.meta}>
-					<time dateTime={post.frontmatter.date} itemProp="datePublished">
-						{post.frontmatter.dateFormatted}
+					<time dateTime={post.date} itemProp="datePublished">
+						{post.dateFormatted}
 					</time>
 
-					<span className={classes.readingTime}>{readingTime}</span>
+					<span className={classes.readingTime}>{post.readingTime}</span>
 				</div>
 			</header>
 
@@ -61,6 +55,36 @@ const BlogPostTemplate = ({ data, classes }) => {
 		</Layout>
 	);
 };
+
+function massage({
+	markdownRemark: {
+		frontmatter: { id, title, date, dateFormatted },
+		fields: { slug },
+		html,
+		excerpt,
+		fields: {
+			readingTime: { text: readingTime }
+		}
+	},
+	site: {
+		siteMetadata: { disqus: disqusShortName, siteUrl }
+	}
+}) {
+	return {
+		post: {
+			id,
+			title,
+			date,
+			dateFormatted,
+			slug,
+			html,
+			excerpt,
+			readingTime
+		},
+		disqusShortName,
+		siteUrl
+	};
+}
 
 const styles = {
 	postHeader: {
@@ -107,8 +131,8 @@ export const pageQuery = graphql`
 			}
 		}
 		markdownRemark(fields: { slug: { eq: $slug } }) {
-			id
 			frontmatter {
+				id
 				title
 				date
 				dateFormatted: date(formatString: "MMMM DD, YYYY")
