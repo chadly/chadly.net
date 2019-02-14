@@ -2,6 +2,7 @@
 /* eslint-disable import/no-commonjs */
 
 const path = require("path");
+const fs = require("fs");
 const { createFilePath } = require("gatsby-source-filesystem");
 
 exports.onCreateNode = ({ node, getNode, actions }) => {
@@ -24,6 +25,7 @@ exports.createPages = async ({ graphql, actions: { createPage } }) => {
 							fields {
 								slug
 							}
+							fileAbsolutePath
 						}
 					}
 				}
@@ -37,10 +39,19 @@ exports.createPages = async ({ graphql, actions: { createPage } }) => {
 	}
 
 	const posts = result.data.allMarkdownRemark.edges;
-	posts.forEach(({ node: { fields: { slug } } }) => {
+	posts.forEach(({ node: { fields: { slug }, fileAbsolutePath } }) => {
+		let templatePath = path.join(
+			path.dirname(fileAbsolutePath),
+			"_template.js"
+		);
+
+		if (!fs.existsSync(templatePath)) {
+			templatePath = docPage;
+		}
+
 		createPage({
 			path: slug,
-			component: docPage,
+			component: templatePath,
 			context: { slug }
 		});
 	});
