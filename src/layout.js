@@ -33,9 +33,7 @@ const Layout = ({ children, classes }) => (
 					{children}
 
 					<footer className={classes.footer}>
-						{title} © {moment().format("YYYY")}.{" "}
-						<a href="https://github.com/chadly/chadly.net">Built</a> with{" "}
-						<a href="https://www.gatsbyjs.org">Gatsby</a>.
+						{title} © {moment().format("YYYY")}
 					</footer>
 				</div>
 			</div>
