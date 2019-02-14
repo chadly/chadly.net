@@ -7,16 +7,10 @@ import { rhythm, scale, smallScreenMediaQuery } from "../theme/typography";
 import { calculate as calculateCanonicalUrl } from "../canonical";
 
 const PostStub = ({
-	slug,
-	title,
-	publishDate,
-	publishDateFormatted,
-	body: {
-		childMarkdownRemark: {
-			fields: {
-				readingTime: { text: readingTime }
-			}
-		}
+	frontmatter: { title, date, dateFormatted },
+	fields: {
+		slug,
+		readingTime: { text: readingTime }
 	},
 	classes
 }) => (
@@ -26,8 +20,8 @@ const PostStub = ({
 		itemScope
 		itemType="http://schema.org/BlogPosting"
 	>
-		<time dateTime={publishDate} itemProp="datePublished">
-			{publishDateFormatted}
+		<time dateTime={date} itemProp="datePublished">
+			{dateFormatted}
 		</time>
 		<header>
 			<Link to={calculateCanonicalUrl({ slug })} itemProp="name headline url">

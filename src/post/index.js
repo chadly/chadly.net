@@ -2,7 +2,6 @@ import React from "react";
 import { graphql } from "gatsby";
 import injectSheet from "react-jss";
 
-import Assets from "./assets";
 import Layout from "../layout";
 import Seo from "../seo";
 import Author from "../author";
@@ -12,37 +11,36 @@ import CanonicalLink, {
 	calculate as calculateCanonicalUrl
 } from "../canonical";
 import Comments from "./comments";
-
-import { get } from "lodash";
+import EditPageLink from "./edit-page-link";
 
 const BlogPostTemplate = ({ data, classes }) => {
-	const post = get(data, "contentfulBlogPost");
-	const disqusShortName = get(data, "site.siteMetadata.disqus");
-	const siteUrl = get(data, "site.siteMetadata.siteUrl");
-
-	const readingTime = get(
+	const {
 		post,
-		"body.childMarkdownRemark.fields.readingTime.text"
-	);
+		disqusShortName,
+		siteUrl,
+		githubLink,
+		fileAbsolutePath
+	} = massage(data);
 
 	return (
 		<Layout>
-			<Seo
-				title={post.title}
-				author={post.author}
-				description={post.body.childMarkdownRemark.excerpt}
-			/>
-			<Assets assets={post.assets} />
+			<Seo title={post.title} description={post.excerpt} />
 			<CanonicalLink siteUrl={siteUrl} slug={post.slug} />
 
 			<header className={classes.postHeader}>
 				<h1>{post.title}</h1>
 				<div className={classes.meta}>
-					<time dateTime={post.publishDate} itemProp="datePublished">
-						{post.publishDateFormatted}
+					<time dateTime={post.date} itemProp="datePublished">
+						{post.dateFormatted}
 					</time>
 
-					<span className={classes.readingTime}>{readingTime}</span>
+					<div className={classes.readingTime}>
+						{post.readingTime} |{" "}
+						<EditPageLink
+							githubLink={githubLink}
+							fileAbsolutePath={fileAbsolutePath}
+						/>
+					</div>
 				</div>
 			</header>
 
@@ -51,14 +49,14 @@ const BlogPostTemplate = ({ data, classes }) => {
 					<section
 						itemProp="articleBody"
 						dangerouslySetInnerHTML={{
-							__html: post.body.childMarkdownRemark.html
+							__html: post.html
 						}}
 					/>
 				</article>
 			</main>
 
 			<footer className={classes.postFooter}>
-				<Author author={post.author} />
+				<Author />
 
 				<Comments
 					shortName={disqusShortName}
@@ -70,6 +68,39 @@ const BlogPostTemplate = ({ data, classes }) => {
 		</Layout>
 	);
 };
+
+function massage({
+	markdownRemark: {
+		frontmatter: { id, title, date, dateFormatted },
+		fields: { slug },
+		html,
+		excerpt,
+		fields: {
+			readingTime: { text: readingTime }
+		},
+		fileAbsolutePath
+	},
+	site: {
+		siteMetadata: { disqus: disqusShortName, siteUrl, githubLink }
+	}
+}) {
+	return {
+		post: {
+			id,
+			title,
+			date,
+			dateFormatted,
+			slug,
+			html,
+			excerpt,
+			readingTime
+		},
+		disqusShortName,
+		siteUrl,
+		githubLink,
+		fileAbsolutePath
+	};
+}
 
 const styles = {
 	postHeader: {
@@ -113,42 +144,27 @@ export const pageQuery = graphql`
 			siteMetadata {
 				disqus
 				siteUrl
+				githubLink
 			}
 		}
-		contentfulBlogPost(slug: { eq: $slug }) {
-			id
-			slug
-			title
-			publishDate
-			publishDateFormatted: publishDate(formatString: "MMMM DD, YYYY")
-			assets
-			body {
-				childMarkdownRemark {
-					html
-					excerpt
-					fields {
-						readingTime {
-							text
-						}
-					}
+		markdownRemark(fields: { slug: { eq: $slug } }) {
+			frontmatter {
+				id
+				title
+				date
+				dateFormatted: date(formatString: "MMMM DD, YYYY")
+			}
+			fields {
+				slug
+			}
+			html
+			excerpt
+			fields {
+				readingTime {
+					text
 				}
 			}
-			author {
-				name
-				shortBio {
-					childMarkdownRemark {
-						html
-					}
-				}
-				github
-				twitter
-				keybase
-				image {
-					file {
-						url
-					}
-				}
-			}
+			fileAbsolutePath
 		}
 	}
 `;

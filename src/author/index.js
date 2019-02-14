@@ -1,34 +1,30 @@
 import React from "react";
 import injectSheet from "react-jss";
+import { StaticQuery, graphql } from "gatsby";
 import { rhythm, scale, smallScreenMediaQuery } from "../theme/typography";
 
+import pic from "./me.jpg";
 import Social from "./social";
 
-import { get } from "lodash";
-
-const Author = ({ author, classes }) => {
-	if (!author) return null;
-
-	return (
-		<div className={classes.container}>
-			<img
-				src={get(author, "image.file.url")}
-				alt={author.name}
-				className={classes.profileImg}
-			/>
-			<div className={classes.meta}>
-				<h3>{author.name}</h3>
-				<div
-					className={classes.bio}
-					dangerouslySetInnerHTML={{
-						__html: get(author, "shortBio.childMarkdownRemark.html")
-					}}
-				/>
-				<Social author={author} />
+const Author = ({ classes }) => (
+	<StaticQuery
+		query={authorQuery}
+		render={({
+			site: {
+				siteMetadata: { author }
+			}
+		}) => (
+			<div className={classes.container}>
+				<img src={pic} alt={author.name} className={classes.profileImg} />
+				<div className={classes.meta}>
+					<h3>{author.name}</h3>
+					<div className={classes.bio}>{author.description}</div>
+					<Social author={author} />
+				</div>
 			</div>
-		</div>
-	);
-};
+		)}
+	/>
+);
 
 const styles = {
 	container: {
@@ -67,3 +63,19 @@ const styles = {
 };
 
 export default injectSheet(styles)(Author);
+
+const authorQuery = graphql`
+	query AuthorQuery {
+		site {
+			siteMetadata {
+				author {
+					name
+					description
+					twitter
+					github
+					keybase
+				}
+			}
+		}
+	}
+`;

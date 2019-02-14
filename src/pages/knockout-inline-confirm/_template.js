@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { graphql } from "gatsby";
 
-import Post from "../post";
+import Post from "../../post";
 
 import ko from "knockout";
 import "knockout-inline-confirm";
@@ -30,44 +30,32 @@ class KnockoutInlineConfirmPost extends Component {
 export default KnockoutInlineConfirmPost;
 
 export const pageQuery = graphql`
-	query KnockoutPost {
+	query KnockoutPost($slug: String!) {
 		site {
 			siteMetadata {
 				disqus
 				siteUrl
+				githubLink
 			}
 		}
-		contentfulBlogPost(slug: { eq: "knockout-inline-confirm" }) {
-			title
-			publishDate
-			assets
-			body {
-				childMarkdownRemark {
-					html
-					excerpt
-					fields {
-						readingTime {
-							text
-						}
-					}
+		markdownRemark(fields: { slug: { eq: $slug } }) {
+			frontmatter {
+				id
+				title
+				date
+				dateFormatted: date(formatString: "MMMM DD, YYYY")
+			}
+			fields {
+				slug
+			}
+			html
+			excerpt
+			fields {
+				readingTime {
+					text
 				}
 			}
-			author {
-				name
-				shortBio {
-					childMarkdownRemark {
-						html
-					}
-				}
-				github
-				twitter
-				keybase
-				image {
-					file {
-						url
-					}
-				}
-			}
+			fileAbsolutePath
 		}
 	}
 `;

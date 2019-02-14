@@ -4,17 +4,13 @@ import { StaticQuery, graphql } from "gatsby";
 
 import { get } from "lodash";
 
-const Seo = ({ title, description, author }) => (
+const Seo = ({ title, description }) => (
 	<StaticQuery
 		query={detailsQuery}
 		render={data => {
 			const siteTitle = get(data, "site.siteMetadata.title");
 			const siteDesc = get(data, "site.siteMetadata.description");
-
-			if (!author) {
-				[author] = get(data, "allContentfulPerson.edges");
-				author = get(author, "node");
-			}
+			const author = get(data, "site.siteMetadata.author");
 
 			title = title || `${siteTitle} | ${siteDesc}`;
 
@@ -62,18 +58,9 @@ const detailsQuery = graphql`
 			siteMetadata {
 				title
 				description
-			}
-		}
-		allContentfulPerson {
-			edges {
-				node {
+				author {
 					name
 					twitter
-					image {
-						file {
-							url
-						}
-					}
 				}
 			}
 		}

@@ -1,35 +1,42 @@
 /* eslint-disable import/no-commonjs */
-require("dotenv").config();
 const calculateCanonicalUrl = require("./src/canonical/calculate");
 
-const contentfulConfig = {
-	spaceId: process.env.CONTENTFUL_SPACE_ID,
-	accessToken: process.env.CONTENTFUL_DELIVERY_TOKEN
-};
-
-if (!contentfulConfig.spaceId || !contentfulConfig.accessToken) {
-	throw new Error(
-		"Contentful spaceId and the delivery token need to be provided."
-	);
-}
+const { NODE_ENV, CONTEXT: NETLIFY_ENV = NODE_ENV } = process.env;
 
 const siteMetadata = {
 	title: "chadly.net",
 	description: "Personal blog by Chad Lee",
 	siteUrl: "https://www.chadly.net",
-	disqus: process.env.DISQUS_SHORTNAME || ""
+	disqus: process.env.DISQUS_SHORTNAME || "",
+	githubLink: "https://github.com/chadly/chadly.net",
+	author: {
+		name: "Chad Lee",
+		description: "Writer of code. Doer of things. Maker of stuff.",
+		github: "chadly",
+		twitter: "wchadly",
+		keybase: "chadly"
+	}
 };
 
 const plugins = [
+	"gatsby-plugin-sharp",
 	"gatsby-plugin-favicon",
 	{
 		resolve: "gatsby-transformer-remark",
 		options: {
 			plugins: [
+				"gatsby-remark-copy-linked-files",
 				"gatsby-remark-autolink-headers",
 				"gatsby-remark-prismjs",
 				"gatsby-remark-reading-time",
-				"gatsby-remark-smartypants"
+				"gatsby-remark-smartypants",
+				{
+					resolve: "gatsby-remark-images",
+					options: {
+						maxWidth: 833, // max width of content container in px
+						linkImagesToOriginal: false
+					}
+				}
 			]
 		}
 	},
@@ -42,12 +49,35 @@ const plugins = [
 		}
 	},
 	{
-		resolve: "gatsby-source-contentful",
-		options: contentfulConfig
+		resolve: "gatsby-source-filesystem",
+		options: {
+			name: "pages",
+			path: `${__dirname}/src/pages`
+		}
 	},
 	"gatsby-plugin-jss",
 	"gatsby-plugin-sitemap",
-	"gatsby-plugin-robots-txt",
+	{
+		resolve: "gatsby-plugin-robots-txt",
+		options: {
+			resolveEnv: () => NETLIFY_ENV,
+			env: {
+				production: {
+					policy: [{ userAgent: "*" }]
+				},
+				"branch-deploy": {
+					policy: [{ userAgent: "*", disallow: ["/"] }],
+					sitemap: null,
+					host: null
+				},
+				"deploy-preview": {
+					policy: [{ userAgent: "*", disallow: ["/"] }],
+					sitemap: null,
+					host: null
+				}
+			}
+		}
+	},
 	{
 		resolve: `gatsby-plugin-feed`,
 		options: {
@@ -64,40 +94,51 @@ const plugins = [
 			}`,
 			feeds: [
 				{
-					serialize: ({ query: { site, allContentfulBlogPost } }) => {
-						return allContentfulBlogPost.edges.map(edge => {
-							const url = calculateCanonicalUrl({
-								siteUrl: site.siteMetadata.siteUrl,
-								slug: edge.node.slug
-							});
+					serialize: ({ query: { site, allMarkdownRemark } }) => {
+						return allMarkdownRemark.edges.map(
+							({
+								node: {
+									frontmatter: { id, title, date },
+									fields: { slug },
+									excerpt,
+									html
+								}
+							}) => {
+								const url = calculateCanonicalUrl({
+									siteUrl: site.siteMetadata.siteUrl,
+									slug: slug
+								});
 
-							return Object.assign({}, edge.node, {
-								description: edge.node.body.childMarkdownRemark.excerpt,
-								date: edge.node.publishDate,
-								url,
-								guid: url,
-								custom_elements: [
-									{
-										"content:encoded": edge.node.body.childMarkdownRemark.html
-									}
-								]
-							});
-						});
+								return {
+									title,
+									description: excerpt,
+									date: date,
+									url,
+									guid: id,
+									custom_elements: [
+										{
+											"content:encoded": html
+										}
+									]
+								};
+							}
+						);
 					},
 					query: `
 					{
-						allContentfulBlogPost(limit: 1000, sort: { fields: [publishDate], order: DESC }) {
+						allMarkdownRemark(limit: 1000, sort: { fields: [frontmatter___date], order: DESC }) {
 							edges {
 								node {
-									title
-									slug
-									publishDate(formatString: "YYYY-MM-DD")
-									body {
-										childMarkdownRemark {
-											excerpt
-											html
-										}
+									frontmatter {
+										id
+										title
+										date(formatString: "YYYY-MM-DD")
 									}
+									fields {
+										slug
+									}
+									html
+									excerpt
 								}
 							}
 						}

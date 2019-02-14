@@ -10,23 +10,24 @@ const AuthorSocial = ({ author: { github, twitter, keybase }, classes }) => {
 	return (
 		<ul className={classes.container}>
 			<SocialIcon
-				id="github"
+				id="fab fa-github"
 				name="Github"
 				href={`https://github.com/${github}`}
 				show={!!github}
 			/>
 			<SocialIcon
-				id="twitter"
+				id="fab fa-twitter"
 				name="Twitter"
 				href={`https://twitter.com/${twitter}`}
 				show={!!twitter}
 			/>
 			<SocialIcon
-				id="keybase"
+				id="fab fa-keybase"
 				name="Keybase"
 				href={`https://keybase.io/${keybase}`}
 				show={!!keybase}
 			/>
+			<SocialIcon id="fas fa-rss" name="RSS" href={`/rss.xml`} show />
 		</ul>
 	);
 };
@@ -37,7 +38,7 @@ const SocialIcon = ({ id, name, href, show }) => {
 	return (
 		<li>
 			<a href={href} title={name}>
-				<i className={`fab fa-${id}`} />{" "}
+				<i className={id} />
 			</a>
 		</li>
 	);
