@@ -28,19 +28,20 @@ const BlogPostTemplate = ({ data, classes }) => {
 			<CanonicalLink siteUrl={siteUrl} slug={post.slug} />
 
 			<header className={classes.postHeader}>
-				<h1>{post.title}</h1>
+				<h1>
+					<EditPageLink
+						githubLink={githubLink}
+						fileAbsolutePath={fileAbsolutePath}
+						className={classes.editLink}
+					/>
+					{post.title}
+				</h1>
 				<div className={classes.meta}>
 					<time dateTime={post.date} itemProp="datePublished">
 						{post.dateFormatted}
 					</time>
 
-					<div className={classes.readingTime}>
-						{post.readingTime} |{" "}
-						<EditPageLink
-							githubLink={githubLink}
-							fileAbsolutePath={fileAbsolutePath}
-						/>
-					</div>
+					<span className={classes.readingTime}>{post.readingTime}</span>
 				</div>
 			</header>
 
@@ -106,11 +107,23 @@ const styles = {
 	postHeader: {
 		marginBottom: rhythm(1),
 		"& h1": {
-			marginBottom: rhythm(-0.1)
+			marginBottom: rhythm(-0.1),
+			"&:hover $editLink": {
+				visibility: "visible"
+			}
 		},
 		"& time": {
 			...scale(-0.4)
 		}
+	},
+	editLink: {
+		float: "left",
+		boxShadow: "none",
+		paddingRight: rhythm(0.4),
+		marginLeft: rhythm(-1.3),
+		marginRight: 0,
+		...scale(0.6),
+		visibility: "hidden"
 	},
 	meta: {
 		color: "var(--textMuted)"

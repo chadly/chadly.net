@@ -8,8 +8,13 @@ const EditPageLink = ({ githubLink, fileAbsolutePath, className }) => {
 	const url = `${githubLink}/edit/master/${fileAbsolutePath.substring(idx)}`;
 
 	return (
-		<a className={className} href={url} title="Suggest an edit on Github">
-			Suggest Edit
+		<a
+			aria-hidden="true"
+			className={className}
+			href={url}
+			title="Suggest an edit on Github"
+		>
+			<i className="fas fa-pencil-alt" />
 		</a>
 	);
 };
