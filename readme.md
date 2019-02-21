@@ -11,4 +11,4 @@ yarn
 yarn start
 ```
 
-This will start the gatsby development server at `localhost:8000`. It will also create a `.env` file in the root of the project that you should enter any environment variables you want to configure (like the contentful API keys).
+This will start the gatsby development server at `localhost:8000`.
