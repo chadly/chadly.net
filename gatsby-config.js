@@ -30,6 +30,7 @@ const plugins = [
 				"gatsby-remark-prismjs",
 				"gatsby-remark-reading-time",
 				"gatsby-remark-smartypants",
+				"@weknow/gatsby-remark-twitter",
 				{
 					resolve: "gatsby-remark-images",
 					options: {

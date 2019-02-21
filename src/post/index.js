@@ -134,6 +134,10 @@ const styles = {
 			maxWidth: "100%",
 			margin: "10px auto"
 		},
+		"& .twitter-tweet": {
+			marginLeft: "auto",
+			marginRight: "auto"
+		},
 		"& div.footnotes li p": {
 			display: "inline"
 		}

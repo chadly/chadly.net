@@ -8,7 +8,11 @@ It's been [a little over a year](/ghost-on-azure/), so it's about that time wher
 
 ### Y Tho?
 
-I find it easier to rebuild this site and learn new technoligies rather than think of something to write about 😒. Also, despite all the [cool new stuff in Ghost v2.0](https://blog.ghost.org/2-0/), I found the editor experience to be...less good -- not the goodest anymore. Maybe I just have stockholm syndrome, but I prefer plain old markdown to any kind of other editor. Ghost still _supports_ that, it's just not the core experience anymore.
+I find it easier to rebuild this site and learn new technoligies rather than think of something to write about 😒.
+
+https://twitter.com/vvoyer/status/1087705536714412032
+
+Also, despite all the [cool new stuff in Ghost v2.0](https://blog.ghost.org/2-0/), I found the editor experience to be...less good -- not the goodest anymore. Maybe I just have stockholm syndrome, but I prefer plain old markdown to any kind of other editor. Ghost still _supports_ that, it's just not the core experience anymore.
 
 --------------
 

@@ -32,6 +32,7 @@
     "typography-theme-github": "^0.16.18"
   },
   "devDependencies": {
+    "@weknow/gatsby-remark-twitter": "^0.2.0",
     "babel-eslint": "^10.0.1",
     "eslint": "^5.13.0",
     "eslint-config-civicsource": "^11.0.0",
