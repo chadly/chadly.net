@@ -18,7 +18,9 @@ In the documentation for `unpublish`, it even explicitly says:
 
 > It is generally considered bad behavior to remove versions of a library that others are depending on!
 
-It is beyond me why it is so ridiculously easy for one disgruntled developer to [break the internet](https://twitter.com/jbogard/status/712845471882948608).
+It is beyond me why it is so ridiculously easy for one disgruntled developer to break the internet.
+
+https://twitter.com/jbogard/status/712845471882948608
 
 ## Words Mean things
 
