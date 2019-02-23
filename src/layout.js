@@ -42,7 +42,21 @@ const Layout = ({ children, classes }) => {
 				{children}
 
 				<footer className={classes.footer}>
-					{title} © {moment().format("YYYY")}
+					All content (except code snippets) licensed{" "}
+					<a
+						rel="license"
+						href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en_US"
+					>
+						CC BY-NC-SA 4.0
+					</a>
+					. All code snippets licensed under{" "}
+					<a
+						rel="license"
+						href="https://github.com/chadly/chadly.net/blob/master/LICENSE"
+					>
+						MIT License
+					</a>
+					.
 				</footer>
 			</div>
 		</div>
