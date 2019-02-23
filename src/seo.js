@@ -11,8 +11,11 @@ const Seo = ({ title, description }) => (
 			const siteTitle = get(data, "site.siteMetadata.title");
 			const siteDesc = get(data, "site.siteMetadata.description");
 			const author = get(data, "site.siteMetadata.author");
+			const authorName = get(author, "name");
 
-			title = title || `${siteTitle} | ${siteDesc}`;
+			title = title
+				? `${title}${authorName ? ` | ${authorName}` : ""}`
+				: `${siteTitle} | ${siteDesc}`;
 
 			const desc = description || siteDesc;
 
