@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, StaticQuery, graphql } from "gatsby";
+import { Link, useStaticQuery, graphql } from "gatsby";
 import Helmet from "react-helmet";
 import injectSheet from "react-jss";
 
@@ -7,39 +7,47 @@ import moment from "moment";
 
 import { rhythm, scale } from "./theme/typography";
 
-const Layout = ({ children, classes }) => (
-	<StaticQuery
-		query={layoutQuery}
-		render={({
-			site: {
-				siteMetadata: { title, description }
+const Layout = ({ children, classes }) => {
+	const {
+		site: {
+			siteMetadata: { title, description }
+		}
+	} = useStaticQuery(graphql`
+		query LayoutQuery {
+			site {
+				siteMetadata {
+					title
+					description
+				}
 			}
-		}) => (
-			<div className={classes.root}>
-				<h1 className={classes.siteTitle} title={description}>
-					<Link to="/">{title}</Link>
-				</h1>
+		}
+	`);
 
-				<div className={classes.container}>
-					<Helmet>
-						<link
-							rel="stylesheet"
-							href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
-							integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
-							crossOrigin="anonymous"
-						/>
-					</Helmet>
+	return (
+		<div className={classes.root}>
+			<h1 className={classes.siteTitle} title={description}>
+				<Link to="/">{title}</Link>
+			</h1>
 
-					{children}
+			<div className={classes.container}>
+				<Helmet>
+					<link
+						rel="stylesheet"
+						href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+						integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+						crossOrigin="anonymous"
+					/>
+				</Helmet>
 
-					<footer className={classes.footer}>
-						{title} © {moment().format("YYYY")}
-					</footer>
-				</div>
+				{children}
+
+				<footer className={classes.footer}>
+					{title} © {moment().format("YYYY")}
+				</footer>
 			</div>
-		)}
-	/>
-);
+		</div>
+	);
+};
 
 const styles = {
 	root: {
@@ -72,14 +80,3 @@ const styles = {
 };
 
 export default injectSheet(styles)(Layout);
-
-const layoutQuery = graphql`
-	query LayoutQuery {
-		site {
-			siteMetadata {
-				title
-				description
-			}
-		}
-	}
-`;

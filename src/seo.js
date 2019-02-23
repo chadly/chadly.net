@@ -1,51 +1,61 @@
 import React from "react";
 import Helmet from "react-helmet";
-import { StaticQuery, graphql } from "gatsby";
+import { useStaticQuery, graphql } from "gatsby";
 
 import { get } from "lodash";
 
-const Seo = ({ title, description }) => (
-	<StaticQuery
-		query={detailsQuery}
-		render={data => {
-			const siteTitle = get(data, "site.siteMetadata.title");
-			const siteDesc = get(data, "site.siteMetadata.description");
-			const author = get(data, "site.siteMetadata.author");
-			const authorName = get(author, "name");
+const Seo = ({ title, description }) => {
+	const data = useStaticQuery(graphql`
+		query DefaultSEOQuery {
+			site {
+				siteMetadata {
+					title
+					description
+					author {
+						name
+						twitter
+					}
+				}
+			}
+		}
+	`);
 
-			title = title
-				? `${title}${authorName ? ` | ${authorName}` : ""}`
-				: `${siteTitle} | ${siteDesc}`;
+	const siteTitle = get(data, "site.siteMetadata.title");
+	const siteDesc = get(data, "site.siteMetadata.description");
+	const author = get(data, "site.siteMetadata.author");
+	const authorName = get(author, "name");
 
-			const desc = description || siteDesc;
+	title = title
+		? `${title}${authorName ? ` | ${authorName}` : ""}`
+		: `${siteTitle} | ${siteDesc}`;
 
-			return (
-				<Helmet htmlAttributes={{ lang: "en" }}>
-					<title>{title}</title>
+	const desc = description || siteDesc;
 
-					<meta name="description" content={desc} />
+	return (
+		<Helmet htmlAttributes={{ lang: "en" }}>
+			<title>{title}</title>
 
-					<meta property="og:title" content={title} />
-					<meta property="og:type" content="website" />
-					<meta property="og:description" content={desc} />
+			<meta name="description" content={desc} />
 
-					<meta name="twitter:card" content="summary" />
-					{get(author, "twitter") ? (
-						<meta name="twitter:creator" content={`@${author.twitter}`} />
-					) : null}
-					{get(author, "image.file.url") ? (
-						<meta
-							name="twitter:image"
-							content={conformMetaUrl(get(author, "image.file.url"))}
-						/>
-					) : null}
-					<meta name="twitter:title" content={title} />
-					<meta name="twitter:description" content={desc} />
-				</Helmet>
-			);
-		}}
-	/>
-);
+			<meta property="og:title" content={title} />
+			<meta property="og:type" content="website" />
+			<meta property="og:description" content={desc} />
+
+			<meta name="twitter:card" content="summary" />
+			{get(author, "twitter") ? (
+				<meta name="twitter:creator" content={`@${author.twitter}`} />
+			) : null}
+			{get(author, "image.file.url") ? (
+				<meta
+					name="twitter:image"
+					content={conformMetaUrl(get(author, "image.file.url"))}
+				/>
+			) : null}
+			<meta name="twitter:title" content={title} />
+			<meta name="twitter:description" content={desc} />
+		</Helmet>
+	);
+};
 
 function conformMetaUrl(url) {
 	if (url.startsWith("https:")) return url;
@@ -54,18 +64,3 @@ function conformMetaUrl(url) {
 }
 
 export default Seo;
-
-const detailsQuery = graphql`
-	query DefaultSEOQuery {
-		site {
-			siteMetadata {
-				title
-				description
-				author {
-					name
-					twitter
-				}
-			}
-		}
-	}
-`;
