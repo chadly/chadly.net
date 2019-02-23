@@ -2,6 +2,10 @@
 id: c748febf-03e7-5052-abc6-8641a0a3dead
 title: The Many Pitfalls of NHibernate.Linq
 date: '2009-08-26'
+redirect_from:
+  - /post/2009/08/26/The-Many-Pitfalls-of-NHibernateLinq.aspx
+  - /the-many-pitfalls-of-nhibernate-linq
+  - /2009/08/the-many-pitfalls-of-nhibernate-linq
 ---
 
 Working with the [recently released NHibernate.Linq](/nhibernate-linq-1/) is not without its (many) pitfalls. In one of my current projects, we are using the specification pattern to build dynamic linq queries based off of persistable specification objects. This has led to more than one hair-pulling session on the limitations of the current NH Linq provider. For instance, did you know that this query will work just fine:

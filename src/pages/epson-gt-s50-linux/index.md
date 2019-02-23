@@ -2,6 +2,9 @@
 id: 7bb6d6e2-9fc1-5ab0-996f-b73785642c69
 title: Scanning & OCR with Epson GT-S50 on Linux Mint
 date: '2014-02-16'
+redirect_from:
+  - /2014/02/epson-gt-s50-linux
+  - /2014/02/scanning-ocr-with-epson-gt-s50-on-linux-mint
 ---
 
 I'm a bit anal when it comes to digitizing all of my important paperwork. Back when I was using Windows, I used to use Adobe Acrobat to scan all my documents into PDF. It was simple and easy. Turn scanner on, load document, click scan in Acrobat -- out pops a nice optimized OCRd PDF.

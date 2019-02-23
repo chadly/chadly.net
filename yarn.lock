@@ -5311,6 +5311,13 @@ gatsby-react-router-scroll@^2.0.4:
     scroll-behavior "^0.9.9"
     warning "^3.0.0"
 
+gatsby-redirect-from@^0.1.1:
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/gatsby-redirect-from/-/gatsby-redirect-from-0.1.1.tgz#06e3d8fe801d15592ddf2998cd48f7287936e8d9"
+  integrity sha512-7hfmqfv2KVFVlHGRmJtfUn2N7PmuZAqD7cBQ04dsHykuGmtF1+K5qLsi5IcTXySfd+GF5RgvGed9zycLjbzYKA==
+  dependencies:
+    chalk "^2.4.1"
+
 gatsby-remark-autolink-headers@^2.0.14:
   version "2.0.14"
   resolved "https://registry.yarnpkg.com/gatsby-remark-autolink-headers/-/gatsby-remark-autolink-headers-2.0.14.tgz#8dbcbb51af900bbf80252677341dceaac38e2afb"

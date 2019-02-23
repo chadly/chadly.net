@@ -2,6 +2,9 @@
 id: d679e8b1-60c0-5180-a55d-8a0d489a8051
 title: A Good Developer is a Healthy Developer
 date: '2014-02-10'
+redirect_from:
+  - /2014/02/healthy-developers
+  - /2014/02/a-good-developer-is-a-healthy-developer
 ---
 
 > Start with the foundation.

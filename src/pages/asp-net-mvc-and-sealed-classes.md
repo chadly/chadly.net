@@ -2,6 +2,9 @@
 id: af624e87-a849-51f6-9dbe-fdb2036fd2f8
 title: Asp.Net MVC and Sealed Classes
 date: '2009-03-14'
+redirect_from:
+  - /post/2009/03/14/AspNet-MVC-and-Sealed-Classes.aspx
+  - /2009/03/asp-net-mvc-and-sealed-classes
 ---
 
 I just created a project from the Asp.Net MVC default template (yes, I am a little late to this game – sorry, I have been living happily with Monorail) and ran across this in the `AccountController` class:

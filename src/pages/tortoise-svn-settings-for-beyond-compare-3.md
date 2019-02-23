@@ -2,6 +2,9 @@
 id: 7232842a-5fe6-53f5-88f0-73abc0e0568d
 title: Tortoise SVN Settings for Beyond Compare 3
 date: '2009-04-13'
+redirect_from:
+  - /post/2009/04/13/Tortoise-SVN-Settings-for-Beyond-Compare-3.aspx
+  - /2009/04/tortoise-svn-settings-for-beyond-compare-3
 ---
 
 This is for future reference for me – for some reason this is a huge pain in the ass for me to find whenever I need it.

@@ -2,6 +2,8 @@
 id: 81fea688-5f68-5c5a-bb23-a6e2a011c1ca
 title: Automate All the Things with Wercker
 date: '2013-12-18'
+redirect_from:
+  - /2013/12/automate-all-the-things-with-wercker
 ---
 
 I recently decided to switch my site over from [Ghost](https://ghost.org/) to [Wintersmith](http://wintersmith.io/), a static site generator.

@@ -2,6 +2,9 @@
 id: 4bc16cda-a4cd-5312-a7e4-427041ad5bbf
 title: Hello Universe
 date: '2009-01-25'
+redirect_from:
+  - /post/2009/01/25/Hello-Universe.aspx
+  - /2009/01/hello-universe
 ---
 
 Hello to you and welcome to the mythical world of Chad's mind. You are embarking on a journey of wonderment and mystery through one of the most bizarre things you will possibly ever come across on your journey through life -- the mind of a Chad.

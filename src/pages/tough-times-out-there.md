@@ -2,6 +2,12 @@
 id: 287c6bb2-a271-558a-8475-886bd31eff95
 title: It's Tough Times Out There
 date: '2009-03-09'
+redirect_from:
+  - /post/2009/03/09/Its-Tough-Times-Out-There.aspx
+  - /its-tough-times-out-there
+  - /2009/03/it-s-tough-times-out-there
+  - /2009/03/its-tough-times-out-there
+  - /2009/03/tough-times-out-there
 ---
 
 "Times are tough" -- I've heard that phrase ten thousand times in the past few months. I am so sick of hearing about the economy and how bad everything is. I feel like much of it is a self-fulfilling prophecy -  a vicious feedback cycle that is perpetuated by how much everyone talks about it _all-the-freaking-time_.

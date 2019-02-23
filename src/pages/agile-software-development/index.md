@@ -2,6 +2,11 @@
 id: 7c4b4673-73de-5a60-b4c1-206afd47a59b
 title: Agile Software Development
 date: '2009-02-01'
+redirect_from:
+  - /post/2009/02/01/Agile-Software-Development-from-a-Business-Perspective.aspx
+  - /agile-software-development-from-a-business-perspective
+  - /2009/02/agile-software-development-from-a-business-perspective
+  - /2009/02/agile-software-development
 ---
 
 I just ran across this [video presentation](http://www.balsamiq.com/blog/?p=375) with software development advice from Jason Fried - from 37Signals. It's not really anything I haven't heard before, it is coming from an interesting perspective though. Here are some highlights and things that jumped out at me:

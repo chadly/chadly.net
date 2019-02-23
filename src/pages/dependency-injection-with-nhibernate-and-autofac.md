@@ -2,6 +2,10 @@
 id: 256ee2a2-a2a4-563f-ab43-61684c707701
 title: Dependency Injection with NHibernate and Autofac
 date: '2009-05-28'
+redirect_from:
+  - /post/2009/05/28/Dependency-Injection-with-NHibernate-and-Autofac.aspx
+  - /2009/05/dependency-injection-with-nhibernate-and-autofac
+  - /2009/05/dependency-injection-with-nhi
 ---
 
 [Fabio](http://fabiomaulo.blogspot.com) just recently committed changes to NHibernate which centralize all of NHibernate’s `Activator.CreateInstance` calls to an `IObjectsFactory` instance. This is exciting because this gives us an opportunity to provide dependency injection services to all of those NHibernate-specific infrastructure types (IUserType, etc.).

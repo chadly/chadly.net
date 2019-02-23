@@ -2,6 +2,8 @@
 id: a73860b0-92cf-514f-81a2-a469e1c64a0c
 title: User experience matters more than you think
 date: '2013-10-18'
+redirect_from:
+  - /2013/10/user-experience-matters-more-than-you-think
 ---
 
 So there is this [new blog engine](http://ghost.org/) in town that [maybe you have heard of](http://www.kickstarter.com/projects/johnonolan/ghost-just-a-blogging-platform)? If not, don't fret, I only heard about it when they made their [public release](http://blog.ghost.org/public-launch/) just a few days ago.

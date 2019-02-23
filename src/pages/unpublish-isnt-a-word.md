@@ -2,6 +2,9 @@
 id: 44467d53-4511-5e69-88c5-6f19d43f834e
 title: Unpublish Isn't a Word
 date: '2016-03-24'
+redirect_from:
+  - /2016/03/unpublish-isnt-a-word
+  - /2016/03/unpublish-isn-t-a-word
 ---
 
 I, being a victim of the npmapocalypse, feel like I need to weigh in on the whole debacle. The community seems to be honing in on the idea that [micropackages](http://lucumr.pocoo.org/2016/3/24/open-source-trust-scaling/) and [microdependencies](http://www.haneycodes.net/npm-left-pad-have-we-forgotten-how-to-program/) are generally a bad thing. I disagree on principal with this sentiment but at the same time, think we've gone a little [off the deep end](https://www.npmjs.com/package/true).

@@ -2,6 +2,9 @@
 id: 17ec72ea-29da-5dde-aafc-7bc9f9ca0dbd
 title: We make shitty software (and so do you!)
 date: '2009-07-09'
+redirect_from:
+  - /post/2009/07/09/we-make-shitty-software-and-so-do-you.aspx
+  - /2009/07/we-make-shitty-software-and-so-do-you
 ---
 
 I just ran across this [little gem](http://davenet.scripting.com/1995/09/03/wemakeshittysoftware) and it made me laugh:

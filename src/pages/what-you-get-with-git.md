@@ -2,6 +2,9 @@
 id: db68074a-1768-5ceb-9d56-1ab9d4c7a0df
 title: What you get with Git
 date: '2012-08-28'
+redirect_from:
+  - /2012/08/the-wonderful-world-of-git
+  - /2012/08/what-you-get-with-git
 ---
 
 I recently broke down and decided to try and use Git for something. Practically every open source project I use has now moved to [GitHub](https://github.com/) and it was becoming hard to submit patches (or pull requests or whatever) without having a Git client on my machine.

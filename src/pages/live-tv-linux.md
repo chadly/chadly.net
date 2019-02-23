@@ -2,6 +2,9 @@
 id: 0c647962-288f-550f-8690-2887b8564593
 title: Live TV with Hauppauge WinTV-HVR2250 in Elementary OS
 date: '2014-03-02'
+redirect_from:
+  - /2014/03/live-tv-in-linux
+  - /2014/03/live-tv-with-hauppauge-wintv-hvr2250-in-elementary-os
 ---
 
 I've been using [elementary OS Luna](http://elementaryos.org/) lately, an Ubuntu derivative, and I really like it so far. It is very smooth and lightweight. Anyway, since I had to reinstall my OS, I've needed to setup all of my hardware again. Here is how I got my [WinTV-HVR2250](http://hauppauge.com/site/products/data_hvr2250.html) working.

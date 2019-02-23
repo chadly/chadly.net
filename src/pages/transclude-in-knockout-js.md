@@ -2,6 +2,10 @@
 id: bd2bc27d-b9b3-5059-bc75-9dea327215e6
 title: A Poor Man's Transclude in Knockout.js
 date: '2013-12-13'
+redirect_from:
+  - /a-poor-mans-transclude-in-knockout-js
+  - /2013/12/a-poor-mans-transclude-in-knockout-js
+  - /2013/12/a-poor-man-s-transclude-in-knockout-js
 ---
 
 If you've ever used [angular.js](http://angularjs.org/), you might have come across the transclude feature. From the [angular.js docs](http://docs.angularjs.org/guide/directive#creating-custom-directives_demo_creating-a-directive-that-wraps-other-elements):
