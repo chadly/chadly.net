@@ -3,8 +3,6 @@ import { Link, useStaticQuery, graphql } from "gatsby";
 import Helmet from "react-helmet";
 import injectSheet from "react-jss";
 
-import moment from "moment";
-
 import { rhythm, scale } from "./theme/typography";
 
 const Layout = ({ children, classes }) => {
