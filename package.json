@@ -47,6 +47,7 @@
     "gatsby-plugin-sharp": "^2.0.22",
     "gatsby-plugin-sitemap": "^2.0.6",
     "gatsby-plugin-typography": "^2.2.7",
+    "gatsby-plugin-webmention": "~0.0.9",
     "gatsby-redirect-from": "^0.1.1",
     "gatsby-remark-autolink-headers": "^2.0.14",
     "gatsby-remark-copy-linked-files": "^2.0.9",

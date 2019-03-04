@@ -7,6 +7,8 @@ const siteMetadata = {
 	title: "chadly.net",
 	description: "Personal blog by Chad Lee",
 	siteUrl: "https://www.chadly.net",
+	domain: "chadly.net",
+	webMentionIoUsername: "www.chadly.net",
 	disqus: process.env.DISQUS_SHORTNAME || "",
 	githubLink: "https://github.com/chadly/chadly.net",
 	author: {
@@ -152,6 +154,20 @@ const plugins = [
 		}
 	}
 ];
+
+if (process.env.WEBMENTIONS_TOKEN) {
+	plugins.push({
+		resolve: "gatsby-plugin-webmention",
+		options: {
+			username: siteMetadata.webMentionIoUsername,
+			mentions: true,
+			pingbacks: true,
+			identity: {},
+			domain: siteMetadata.domain,
+			token: process.env.WEBMENTIONS_TOKEN
+		}
+	});
+}
 
 if (process.env.GOOGLE_ANALYTICS_TRACKING_ID) {
 	plugins.push({
