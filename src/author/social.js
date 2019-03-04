@@ -14,12 +14,14 @@ const AuthorSocial = ({ author: { github, twitter, keybase }, classes }) => {
 				name="Github"
 				href={`https://github.com/${github}`}
 				show={!!github}
+				rel="me"
 			/>
 			<SocialIcon
 				id="fab fa-twitter"
 				name="Twitter"
 				href={`https://twitter.com/${twitter}`}
 				show={!!twitter}
+				rel="me"
 			/>
 			<SocialIcon
 				id="fab fa-keybase"
@@ -32,12 +34,12 @@ const AuthorSocial = ({ author: { github, twitter, keybase }, classes }) => {
 	);
 };
 
-const SocialIcon = ({ id, name, href, show }) => {
+const SocialIcon = ({ id, name, show, ...props }) => {
 	if (!show) return null;
 
 	return (
 		<li>
-			<a href={href} title={name}>
+			<a title={name} {...props}>
 				<i className={id} />
 			</a>
 		</li>
