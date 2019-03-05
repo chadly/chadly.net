@@ -7,7 +7,6 @@ const siteMetadata = {
 	title: "chadly.net",
 	description: "Personal blog by Chad Lee",
 	siteUrl: "https://www.chadly.net",
-	domain: "chadly.net",
 	webMentionIoUsername: "www.chadly.net",
 	disqus: process.env.DISQUS_SHORTNAME || "",
 	githubLink: "https://github.com/chadly/chadly.net",
@@ -163,7 +162,7 @@ if (process.env.WEBMENTIONS_TOKEN) {
 			mentions: true,
 			pingbacks: true,
 			identity: {},
-			domain: siteMetadata.domain,
+			domain: siteMetadata.webMentionIoUsername,
 			token: process.env.WEBMENTIONS_TOKEN
 		}
 	});
