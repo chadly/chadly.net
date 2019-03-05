@@ -22,7 +22,6 @@
     "lodash": "^4.17.11",
     "prismjs": "^1.15.0",
     "react": "^16.8.3",
-    "react-disqus-comments": "^1.4.0",
     "react-dom": "^16.8.3",
     "react-helmet": "^5.2.0",
     "react-jss": "^8.6.1",

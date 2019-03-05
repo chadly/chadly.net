@@ -33,7 +33,6 @@ export const pageQuery = graphql`
 	query KnockoutPost($slug: String!) {
 		site {
 			siteMetadata {
-				disqus
 				siteUrl
 				githubLink
 			}

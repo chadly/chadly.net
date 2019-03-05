@@ -1,5 +1,4 @@
 import React from "react";
-import Disqus from "react-disqus-comments";
 
 const Comments = ({ shortName, url, id, title }) => {
 	if (!shortName) return null;
@@ -7,7 +6,8 @@ const Comments = ({ shortName, url, id, title }) => {
 	return (
 		<>
 			<hr />
-			<Disqus shortname={shortName} url={url} identifier={id} title={title} />
+			<span>oh hi, here are some comments</span>
+			{/* <Disqus shortname={shortName} url={url} identifier={id} title={title} /> */}
 		</>
 	);
 };

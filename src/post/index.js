@@ -14,13 +14,7 @@ import Comments from "./comments";
 import EditPageLink from "./edit-page-link";
 
 const BlogPostTemplate = ({ data, classes }) => {
-	const {
-		post,
-		disqusShortName,
-		siteUrl,
-		githubLink,
-		fileAbsolutePath
-	} = massage(data);
+	const { post, siteUrl, githubLink, fileAbsolutePath } = massage(data);
 
 	return (
 		<Layout>
@@ -60,7 +54,6 @@ const BlogPostTemplate = ({ data, classes }) => {
 				<Author />
 
 				<Comments
-					shortName={disqusShortName}
 					id={post.id}
 					url={calculateCanonicalUrl({ siteUrl, slug: post.slug })}
 					title={post.title}
@@ -82,7 +75,7 @@ function massage({
 		fileAbsolutePath
 	},
 	site: {
-		siteMetadata: { disqus: disqusShortName, siteUrl, githubLink }
+		siteMetadata: { siteUrl, githubLink }
 	}
 }) {
 	return {
@@ -96,7 +89,6 @@ function massage({
 			excerpt,
 			readingTime
 		},
-		disqusShortName,
 		siteUrl,
 		githubLink,
 		fileAbsolutePath
@@ -159,7 +151,6 @@ export const pageQuery = graphql`
 	query BlogPostBySlug($slug: String!, $threadId: String!) {
 		site {
 			siteMetadata {
-				disqus
 				siteUrl
 				githubLink
 			}

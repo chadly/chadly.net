@@ -20,7 +20,6 @@ export const pageQuery = graphql`
 	query LightboxYoutubePost($slug: String!) {
 		site {
 			siteMetadata {
-				disqus
 				siteUrl
 				githubLink
 			}
