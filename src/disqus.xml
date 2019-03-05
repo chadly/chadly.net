@@ -1,0 +1,1978 @@
+<?xml version="1.0" encoding="utf-8"?>
+<disqus xmlns="http://disqus.com" xmlns:dsq="http://disqus.com/disqus-internals" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://disqus.com/api/schemas/1.0/disqus.xsd http://disqus.com/api/schemas/1.0/disqus-internals.xsd">
+<category dsq:id="2652276">
+<forum>chadlynet</forum>
+<title>General</title>
+<isDefault>true</isDefault>
+</category>
+<thread dsq:id="1870006976">
+<id>af624e87-a849-51f6-9dbe-fdb2036fd2f8</id>
+<forum>chadlynet</forum>
+<category dsq:id="2652276" />
+<link>https://www.chadly.net/asp-net-mvc-and-sealed-classes/</link>
+<title>Asp.Net MVC and Sealed Classes</title>
+<message />
+<createdAt>2009-03-14T18:05:10Z</createdAt>
+<author>
+<name>Chad Lee</name>
+<isAnonymous>false</isAnonymous>
+<username>wchadly</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="1870006971">
+<id>7232842a-5fe6-53f5-88f0-73abc0e0568d</id>
+<forum>chadlynet</forum>
+<category dsq:id="2652276" />
+<link>https://www.chadly.net/tortoise-svn-settings-for-beyond-compare-3/</link>
+<title>Tortoise SVN Settings for Beyond Compare 3</title>
+<message />
+<createdAt>2009-04-13T09:33:56Z</createdAt>
+<author>
+<name>Chad Lee</name>
+<isAnonymous>false</isAnonymous>
+<username>wchadly</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="1870006968">
+<id>964175c5-5180-503d-abbd-8d59ddb96369</id>
+<forum>chadlynet</forum>
+<category dsq:id="2652276" />
+<link>https://www.chadly.net/bdd-with-xunit-net/</link>
+<title>BDD with xUnit.net</title>
+<message />
+<createdAt>2009-04-20T23:54:37Z</createdAt>
+<author>
+<name>Chad Lee</name>
+<isAnonymous>false</isAnonymous>
+<username>wchadly</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="1870006955">
+<id>256ee2a2-a2a4-563f-ab43-61684c707701</id>
+<forum>chadlynet</forum>
+<category dsq:id="2652276" />
+<link>https://www.chadly.net/dependency-injection-with-nhibernate-and-autofac/</link>
+<title>Dependency Injection with NHibernate and Autofac</title>
+<message />
+<createdAt>2009-05-28T12:38:46Z</createdAt>
+<author>
+<name>Chad Lee</name>
+<isAnonymous>false</isAnonymous>
+<username>wchadly</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="1870006957">
+<id>cf479780-33d2-5d4b-b52f-2d2e1dbc375e</id>
+<forum>chadlynet</forum>
+<category dsq:id="2652276" />
+<link>https://www.chadly.net/nhibernate-linq-1/</link>
+<title>NHibernate.Linq 1.0 is out and about!</title>
+<message />
+<createdAt>2009-07-27T11:40:18Z</createdAt>
+<author>
+<name>Chad Lee</name>
+<isAnonymous>false</isAnonymous>
+<username>wchadly</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="1872105165">
+<id>db68074a-1768-5ceb-9d56-1ab9d4c7a0df</id>
+<forum>chadlynet</forum>
+<category dsq:id="2652276" />
+<link>https://www.chadly.net/what-you-get-with-git/</link>
+<title>What you get with Git</title>
+<message />
+<createdAt>2013-10-18T15:02:34Z</createdAt>
+<author>
+<name>Chad Lee</name>
+<isAnonymous>false</isAnonymous>
+<username>wchadly</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="1884824208">
+<id>a73860b0-92cf-514f-81a2-a469e1c64a0c</id>
+<forum>chadlynet</forum>
+<category dsq:id="2652276" />
+<link>https://www.chadly.net/user-experience-matters-more-than-you-think/</link>
+<title>User experience matters more than you think</title>
+<message />
+<createdAt>2013-10-22T01:05:26Z</createdAt>
+<author>
+<name>Chad Lee</name>
+<isAnonymous>false</isAnonymous>
+<username>wchadly</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="2048633835">
+<id>bd2bc27d-b9b3-5059-bc75-9dea327215e6</id>
+<forum>chadlynet</forum>
+<category dsq:id="2652276" />
+<link>https://www.chadly.net/transclude-in-knockout-js/</link>
+<title>A Poor Man's Transclude in knockout.js</title>
+<message />
+<createdAt>2013-12-13T18:54:23Z</createdAt>
+<author>
+<name>Chad Lee</name>
+<isAnonymous>false</isAnonymous>
+<username>wchadly</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="2053032274">
+<id>4bc16cda-a4cd-5312-a7e4-427041ad5bbf</id>
+<forum>chadlynet</forum>
+<category dsq:id="2652276" />
+<link>https://www.chadly.net/hello-universe/</link>
+<title>Hello Universe</title>
+<message />
+<createdAt>2013-12-16T02:32:45Z</createdAt>
+<author>
+<name>Chad Lee</name>
+<isAnonymous>false</isAnonymous>
+<username>wchadly</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="2056450553">
+<id>81fea688-5f68-5c5a-bb23-a6e2a011c1ca</id>
+<forum>chadlynet</forum>
+<category dsq:id="2652276" />
+<link>https://www.chadly.net/automate-all-the-things-with-wercker/</link>
+<title>Automate All the Things with Wercker</title>
+<message />
+<createdAt>2013-12-17T15:29:27Z</createdAt>
+<author>
+<name>Chad Lee</name>
+<isAnonymous>false</isAnonymous>
+<username>wchadly</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="2067394096">
+<id>7c4b4673-73de-5a60-b4c1-206afd47a59b</id>
+<forum>chadlynet</forum>
+<category dsq:id="2652276" />
+<link>https://www.chadly.net/agile-software-development/</link>
+<title>Agile Software Development</title>
+<message />
+<createdAt>2013-12-22T21:20:10Z</createdAt>
+<author>
+<name>Chad Lee</name>
+<isAnonymous>false</isAnonymous>
+<username>wchadly</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="2072713098">
+<id>b5203ae6-7fb8-5a93-81d7-4c1d297ce3fc</id>
+<forum>chadlynet</forum>
+<category dsq:id="2652276" />
+<link>https://www.chadly.net/lazy-loading-with-knockout/</link>
+<title>Lazy Loading an Observable Array with Knockout JS - Chad Lee</title>
+<message />
+<createdAt>2013-12-25T17:28:05Z</createdAt>
+<author>
+<name>Chad Lee</name>
+<isAnonymous>false</isAnonymous>
+<username>wchadly</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="2076610486">
+<id>/2013/12/geocoding-v3</id>
+<forum>chadlynet</forum>
+<category dsq:id="2652276" />
+<link>https://github.com/chadly/Geocoding.net</link>
+<title>Geocoding.net v3 Released</title>
+<message />
+<createdAt>2013-12-27T18:03:26Z</createdAt>
+<author>
+<name>Chad Lee</name>
+<isAnonymous>false</isAnonymous>
+<username>wchadly</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="2219768626">
+<id>c748febf-03e7-5052-abc6-8641a0a3dead</id>
+<forum>chadlynet</forum>
+<category dsq:id="2652276" />
+<link>https://www.chadly.net/many-pitfalls-of-nhibernate-linq/</link>
+<title>The Many Pitfalls of NHibernate.Linq</title>
+<message />
+<createdAt>2014-02-04T13:39:21Z</createdAt>
+<author>
+<name>Chad Lee</name>
+<isAnonymous>false</isAnonymous>
+<username>wchadly</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="2246816297">
+<id>d679e8b1-60c0-5180-a55d-8a0d489a8051</id>
+<forum>chadlynet</forum>
+<category dsq:id="2652276" />
+<link>https://www.chadly.net/healthy-developers/</link>
+<title>A Good Developer is a Healthy Developer</title>
+<message />
+<createdAt>2014-02-10T13:22:37Z</createdAt>
+<author>
+<name>Chad Lee</name>
+<isAnonymous>false</isAnonymous>
+<username>wchadly</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="2251710841">
+<id>7bb6d6e2-9fc1-5ab0-996f-b73785642c69</id>
+<forum>chadlynet</forum>
+<category dsq:id="2652276" />
+<link>https://www.chadly.net/epson-gt-s50-linux/</link>
+<title>Epson GT-S50 on Linux Mint</title>
+<message />
+<createdAt>2014-02-11T13:47:24Z</createdAt>
+<author>
+<name>Chad Lee</name>
+<isAnonymous>false</isAnonymous>
+<username>wchadly</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="2341274771">
+<id>433fd9dd-7035-57aa-a990-2e6dbdfff518</id>
+<forum>chadlynet</forum>
+<category dsq:id="2652276" />
+<link>https://www.chadly.net/steam-on-linux/</link>
+<title>Moving Steam Folder Out of Home in Linux</title>
+<message />
+<createdAt>2014-03-01T16:55:48Z</createdAt>
+<author>
+<name>Chad Lee</name>
+<isAnonymous>false</isAnonymous>
+<username>wchadly</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="2358322450">
+<id>0c647962-288f-550f-8690-2887b8564593</id>
+<forum>chadlynet</forum>
+<category dsq:id="2652276" />
+<link>https://www.chadly.net/live-tv-linux/</link>
+<title>Live TV with Hauppauge WinTV-HVR2250 in Elementary OS</title>
+<message />
+<createdAt>2014-03-04T15:16:46Z</createdAt>
+<author>
+<name>Chad Lee</name>
+<isAnonymous>false</isAnonymous>
+<username>wchadly</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="2432992820">
+<id>17ec72ea-29da-5dde-aafc-7bc9f9ca0dbd</id>
+<forum>chadlynet</forum>
+<category dsq:id="2652276" />
+<link>https://www.chadly.net/we-make-shitty-software-and-so-do-you/</link>
+<title>We make shitty software (and so do you!) - Chad Lee</title>
+<message />
+<createdAt>2014-03-15T01:07:38Z</createdAt>
+<author>
+<name>Chad Lee</name>
+<isAnonymous>false</isAnonymous>
+<username>wchadly</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="2460838440">
+<id>287c6bb2-a271-558a-8475-886bd31eff95</id>
+<forum>chadlynet</forum>
+<category dsq:id="2652276" />
+<link>https://www.chadly.net/tough-times-out-there/</link>
+<title>It's Tough Times Out There - Chad Lee</title>
+<message />
+<createdAt>2014-03-19T07:59:04Z</createdAt>
+<author>
+<name>Chad Lee</name>
+<isAnonymous>false</isAnonymous>
+<username>wchadly</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="3654828461">
+<id>cc6295c5-3b07-5888-a1ea-61288006f897</id>
+<forum>chadlynet</forum>
+<category dsq:id="2652276" />
+<link>https://www.chadly.net/nvidia-drivers-ubuntu/</link>
+<title>Installing NVidia Drivers for GTX 650 Ti Boost in Ubuntu 14.04</title>
+<message />
+<createdAt>2015-04-04T17:29:50Z</createdAt>
+<author>
+<name>Chad Lee</name>
+<isAnonymous>false</isAnonymous>
+<username>wchadly</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="3712817070">
+<id>25161217-87af-5368-b95d-70ffb5569388</id>
+<forum>chadlynet</forum>
+<category dsq:id="2652276" />
+<link>https://www.chadly.net/publishing-react-to-npm/</link>
+<title>Publishing a React Component to npm</title>
+<message />
+<createdAt>2015-04-26T00:05:17Z</createdAt>
+<author>
+<name>Chad Lee</name>
+<isAnonymous>false</isAnonymous>
+<username>wchadly</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="5133859796">
+<id>1ac269b0-e962-5532-8d2c-07bfa32afaf0</id>
+<forum>chadlynet</forum>
+<category dsq:id="2652276" />
+<link>https://www.chadly.net/git-bcompare/</link>
+<title>Configuring Beyond Compare 4 with Git</title>
+<message />
+<createdAt>2016-09-10T13:51:29Z</createdAt>
+<author>
+<name>Chad Lee</name>
+<isAnonymous>false</isAnonymous>
+<username>wchadly</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="5156573650">
+<id>3043ec9f-e5c1-5468-9d87-92a54cfb31e5</id>
+<forum>chadlynet</forum>
+<category dsq:id="2652276" />
+<link>https://www.chadly.net/nhibernate-linq-criteria/</link>
+<title>Creating NHibernate Linq Query from Criteria</title>
+<message />
+<createdAt>2016-09-19T17:33:30Z</createdAt>
+<author>
+<name>Chad Lee</name>
+<isAnonymous>false</isAnonymous>
+<username>wchadly</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="6076729608">
+<id>4a004ef5-b2da-54d7-8589-363ea3f4edf5</id>
+<forum>chadlynet</forum>
+<category dsq:id="2652276" />
+<link>https://www.chadly.net/etags-performance/</link>
+<title>Why ETags Probably Aren't Helping Your Site Performance</title>
+<message />
+<createdAt>2017-08-18T17:40:00Z</createdAt>
+<author>
+<name>Chad Lee</name>
+<isAnonymous>false</isAnonymous>
+<username>wchadly</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="6082227287">
+<id>f36b6c19-9e95-57af-adcc-28039a958366</id>
+<forum>chadlynet</forum>
+<category dsq:id="2652276" />
+<link>https://www.chadly.net/knockout-inline-confirm/</link>
+<title>Knockout Inline Confirm Component</title>
+<message />
+<createdAt>2017-08-21T01:41:24Z</createdAt>
+<author>
+<name>Chad Lee</name>
+<isAnonymous>false</isAnonymous>
+<username>wchadly</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="6875310866">
+<id>ghost-5b829d06c376483db844a9d2</id>
+<forum>chadlynet</forum>
+<category dsq:id="2652276" />
+<link>https://www.chadly.net/p/64389457-a913-4eed-88a2-dff8c0316ec4/</link>
+<title>(Untitled)</title>
+<message />
+<createdAt>2018-08-26T12:32:37Z</createdAt>
+<author>
+<name>Chad Lee</name>
+<isAnonymous>false</isAnonymous>
+<username>wchadly</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="7144027849">
+<id>82aab5a0-5460-5bea-9aad-634afbe010ba</id>
+<forum>chadlynet</forum>
+<category dsq:id="2652276" />
+<link>https://www.chadly.net/ghost-on-azure/</link>
+<title>Host Ghost 1.0 on Azure for Free</title>
+<message />
+<createdAt>2019-01-03T16:39:18Z</createdAt>
+<author>
+<name>Chad Lee</name>
+<isAnonymous>false</isAnonymous>
+<username>wchadly</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="7144028822">
+<id>44467d53-4511-5e69-88c5-6f19d43f834e</id>
+<forum>chadlynet</forum>
+<category dsq:id="2652276" />
+<link>https://www.chadly.net/unpublish-isnt-a-word/</link>
+<title>Unpublish Isn't a Word</title>
+<message />
+<createdAt>2019-01-03T16:39:48Z</createdAt>
+<author>
+<name>Chad Lee</name>
+<isAnonymous>false</isAnonymous>
+<username>wchadly</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="7144080747">
+<id>d75ee7a5-3b9c-57a6-a9a1-3c04f89d4e2b</id>
+<forum>chadlynet</forum>
+<category dsq:id="2652276" />
+<link>https://www.chadly.net/developing-with-passion/</link>
+<title>Developing with Passion</title>
+<message />
+<createdAt>2019-01-03T17:07:37Z</createdAt>
+<author>
+<name>Chad Lee</name>
+<isAnonymous>false</isAnonymous>
+<username>wchadly</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="7144095622">
+<id>be3e9ed2-e3ce-56ce-92ff-dc214ff0215f</id>
+<forum>chadlynet</forum>
+<category dsq:id="2652276" />
+<link>https://www.chadly.net/lightbox-for-youtube-videos/</link>
+<title>Lightbox for YouTube Videos</title>
+<message />
+<createdAt>2019-01-03T17:16:01Z</createdAt>
+<author>
+<name>Chad Lee</name>
+<isAnonymous>false</isAnonymous>
+<username>wchadly</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="7144236702">
+<id>8fe768c8-de26-5cc4-931a-40d099d76f20</id>
+<forum>chadlynet</forum>
+<category dsq:id="2652276" />
+<link>https://www.chadly.net/handle-monorail-404s-gracefully/</link>
+<title>Handle MonoRail 404s gracefully</title>
+<message />
+<createdAt>2019-01-03T18:25:58Z</createdAt>
+<author>
+<name>Chad Lee</name>
+<isAnonymous>false</isAnonymous>
+<username>wchadly</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="7144991495">
+<id>94965cd6-1e43-5c45-bb19-6274e1271a30</id>
+<forum>chadlynet</forum>
+<category dsq:id="2652276" />
+<link>https://www.chadly.net/purpose-built-software/</link>
+<title>Purpose Built Software</title>
+<message />
+<createdAt>2019-01-04T03:50:00Z</createdAt>
+<author>
+<name>Chad Lee</name>
+<isAnonymous>false</isAnonymous>
+<username>wchadly</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="7152199754">
+<id>b6e07fc5-c544-5d33-8762-e4b24d209d04</id>
+<forum>chadlynet</forum>
+<category dsq:id="2652276" />
+<link>https://www.chadly.net/</link>
+<title>Knockout Inline Confirm Component</title>
+<message />
+<createdAt>2019-01-07T12:59:30Z</createdAt>
+<author>
+<name>Chad Lee</name>
+<isAnonymous>false</isAnonymous>
+<username>wchadly</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<thread dsq:id="7225216885">
+<id />
+<forum>chadlynet</forum>
+<category dsq:id="2652276" />
+<link>https://www.chadly.net/#!newthread</link>
+<title>Knockout Inline Confirm Component</title>
+<message />
+<createdAt>2019-02-11T15:22:29Z</createdAt>
+<author>
+<name>Chad Lee</name>
+<isAnonymous>false</isAnonymous>
+<username>wchadly</username>
+</author>
+<isClosed>false</isClosed>
+<isDeleted>false</isDeleted>
+</thread>
+<post dsq:id="1086627100">
+<id>wp_id=191</id>
+<message><![CDATA[<p>Yep. "Just knock it out." Burns me up every time I hear that. Thanks for the shout out babe! Keep your posts coming.</p>]]></message>
+<createdAt>2008-12-08T04:19:17Z</createdAt>
+<isDeleted>false</isDeleted>
+<isSpam>false</isSpam>
+<author>
+<name>Alanna</name>
+<isAnonymous>true</isAnonymous>
+</author>
+<thread dsq:id="2067394096" />
+</post>
+<post dsq:id="1086627154">
+<id>wp_id=721</id>
+<message><![CDATA[<p>Well I''m ready ... so bring it on.</p>]]></message>
+<createdAt>2008-12-09T07:34:51Z</createdAt>
+<isDeleted>false</isDeleted>
+<isSpam>false</isSpam>
+<author>
+<name>Mabs</name>
+<isAnonymous>true</isAnonymous>
+</author>
+<thread dsq:id="2053032274" />
+</post>
+<post dsq:id="1086627157">
+<id>wp_id=731</id>
+<message><![CDATA[<p>I can''t wait!!</p>]]></message>
+<createdAt>2008-12-09T10:55:40Z</createdAt>
+<isDeleted>false</isDeleted>
+<isSpam>false</isSpam>
+<author>
+<name>Alanna</name>
+<isAnonymous>true</isAnonymous>
+</author>
+<thread dsq:id="2053032274" />
+</post>
+<post dsq:id="1086627158">
+<id>wp_id=741</id>
+<message><![CDATA[<p>Welcome, Chad! I hope this blog will rock!</p>]]></message>
+<createdAt>2008-12-09T11:27:46Z</createdAt>
+<isDeleted>false</isDeleted>
+<isSpam>false</isSpam>
+<author>
+<name>Tuna Toksoz</name>
+<isAnonymous>true</isAnonymous>
+</author>
+<thread dsq:id="2053032274" />
+</post>
+<post dsq:id="1086627159">
+<id>wp_id=751</id>
+<message><![CDATA[<p>Delving in to the mind of chad may lead to some unwanted side effect such as Dizziness; drowsiness; dry mouth; fatigue; headache; nausea; nervousness; sore throat; and trouble sleeping. Do not read "Chads mind" if you suffer from migranes or high blood pressure, as doing so may lead to an exacerbation of such conditions. Please note - some side effects of "Chads mind" may not be reported. Always consult your doctor or healthcare specialist before reading "Chads mind" . You may also report side effects to the FDA at <a href="http://www.fda.gov" rel="nofollow noopener" title="http://www.fda.gov">http://www.fda.gov</a>.</p>]]></message>
+<createdAt>2008-12-10T12:17:47Z</createdAt>
+<isDeleted>false</isDeleted>
+<isSpam>false</isSpam>
+<author>
+<name>Adam</name>
+<isAnonymous>true</isAnonymous>
+</author>
+<thread dsq:id="2053032274" />
+</post>
+<post dsq:id="1086627101">
+<id />
+<message><![CDATA[<p>Can you help.</p><p>I have been looking around to find a way of displaying both Video ( Youtube content ) and Images in the same webpage using your variation of the Lightbox script.</p><p>Can you tell me firstly is it possible and second how I can do this, I am not a programmer but love using this tool.</p><p>Thanks in advance for your help.</p><p>Regards<br>Pat</p>]]></message>
+<createdAt>2008-12-23T10:26:21Z</createdAt>
+<isDeleted>false</isDeleted>
+<isSpam>false</isSpam>
+<author>
+<name>Patrick</name>
+<isAnonymous>true</isAnonymous>
+</author>
+<thread dsq:id="7144095622" />
+</post>
+<post dsq:id="1086627096">
+<id />
+<message><![CDATA[<p>Glad to hear you really love what you do :) passionate is also a trait people identify in me at interviews, and I really am. My point I guess is what you identified halfway through, some people actually DO decide what they want to do with their lives early on, and pursue it. Consider it the difference between a vocation and a job. While I live and am passionate about good software development, I am also self aware enough to know that no line of code I have ever written has honestly improved the world, most of it never lasted 2 years before being rewritten!</p><p>If I do go down a medical route, and save just one life, or make just one persons life better, then I won''t have wasted my time here</p>]]></message>
+<createdAt>2009-01-30T06:25:58Z</createdAt>
+<isDeleted>false</isDeleted>
+<isSpam>false</isSpam>
+<author>
+<name>Casey</name>
+<isAnonymous>true</isAnonymous>
+</author>
+<thread dsq:id="7144080747" />
+</post>
+<post dsq:id="1086627102">
+<id />
+<message><![CDATA[<p>great job i was looking for video support with fancybox....i tried it for videos and really i liked it, but how can you activate an image ? (in the same page of the video?...is your script for videos only?<br>thanks</p>]]></message>
+<createdAt>2009-03-02T20:39:04Z</createdAt>
+<isDeleted>false</isDeleted>
+<isSpam>false</isSpam>
+<author>
+<name>samix</name>
+<isAnonymous>true</isAnonymous>
+</author>
+<thread dsq:id="7144095622" />
+</post>
+<post dsq:id="1086627162">
+<id />
+<message><![CDATA[<p>Yes, the fancybox normally only works with images. This script simply adds the ability to use videos with it. You can still use the fancybox as normal to show images. Basically, instead of a link to a youtube video, you just use a link to an image.</p><p>You can go check it out the fancybox documentation for more info.</p>]]></message>
+<createdAt>2009-03-03T03:03:59Z</createdAt>
+<isDeleted>false</isDeleted>
+<isSpam>false</isSpam>
+<author>
+<name>Chad Lee</name>
+<isAnonymous>false</isAnonymous>
+<username>wchadly</username>
+</author>
+<thread dsq:id="7144095622" />
+<parent dsq:id="1086627102" />
+</post>
+<post dsq:id="1086627103">
+<id />
+<message><![CDATA[<p>Ceebox was awesome but combined with fancy box. Adds a zooming out effect that makes it look like flash. Great Job!! The only drawback is that it only works with JQuery 1.2.6. If anyone got this to work with the latest jquery 1.3.2. post please.</p>]]></message>
+<createdAt>2009-03-21T17:05:25Z</createdAt>
+<isDeleted>false</isDeleted>
+<isSpam>false</isSpam>
+<author>
+<name>derkoidus</name>
+<isAnonymous>true</isAnonymous>
+</author>
+<thread dsq:id="7144095622" />
+</post>
+<post dsq:id="1086627083">
+<id>wp_id=81</id>
+<message><![CDATA[<p>Well done Chad.<br>For the encryption and in general for users types you don''t need to wire your implementation with a container since NH have another way.<br>Take a look to the Gustavo''s implementation:<br><a href="http://gustavoringel.blogspot.com/2009/02/encrypting-password-or-other-strings-in.html" rel="nofollow noopener" title="http://gustavoringel.blogspot.com/2009/02/encrypting-password-or-other-strings-in.html">http://gustavoringel.blogsp...</a></p>]]></message>
+<createdAt>2009-03-26T22:04:07Z</createdAt>
+<isDeleted>false</isDeleted>
+<isSpam>false</isSpam>
+<author>
+<name>Fabio Maulo</name>
+<isAnonymous>true</isAnonymous>
+</author>
+<thread dsq:id="1870006955" />
+</post>
+<post dsq:id="1086627105">
+<id />
+<message><![CDATA[<p>chadly,</p><p>You are the MAN. I really like this. It is exactly what I was looking for. Thank you for making such a great script.</p>]]></message>
+<createdAt>2009-03-28T04:13:59Z</createdAt>
+<isDeleted>false</isDeleted>
+<isSpam>false</isSpam>
+<author>
+<name>chill</name>
+<isAnonymous>true</isAnonymous>
+</author>
+<thread dsq:id="7144095622" />
+</post>
+<post dsq:id="1086627107">
+<id />
+<message><![CDATA[<p>It seems like you have done some modification directly within jquery.fancybox-1.0.0.js. Can you note down where did you change? I need to port to change to jquery.fancybox-1.2.1.js. Thanks</p>]]></message>
+<createdAt>2009-04-04T02:20:22Z</createdAt>
+<isDeleted>false</isDeleted>
+<isSpam>false</isSpam>
+<author>
+<name>HP</name>
+<isAnonymous>true</isAnonymous>
+</author>
+<thread dsq:id="7144095622" />
+</post>
+<post dsq:id="1086627109">
+<id />
+<message><![CDATA[<p>Thanks for making this script!!!!!!</p>]]></message>
+<createdAt>2009-04-04T09:26:40Z</createdAt>
+<isDeleted>false</isDeleted>
+<isSpam>false</isSpam>
+<author>
+<name>Char</name>
+<isAnonymous>true</isAnonymous>
+</author>
+<thread dsq:id="7144095622" />
+</post>
+<post dsq:id="1086627110">
+<id />
+<message><![CDATA[<p>Any plans on updating this for the latest versions of jquery/fancybox??? That would be great.</p>]]></message>
+<createdAt>2009-05-24T09:22:23Z</createdAt>
+<isDeleted>false</isDeleted>
+<isSpam>false</isSpam>
+<author>
+<name>naet</name>
+<isAnonymous>true</isAnonymous>
+</author>
+<thread dsq:id="7144095622" />
+</post>
+<post dsq:id="1086627089">
+<id>wp_id=91</id>
+<message><![CDATA[<p>This is cool stuff Chad! Just a quick addendum, this is now available in binary form in the Contrib release here: <a href="http://code.google.com/p/autofac/downloads/list" rel="nofollow noopener" title="http://code.google.com/p/autofac/downloads/list">http://code.google.com/p/au...</a></p><p>Thanks for kick-starting Autofac''s NHibernate integration effort, it was long overdue!</p><p>All the best,</p><p>Nick</p>]]></message>
+<createdAt>2009-05-31T03:09:19Z</createdAt>
+<isDeleted>false</isDeleted>
+<isSpam>false</isSpam>
+<author>
+<name>Nicholas Blumhardt</name>
+<isAnonymous>true</isAnonymous>
+</author>
+<thread dsq:id="1870006955" />
+</post>
+<post dsq:id="1086627097">
+<id>wp_id=171</id>
+<message><![CDATA[<p>Unfortunately, that''s probably unrealistic.  The reason they seal &amp; internal classes is so they don''t have to officially support them.</p><p>From what I''ve heard, getting a type public in the framework is very difficult.</p><p>But it would be nice if they opened up public interfaces, so we could at least stub them and inject them.  I think that is becoming more of reality.  We''ll see with 4.0 I guess</p>]]></message>
+<createdAt>2009-06-03T06:03:03Z</createdAt>
+<isDeleted>false</isDeleted>
+<isSpam>false</isSpam>
+<author>
+<name>John Teague</name>
+<isAnonymous>true</isAnonymous>
+</author>
+<thread dsq:id="1870006976" />
+</post>
+<post dsq:id="1086627111">
+<id />
+<message><![CDATA[<p>For all those who want to use this with later versions from the @ symbol both in the initiation process and in the script. just to a search for @ and get rid of it</p>]]></message>
+<createdAt>2009-06-04T16:13:22Z</createdAt>
+<isDeleted>false</isDeleted>
+<isSpam>false</isSpam>
+<author>
+<name>Tony</name>
+<isAnonymous>true</isAnonymous>
+</author>
+<thread dsq:id="7144095622" />
+</post>
+<post dsq:id="1086627081">
+<id>wp_id=31</id>
+<message><![CDATA[<p>Working on NH.Linq 2.0 right now - still a way to go, but making progress.  So far, relinq is helping out a lot :)</p><p>I''ll make a note of these queries to make sure that we don''t fall into the same trap (although the problems that you are seeing should be solved with relinq)</p><p>Cheers,</p><p>Steve</p>]]></message>
+<createdAt>2009-06-14T22:23:36Z</createdAt>
+<isDeleted>false</isDeleted>
+<isSpam>false</isSpam>
+<author>
+<name>Steve Strong</name>
+<isAnonymous>true</isAnonymous>
+</author>
+<thread dsq:id="2219768626" />
+</post>
+<post dsq:id="1086627084">
+<id>wp_id=51</id>
+<message><![CDATA[<p>Intensive purposes? :)</p>]]></message>
+<createdAt>2009-06-15T02:33:41Z</createdAt>
+<isDeleted>false</isDeleted>
+<isSpam>false</isSpam>
+<author>
+<name>mgroves</name>
+<isAnonymous>true</isAnonymous>
+</author>
+<thread dsq:id="1870006957" />
+</post>
+<post dsq:id="1086627114">
+<id />
+<message><![CDATA[<p>Nice work! <br>BTW. I''ve recently updated &lt;a href="<a href="http://catcubed.com/2008/12/23/ceebox-a-thickboxvideobox-mashup" rel="nofollow noopener" title="http://catcubed.com/2008/12/23/ceebox-a-thickboxvideobox-mashup">http://catcubed.com/2008/12...</a>"&gt;CeeBox&lt;/a&gt; to work with jquery 1.3.2. The fix is pretty easy. You need to change:</p><p>var arr = $("a[@rel=" + el.rel + "]").get();</p><p>to</p><p>var arr = $("a[rel=" + el.rel + "]").get();</p><p>Also, I suggest you change your script to use the &lt;a href="<a href="http://jquery.thewikies.com/swfobject/" rel="nofollow noopener" title="http://jquery.thewikies.com/swfobject/">http://jquery.thewikies.com...</a>"&gt;jquery.swfobject.js&lt;/a&gt; jQuery plugin asI have since it''s much smaller than the full swfobject.js.</p>]]></message>
+<createdAt>2009-06-22T08:07:46Z</createdAt>
+<isDeleted>false</isDeleted>
+<isSpam>false</isSpam>
+<author>
+<name>Colin</name>
+<isAnonymous>true</isAnonymous>
+</author>
+<thread dsq:id="7144095622" />
+</post>
+<post dsq:id="1086627113">
+<id />
+<message><![CDATA[<p>Noticed the links got messed with so removed them and reposted comment</p><p>Nice work! <br>BTW. I''ve recently updated CeeBox to work with jquery 1.3.2. The fix is pretty easy. You need to change:</p><p>var arr = $("a[@rel=" + el.rel + "]").get();</p><p>to</p><p>var arr = $("a[rel=" + el.rel + "]").get();</p><p>Also, I suggest you change your script to use the jquery.swfobject.js jQuery plugin asI have since it''s much smaller than the full swfobject.js.</p>]]></message>
+<createdAt>2009-06-22T08:11:19Z</createdAt>
+<isDeleted>false</isDeleted>
+<isSpam>false</isSpam>
+<author>
+<name>Colin</name>
+<isAnonymous>true</isAnonymous>
+</author>
+<thread dsq:id="7144095622" />
+</post>
+<post dsq:id="1086627115">
+<id />
+<message><![CDATA[<p>The close button doesn''t work in IE</p>]]></message>
+<createdAt>2009-06-26T20:57:08Z</createdAt>
+<isDeleted>false</isDeleted>
+<isSpam>false</isSpam>
+<author>
+<name>Rimu</name>
+<isAnonymous>true</isAnonymous>
+</author>
+<thread dsq:id="7144095622" />
+</post>
+<post dsq:id="1086627116">
+<id />
+<message><![CDATA[<p>I''m getting:</p><p>uncaught exception: Syntax error, unrecognized expression: [@rel*=fancyvideo]</p><p>Any idea why?</p>]]></message>
+<createdAt>2009-08-05T01:27:47Z</createdAt>
+<isDeleted>false</isDeleted>
+<isSpam>false</isSpam>
+<author>
+<name>Tam</name>
+<isAnonymous>true</isAnonymous>
+</author>
+<thread dsq:id="7144095622" />
+</post>
+<post dsq:id="1086627163">
+<id />
+<message><![CDATA[<p>For jQuery &gt;= 1.3.2, change it to $("a[rel=fancyvideo]")</p>]]></message>
+<createdAt>2009-08-05T04:13:29Z</createdAt>
+<isDeleted>false</isDeleted>
+<isSpam>false</isSpam>
+<author>
+<name>Chad Lee</name>
+<isAnonymous>false</isAnonymous>
+<username>wchadly</username>
+</author>
+<thread dsq:id="7144095622" />
+<parent dsq:id="1086627116" />
+</post>
+<post dsq:id="1086627119">
+<id />
+<message><![CDATA[<p>Hi , I had been desperately tring to make this work here , I added the rel="fancyvideo" to all my youtube links (Under the "Related Videos" )<br>still no luck ,Chad could you suggest that seems to be the problem.<br>here is the post <a href="http://easygifts123.net/wordpress/?p=5" rel="nofollow noopener" title="http://easygifts123.net/wordpress/?p=5">http://easygifts123.net/wor...</a></p>]]></message>
+<createdAt>2009-08-07T06:48:24Z</createdAt>
+<isDeleted>false</isDeleted>
+<isSpam>false</isSpam>
+<author>
+<name>adi</name>
+<isAnonymous>true</isAnonymous>
+</author>
+<thread dsq:id="7144095622" />
+</post>
+<post dsq:id="1086627164">
+<id />
+<message><![CDATA[<p>Did you wire up the links with ("a[@rel*=fancyvideo]").fancybox(); ? I just gave your site a cursory glance and didn''''t see that anywhere.</p>]]></message>
+<createdAt>2009-08-07T12:39:46Z</createdAt>
+<isDeleted>false</isDeleted>
+<isSpam>false</isSpam>
+<author>
+<name>Chad Lee</name>
+<isAnonymous>false</isAnonymous>
+<username>wchadly</username>
+</author>
+<thread dsq:id="7144095622" />
+<parent dsq:id="1086627119" />
+</post>
+<post dsq:id="1086627168">
+<id />
+<message><![CDATA[<p>Hey Chadly I just added the [quote]&lt;script type="text/javascript"&gt;<br>    $(document).ready(function() {<br>..........[/quote]</p><p>On the header file still no luck !!! I can''t tell, how badly I want this to be running .</p>]]></message>
+<createdAt>2009-08-07T16:32:41Z</createdAt>
+<isDeleted>false</isDeleted>
+<isSpam>false</isSpam>
+<author>
+<name>adi</name>
+<isAnonymous>true</isAnonymous>
+</author>
+<thread dsq:id="7144095622" />
+<parent dsq:id="1086627164" />
+</post>
+<post dsq:id="1086627121">
+<id />
+<message><![CDATA[<p>Thanks for this! - It''s great and just what I needed!</p><p>Only problem for me is that it isn''t automatically starting the video and I''m having a bit of problem troubleshooting it. What part of the script should I be taking a look at?</p><p>Cheers</p>]]></message>
+<createdAt>2009-08-27T10:07:33Z</createdAt>
+<isDeleted>false</isDeleted>
+<isSpam>false</isSpam>
+<author>
+<name>Mike</name>
+<isAnonymous>true</isAnonymous>
+</author>
+<thread dsq:id="7144095622" />
+</post>
+<post dsq:id="1086627120">
+<id />
+<message><![CDATA[<p>Chadly im also not winning. im trying to use with my wordpress theme. i did just like adi did. put the &lt;script type="text/javascript"&gt;<br>$(document).ready(function() {<br>.......... &lt;/script&gt; code in header.php and &lt;script type="text/javascript" href="&lt;?php bloginfo(''template_directory''); ?&gt;/swfobject.js" /&gt; for all other .js files. It just dont work. Any idea why?</p><p>Thanks</p>]]></message>
+<createdAt>2009-09-01T22:57:53Z</createdAt>
+<isDeleted>false</isDeleted>
+<isSpam>false</isSpam>
+<author>
+<name>sne</name>
+<isAnonymous>true</isAnonymous>
+</author>
+<thread dsq:id="7144095622" />
+</post>
+<post dsq:id="1086627123">
+<id />
+<message><![CDATA[<p>Great script.  I had a little trouble getting it to work with my Wordpress site, but checking out what code you had on your demo page helped.  I do have one issue which is frustrating me a little.  I don''t know whether it''s the code or what, but when I link to a Vimeo video, the video is very small and at the side of the popup window.  I''ve tried to add dimensions to increase its size, but nothing works.  Any help would be greatly appreciated.</p><p>Here''s the page it''s on...<br><a href="http://www.wearingfilm.com/about/" rel="nofollow noopener" title="http://www.wearingfilm.com/about/">http://www.wearingfilm.com/...</a></p>]]></message>
+<createdAt>2009-09-26T10:31:32Z</createdAt>
+<isDeleted>false</isDeleted>
+<isSpam>false</isSpam>
+<author>
+<name>Tim W.</name>
+<isAnonymous>true</isAnonymous>
+</author>
+<thread dsq:id="7144095622" />
+</post>
+<post dsq:id="1086627125">
+<id />
+<message><![CDATA[<p>Hi, I am very green to scripting for the most part and I am wondering what exactly you meant when you wrote just wire up the script to all links with rel="fancyvideo".  I pasted that into the script, but wasn''t sure where to do it and when I click on the link it just brings me to youtube.</p>]]></message>
+<createdAt>2009-09-28T03:55:03Z</createdAt>
+<isDeleted>false</isDeleted>
+<isSpam>false</isSpam>
+<author>
+<name>Dale F</name>
+<isAnonymous>true</isAnonymous>
+</author>
+<thread dsq:id="7144095622" />
+</post>
+<post dsq:id="1086627126">
+<id />
+<message><![CDATA[<p>Hi Chadly - thanks for great plugin. Something I noticed was a bit strange whilst testing across browsers...</p><p>Chrome - good quality video<br>FireFox - good quality video<br>IE - bad quality</p><p>I tested IE using version 8.</p><p>The videos can be found at</p><p><a href="http://www.smoothstar.com.au/grommet-surfboard-skateboard.html" rel="nofollow noopener" title="http://www.smoothstar.com.au/grommet-surfboard-skateboard.html">http://www.smoothstar.com.a...</a></p><p>Would this problem be with new resolution changes on youtube that IE doesn''t like?</p><p>You comments would be most appreciated.</p>]]></message>
+<createdAt>2009-11-12T01:58:01Z</createdAt>
+<isDeleted>false</isDeleted>
+<isSpam>false</isSpam>
+<author>
+<name>MediaSpark</name>
+<isAnonymous>true</isAnonymous>
+</author>
+<thread dsq:id="7144095622" />
+</post>
+<post dsq:id="1086627129">
+<id />
+<message><![CDATA[<p>This is awesome.  Thanks!</p>]]></message>
+<createdAt>2009-12-08T02:22:44Z</createdAt>
+<isDeleted>false</isDeleted>
+<isSpam>false</isSpam>
+<author>
+<name>Chad</name>
+<isAnonymous>true</isAnonymous>
+</author>
+<thread dsq:id="7144095622" />
+</post>
+<post dsq:id="1086627130">
+<id />
+<message><![CDATA[<p>Hello</p><p>I want to say thank you for this nice lightbox script. <br>A question if you dont mind, do you have similar script but to be able to use jwplayer flv player?<br>I am not a programmer, i mean if you have ready one to be dowloaded same as you have this one, because i tried to figure out how it works on their site, lol i got headaches:)</p><p>Regards</p>]]></message>
+<createdAt>2009-12-14T18:26:07Z</createdAt>
+<isDeleted>false</isDeleted>
+<isSpam>false</isSpam>
+<author>
+<name>mike</name>
+<isAnonymous>true</isAnonymous>
+</author>
+<thread dsq:id="7144095622" />
+</post>
+<post dsq:id="1086627087">
+<id>wp_id=41</id>
+<message><![CDATA[<p>Hi,<br>I faced this problem today and I can''t see a reason why the alias is the parameter name. I mean, I can''t find a scenario when this could be needed.<br>With criteria one can do something like<br>var c = session.CreateCriteria( type );<br>var p1 = c.CreateCriteria( "foo" ).Add( Expression.Eq( "XXXX", 5 );<br>var p2 = c.CreateCriteria( "bar" ).Add( Expression.Gt( "YYYY", 10 );</p><p>var result = p1.List&lt;Foo&gt;();</p><p>but with linq, we only have one single path, right? so, the queryable could have the "current path alias" and when SelectMany is called, change the alias.</p><p>Just to be sure, I changed the AssociationVisitor class for accepting only one path an every test were green.</p>]]></message>
+<createdAt>2009-12-31T04:55:31Z</createdAt>
+<isDeleted>false</isDeleted>
+<isSpam>false</isSpam>
+<author>
+<name>Ivo</name>
+<isAnonymous>true</isAnonymous>
+</author>
+<thread dsq:id="2219768626" />
+</post>
+<post dsq:id="1086627134">
+<id />
+<message><![CDATA[<p>Hey,</p><p>If you guys are not getting your thing to work.  Carefully check everything.  Put your scripts in a "scripts" folder.  Put your fancy.css inside "fancybox" folder and that goes inside the "scripts" folder.  Put all of the images inside the fancybox folder as well.</p><p>Then make sure you have the rel="fancybox" within the link of the video you want to display.</p><p>I couldn''t get mine to work for the longest time and I found it won''t work if you have any scripts below this:</p><p>    &lt;script type="text/javascript" src="scripts/jquery-1.2.6.min.js"&gt;&lt;/script&gt;<br>    &lt;script type="text/javascript" src="scripts/jquery.pngFix.pack.js"&gt;&lt;/script&gt;<br>    &lt;script type="text/javascript" src="scripts/jquery.fancybox-1.0.0.js"&gt;&lt;/script&gt;<br>    &lt;script type="text/javascript" src="scripts/swfobject.js"&gt;&lt;/script&gt;<br>    &lt;link rel="stylesheet" type="text/css" href="scripts/fancybox/fancy.css"/&gt;</p><p>    &lt;script type="text/javascript"&gt;<br>        $(document).ready(function() {<br>            $("a[@rel*=fancyvideo]").fancybox({<br>                overlayShow: true,<br>                frameWidth:640,<br>                frameHeight:360<br>            });<br>        });<br>    &lt;/script&gt;</p><p>So make sure to put your linked script files above this code.  Hopefully that helps.  I must''ve been trying for an hour trying to get everything right.  And that was the problem.</p>]]></message>
+<createdAt>2009-12-31T07:23:40Z</createdAt>
+<isDeleted>false</isDeleted>
+<isSpam>false</isSpam>
+<author>
+<name>Andrew Tarcon</name>
+<isAnonymous>true</isAnonymous>
+</author>
+<thread dsq:id="7144095622" />
+</post>
+<post dsq:id="1086627135">
+<id />
+<message><![CDATA[<p>Oh and also check to see if you have newer/older version of the jquery library already linked on your page.  If you do, you do not need them.  You can use the library that comes with this package.</p>]]></message>
+<createdAt>2009-12-31T07:56:47Z</createdAt>
+<isDeleted>false</isDeleted>
+<isSpam>false</isSpam>
+<author>
+<name>Andrew Tarcon</name>
+<isAnonymous>true</isAnonymous>
+</author>
+<thread dsq:id="7144095622" />
+</post>
+<post dsq:id="1086627136">
+<id />
+<message><![CDATA[<p>I have a question that''s related to this post, and am hoping someone can help me out.</p><p>I''d like to know if YouTube tracks viewer statistics when the video is displayed via someone''s lightbox (in my case I used prettyPhoto ... in your case it''s fancybox).</p><p>I ask because we''ve had a lot of visitors come to the site recently, yet YouTube''s viewer stats don''t seem to be increasing. I know people are watching the videos because our average time on site is 5 minutes, and there''s just not much text to read!</p><p>I suspect it has something to do with the lightbox (i.e. prettyPhoto or fancybox), because they only require the URL, not the YouTube embed code, when implemented on-site.</p><p>If you''d like to see how the videos are being presented on the site, go to <a href="http://www.redgreyconcepts.com" rel="nofollow noopener" title="http://www.redgreyconcepts.com">http://www.redgreyconcepts.com</a> , scroll down a bit, and click on the button that says, W.I.I.F.Y.</p><p>Thanks in advance for any assistance. And Happy St. Patty''s Day!</p>]]></message>
+<createdAt>2010-01-18T13:05:46Z</createdAt>
+<isDeleted>false</isDeleted>
+<isSpam>false</isSpam>
+<author>
+<name>Jeremy</name>
+<isAnonymous>true</isAnonymous>
+</author>
+<thread dsq:id="7144095622" />
+</post>
+<post dsq:id="1086627137">
+<id />
+<message><![CDATA[<p>This is great. I''ve gotten to work for the most part and I have zero js experience. I do have one problem.</p><p>When I play a video, if I try to adjust the volume or skip ahead in the video, the screen goes white and says "No Video Available".</p><p>Any help would me much appreciated. Thanks!</p>]]></message>
+<createdAt>2011-07-15T06:20:00Z</createdAt>
+<isDeleted>false</isDeleted>
+<isSpam>false</isSpam>
+<author>
+<name>Kevin</name>
+<isAnonymous>true</isAnonymous>
+</author>
+<thread dsq:id="7144095622" />
+</post>
+<post dsq:id="1086627092">
+<id>wp_id=101</id>
+<message><![CDATA[<p>This looks like exactly what I''m looking for! Thanks</p>]]></message>
+<createdAt>2011-09-11T17:12:53Z</createdAt>
+<isDeleted>false</isDeleted>
+<isSpam>false</isSpam>
+<author>
+<name>Sipke</name>
+<isAnonymous>true</isAnonymous>
+</author>
+<thread dsq:id="1870006968" />
+</post>
+<post dsq:id="1086627138">
+<id />
+<message><![CDATA[<p>THAaaaaaaaaank YOUuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu</p>]]></message>
+<createdAt>2011-09-22T23:45:41Z</createdAt>
+<isDeleted>false</isDeleted>
+<isSpam>false</isSpam>
+<author>
+<name>Nawras</name>
+<isAnonymous>true</isAnonymous>
+</author>
+<thread dsq:id="7144095622" />
+</post>
+<post dsq:id="1086627139">
+<id />
+<message><![CDATA[<p>First of all, thank you.  Secondly, does anyone have a fix for jquery version 1.4.4?  If so, I''d love to see it as the original and 1.3.2 fixes mentioned above do not work.</p><p>Cheers,<br>Brad</p>]]></message>
+<createdAt>2011-10-17T07:26:25Z</createdAt>
+<isDeleted>false</isDeleted>
+<isSpam>false</isSpam>
+<author>
+<name>brad</name>
+<isAnonymous>true</isAnonymous>
+</author>
+<thread dsq:id="7144095622" />
+</post>
+<post dsq:id="1086627167">
+<id />
+<message><![CDATA[<p>Okay, I actually was able to solve this.  Does anyone know how to make it so the thumbnail is the link instead of text?  Basically, I want to show 5 video thumbnails and then when clicked, that video would popup in the lightbox in a larger size.  Thanks!</p>]]></message>
+<createdAt>2011-10-17T07:40:13Z</createdAt>
+<isDeleted>false</isDeleted>
+<isSpam>false</isSpam>
+<author>
+<name>brad</name>
+<isAnonymous>true</isAnonymous>
+</author>
+<thread dsq:id="7144095622" />
+<parent dsq:id="1086627139" />
+</post>
+<post dsq:id="1086627143">
+<id />
+<message><![CDATA[<p>quiero agradecerte el enorme favor....esta excelente...y se ve bien....me salvaste.....fabuloso felicitaciones!!!!!!</p>]]></message>
+<createdAt>2011-10-19T21:04:45Z</createdAt>
+<isDeleted>false</isDeleted>
+<isSpam>false</isSpam>
+<author>
+<name>claudia</name>
+<isAnonymous>true</isAnonymous>
+</author>
+<thread dsq:id="7144095622" />
+</post>
+<post dsq:id="1086627144">
+<id />
+<message><![CDATA[<p>Thank you! It works great!!</p>]]></message>
+<createdAt>2011-11-02T05:05:18Z</createdAt>
+<isDeleted>false</isDeleted>
+<isSpam>false</isSpam>
+<author>
+<name>Rozzane</name>
+<isAnonymous>true</isAnonymous>
+</author>
+<thread dsq:id="7144095622" />
+</post>
+<post dsq:id="1086627145">
+<id />
+<message><![CDATA[<p>Great work! I was looking for exactly this and it was the first link I clicked!</p><p>Got it all working smoothly very quickly then I uploaded it to my server and it doesn''t work! Any thoughts would be massively appreciated. It''s probably something simple but I''ve got tunnel vision now ;-)</p><p>Cheers for posting it though!</p>]]></message>
+<createdAt>2011-11-03T16:48:09Z</createdAt>
+<isDeleted>false</isDeleted>
+<isSpam>false</isSpam>
+<author>
+<name>Joe</name>
+<isAnonymous>true</isAnonymous>
+</author>
+<thread dsq:id="7144095622" />
+</post>
+<post dsq:id="1086627147">
+<id />
+<message><![CDATA[<p>You sir are a genuiney LEGEND!! And thanks to Andrew for your post, fixed my issue of not knowing where the hell to put the files.  You should update the post with that info to help people new to code with this.</p><p>Awesome work mr, THANK YOU!!</p>]]></message>
+<createdAt>2011-12-02T00:47:44Z</createdAt>
+<isDeleted>false</isDeleted>
+<isSpam>false</isSpam>
+<author>
+<name>Mark Holand</name>
+<isAnonymous>true</isAnonymous>
+</author>
+<thread dsq:id="7144095622" />
+</post>
+<post dsq:id="1086627149">
+<id />
+<message><![CDATA[<p>hey, i couldnt understand it. I want to add this fancybox facility to my blogger blog page, where the page name is video gallery. when people click on particular thumbnail that video should be opened in fancybox. plz help me. mail me at vikasdevde@gmail.com ..........as i will not come to know if you reply me here. so plz help..i really need help</p>]]></message>
+<createdAt>2011-12-19T23:38:07Z</createdAt>
+<isDeleted>false</isDeleted>
+<isSpam>false</isSpam>
+<author>
+<name>vikas</name>
+<isAnonymous>true</isAnonymous>
+</author>
+<thread dsq:id="7144095622" />
+</post>
+<post dsq:id="1086627151">
+<id />
+<message><![CDATA[<p>Hi. Nice script! Thanks a lot.<br>Vondering, how I make it auto play?</p>]]></message>
+<createdAt>2011-12-31T01:55:04Z</createdAt>
+<isDeleted>false</isDeleted>
+<isSpam>false</isSpam>
+<author>
+<name>Emil</name>
+<isAnonymous>true</isAnonymous>
+</author>
+<thread dsq:id="7144095622" />
+</post>
+<post dsq:id="1086627150">
+<id />
+<message><![CDATA[<p>I can''t get it work. Clicking makes the screen darker but then the browser goes to <a href="http://youtube.com" rel="nofollow noopener" title="youtube.com">youtube.com</a> instead of opening a light box.</p>]]></message>
+<createdAt>2012-01-07T05:55:29Z</createdAt>
+<isDeleted>false</isDeleted>
+<isSpam>false</isSpam>
+<author>
+<name>Avner</name>
+<isAnonymous>true</isAnonymous>
+</author>
+<thread dsq:id="7144095622" />
+</post>
+<post dsq:id="1086627218">
+<id />
+<message><![CDATA[<p>How did you fix this for Jquery 1.4.4?  Any advice would be appreciated.<br>Thank you!</p>]]></message>
+<createdAt>2012-01-09T05:37:53Z</createdAt>
+<isDeleted>false</isDeleted>
+<isSpam>false</isSpam>
+<author>
+<name>Will</name>
+<isAnonymous>true</isAnonymous>
+</author>
+<thread dsq:id="7144095622" />
+<parent dsq:id="1086627167" />
+</post>
+<post dsq:id="1086627152">
+<id />
+<message><![CDATA[<p>little help.  i have the light box working, but the video isn''t displaying...</p><p>IE8:<br>"This content cannot be displayed in a frame. To help protect the security of information you enter into this website, the publisher of this content does not allow it to be displayed in a frame."</p><p>FIREFOX &amp; CHROME:<br>Blank Lightbox.</p>]]></message>
+<createdAt>2012-01-10T00:51:36Z</createdAt>
+<isDeleted>false</isDeleted>
+<isSpam>false</isSpam>
+<author>
+<name>Gary</name>
+<isAnonymous>true</isAnonymous>
+</author>
+<thread dsq:id="7144095622" />
+</post>
+<post dsq:id="1086627094">
+<id>wp_id=111</id>
+<message><![CDATA[<p>You need to add it to NuGet! :(</p>]]></message>
+<createdAt>2012-04-03T17:36:51Z</createdAt>
+<isDeleted>false</isDeleted>
+<isSpam>false</isSpam>
+<author>
+<name>Danny Tuppeny</name>
+<isAnonymous>true</isAnonymous>
+</author>
+<thread dsq:id="1870006968" />
+</post>
+<post dsq:id="1086627093">
+<id>wp_id=121</id>
+<message><![CDATA[<p>Works on Windows Server 2008 R2</p>]]></message>
+<createdAt>2012-08-02T22:25:21Z</createdAt>
+<isDeleted>false</isDeleted>
+<isSpam>false</isSpam>
+<author>
+<name>A person</name>
+<isAnonymous>true</isAnonymous>
+</author>
+<thread dsq:id="1870006971" />
+</post>
+<post dsq:id="1086627098">
+<id>wp_id=181</id>
+<message><![CDATA[<p>I feel ya. Been there 1000 times and always sucks. Very last time was in 2000. I started my own small web dev company and have never looked back. Much longer hours but phone still works, lights are still on and managing to put some away.</p><p>On the career front there seems to be lots more .NET jobs in Virginia, Hampton Roads area in all sectors. Send me a private email and will be glad to share what I know.</p><p>BTW... you Lightbox/ You Tube script saved me a sleepless night. So I owe you one.<br>~ Rick</p>]]></message>
+<createdAt>2012-10-21T21:07:11Z</createdAt>
+<isDeleted>false</isDeleted>
+<isSpam>false</isSpam>
+<author>
+<name>Rick Vidallon</name>
+<isAnonymous>true</isAnonymous>
+</author>
+<thread dsq:id="2460838440" />
+</post>
+<post dsq:id="1086627086">
+<id>wp_id=11</id>
+<message><![CDATA[<p>I like it. Just have to test it if it works.</p>]]></message>
+<createdAt>2012-11-30T11:46:56Z</createdAt>
+<isDeleted>false</isDeleted>
+<isSpam>false</isSpam>
+<author>
+<name>Ivan</name>
+<isAnonymous>true</isAnonymous>
+</author>
+<thread dsq:id="5156573650" />
+</post>
+<post dsq:id="1086627153">
+<id />
+<message><![CDATA[<p>Howdy Chadly... I recently stumbled upon your lovely Fancybox plugin.  I realized out of the box that it no longer works with jQuery v1.8.3.  I fixed the issues, and it now functions correctly under jQuery v1.8.3.</p><p>I could not find an email address for you (you might want to change that, add a contact link or something), but I will place the fix here as a general description.  If you want further information for any reason, just shoot me an email.</p><p>The fix is as follows:</p><p>Update the:</p><p>$("a[@rel*=fancyvideo]").fancybox ()</p><p>call to</p><p>$("a[rel=fancyvideo]").fancybox</p><p>where you initialize your JS code</p><p>Update line #73 in jquery.fancybox.1.0.0.js in the same way (removing the @ and the * from the selector)</p><p>Two more things must be fixed before it works under the current version.  One:</p><p>Change line #19 in jquery.fancybox.1.0.0.js from<br>        return this.each(function() {</p><p>to <br>        return $(this).each(function() {</p><p>---</p><p>Last thing to do is to update line #356 (in same file) from<br>        return parseInt($.curCSS(el.jquery ? el[0] : el, prop, true)) || 0;<br>to<br>        return parseInt($(this).css(el.jquery ? el[0] : el, prop, true)) || 0;</p><p>Those are all of the changes I made in order to get this plugin working under the newest version of jQuery.</p>]]></message>
+<createdAt>2012-12-07T03:26:42Z</createdAt>
+<isDeleted>false</isDeleted>
+<isSpam>false</isSpam>
+<author>
+<name>Mick</name>
+<isAnonymous>true</isAnonymous>
+</author>
+<thread dsq:id="7144095622" />
+</post>
+<post dsq:id="1086627095">
+<id>wp_id=871</id>
+<message><![CDATA[<p>@A person: I don't see how this could work for anyone - the backslashes are missing in the path. I guess  some dodgy blogging software has stripped them out. Anyway with the backslashes included it works for me - thanks :-)</p>]]></message>
+<createdAt>2013-06-24T18:52:24Z</createdAt>
+<isDeleted>false</isDeleted>
+<isSpam>false</isSpam>
+<author>
+<name>Tim</name>
+<isAnonymous>true</isAnonymous>
+</author>
+<thread dsq:id="1870006971" />
+</post>
+<post dsq:id="1086627082">
+<id>wp_id=881</id>
+<message><![CDATA[<p>Hello,<br>we have integrated an NHibernate 3.3.1.4000 into our application but NHibernate.Linq doesn't seem to support the version. I have read somewhere that NHibernate.Linq features are contained in NHibernate self in the version but I am missing the described feature, which I really like. Do you know where it disappeared in the new version of NHibernate?</p>]]></message>
+<createdAt>2013-07-03T16:27:36Z</createdAt>
+<isDeleted>false</isDeleted>
+<isSpam>false</isSpam>
+<author>
+<name>Jindra</name>
+<isAnonymous>true</isAnonymous>
+</author>
+<thread dsq:id="5156573650" />
+</post>
+<post dsq:id="1086627088">
+<id>wp_id=891</id>
+<message><![CDATA[<p>The linq provider built into NHibernate 3 is based off of HQL rather than the Criteria API and does not support this.</p>]]></message>
+<createdAt>2013-07-03T16:57:33Z</createdAt>
+<isDeleted>false</isDeleted>
+<isSpam>false</isSpam>
+<author>
+<name>Chad Lee</name>
+<isAnonymous>false</isAnonymous>
+<username>wchadly</username>
+</author>
+<thread dsq:id="5156573650" />
+<parent dsq:id="1086627082" />
+</post>
+<post dsq:id="1086627161">
+<id>wp_id=901</id>
+<message><![CDATA[<p>Thank you for your time and answer. As I have read today the Criteria is translated directly into SQL when used as a query. It makes sense now that the way I described is not supported. But I am not sure from your answer whether it is possible to create IQueryable from HQL. I.e. specify complex query using HQL and create a IQueryable which is already limited by this HQL query. Is it possible?</p>]]></message>
+<createdAt>2013-07-04T10:39:19Z</createdAt>
+<isDeleted>false</isDeleted>
+<isSpam>false</isSpam>
+<author>
+<name>Jindra</name>
+<isAnonymous>true</isAnonymous>
+</author>
+<thread dsq:id="5156573650" />
+<parent dsq:id="1086627088" />
+</post>
+<post dsq:id="1170071274">
+<id />
+<message><![CDATA[<p>Hi Chad,</p><p>First off thanks for the great tutorial.</p><p>There is a "not-so-well" documented feature that will fit your use case. If you put any files in `$WERCKER_OUTPUT_DIR` directory then the build will store those files, instead of `$WERCKER_ROOT` directory. Then during the deploy you will only get those files. So if you store the output of grunt directly inside the `$WERCKER_OUTPUT_DIR` directory then you can simply use the `azure-ftp-deploy` step, since the files won't be in a sub directory.</p><p>Otherwise you can use the `cwd` property to change the current working directory of a step. So you'll be able to change the working directory of the `azure-ftp-deploy` to build/. This will make sure that only that directory will get uploaded.</p><p>Benno</p>]]></message>
+<createdAt>2013-12-19T13:42:07Z</createdAt>
+<isDeleted>false</isDeleted>
+<isSpam>false</isSpam>
+<author>
+<name>Benno van den Berg</name>
+<isAnonymous>false</isAnonymous>
+<username>bennovandenberg</username>
+</author>
+<thread dsq:id="2056450553" />
+</post>
+<post dsq:id="1170211111">
+<id />
+<message><![CDATA[<p>Thanks, Benno! I updated my code and the post to use this method instead of what I was doing before. I'm really happy with Wercker so far!</p>]]></message>
+<createdAt>2013-12-19T15:34:54Z</createdAt>
+<isDeleted>false</isDeleted>
+<isSpam>false</isSpam>
+<author>
+<name>Chad Lee</name>
+<isAnonymous>false</isAnonymous>
+<username>wchadly</username>
+</author>
+<thread dsq:id="2056450553" />
+<parent dsq:id="1170071274" />
+</post>
+<post dsq:id="1202286803">
+<id />
+<message><![CDATA[<p>comes up nice and high in web search, and was nice to have the answer quickly. Thanks</p>]]></message>
+<createdAt>2014-01-15T19:09:17Z</createdAt>
+<isDeleted>false</isDeleted>
+<isSpam>false</isSpam>
+<author>
+<name>cagomez</name>
+<isAnonymous>false</isAnonymous>
+<username>cagomez</username>
+</author>
+<thread dsq:id="1870006971" />
+</post>
+<post dsq:id="1436302740">
+<id />
+<message><![CDATA[<p>The advice above is what I used to install firmware into linux mint 17 MATE that worked to get a hvr 2250 running, however I chose MythTv to install which became corrupted not knowing which advice to follow to work with my system. There is a lack of current info on installing MythTv. I am now going to try Elementary OS. I need to be able to watch and record TV, surf and work on my computer. I like the snappy feel of linux without the slowdown so it needs to become my only operatings system. Tired of fighting Windows and will not move to version 8.?. Thanks for your time in the article.</p>]]></message>
+<createdAt>2014-06-15T11:44:17Z</createdAt>
+<isDeleted>false</isDeleted>
+<isSpam>false</isSpam>
+<author>
+<name>subjectofgov</name>
+<isAnonymous>false</isAnonymous>
+<username>subjectofgov</username>
+</author>
+<thread dsq:id="2358322450" />
+</post>
+<post dsq:id="1439456467">
+<id />
+<message><![CDATA[<p>ko.renderTemplate("knockout-tippy-main", {<br>    name : name,<br>    data : model<br>}, null, element, "replaceNode");</p><p>Both "replaceNode" and "replaceChildren" can't delete ugly "&lt;div class="content" data-bind="template: { name: name, data: model }"&gt;"</p><p>I've created small modifications in order to use custom wrapper instead of "template" <a href="http://jsfiddle.net/DGtTv/7/" rel="nofollow noopener" title="http://jsfiddle.net/DGtTv/7/">http://jsfiddle.net/DGtTv/7/</a></p>]]></message>
+<createdAt>2014-06-17T15:42:28Z</createdAt>
+<isDeleted>false</isDeleted>
+<isSpam>false</isSpam>
+<author>
+<name>Андрей Аладьев</name>
+<isAnonymous>false</isAnonymous>
+<username>disqus_mGTXRHfzNr</username>
+</author>
+<thread dsq:id="2048633835" />
+</post>
+<post dsq:id="1645134359">
+<id />
+<message><![CDATA[<p>For everyone having trouble after moving. Just add the -R argument to change permissions for all subdirectories like:</p><p>sudo chmod a+rwx /opt/Steam -R</p>]]></message>
+<createdAt>2014-10-20T19:09:23Z</createdAt>
+<isDeleted>false</isDeleted>
+<isSpam>false</isSpam>
+<author>
+<name>Robin Gauß</name>
+<isAnonymous>false</isAnonymous>
+<username>robingau</username>
+</author>
+<thread dsq:id="2341274771" />
+</post>
+<post dsq:id="1647110633">
+<id />
+<message><![CDATA[<p>Thanks, Robin. I updated the post.</p>]]></message>
+<createdAt>2014-10-21T20:55:25Z</createdAt>
+<isDeleted>false</isDeleted>
+<isSpam>false</isSpam>
+<author>
+<name>Chad Lee</name>
+<isAnonymous>false</isAnonymous>
+<username>wchadly</username>
+</author>
+<thread dsq:id="2341274771" />
+<parent dsq:id="1645134359" />
+</post>
+<post dsq:id="1683931061">
+<id />
+<message><![CDATA[<p>That's what I need, thank you!</p>]]></message>
+<createdAt>2014-11-09T05:02:28Z</createdAt>
+<isDeleted>false</isDeleted>
+<isSpam>false</isSpam>
+<author>
+<name>ZiglioNZ</name>
+<isAnonymous>false</isAnonymous>
+<username>ZiglioNZ</username>
+</author>
+<thread dsq:id="2341274771" />
+</post>
+<post dsq:id="1968842511">
+<id />
+<message><![CDATA[<p>Thank you for sharing the "--dir-diff" flag! That's exactly what I've been looking for, but hadn't found the right query terms to find it.</p>]]></message>
+<createdAt>2015-04-15T15:29:06Z</createdAt>
+<isDeleted>false</isDeleted>
+<isSpam>false</isSpam>
+<author>
+<name>atcrawford</name>
+<isAnonymous>false</isAnonymous>
+<username>atcrawford</username>
+</author>
+<thread dsq:id="5133859796" />
+</post>
+<post dsq:id="2361357625">
+<id />
+<message><![CDATA[<p>I don't think giving 777 permissions to each file in /opt/Steam is a good thing (chmod 777, or chmod a+rwd should be considered as a threat for your computer's security).</p><p>Instead of changing the rights, you can simply change the owner of the Steam folder by running this command : <br>    sudo chown yourusername:yourusername -R /opt/Steam</p>]]></message>
+<createdAt>2015-11-15T19:55:11Z</createdAt>
+<isDeleted>false</isDeleted>
+<isSpam>false</isSpam>
+<author>
+<name>Quentin B.</name>
+<isAnonymous>false</isAnonymous>
+<username>quentinbouteiller</username>
+</author>
+<thread dsq:id="2341274771" />
+</post>
+<post dsq:id="2455677242">
+<id />
+<message><![CDATA[<p>thanks for sharing. I'm about to reinstall my htpc with Elementory OS with the hauppauge 2250. Could you tell me how you share Live TV on other devices? VLC? thanks</p>]]></message>
+<createdAt>2016-01-13T18:13:29Z</createdAt>
+<isDeleted>false</isDeleted>
+<isSpam>false</isSpam>
+<author>
+<name>Francis Roy</name>
+<isAnonymous>false</isAnonymous>
+<username>disqus_7ioCcVi3lD</username>
+</author>
+<thread dsq:id="2358322450" />
+</post>
+<post dsq:id="2455798169">
+<id />
+<message><![CDATA[<p>I use Tvheadend &amp; Kodi (formerly XBMC)</p>]]></message>
+<createdAt>2016-01-13T19:18:39Z</createdAt>
+<isDeleted>false</isDeleted>
+<isSpam>false</isSpam>
+<author>
+<name>Chad Lee</name>
+<isAnonymous>false</isAnonymous>
+<username>wchadly</username>
+</author>
+<thread dsq:id="2358322450" />
+<parent dsq:id="2455677242" />
+</post>
+<post dsq:id="2503964305">
+<id />
+<message><![CDATA[<p><a href="http://stackoverflow.com/questions/35287983/webpack-cannot-create-working-module" rel="nofollow noopener" title="http://stackoverflow.com/questions/35287983/webpack-cannot-create-working-module">http://stackoverflow.com/qu...</a></p>]]></message>
+<createdAt>2016-02-09T09:17:41Z</createdAt>
+<isDeleted>false</isDeleted>
+<isSpam>false</isSpam>
+<author>
+<name>Tjorriemorrie</name>
+<isAnonymous>false</isAnonymous>
+<username>Tjorriemorrie</username>
+</author>
+<thread dsq:id="3712817070" />
+</post>
+<post dsq:id="2545286144">
+<id />
+<message><![CDATA[<p>Should there be a "result.loaded(true);" in the Read function, after the callback? Or using the result of the callback? Or is it the responsibility of the callback to set it? </p>]]></message>
+<createdAt>2016-03-01T13:15:05Z</createdAt>
+<isDeleted>false</isDeleted>
+<isSpam>false</isSpam>
+<author>
+<name>darcy</name>
+<isAnonymous>false</isAnonymous>
+<username>someanonguydudemanchap</username>
+</author>
+<thread dsq:id="2072713098" />
+</post>
+<post dsq:id="2587838508">
+<id />
+<message><![CDATA[<p>I agree</p>]]></message>
+<createdAt>2016-03-25T00:44:25Z</createdAt>
+<isDeleted>false</isDeleted>
+<isSpam>false</isSpam>
+<author>
+<name>download13</name>
+<isAnonymous>false</isAnonymous>
+<username>download13</username>
+</author>
+<thread dsq:id="7144028822" />
+</post>
+<post dsq:id="2813015585">
+<id />
+<message><![CDATA[<p>+1. That is what I wanted to say.</p>]]></message>
+<createdAt>2016-07-31T07:09:00Z</createdAt>
+<isDeleted>false</isDeleted>
+<isSpam>false</isSpam>
+<author>
+<name>奥观海</name>
+<isAnonymous>false</isAnonymous>
+<username>k4n90d</username>
+</author>
+<thread dsq:id="2341274771" />
+<parent dsq:id="2361357625" />
+</post>
+<post dsq:id="2841042484">
+<id />
+<message><![CDATA[<p>I see this everywhere but all my data is in ~/.steam. There's not much at all in /.local/share/Steam</p>]]></message>
+<createdAt>2016-08-16T21:11:46Z</createdAt>
+<isDeleted>false</isDeleted>
+<isSpam>false</isSpam>
+<author>
+<name>Wheatley</name>
+<isAnonymous>false</isAnonymous>
+<username>dvdbillen</username>
+</author>
+<thread dsq:id="2341274771" />
+</post>
+<post dsq:id="2855104911">
+<id />
+<message><![CDATA[<p><a href="http://react-components.com" rel="nofollow noopener" title="react-components.com">react-components.com</a> is no longer in use, you should instead go to <a href="https://js.coach" rel="nofollow noopener" title="https://js.coach">https://js.coach</a>.</p>]]></message>
+<createdAt>2016-08-23T16:58:53Z</createdAt>
+<isDeleted>false</isDeleted>
+<isSpam>false</isSpam>
+<author>
+<name>Robert Komaromi</name>
+<isAnonymous>false</isAnonymous>
+<username>robertkomaromi</username>
+</author>
+<thread dsq:id="3712817070" />
+</post>
+<post dsq:id="2975451908">
+<id />
+<message><![CDATA[<p>Sadly `react-tools` was deprecated. <a href="https://facebook.github.io/react/blog/2015/06/12/deprecating-jstransform-and-react-tools.html" rel="nofollow noopener" title="https://facebook.github.io/react/blog/2015/06/12/deprecating-jstransform-and-react-tools.html">https://facebook.github.io/...</a></p>]]></message>
+<createdAt>2016-10-30T00:32:35Z</createdAt>
+<isDeleted>false</isDeleted>
+<isSpam>false</isSpam>
+<author>
+<name>Karl</name>
+<isAnonymous>false</isAnonymous>
+<username>disqus_lkvU0soSLY</username>
+</author>
+<thread dsq:id="3712817070" />
+</post>
+<post dsq:id="3475390307">
+<id />
+<message><![CDATA[<p>You're the man. You just saved me a bunch of time.</p>]]></message>
+<createdAt>2017-08-18T20:57:33Z</createdAt>
+<isDeleted>false</isDeleted>
+<isSpam>false</isSpam>
+<author>
+<name>Johnathon Biersack</name>
+<isAnonymous>false</isAnonymous>
+<username>johnathon_biersack</username>
+</author>
+<thread dsq:id="7144027849" />
+</post>
+<post dsq:id="3492164056">
+<id />
+<message><![CDATA[<p>Great post!</p><p>However i have some issues with the "Create the DB" step. I have followed the instructions but when i run node db.js nothing happens and no DB is created anywhere. Not sure what i'm doing wrong or if i have misunderstood something. I have runned npm installed, i've also runned the install for the knex thing both with npm install -g knex-migrator --save and then only npm install knex-migrator.</p><p>I'm pretty new to node / ghost so i might have missed something experience users takes for granted :D</p>]]></message>
+<createdAt>2017-08-29T11:48:40Z</createdAt>
+<isDeleted>false</isDeleted>
+<isSpam>false</isSpam>
+<author>
+<name>olaj</name>
+<isAnonymous>false</isAnonymous>
+<username>olaj</username>
+</author>
+<thread dsq:id="7144027849" />
+</post>
+<post dsq:id="3492200187">
+<id />
+<message><![CDATA[<p>Strange, i know changed the line "knexMigratorFilePath: __dirname" to my "config.production.json" and runned, then i got an error and realised it was the "MigratorConfig.js" that probably should be specified there. Then i just changed back to "__dirname" and now it works. No idea what happened :D</p>]]></message>
+<createdAt>2017-08-29T12:21:27Z</createdAt>
+<isDeleted>false</isDeleted>
+<isSpam>false</isSpam>
+<author>
+<name>olaj</name>
+<isAnonymous>false</isAnonymous>
+<username>olaj</username>
+</author>
+<thread dsq:id="7144027849" />
+<parent dsq:id="3492164056" />
+</post>
+<post dsq:id="3492263531">
+<id />
+<message><![CDATA[<p>Yeah, if you run it the way I did in the article, you need to make sure you have a config.development.json in the root. Otherwise, ghost will just use it's defaults and ignore your config.production.json. Either that, or set the env variable NODE_ENV to production.</p>]]></message>
+<createdAt>2017-08-29T13:12:30Z</createdAt>
+<isDeleted>false</isDeleted>
+<isSpam>false</isSpam>
+<author>
+<name>Chad Lee</name>
+<isAnonymous>false</isAnonymous>
+<username>wchadly</username>
+</author>
+<thread dsq:id="7144027849" />
+<parent dsq:id="3492200187" />
+</post>
+<post dsq:id="3596388551">
+<id />
+<message><![CDATA[<p>This post has been up for three years and that reckless chmod command is still included? Why?</p><p>You don't need it if there are no other users on your computer. And if there are, your brother or your "hilarious" roommate or whoever can do all sorts of mischievious things: replace your game executable with a script that deletes all your scores or grants access to your emails, log in to Steam and get you permabanned etc.</p><p>DO NOT DO IT!</p>]]></message>
+<createdAt>2017-11-02T10:16:21Z</createdAt>
+<isDeleted>false</isDeleted>
+<isSpam>false</isSpam>
+<author>
+<name>Martin Neumann</name>
+<isAnonymous>false</isAnonymous>
+<username>disqus_lKKEu7DUcG</username>
+</author>
+<thread dsq:id="2341274771" />
+</post>
+<post dsq:id="3606756130">
+<id />
+<message><![CDATA[<p>@Chad Lee Your thinking seems strange to me. If you set max-age to for example 20 hours, then the browser usually is not making any request at all. This is totally independed of the etag or last-modified. When the file becomes stale after 20 hours, then the browser will make a request anyway and from that moment the etag and last-modified can have some effect.</p><p>We have 3 options:<br>1. If the etag / last-modified is present, the browser will check if the file has been changed. If the file didn't change, the browser will take the file from cache. <br>2. If the file did change, the browser will not use the file from cache.<br>3. And if there is no etag and last-modified present, the browser will act like the file has been changed (same as 2).</p><p>Actually 2 and 3 are the same amount of work for a browser. There is no extra pressure for the server at all, between those 3 options.</p><p>It looks like you are thinking that the browser would make requests if you have "max-age 20 hours" WITH etag / last-modified. But that's not true and your article is based on that assumption.</p><p>p.s. And anyway generating an Etag is not that big deal for a server. A server will not check the whole content of a file. You can also test it by making 2 different files:</p><p>- with 2 different names<br>- with the same kb<br>- with the same last-modified<br>- with the same content</p><p>Just change 1 letter in one file and the Etag can be the same for both files (if last-modified, kb, rest of the content are the same).</p>]]></message>
+<createdAt>2017-11-08T19:01:56Z</createdAt>
+<isDeleted>false</isDeleted>
+<isSpam>false</isSpam>
+<author>
+<name>Maarten Bruins</name>
+<isAnonymous>false</isAnonymous>
+<username>maartenbruins</username>
+</author>
+<thread dsq:id="6076729608" />
+</post>
+<post dsq:id="3654422927">
+<id />
+<message><![CDATA[<p>Great step-by-step guide to getting Ghost running on Azure! Best one I have seen out there to date!</p>]]></message>
+<createdAt>2017-12-09T17:59:06Z</createdAt>
+<isDeleted>false</isDeleted>
+<isSpam>false</isSpam>
+<author>
+<name>Steve Mitchell</name>
+<isAnonymous>false</isAnonymous>
+<username>stevepmitchell</username>
+</author>
+<thread dsq:id="7144027849" />
+</post>
+<post dsq:id="3668894095">
+<id />
+<message><![CDATA[<p>You seem not to have read a key part of the blog.  Ghost, in particular, creates everything dynamically.  That means, when there's an etag-based request, the server is doing everything it would have done except the final file transfer, which means server load, which he doesn't want.  However, your ultimate point is correct, I think -- if you can serve *both* a max-age *and* an ETag, you should do it.  You'll save server load over the max-age period, then transferred bytes on a revalidate.</p>]]></message>
+<createdAt>2017-12-19T07:05:37Z</createdAt>
+<isDeleted>false</isDeleted>
+<isSpam>false</isSpam>
+<author>
+<name>Mike Bishop</name>
+<isAnonymous>false</isAnonymous>
+<username>disqus_EYKWapRaum</username>
+</author>
+<thread dsq:id="6076729608" />
+<parent dsq:id="3606756130" />
+</post>
+<post dsq:id="3777502886">
+<id />
+<message><![CDATA[<p>Followed GIT deployment instructions, FTPd the database, and changed the url in AppSettings, but keep getting a 500 error.  I'm wondering if it is the redirect to HTTPS...has this happened to anyone else?  Banging my head trying to figure it out.</p>]]></message>
+<createdAt>2018-02-26T20:44:43Z</createdAt>
+<isDeleted>false</isDeleted>
+<isSpam>false</isSpam>
+<author>
+<name>John Barnes</name>
+<isAnonymous>false</isAnonymous>
+<username>Barnes_jr</username>
+</author>
+<thread dsq:id="7144027849" />
+</post>
+<post dsq:id="3777504462">
+<id />
+<message><![CDATA[<p>Haven't done the CDN yet :)</p>]]></message>
+<createdAt>2018-02-26T20:45:44Z</createdAt>
+<isDeleted>false</isDeleted>
+<isSpam>false</isSpam>
+<author>
+<name>John Barnes</name>
+<isAnonymous>false</isAnonymous>
+<username>Barnes_jr</username>
+</author>
+<thread dsq:id="7144027849" />
+<parent dsq:id="3777502886" />
+</post>
+<post dsq:id="3788721098">
+<id />
+<message><![CDATA[<p>Thanks for the great tutorial.</p><p>I've tried it and followed you step-by-step until the actual deployment - mirrored your Github repo (current state), deployed from the azure branch, created the db, copied via FTP and finally created the app setting. But now I still get HTTP 500 if I try to view my site. In the logs, I can see an error like this:<br>Knex: run<br>$ npm install sqlite3 --save<br>Error: Cannot find module 'D:\home\site\wwwroot\node_modules\sqlite3\lib\binding\node-v57-win32-ia32\node_sqlite3.node'</p><p>And this is indeed true. If I check my node_modules, under sqlite3\lib\binding I see a different folder on the same path called node-v48-win32-ia32, with the same file. Also tried running db.js from inside the app service through the kudu console, but it doesn't seem to make a difference.</p><p>Do you have any suggestions?</p>]]></message>
+<createdAt>2018-03-05T20:27:23Z</createdAt>
+<isDeleted>false</isDeleted>
+<isSpam>false</isSpam>
+<author>
+<name>Akos</name>
+<isAnonymous>false</isAnonymous>
+<username>disqus_bdIDw5wc5R</username>
+</author>
+<thread dsq:id="7144027849" />
+</post>
+<post dsq:id="3788812968">
+<id />
+<message><![CDATA[<p>I just saw that someone else had the same issue in your Github repo under the closed items. That solved my problem too, sorry.<br>Again, great post!</p>]]></message>
+<createdAt>2018-03-05T21:25:15Z</createdAt>
+<isDeleted>false</isDeleted>
+<isSpam>false</isSpam>
+<author>
+<name>Akos</name>
+<isAnonymous>false</isAnonymous>
+<username>disqus_bdIDw5wc5R</username>
+</author>
+<thread dsq:id="7144027849" />
+<parent dsq:id="3788721098" />
+</post>
+<post dsq:id="3788849730">
+<id />
+<message><![CDATA[<p>Thanks, I've updated the post to make sure the node version is correct in the Application Settings. Apparently that is a step I left out that affects more people than I realized.</p>]]></message>
+<createdAt>2018-03-05T21:49:19Z</createdAt>
+<isDeleted>false</isDeleted>
+<isSpam>false</isSpam>
+<author>
+<name>Chad Lee</name>
+<isAnonymous>false</isAnonymous>
+<username>wchadly</username>
+</author>
+<thread dsq:id="7144027849" />
+<parent dsq:id="3788812968" />
+</post>
+<post dsq:id="3791106342">
+<id />
+<message><![CDATA[<p>I think I'm in love with this blog post. Thank you, thank you, thank you!</p>]]></message>
+<createdAt>2018-03-07T08:12:50Z</createdAt>
+<isDeleted>false</isDeleted>
+<isSpam>false</isSpam>
+<author>
+<name>Nadine L</name>
+<isAnonymous>false</isAnonymous>
+<username>Nadine_Leitso</username>
+</author>
+<thread dsq:id="7144027849" />
+</post>
+<post dsq:id="3814898564">
+<id />
+<message><![CDATA[<p>great article and excellent work. I would like to setup my own blog but not sure where to start. Do I need to setup ghost in my local machine first in-order to create db? if yes, can I do it in windows machine. sorry if I don't make any sense. Thanks in advance.</p>]]></message>
+<createdAt>2018-03-20T04:52:29Z</createdAt>
+<isDeleted>false</isDeleted>
+<isSpam>false</isSpam>
+<author>
+<name>ksnv soft</name>
+<isAnonymous>false</isAnonymous>
+<username>ksnvsoft</username>
+</author>
+<thread dsq:id="7144027849" />
+</post>
+<post dsq:id="3817274696">
+<id />
+<message><![CDATA[<p>So let's say you wanted to make the solution even more Azure-y by adding App Insights into the mix. What would you suggest the best place is to set it up in the Ghost source code?</p>]]></message>
+<createdAt>2018-03-21T16:38:54Z</createdAt>
+<isDeleted>false</isDeleted>
+<isSpam>false</isSpam>
+<author>
+<name>Akos</name>
+<isAnonymous>false</isAnonymous>
+<username>disqus_bdIDw5wc5R</username>
+</author>
+<thread dsq:id="7144027849" />
+</post>
+<post dsq:id="3817347680">
+<id />
+<message><![CDATA[<p>You just need to clone the ghost repo and run the db.js script as I outlined in the post in order to create the database locally. I did it all on a windows machine.</p>]]></message>
+<createdAt>2018-03-21T17:21:55Z</createdAt>
+<isDeleted>false</isDeleted>
+<isSpam>false</isSpam>
+<author>
+<name>Chad Lee</name>
+<isAnonymous>false</isAnonymous>
+<username>wchadly</username>
+</author>
+<thread dsq:id="7144027849" />
+<parent dsq:id="3814898564" />
+</post>
+<post dsq:id="3817356033">
+<id />
+<message><![CDATA[<p>I would just add the applicationinsights package and follow the <a href="https://github.com/Microsoft/ApplicationInsights-node.js#getting-started" rel="nofollow noopener" title="https://github.com/Microsoft/ApplicationInsights-node.js#getting-started">Getting Started instructions</a>. You would probably want to do it at the beginning of the root index.js.</p>]]></message>
+<createdAt>2018-03-21T17:26:54Z</createdAt>
+<isDeleted>false</isDeleted>
+<isSpam>false</isSpam>
+<author>
+<name>Chad Lee</name>
+<isAnonymous>false</isAnonymous>
+<username>wchadly</username>
+</author>
+<thread dsq:id="7144027849" />
+<parent dsq:id="3817274696" />
+</post>
+<post dsq:id="3820661262">
+<id />
+<message><![CDATA[<p>Thanks for the tip. I was going through the source trying to insert the startup code to server/index.js and other places, but no matter what I did, it didn't work. I didn't even think about the root index.js, but it was the right solution.</p>]]></message>
+<createdAt>2018-03-23T17:19:47Z</createdAt>
+<isDeleted>false</isDeleted>
+<isSpam>false</isSpam>
+<author>
+<name>Akos</name>
+<isAnonymous>false</isAnonymous>
+<username>disqus_bdIDw5wc5R</username>
+</author>
+<thread dsq:id="7144027849" />
+<parent dsq:id="3817356033" />
+</post>
+<post dsq:id="3824044149">
+<id />
+<message><![CDATA[<p>thank you. will try it. have you also considered hosting on free aws? I see that many people using in that way</p>]]></message>
+<createdAt>2018-03-25T20:53:23Z</createdAt>
+<isDeleted>false</isDeleted>
+<isSpam>false</isSpam>
+<author>
+<name>ksnv soft</name>
+<isAnonymous>false</isAnonymous>
+<username>ksnvsoft</username>
+</author>
+<thread dsq:id="7144027849" />
+<parent dsq:id="3817347680" />
+</post>
+<post dsq:id="3847617115">
+<id />
+<message><![CDATA[<p>yaay.. I was able to setup my own blog with the help of this post. thank you very much. <br>now how can I add comments plugin like here. if I setup cdn with 20 hrs cache will it work. thanks again</p>]]></message>
+<createdAt>2018-04-10T03:15:55Z</createdAt>
+<isDeleted>false</isDeleted>
+<isSpam>false</isSpam>
+<author>
+<name>remo</name>
+<isAnonymous>false</isAnonymous>
+<username>disqus_wCTxz7AEZ7</username>
+</author>
+<thread dsq:id="7144027849" />
+</post>
+<post dsq:id="3873872717">
+<id />
+<message><![CDATA[<p>Hey Chad, awesome article, helped me a lot. I just have one problem, the website takes initially about 15 seconds to load for the first load, afterwards it is fine, is the machine somehow sleeping if inactive for a while? Or is this DNS related (because of the azurewebsites domain) ? Thanks!</p>]]></message>
+<createdAt>2018-04-26T15:21:50Z</createdAt>
+<isDeleted>false</isDeleted>
+<isSpam>false</isSpam>
+<author>
+<name>Ahmed Shehata</name>
+<isAnonymous>false</isAnonymous>
+<username>disqus_rmp3npbQ5q</username>
+</author>
+<thread dsq:id="7144027849" />
+</post>
+<post dsq:id="3873893565">
+<id />
+<message><![CDATA[<p>Yes, the azurewebsites free tier will spin down the app if it doesn't receive any traffic for a while. If you upgrade to a paid tier, you can enable the "Always On" option for the app so it won't do that.</p><p>There are a number of ways to get around that:<br>1. Upgrade to the paid tier like I mentioned<br>2. Setup a CRON job somewhere to load your homepage (on the azurewebsites domain to bypass the CDN) every 5-10 minutes or so to keep the app alive.<br>3. Don't worry about it. After your CDN cache expires, just know the first hit will take ~ 15 seconds.</p>]]></message>
+<createdAt>2018-04-26T15:34:06Z</createdAt>
+<isDeleted>false</isDeleted>
+<isSpam>false</isSpam>
+<author>
+<name>Chad Lee</name>
+<isAnonymous>false</isAnonymous>
+<username>wchadly</username>
+</author>
+<thread dsq:id="7144027849" />
+<parent dsq:id="3873872717" />
+</post>
+<post dsq:id="3873894342">
+<id />
+<message><![CDATA[<p>Yes, the CDN cache is independent of any 3rd path comment service loading. The disqus comments are loaded client-side from disqus's domain.</p>]]></message>
+<createdAt>2018-04-26T15:34:35Z</createdAt>
+<isDeleted>false</isDeleted>
+<isSpam>false</isSpam>
+<author>
+<name>Chad Lee</name>
+<isAnonymous>false</isAnonymous>
+<username>wchadly</username>
+</author>
+<thread dsq:id="7144027849" />
+<parent dsq:id="3847617115" />
+</post>
+<post dsq:id="3874038847">
+<id />
+<message><![CDATA[<p>Cool, thanks a lot for the tips!</p>]]></message>
+<createdAt>2018-04-26T16:59:04Z</createdAt>
+<isDeleted>false</isDeleted>
+<isSpam>false</isSpam>
+<author>
+<name>Ahmed Shehata</name>
+<isAnonymous>false</isAnonymous>
+<username>disqus_rmp3npbQ5q</username>
+</author>
+<thread dsq:id="7144027849" />
+<parent dsq:id="3873893565" />
+</post>
+<post dsq:id="3929714473">
+<id />
+<message><![CDATA[<p>Help,<br>I have created the DB and ftp it to azure, configured url and node version. When I try deploy I got this strange error=</p><p>Command: deploy.cmd<br>Handling node.js deployment.<br>KuduSync.NET from: 'D:\home\site\repository' to: 'D:\home\site\wwwroot'<br>Copying file: 'iisnode.yml'<br>Using start-up script index.js from package.json.<br>Node.js versions available on the platform are: 0.6.20, 0.8.2, 0.8.19, 0.8.26, 0.8.27, 0.8.28, 0.10.5, 0.10.18, 0.10.21, 0.10.24, 0.10.26, 0.10.28, 0.10.29, 0.10.31, 0.10.32, 0.10.40, 0.12.0, 0.12.2, 0.12.3, 0.12.6, 4.0.0, 4.1.0, 4.1.2, 4.2.1, 4.2.2, 4.2.3, 4.2.4, 4.3.0, 4.3.2, 4.4.0, 4.4.1, 4.4.6, 4.4.7, 4.5.0, 4.6.0, 4.6.1, 4.8.4, 5.0.0, 5.1.1, 5.3.0, 5.4.0, 5.5.0, 5.6.0, 5.7.0, 5.7.1, 5.8.0, 5.9.1, 6.0.0, 6.1.0, 6.2.2, 6.3.0, 6.5.0, 6.6.0, 6.7.0, 6.9.0, 6.9.1, 6.9.2, 6.9.4, 6.9.5, 6.10.0, 6.10.3, 6.11.1, 6.11.2, 6.11.5, 6.12.2, 6.12.3, 7.0.0, 7.1.0, 7.2.0, 7.3.0, 7.4.0, 7.5.0, 7.6.0, 7.7.0, 7.7.4, 7.10.0, 7.10.1, 8.0.0, 8.1.4, 8.4.0, 8.5.0, 8.7.0, 8.8.0, 8.8.1, 8.9.0, 8.9.3, 8.9.4, 8.10.0, 8.11.1, 10.0.0.<br>Selected node.js version 8.11.1. Use package.json file to choose a different version.<br>Selected npm version 5.6.0<br>Updating iisnode.yml at D:\home\site\wwwroot\iisnode.yml<br>Verifying Yarn Install.<br>D:\local\AppData\npm\yarnpkg -&gt; D:\local\AppData\npm\node_modules\yarn\bin\yarn.js<br>D:\local\AppData\npm\yarn -&gt; D:\local\AppData\npm\node_modules\yarn\bin\yarn.js<br>+ yarn@1.7.0<br>updated 1 package in 1.203s<br>Installing Yarn Packages.<br>'yarn' is not recognized as an internal or external command,<br>operable program or batch file.<br>Failed exitCode=1, command=yarn install --production<br>An error has occurred during web site deployment.<br>'yarn' is not recognized as an internal or external command,\r\noperable program or batch file.\r\nD:\Program Files (x86)\SiteExtensions\Kudu\73.10510.3399\bin\Scripts\starter.cmd deploy.cmd</p>]]></message>
+<createdAt>2018-06-04T09:35:21Z</createdAt>
+<isDeleted>false</isDeleted>
+<isSpam>false</isSpam>
+<author>
+<name>MP</name>
+<isAnonymous>false</isAnonymous>
+<username>mattiaspalm</username>
+</author>
+<thread dsq:id="7144027849" />
+</post>
+<post dsq:id="4004338461">
+<id />
+<message><![CDATA[<p>Epson GTS50 Driver Download :</p><p><a href="https://www.epson-printerdriver.com/2018/07/epson-gts50-driver-download.html" rel="nofollow noopener" title="https://www.epson-printerdriver.com/2018/07/epson-gts50-driver-download.html">https://www.epson-printerdr...</a></p>]]></message>
+<createdAt>2018-07-24T18:42:59Z</createdAt>
+<isDeleted>false</isDeleted>
+<isSpam>true</isSpam>
+<author>
+<name>Rafly Ilham</name>
+<isAnonymous>false</isAnonymous>
+<username>raflyilham</username>
+</author>
+<thread dsq:id="2251710841" />
+</post>
+<post dsq:id="4009917429">
+<id />
+<message><![CDATA[<p>Hi Chad, <br>Nice article! I am starting my own blog with this setup.</p><p>I got a question about running this locally (I am trying to make some customization).<br>- I forked your github repository, created a new branch off azure branch and called it myBlog branch.<br>- now that I'm in myBlog branch, i ran the node db.js and it created the database fine. <br>- Then, I try to do npm start and it gave me below:</p><p>WARN Theme's file locales/en.json not found.<br>INFO Ghost is running in development...<br>INFO Listening on: 127.0.0.1:<br>INFO Url configured as: http://localhost:2368/<br>INFO Ctrl+C to shut down<br>INFO Ghost boot 3.254s</p><p>- Then I open my browser to http://localhost:2368 but it gave my "The site can't be reached" :(</p><p>Any tips on running this locally?</p><p>Thanks!</p>]]></message>
+<createdAt>2018-07-27T22:21:51Z</createdAt>
+<isDeleted>false</isDeleted>
+<isSpam>false</isSpam>
+<author>
+<name>Tonny Thiatmaja</name>
+<isAnonymous>false</isAnonymous>
+<username>tonny_thiatmaja</username>
+</author>
+<thread dsq:id="7144027849" />
+</post>
+<post dsq:id="4143346924">
+<id />
+<message><![CDATA[<p>I just did a similar Steam dir mvoe from an HDD to an NVMe PCIe SSD, but I did it with rsync (twice - I like to do 2 runs of that to confirm all files are across). I then moved the HDD steam dir to a .old version, fired up the Steam client, pointed it to the SSD and then tried out several games to make sure it all worked. Only then did I delete the old HDD steam dir.</p><p>If anything had gone wrong, I could just move the SSD Steam dir to .old, rename the HDD Steam dir back to its original name, fire up the Steam client and point it back to the old HDD Steam dir. BTW, it took 2 hours to do a copy of the 660GB HDD steam dir to SSD, which wasn't too bad.</p><p>Oh, and yes, the chmod stuff is utter nonsense - just make sure the Steam tree is owned by you, so "chown -R username steam_dir" would have been good enough, though you may have to that as root if you don't own something under the tree. If you must chmod -R, then u+rw would be a *lot* safer.</p>]]></message>
+<createdAt>2018-10-13T17:14:38Z</createdAt>
+<isDeleted>false</isDeleted>
+<isSpam>false</isSpam>
+<author>
+<name>Richard Lloyd</name>
+<isAnonymous>false</isAnonymous>
+<username>disqus_Yb4Uj97Z3g</username>
+</author>
+<thread dsq:id="2341274771" />
+</post>
+<post dsq:id="4358116315">
+<id />
+<message><![CDATA[<p>Does it generate any HTML reports with the BDD steps?</p>]]></message>
+<createdAt>2019-02-28T13:24:07Z</createdAt>
+<isDeleted>false</isDeleted>
+<isSpam>false</isSpam>
+<author>
+<name>jjfawkes</name>
+<isAnonymous>false</isAnonymous>
+<username>jjfawkes</username>
+</author>
+<thread dsq:id="1870006968" />
+</post>
+</disqus>

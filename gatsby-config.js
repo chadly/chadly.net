@@ -58,6 +58,12 @@ const plugins = [
 			path: `${__dirname}/src/pages`
 		}
 	},
+	{
+		resolve: "gatsby-source-disqus-xml",
+		options: {
+			filePath: `${__dirname}/src/disqus.xml`
+		}
+	},
 	"gatsby-plugin-jss",
 	"gatsby-plugin-sitemap",
 	{
