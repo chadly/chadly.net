@@ -156,7 +156,7 @@ const styles = {
 export default injectSheet(styles)(BlogPostTemplate);
 
 export const pageQuery = graphql`
-	query BlogPostBySlug($slug: String!) {
+	query BlogPostBySlug($slug: String!, $threadId: String!) {
 		site {
 			siteMetadata {
 				disqus
@@ -182,6 +182,16 @@ export const pageQuery = graphql`
 				}
 			}
 			fileAbsolutePath
+		}
+		disqusThread(threadId: { eq: $threadId }) {
+			comments {
+				author {
+					name
+					username
+				}
+				createdAt
+				message
+			}
 		}
 	}
 `;

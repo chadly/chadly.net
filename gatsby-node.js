@@ -22,6 +22,9 @@ exports.createPages = async ({ graphql, actions: { createPage } }) => {
 				allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
 					edges {
 						node {
+							frontmatter {
+								id
+							}
 							fields {
 								slug
 							}
@@ -39,20 +42,28 @@ exports.createPages = async ({ graphql, actions: { createPage } }) => {
 	}
 
 	const posts = result.data.allMarkdownRemark.edges;
-	posts.forEach(({ node: { fields: { slug }, fileAbsolutePath } }) => {
-		let templatePath = path.join(
-			path.dirname(fileAbsolutePath),
-			"_template.js"
-		);
+	posts.forEach(
+		({
+			node: {
+				frontmatter: { id: threadId },
+				fields: { slug },
+				fileAbsolutePath
+			}
+		}) => {
+			let templatePath = path.join(
+				path.dirname(fileAbsolutePath),
+				"_template.js"
+			);
 
-		if (!fs.existsSync(templatePath)) {
-			templatePath = docPage;
+			if (!fs.existsSync(templatePath)) {
+				templatePath = docPage;
+			}
+
+			createPage({
+				path: slug,
+				component: templatePath,
+				context: { slug, threadId }
+			});
 		}
-
-		createPage({
-			path: slug,
-			component: templatePath,
-			context: { slug }
-		});
-	});
+	);
 };
