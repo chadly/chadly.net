@@ -6,8 +6,6 @@ import { rhythm, scale, smallScreenMediaQuery } from "../theme/typography";
 const Comments = ({ comments, classes }) => {
 	if (!comments || !comments.length) return null;
 
-	console.log(comments);
-
 	return (
 		<ol className={classes.root}>
 			{comments.map(c => {
