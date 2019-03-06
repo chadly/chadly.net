@@ -55,7 +55,6 @@ const BlogPostTemplate = ({ data, classes }) => {
 
 			<footer className={classes.postFooter}>
 				<Author />
-				<hr />
 				<Comments comments={comments} />
 			</footer>
 		</Layout>
@@ -78,7 +77,9 @@ function massage({
 	},
 	disqusThread
 }) {
-	const comments = nestComments(get(disqusThread, "comments", []));
+	const allComments = get(disqusThread, "comments", []);
+	const comments = nestComments(allComments);
+	comments.totalCount = allComments.length;
 
 	return {
 		post: {

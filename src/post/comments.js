@@ -1,7 +1,18 @@
 import React from "react";
 import injectSheet from "react-jss";
 import moment from "moment";
-import { rhythm, scale, smallScreenMediaQuery } from "../theme/typography";
+import { rhythm, scale } from "../theme/typography";
+
+const CommentsRoot = ({ comments, classes }) => {
+	if (!comments || !comments.length) return null;
+
+	return (
+		<div className={classes.commentSection}>
+			<h3>{comments.totalCount} Comments</h3>
+			<Comments comments={comments} classes={classes} />
+		</div>
+	);
+};
 
 const Comments = ({ comments, classes }) => {
 	if (!comments || !comments.length) return null;
@@ -44,6 +55,11 @@ const Comments = ({ comments, classes }) => {
 };
 
 const styles = {
+	commentSection: {
+		borderTop: "1px solid var(--hr)",
+		// paddingTop: rhythm(1),
+		marginTop: rhythm(1)
+	},
 	root: {
 		margin: 0
 	},
@@ -83,4 +99,4 @@ const styles = {
 	}
 };
 
-export default injectSheet(styles)(Comments);
+export default injectSheet(styles)(CommentsRoot);

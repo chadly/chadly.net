@@ -42,7 +42,6 @@ const Author = ({ classes }) => {
 const styles = {
 	container: {
 		display: "flex",
-		marginBottom: rhythm(1.5),
 		...scale(-0.25),
 		[smallScreenMediaQuery]: {
 			display: "block",
