@@ -1,15 +1,38 @@
 import React from "react";
+import injectSheet from "react-jss";
 
-const Comments = ({ shortName, url, id, title }) => {
-	if (!shortName) return null;
+import { rhythm, scale } from "../theme/typography";
+
+const Comments = ({ comments }) => {
+	if (!comments || !comments.length) return null;
+
+	console.log(comments);
 
 	return (
-		<>
-			<hr />
-			<span>oh hi, here are some comments</span>
-			{/* <Disqus shortname={shortName} url={url} identifier={id} title={title} /> */}
-		</>
+		<ol>
+			{comments.map(c => (
+				<li key={c.id}>
+					<img
+						src={`https://disqus.com/api/users/avatars/${
+							c.author.username
+						}.jpg`}
+						alt={c.author.name}
+					/>
+					<h4>{c.author.name}</h4>
+					<time dateTime={c.createdAt}>{c.createdAt}</time>
+					<div
+						dangerouslySetInnerHTML={{
+							__html: c.message
+						}}
+					/>
+
+					<Comments comments={c.comments} />
+				</li>
+			))}
+		</ol>
 	);
 };
 
-export default Comments;
+const styles = {};
+
+export default injectSheet(styles)(Comments);

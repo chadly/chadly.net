@@ -54,7 +54,7 @@
     "gatsby-remark-prismjs": "^3.2.4",
     "gatsby-remark-reading-time": "^1.0.1",
     "gatsby-remark-smartypants": "^2.0.8",
-    "gatsby-source-disqus-xml": "^0.1.0",
+    "gatsby-source-disqus-xml": "^0.3.0",
     "gatsby-source-filesystem": "^2.0.22",
     "gatsby-transformer-remark": "^2.2.6",
     "prettier": "^1.16.4",

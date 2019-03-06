@@ -12,9 +12,12 @@ import CanonicalLink, {
 } from "../canonical";
 import Comments from "./comments";
 import EditPageLink from "./edit-page-link";
+import { get } from "lodash";
 
 const BlogPostTemplate = ({ data, classes }) => {
-	const { post, siteUrl, githubLink, fileAbsolutePath } = massage(data);
+	const { post, siteUrl, githubLink, fileAbsolutePath, comments } = massage(
+		data
+	);
 
 	return (
 		<Layout>
@@ -52,12 +55,7 @@ const BlogPostTemplate = ({ data, classes }) => {
 
 			<footer className={classes.postFooter}>
 				<Author />
-
-				<Comments
-					id={post.id}
-					url={calculateCanonicalUrl({ siteUrl, slug: post.slug })}
-					title={post.title}
-				/>
+				<Comments comments={comments} />
 			</footer>
 		</Layout>
 	);
@@ -76,8 +74,11 @@ function massage({
 	},
 	site: {
 		siteMetadata: { siteUrl, githubLink }
-	}
+	},
+	disqusThread
 }) {
+	const comments = nestComments(get(disqusThread, "comments", []));
+
 	return {
 		post: {
 			id,
@@ -91,8 +92,25 @@ function massage({
 		},
 		siteUrl,
 		githubLink,
-		fileAbsolutePath
+		fileAbsolutePath,
+		comments
 	};
+}
+
+function nestComments(comments) {
+	const newCommentList = [];
+
+	comments.forEach(c => {
+		if (c.parentId) {
+			const parent = comments.find(pc => pc.id == c.parentId);
+			parent.comments = parent.comments || [];
+			parent.comments.push(c);
+		} else {
+			newCommentList.push(c);
+		}
+	});
+
+	return newCommentList;
 }
 
 const styles = {
@@ -176,6 +194,8 @@ export const pageQuery = graphql`
 		}
 		disqusThread(threadId: { eq: $threadId }) {
 			comments {
+				id
+				parentId
 				author {
 					name
 					username
