@@ -55,6 +55,7 @@ const BlogPostTemplate = ({ data, classes }) => {
 
 			<footer className={classes.postFooter}>
 				<Author />
+				<hr />
 				<Comments comments={comments} />
 			</footer>
 		</Layout>
