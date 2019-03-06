@@ -8,7 +8,9 @@ const CommentsRoot = ({ comments, classes }) => {
 
 	return (
 		<div className={classes.commentSection}>
-			<h3>{comments.totalCount} Comments</h3>
+			<h3>
+				{comments.totalCount} Comment{comments.totalCount != 1 ? "s" : ""}
+			</h3>
 			<Comments comments={comments} classes={classes} />
 		</div>
 	);
