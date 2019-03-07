@@ -10,8 +10,7 @@ import { rhythm, scale } from "../theme/typography";
 import CanonicalLink, {
 	calculate as calculateCanonicalUrl
 } from "../canonical";
-import Comments from "./feedback/comments";
-import Likes from "./feedback/likes";
+import Feedback from "./feedback";
 import EditPageLink from "./edit-page-link";
 import { get, sortBy } from "lodash";
 
@@ -61,8 +60,11 @@ const BlogPostTemplate = ({ data, classes }) => {
 
 			<footer className={classes.postFooter}>
 				<Author />
-				<Likes likes={likes} />
-				<Comments comments={comments} />
+				<Feedback
+					twitterId={post.twitterId}
+					likes={likes}
+					comments={comments}
+				/>
 			</footer>
 		</Layout>
 	);
@@ -70,7 +72,7 @@ const BlogPostTemplate = ({ data, classes }) => {
 
 function massage({
 	markdownRemark: {
-		frontmatter: { id, title, date, dateFormatted },
+		frontmatter: { id, title, date, dateFormatted, twitterId },
 		fields: { slug },
 		html,
 		excerpt,
@@ -125,6 +127,7 @@ function massage({
 			title,
 			date,
 			dateFormatted,
+			twitterId,
 			slug,
 			html,
 			excerpt,
@@ -220,6 +223,7 @@ export const pageQuery = graphql`
 				title
 				date
 				dateFormatted: date(formatString: "MMMM DD, YYYY")
+				twitterId
 			}
 			fields {
 				slug
