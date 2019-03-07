@@ -2,6 +2,9 @@ import React from "react";
 import Helmet from "react-helmet";
 import { useStaticQuery, graphql } from "gatsby";
 
+import AuthorPhoto from "./author/me.jpg";
+
+import Uri from "urijs";
 import { get } from "lodash";
 
 const Seo = ({ title, description }) => {
@@ -9,6 +12,7 @@ const Seo = ({ title, description }) => {
 		query DefaultSEOQuery {
 			site {
 				siteMetadata {
+					siteUrl
 					title
 					description
 					author {
@@ -20,6 +24,7 @@ const Seo = ({ title, description }) => {
 		}
 	`);
 
+	const siteUrl = get(data, "site.siteMetadata.siteUrl");
 	const siteTitle = get(data, "site.siteMetadata.title");
 	const siteDesc = get(data, "site.siteMetadata.description");
 	const author = get(data, "site.siteMetadata.author");
@@ -45,22 +50,16 @@ const Seo = ({ title, description }) => {
 			{get(author, "twitter") ? (
 				<meta name="twitter:creator" content={`@${author.twitter}`} />
 			) : null}
-			{get(author, "image.file.url") ? (
-				<meta
-					name="twitter:image"
-					content={conformMetaUrl(get(author, "image.file.url"))}
-				/>
-			) : null}
+			<meta
+				name="twitter:image"
+				content={Uri(AuthorPhoto)
+					.origin(siteUrl)
+					.toString()}
+			/>
 			<meta name="twitter:title" content={title} />
 			<meta name="twitter:description" content={desc} />
 		</Helmet>
 	);
 };
-
-function conformMetaUrl(url) {
-	if (url.startsWith("https:")) return url;
-	if (url.startsWith("http:")) return url;
-	return `https:${url}`;
-}
 
 export default Seo;
