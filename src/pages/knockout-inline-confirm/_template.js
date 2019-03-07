@@ -71,15 +71,19 @@ export const pageQuery = graphql`
 		allWebMentionEntry(filter: { fields: { slug: { eq: $slug } } }) {
 			edges {
 				node {
+					id
 					author {
 						name
 						photo
 						url
 					}
 					url
-					wmReceived
+					published
 					wmTarget
 					wmProperty
+					content {
+						text
+					}
 				}
 			}
 		}

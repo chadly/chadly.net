@@ -22,24 +22,30 @@ const Comments = ({ comments, classes }) => {
 	return (
 		<ol className={classes.root}>
 			{comments.map(c => {
-				const createdAt = moment(c.createdAt);
+				const date = moment(c.date);
 
 				return (
 					<li key={c.id} className={classes.container}>
 						<img
-							src={`https://disqus.com/api/users/avatars/${
-								c.author.username
-							}.jpg`}
+							src={c.author.photo}
 							alt={c.author.name}
 							className={classes.avatar}
 						/>
 						<div className={classes.body}>
-							<h4>{c.author.name}</h4>
+							<h4>
+								{c.url ? (
+									<a href={c.url}>{c.author.name}</a>
+								) : c.author.url ? (
+									<a href={c.author.url}>{c.author.name}</a>
+								) : (
+									c.author.name
+								)}
+							</h4>
 							<time
-								dateTime={c.createdAt}
-								title={createdAt.format("MMMM Do, YYYY h:mm a")}
+								dateTime={c.date}
+								title={date.format("MMMM Do, YYYY h:mm a")}
 							>
-								{moment(c.createdAt).fromNow()}
+								{date.fromNow()}
 							</time>
 							<div
 								dangerouslySetInnerHTML={{

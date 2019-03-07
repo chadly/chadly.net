@@ -13,7 +13,7 @@ import CanonicalLink, {
 import Comments from "./feedback/comments";
 import Likes from "./feedback/likes";
 import EditPageLink from "./edit-page-link";
-import { get } from "lodash";
+import { get, sortBy } from "lodash";
 
 const BlogPostTemplate = ({ data, classes }) => {
 	const {
@@ -85,9 +85,33 @@ function massage({
 	disqusThread,
 	allWebMentionEntry
 }) {
-	const allComments = get(disqusThread, "comments", []);
-	const comments = nestComments(allComments);
-	comments.totalCount = allComments.length;
+	const allComments = get(disqusThread, "comments", []).map(c => ({
+		id: c.id,
+		parentId: c.parentId,
+		author: {
+			name: get(c, "author.name"),
+			photo: `https://disqus.com/api/users/avatars/${get(
+				c,
+				"author.username"
+			)}.jpg`
+		},
+		date: c.createdAt,
+		message: c.message
+	}));
+	let comments = nestComments(allComments);
+
+	const webMentionComments = get(allWebMentionEntry, "edges", [])
+		.filter(w => w.node.wmProperty == "in-reply-to")
+		.map(w => ({
+			id: w.node.id,
+			author: w.node.author,
+			url: w.node.url,
+			date: w.node.published,
+			message: get(w.node, "content.text")
+		}));
+
+	comments = sortBy([...comments, ...webMentionComments], "date");
+	comments.totalCount = allComments.length + webMentionComments.length;
 
 	const likes = get(allWebMentionEntry, "edges", [])
 		.filter(
@@ -224,15 +248,19 @@ export const pageQuery = graphql`
 		allWebMentionEntry(filter: { fields: { slug: { eq: $slug } } }) {
 			edges {
 				node {
+					id
 					author {
 						name
 						photo
 						url
 					}
 					url
-					wmReceived
+					published
 					wmTarget
 					wmProperty
+					content {
+						text
+					}
 				}
 			}
 		}
