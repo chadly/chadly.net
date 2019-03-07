@@ -1,32 +1,26 @@
 import React from "react";
+import injectSheet from "react-jss";
+
+import TwitterIntents from "./twitter";
 import Comments from "./comments";
 import Likes from "./likes";
 
-const Feedback = ({ twitterId, likes, comments }) => (
-	<>
+import { rhythm } from "../../theme/typography";
+
+const Feedback = ({ twitterId, likes, comments, classes }) => (
+	<div className={classes.root}>
 		<TwitterIntents twitterId={twitterId} />
 		<Likes likes={likes} />
 		<Comments comments={comments} />
-	</>
+	</div>
 );
 
-const TwitterIntents = ({ twitterId }) => {
-	if (!twitterId) return null;
-
-	return (
-		<div>
-			Respond via Twitter:
-			<a href={`https://twitter.com/intent/tweet?in_reply_to=${twitterId}`}>
-				Reply
-			</a>
-			<a href={`https://twitter.com/intent/retweet?tweet_id=${twitterId}`}>
-				Repost
-			</a>
-			<a href={`https://twitter.com/intent/favorite?tweet_id=${twitterId}`}>
-				Like
-			</a>
-		</div>
-	);
+const styles = {
+	root: {
+		borderTop: "1px solid var(--hr)",
+		paddingTop: rhythm(0.5),
+		marginTop: rhythm(1)
+	}
 };
 
-export default Feedback;
+export default injectSheet(styles)(Feedback);

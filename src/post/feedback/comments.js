@@ -7,12 +7,12 @@ const CommentsRoot = ({ comments, classes }) => {
 	if (!comments || !comments.length) return null;
 
 	return (
-		<div className={classes.commentSection}>
+		<section>
 			<h3>
 				{comments.totalCount} Comment{comments.totalCount != 1 ? "s" : ""}
 			</h3>
 			<Comments comments={comments} classes={classes} />
-		</div>
+		</section>
 	);
 };
 
@@ -63,11 +63,6 @@ const Comments = ({ comments, classes }) => {
 };
 
 const styles = {
-	commentSection: {
-		borderTop: "1px solid var(--hr)",
-		// paddingTop: rhythm(1),
-		marginTop: rhythm(1)
-	},
 	root: {
 		margin: 0
 	},
