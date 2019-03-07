@@ -8,17 +8,29 @@ const TwitterIntents = ({ twitterId, classes }) => {
 	return (
 		<ul className={classes.root}>
 			<li>
-				<a href={`https://twitter.com/intent/tweet?in_reply_to=${twitterId}`}>
+				<a
+					href={`https://twitter.com/intent/tweet?in_reply_to=${twitterId}`}
+					target="_blank"
+					rel="noopener noreferrer"
+				>
 					<i className="fas fa-reply" /> Reply
 				</a>
 			</li>
 			<li>
-				<a href={`https://twitter.com/intent/retweet?tweet_id=${twitterId}`}>
+				<a
+					href={`https://twitter.com/intent/retweet?tweet_id=${twitterId}`}
+					target="_blank"
+					rel="noopener noreferrer"
+				>
 					<i className="fas fa-retweet" /> Repost
 				</a>
 			</li>
 			<li>
-				<a href={`https://twitter.com/intent/favorite?tweet_id=${twitterId}`}>
+				<a
+					href={`https://twitter.com/intent/favorite?tweet_id=${twitterId}`}
+					target="_blank"
+					rel="noopener noreferrer"
+				>
 					<i className="fas fa-heart" /> Like
 				</a>
 			</li>
