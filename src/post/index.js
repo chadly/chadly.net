@@ -7,9 +7,7 @@ import Seo from "../seo";
 import Author from "../author";
 import { rhythm, scale } from "../theme/typography";
 
-import CanonicalLink, {
-	calculate as calculateCanonicalUrl
-} from "../canonical";
+import CanonicalLink from "../canonical";
 import Feedback from "./feedback";
 import EditPageLink from "./edit-page-link";
 import { get, sortBy } from "lodash";
