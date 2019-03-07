@@ -2,6 +2,7 @@
 id: ff3cc1e9-d1f2-41ed-b4c7-4ff1c0fa986b
 title: Embracing the IndieWeb
 date: '2019-03-07'
+twitterId: '1103803489212354560'
 ---
 
 I've used Disqus comments on this site for a long time. At the time I set it up, it was ubiquitous, easy to set up, and a no-brainer. However, after [converting my site to Gatsby](/purpose-built-software/) and getting the site to load _Blazing Fast™_, the Disqus embed code was the slowest thing on my site. It's gotten fat over the years and like a bad husband, I'm finally dumping it.
