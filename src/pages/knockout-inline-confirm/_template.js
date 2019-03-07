@@ -30,7 +30,7 @@ class KnockoutInlineConfirmPost extends Component {
 export default KnockoutInlineConfirmPost;
 
 export const pageQuery = graphql`
-	query KnockoutPost($slug: String!) {
+	query KnockoutPost($slug: String!, $threadId: String!) {
 		site {
 			siteMetadata {
 				siteUrl
@@ -55,6 +55,33 @@ export const pageQuery = graphql`
 				}
 			}
 			fileAbsolutePath
+		}
+		disqusThread(threadId: { eq: $threadId }) {
+			comments {
+				id
+				parentId
+				author {
+					name
+					username
+				}
+				createdAt
+				message
+			}
+		}
+		allWebMentionEntry(filter: { fields: { slug: { eq: $slug } } }) {
+			edges {
+				node {
+					author {
+						name
+						photo
+						url
+					}
+					url
+					wmReceived
+					wmTarget
+					wmProperty
+				}
+			}
 		}
 	}
 `;
