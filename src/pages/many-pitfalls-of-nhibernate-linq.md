@@ -2,6 +2,7 @@
 id: c748febf-03e7-5052-abc6-8641a0a3dead
 title: The Many Pitfalls of NHibernate.Linq
 date: '2009-08-26'
+twitterId: '3562481113'
 redirect_from:
   - /post/2009/08/26/The-Many-Pitfalls-of-NHibernateLinq.aspx
   - /the-many-pitfalls-of-nhibernate-linq

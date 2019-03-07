@@ -2,6 +2,7 @@
 id: 8fe768c8-de26-5cc4-931a-40d099d76f20
 title: Handle MonoRail 404s gracefully
 date: '2009-03-10'
+twitterId: '1308416566'
 redirect_from:
   - /post/2009/03/10/Custom-MonorailHttpHandlerFactory-to-handle-404s-gracefully.aspx
   - /custom-monorailhttphandlerfactory-to-handle-404s-gracefully

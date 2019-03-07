@@ -2,6 +2,7 @@
 id: 964175c5-5180-503d-abbd-8d59ddb96369
 title: BDD with xUnit.net
 date: '2009-04-20'
+twitterId: '1659718983'
 redirect_from:
   - /post/2009/04/20/BDD-with-xUnit.aspx
   - /2009/04/bdd-with-xunit-net

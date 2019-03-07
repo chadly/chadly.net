@@ -2,6 +2,7 @@
 id: d75ee7a5-3b9c-57a6-a9a1-3c04f89d4e2b
 title: Developing with Passion
 date: '2009-03-09'
+twitterId: '1415779280'
 redirect_from:
   - /post/2009/03/29/Developing-with-Passion.aspx
   - /2009/03/developing-with-passion

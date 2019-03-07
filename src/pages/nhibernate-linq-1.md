@@ -2,6 +2,7 @@
 id: cf479780-33d2-5d4b-b52f-2d2e1dbc375e
 title: NHibernate.Linq 1.0 is out and about!
 date: '2009-07-27'
+twitterId: '2874398512'
 redirect_from:
   - /post/2009/07/27/NHibernateLinq-10-is-out-and-about.aspx
   - /nhibernate-linq-1-0-is-out-and-about

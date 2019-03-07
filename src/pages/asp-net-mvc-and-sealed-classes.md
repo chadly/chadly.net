@@ -2,6 +2,7 @@
 id: af624e87-a849-51f6-9dbe-fdb2036fd2f8
 title: Asp.Net MVC and Sealed Classes
 date: '2009-03-14'
+twitterId: '1329092273'
 redirect_from:
   - /post/2009/03/14/AspNet-MVC-and-Sealed-Classes.aspx
   - /2009/03/asp-net-mvc-and-sealed-classes

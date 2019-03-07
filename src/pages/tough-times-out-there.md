@@ -2,6 +2,7 @@
 id: 287c6bb2-a271-558a-8475-886bd31eff95
 title: It's Tough Times Out There
 date: '2009-03-09'
+twitterId: '1302604668'
 redirect_from:
   - /post/2009/03/09/Its-Tough-Times-Out-There.aspx
   - /its-tough-times-out-there

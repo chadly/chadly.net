@@ -2,6 +2,7 @@
 id: 7c4b4673-73de-5a60-b4c1-206afd47a59b
 title: Agile Software Development
 date: '2009-02-01'
+twitterId: '1171310531'
 redirect_from:
   - /post/2009/02/01/Agile-Software-Development-from-a-Business-Perspective.aspx
   - /agile-software-development-from-a-business-perspective

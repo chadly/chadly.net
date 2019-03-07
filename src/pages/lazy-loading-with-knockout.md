@@ -2,6 +2,7 @@
 id: b5203ae6-7fb8-5a93-81d7-4c1d297ce3fc
 title: Lazy Loading an Observable Array with Knockout JS
 date: '2012-09-12'
+twitterId: '246084928851292160'
 redirect_from:
   - /lazy-loading-an-observable-array-with-knockout-js
   - /2012/09/lazy-loading-an-observable-array-with-knockout-js

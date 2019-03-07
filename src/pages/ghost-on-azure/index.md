@@ -2,6 +2,7 @@
 id: 82aab5a0-5460-5bea-9aad-634afbe010ba
 title: Host Ghost 1.0 on Azure for Free
 date: '2017-08-16'
+twitterId: '897893849896321024'
 ---
 
 This site now runs on [Ghost](https://ghost.org/) in [Azure](https://azure.microsoft.com/) hosted for free[^1]. Yes, this blog has officially become nothing but me switching blog engines and then writing about it, but hey, maybe someone finds it useful? 🤷

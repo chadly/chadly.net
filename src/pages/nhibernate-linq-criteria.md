@@ -2,6 +2,7 @@
 id: 3043ec9f-e5c1-5468-9d87-92a54cfb31e5
 title: Creating NHibernate Linq Query from Criteria
 date: '2009-10-30'
+twitterId: '5291710571'
 redirect_from:
   - /post/2009/10/30/Creating-NHibernate-Linq-Query-from-arbitrary-Criteria.aspx
   - /creating-nhibernate-linq-query-from-arbitrary-criteria

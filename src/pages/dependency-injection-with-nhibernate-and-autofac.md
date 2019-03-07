@@ -2,6 +2,7 @@
 id: 256ee2a2-a2a4-563f-ab43-61684c707701
 title: Dependency Injection with NHibernate and Autofac
 date: '2009-05-28'
+twitterId: '1951109647'
 redirect_from:
   - /post/2009/05/28/Dependency-Injection-with-NHibernate-and-Autofac.aspx
   - /2009/05/dependency-injection-with-nhibernate-and-autofac

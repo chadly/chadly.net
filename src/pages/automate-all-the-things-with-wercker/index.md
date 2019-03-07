@@ -2,6 +2,7 @@
 id: 81fea688-5f68-5c5a-bb23-a6e2a011c1ca
 title: Automate All the Things with Wercker
 date: '2013-12-18'
+twitterId: '413469842264449024'
 redirect_from:
   - /2013/12/automate-all-the-things-with-wercker
 ---
