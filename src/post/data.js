@@ -76,9 +76,16 @@ function nestComments(comments) {
 
 	comments.forEach(c => {
 		if (c.parentId) {
-			const parent = comments.find(pc => pc.id == c.parentId);
+			let parent = comments.find(pc => pc.id == c.parentId);
+
+			while (parent.parentId) {
+				// only nest one level deep
+				parent = comments.find(pc => pc.id == parent.parentId);
+			}
+
 			parent.comments = parent.comments || [];
 			parent.comments.push(c);
+			parent.comments = sortBy(parent.comments, "date");
 		} else {
 			newCommentList.push(c);
 		}
