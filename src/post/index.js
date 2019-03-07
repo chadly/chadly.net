@@ -10,14 +10,20 @@ import { rhythm, scale } from "../theme/typography";
 import CanonicalLink, {
 	calculate as calculateCanonicalUrl
 } from "../canonical";
-import Comments from "./comments";
+import Comments from "./feedback/comments";
+import Likes from "./feedback/likes";
 import EditPageLink from "./edit-page-link";
 import { get } from "lodash";
 
 const BlogPostTemplate = ({ data, classes }) => {
-	const { post, siteUrl, githubLink, fileAbsolutePath, comments } = massage(
-		data
-	);
+	const {
+		post,
+		siteUrl,
+		githubLink,
+		fileAbsolutePath,
+		comments,
+		likes
+	} = massage(data);
 
 	return (
 		<Layout>
@@ -55,6 +61,7 @@ const BlogPostTemplate = ({ data, classes }) => {
 
 			<footer className={classes.postFooter}>
 				<Author />
+				<Likes likes={likes} />
 				<Comments comments={comments} />
 			</footer>
 		</Layout>
@@ -75,11 +82,18 @@ function massage({
 	site: {
 		siteMetadata: { siteUrl, githubLink }
 	},
-	disqusThread
+	disqusThread,
+	allWebMentionEntry
 }) {
 	const allComments = get(disqusThread, "comments", []);
 	const comments = nestComments(allComments);
 	comments.totalCount = allComments.length;
+
+	const likes = get(allWebMentionEntry, "edges", [])
+		.filter(
+			w => w.node.wmProperty == "like-of" || w.node.wmProperty == "bookmark-of"
+		)
+		.map(w => w.node.author);
 
 	return {
 		post: {
@@ -95,7 +109,8 @@ function massage({
 		siteUrl,
 		githubLink,
 		fileAbsolutePath,
-		comments
+		comments,
+		likes
 	};
 }
 
@@ -204,6 +219,21 @@ export const pageQuery = graphql`
 				}
 				createdAt
 				message
+			}
+		}
+		allWebMentionEntry(filter: { fields: { slug: { eq: $slug } } }) {
+			edges {
+				node {
+					author {
+						name
+						photo
+						url
+					}
+					url
+					wmReceived
+					wmTarget
+					wmProperty
+				}
 			}
 		}
 	}

@@ -1,7 +1,7 @@
 import React from "react";
 import injectSheet from "react-jss";
 import moment from "moment";
-import { rhythm, scale } from "../theme/typography";
+import { rhythm, scale } from "../../theme/typography";
 
 const CommentsRoot = ({ comments, classes }) => {
 	if (!comments || !comments.length) return null;

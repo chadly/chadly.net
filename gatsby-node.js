@@ -5,10 +5,19 @@ const path = require("path");
 const fs = require("fs");
 const { createFilePath } = require("gatsby-source-filesystem");
 
-exports.onCreateNode = ({ node, getNode, actions }) => {
+exports.onCreateNode = async ({ node, getNode, actions, getNodes }) => {
 	const { createNodeField } = actions;
 	if (node.internal.type === "MarkdownRemark") {
 		const slug = createFilePath({ node, getNode, basePath: "pages" });
+		createNodeField({ node, name: "slug", value: slug });
+	}
+
+	if (node.internal.type === "WebMentionEntry") {
+		const {
+			siteMetadata: { siteUrl }
+		} = getNodes().find(n => n.internal.type === "Site");
+
+		const slug = node.wmTarget.replace(siteUrl, "");
 		createNodeField({ node, name: "slug", value: slug });
 	}
 };
