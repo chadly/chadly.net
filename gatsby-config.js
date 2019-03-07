@@ -1,4 +1,6 @@
 /* eslint-disable import/no-commonjs */
+require("dotenv").config();
+
 const calculateCanonicalUrl = require("./src/canonical/calculate");
 
 const { NODE_ENV, CONTEXT: NETLIFY_ENV = NODE_ENV } = process.env;
