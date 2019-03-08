@@ -27,7 +27,7 @@ That last step was the hardest one as a plugin didn't exist to do what I wanted.
 
 ## The New Hotness
 
-In order to get WebMentions working, I made use of [Chris Biscardi's plugin](https://www.christopherbiscardi.com/post/building-gatsby-plugin-webmentions) along with [webmention.io](https://webmention.io/) and [brid.gy](https://brid.gy/). The former takes care of the nitty gritty of accepting webmentions while the latter converts "normal social media activity" into webmentions. They are both OSS IndieWeb projects which means I don't have to worry about them fucking with my data or all-of-a-sudden barfing ads all over me and my visitors.
+In order to get WebMentions working, I made use of [Chris Biscardi's plugin](https://www.christopherbiscardi.com/post/building-gatsby-plugin-webmentions) along with [webmention.io](https://webmention.io/) and [brid.gy](https://brid.gy/). The former takes care of the nitty gritty of accepting webmentions while the latter converts "normal social media activity" into webmentions. They are both OSS IndieWeb projects which means I don't have to worry about them messing with my data or all-of-a-sudden barfing ads all over me and my visitors.
 
 The workflow goes something like this:
 
