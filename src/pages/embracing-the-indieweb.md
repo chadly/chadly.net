@@ -27,19 +27,24 @@ That last step was the hardest one as a plugin didn't exist to do what I wanted.
 
 ## The New Hotness
 
-In order to get WebMentions working, I made use of [Chris Biscardi's plugin](https://www.christopherbiscardi.com/post/building-gatsby-plugin-webmentions) along with [webmention.io](https://webmention.io/) and [brid.gy](https://brid.gy/). The former takes care of the nitty gritty of accepting webmentions while the latter converts "normal social media activity" into webmentions. They are both OSS IndieWeb projects which means I don't have to worry about them messing with my data or all-of-a-sudden barfing ads all over me and my visitors.
+In order to get WebMentions working, I made use of [Chris Biscardi's source plugin](https://www.christopherbiscardi.com/post/building-gatsby-plugin-webmentions) to pull data from [webmention.io](https://webmention.io/)'s API. WebMention.io takes care of the nitty gritty of accepting & storing WebMentions so that I don't have to setup a server for myself (since this is a static site after all). However, that by itself would not be enough since WebMentions aren't exactly mainstream yet. I still want a way to allow muggles to comment on my posts. That's where [brid.gy](https://brid.gy/) comes in. It takes care of converting "normal social media activity" into WebMentions so that my mother, who only knows how to use Twitter, can still comment (if she ever read one of my "weird computer articles").
 
-The workflow goes something like this:
+This is one spot where I think the [philosophy of the IndieWeb](https://indieweb.org/POSSE) really shines. Rather than force an ideal, focus on where people are and bring them over gradually:
+
+> Friends are more important than federation. By focusing on actual social relationships that matter to people rather than architectural ideals, from a human perspective, <acronym title="Publish (on your) Own Site, Syndicate Elsewhere">POSSE</acronym> is more important than federation.
+
+Webmention.io & brid.gy are both OSS IndieWeb projects which means I don't have to worry about them messing with my data or all-of-a-sudden barfing ads all over me and my visitors.
+
+The new workflow for writing a post and getting feedback now goes something like this:
 
 * I write a pretty cool post
-* I post a link to the post on Twitter (or [_POSSE_](https://indieweb.org/POSSE) if you are into weird acronyms)
+* I post a link to the post on Twitter (or [_POSSE_](https://indieweb.org/POSSE) if you are into acronyms)
 * Maybe a few people read it, maybe someone likes or replies to my tweet
 * Bridgy looks at the post linked in my tweet, loads the `link` tag pointing it to webmention.io, and sends a WebMention
 * My site rebuilds nightly pulling data from webmention.io, mixing it with my "legacy" Disqus comment data and rendering it all via normal React components which I control
-* Or also, maybe someone sends over an actual WebMention not from one of those evil social media sites. That would work, too, I guess.
+* Or also, maybe someone sends over an actual WebMention not from one of those evil social media sites.
 
-I'm pretty happy with the way it all turned out even though, effectively, until WebMentions proper becomes more ubiquitous, I'm effectively just outsourcing my comments to Twitter now.
+I'm pretty happy with the way it all turned out even though, effectively, until WebMentions proper becomes more ubiquitous, I'm effectively just outsourcing my comments to Twitter now. 🤷‍♂️
 
-...
 
-<small>Fuck the man.</small>
+Now, I need to figure out how to *send* a WebMention...
