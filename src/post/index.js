@@ -7,7 +7,7 @@ import Seo from "../seo";
 import Author from "../author";
 import { rhythm, scale } from "../theme/typography";
 
-import CanonicalLink from "../canonical";
+import CanonicalLink, { calculate as getPermalink } from "../canonical";
 import massage from "./data";
 import Feedback from "./feedback";
 import EditPageLink from "./edit-page-link";
@@ -27,43 +27,45 @@ const BlogPostTemplate = ({ data, classes }) => {
 			<Seo title={post.title} description={post.excerpt} />
 			<CanonicalLink siteUrl={siteUrl} slug={post.slug} />
 
-			<header className={classes.postHeader}>
-				<h1>
+			<article className="h-entry">
+				<header className={classes.postHeader}>
 					<EditPageLink
 						githubLink={githubLink}
 						fileAbsolutePath={fileAbsolutePath}
 						className={classes.editLink}
 					/>
-					{post.title}
-				</h1>
-				<div className={classes.meta}>
-					<time dateTime={post.date} itemProp="datePublished">
-						{post.dateFormatted}
-					</time>
+					<h1 className="p-name">{post.title}</h1>
+					<div className={classes.meta}>
+						<a
+							href={getPermalink({ siteUrl, slug: post.slug })}
+							className="u-url"
+						>
+							<time dateTime={post.date} className="dt-published">
+								{post.dateFormatted}
+							</time>
+						</a>
 
-					<span className={classes.readingTime}>{post.readingTime}</span>
-				</div>
-			</header>
+						<span className={classes.readingTime}>{post.readingTime}</span>
+					</div>
+				</header>
 
-			<main role="main" className={classes.postBody}>
-				<article itemScope itemType="http://schema.org/BlogPosting">
-					<section
-						itemProp="articleBody"
-						dangerouslySetInnerHTML={{
-							__html: post.html
-						}}
-					/>
-				</article>
-			</main>
-
-			<footer className={classes.postFooter}>
-				<Author />
-				<Feedback
-					twitterId={post.twitterId}
-					likes={likes}
-					comments={comments}
+				<main
+					role="main"
+					className={`e-content ${classes.postBody}`}
+					dangerouslySetInnerHTML={{
+						__html: post.html
+					}}
 				/>
-			</footer>
+
+				<footer className={classes.postFooter}>
+					<Author />
+					<Feedback
+						twitterId={post.twitterId}
+						likes={likes}
+						comments={comments}
+					/>
+				</footer>
+			</article>
 		</Layout>
 	);
 };
@@ -72,13 +74,13 @@ const styles = {
 	postHeader: {
 		marginBottom: rhythm(1),
 		"& h1": {
-			marginBottom: rhythm(-0.1),
-			"&:hover $editLink": {
-				visibility: "visible"
-			}
+			marginBottom: rhythm(-0.1)
 		},
 		"& time": {
 			...scale(-0.4)
+		},
+		"&:hover $editLink": {
+			visibility: "visible"
 		}
 	},
 	editLink: {
@@ -91,7 +93,11 @@ const styles = {
 		visibility: "hidden"
 	},
 	meta: {
-		color: "var(--textMuted)"
+		color: "var(--textMuted)",
+		"& a": {
+			textDecoration: "none",
+			color: "var(--textMuted)"
+		}
 	},
 	postBody: {
 		"& img": {

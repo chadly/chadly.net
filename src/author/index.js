@@ -9,12 +9,13 @@ import Social from "./social";
 const Author = ({ classes }) => {
 	const {
 		site: {
-			siteMetadata: { author }
+			siteMetadata: { author, siteUrl }
 		}
 	} = useStaticQuery(graphql`
 		query AuthorQuery {
 			site {
 				siteMetadata {
+					siteUrl
 					author {
 						name
 						description
@@ -28,11 +29,19 @@ const Author = ({ classes }) => {
 	`);
 
 	return (
-		<div className={classes.container}>
-			<img src={pic} alt={author.name} className={classes.profileImg} />
+		<div className={`p-author h-card ${classes.container}`}>
+			<img
+				src={pic}
+				alt={author.name}
+				className={`u-photo ${classes.profileImg}`}
+			/>
 			<div className={classes.meta}>
-				<h3>{author.name}</h3>
-				<div className={classes.bio}>{author.description}</div>
+				<h3>
+					<a href={siteUrl} className="u-url p-name">
+						{author.name}
+					</a>
+				</h3>
+				<div className={`p-note ${classes.bio}`}>{author.description}</div>
 				<Social author={author} />
 			</div>
 		</div>
@@ -65,7 +74,12 @@ const styles = {
 	meta: {
 		"& h3": {
 			marginTop: rhythm(0.25),
-			marginBottom: rhythm(0.25)
+			marginBottom: rhythm(0.25),
+
+			"& a": {
+				textDecoration: "none",
+				color: "var(--textNormal)"
+			}
 		}
 	},
 	bio: {

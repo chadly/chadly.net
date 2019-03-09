@@ -14,17 +14,12 @@ const PostStub = ({
 	},
 	classes
 }) => (
-	<article
-		className={classes.post}
-		itemProp="blogPost"
-		itemScope
-		itemType="http://schema.org/BlogPosting"
-	>
-		<time dateTime={date} itemProp="datePublished">
+	<article className={`h-entry ${classes.post}`}>
+		<time dateTime={date} className="dt-published">
 			{dateFormatted}
 		</time>
 		<header>
-			<Link to={calculateCanonicalUrl({ slug })} itemProp="name headline url">
+			<Link to={calculateCanonicalUrl({ slug })} className="u-url p-name">
 				{title}
 			</Link>
 		</header>

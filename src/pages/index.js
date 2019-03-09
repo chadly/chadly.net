@@ -19,10 +19,12 @@ const RootIndex = ({ data }) => {
 			<Seo />
 			<CanonicalLink siteUrl={siteUrl} />
 
-			<Author />
-			{posts.map(({ node: { id, ...post } }) => (
-				<PostStub key={id} {...post} />
-			))}
+			<main role="main" className={`h-feed`}>
+				<Author />
+				{posts.map(({ node: { id, ...post } }) => (
+					<PostStub key={id} {...post} />
+				))}
+			</main>
 		</Layout>
 	);
 };
