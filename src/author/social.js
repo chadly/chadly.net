@@ -30,7 +30,6 @@ const AuthorSocial = ({ author: { github, twitter, keybase }, classes }) => {
 				show={!!keybase}
 				rel="me"
 			/>
-			<SocialIcon id="fas fa-rss" name="RSS" href={`/rss.xml`} show />
 		</ul>
 	);
 };
