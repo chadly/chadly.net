@@ -4,13 +4,15 @@ import injectSheet from "react-jss";
 import TwitterIntents from "./twitter";
 import Comments from "./comments";
 import Likes from "./likes";
+import Reposts from "./reposts";
 
 import { rhythm } from "../../theme/typography";
 
-const Feedback = ({ twitterId, likes, comments, classes }) => (
+const Feedback = ({ twitterId, likes, comments, reposts, classes }) => (
 	<div className={classes.root}>
 		<TwitterIntents twitterId={twitterId} />
 		<Likes likes={likes} />
+		<Reposts reposts={reposts} />
 		<Comments comments={comments} />
 	</div>
 );

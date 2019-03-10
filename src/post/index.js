@@ -19,7 +19,8 @@ const BlogPostTemplate = ({ data, classes }) => {
 		githubLink,
 		fileAbsolutePath,
 		comments,
-		likes
+		likes,
+		reposts
 	} = massage(data);
 
 	return (
@@ -63,6 +64,7 @@ const BlogPostTemplate = ({ data, classes }) => {
 						twitterId={post.twitterId}
 						likes={likes}
 						comments={comments}
+						reposts={reposts}
 					/>
 				</footer>
 			</article>

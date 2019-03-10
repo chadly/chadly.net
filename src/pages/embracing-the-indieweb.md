@@ -9,11 +9,7 @@ I've used Disqus comments on this site for a long time. At the time I set it up,
 
 I don't remember how I stumbled upon it, but the inspiration for this change came from the [IndieWeb](https://indieweb.org/), a group of hipsters with websites trying to take down THE MAN (aka the "corporate web"). I read through a bunch of their stuff and got really into it.
 
-Anyway, long story short, I decided to go with the distributed & standards-based [WebMentions](https://indieweb.org/Webmention):
-
-https://twitter.com/nhoizey/status/1017828818441134087
-
-This gives me control over my content again, doesn't subject my visitors to a bunch of ad-tracking nonsense, and allows me to remove bloat which was slowing my pages down.
+Anyway, long story short, I decided to go with the [distributed & standards-based](https://nicolas-hoizey.com/2017/07/so-long-disqus-hello-webmentions.html) [WebMentions](https://indieweb.org/Webmention). This gives me control over my content again, doesn't subject my visitors to a bunch of ad-tracking nonsense, and allows me to remove bloat which was slowing my pages down.
 
 ## Migrating Existing Comments
 

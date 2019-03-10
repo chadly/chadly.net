@@ -46,9 +46,11 @@ export default function massage({
 	comments.totalCount = allComments.length + webMentionComments.length;
 
 	const likes = get(allWebMentionEntry, "edges", [])
-		.filter(
-			w => w.node.wmProperty == "like-of" || w.node.wmProperty == "bookmark-of"
-		)
+		.filter(w => w.node.wmProperty == "like-of")
+		.map(w => w.node.author);
+
+	const reposts = get(allWebMentionEntry, "edges", [])
+		.filter(w => w.node.wmProperty == "repost-of")
 		.map(w => w.node.author);
 
 	return {
@@ -67,7 +69,8 @@ export default function massage({
 		githubLink,
 		fileAbsolutePath,
 		comments,
-		likes
+		likes,
+		reposts
 	};
 }
 
