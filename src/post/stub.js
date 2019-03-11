@@ -7,11 +7,16 @@ import { rhythm, scale, smallScreenMediaQuery } from "../theme/typography";
 import { calculate as calculateCanonicalUrl } from "../canonical";
 
 const PostStub = ({
-	frontmatter: { title, date, dateFormatted },
-	fields: {
-		slug,
-		readingTime: { text: readingTime }
+	post: {
+		frontmatter: { title, date, dateFormatted },
+		fields: {
+			slug,
+			readingTime: { text: readingTime }
+		}
 	},
+	commentCount,
+	likeCount,
+	repostCount,
 	classes
 }) => (
 	<article className={`h-entry ${classes.post}`}>
@@ -26,9 +31,26 @@ const PostStub = ({
 
 		<footer>
 			<span>{readingTime}</span>
+			<FeedbackBadge
+				count={commentCount}
+				label="Comment"
+				icon="fas fa-comments"
+			/>
+			<FeedbackBadge count={likeCount} label="Like" icon="fas fa-heart" />
+			<FeedbackBadge count={repostCount} label="Repost" icon="fas fa-retweet" />
 		</footer>
 	</article>
 );
+
+const FeedbackBadge = ({ count, label, icon }) => {
+	if (!count) return null;
+
+	return (
+		<span title={`${count} ${label}${count > 1 ? "s" : ""}`}>
+			<i className={icon} /> {count}
+		</span>
+	);
+};
 
 const styles = {
 	post: {
@@ -70,6 +92,11 @@ const styles = {
 			...scale(-0.4),
 			[smallScreenMediaQuery]: {
 				marginLeft: 0
+			},
+
+			"& span": {
+				display: "inline-block",
+				marginRight: rhythm(0.5)
 			}
 		}
 	}
