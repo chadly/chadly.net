@@ -55,6 +55,16 @@ const Layout = ({ children, classes }) => {
 						MIT License
 					</a>
 					.
+					<br />
+					<div className={classes.webring} title="Webrings are cool again">
+						<a href="https://xn--sr8hvo.ws/%F0%9F%93%97%F0%9F%93%AD%F0%9F%90%AF/previous">
+							←
+						</a>
+						🕸💍
+						<a href="https://xn--sr8hvo.ws/%F0%9F%93%97%F0%9F%93%AD%F0%9F%90%AF/next">
+							→
+						</a>
+					</div>
 				</footer>
 			</div>
 		</div>
@@ -88,6 +98,9 @@ const styles = {
 		borderTop: "1px solid var(--hr)",
 		marginTop: rhythm(1),
 		...scale(-0.5)
+	},
+	webring: {
+		textAlign: "center"
 	}
 };
 
