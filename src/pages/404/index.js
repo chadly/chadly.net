@@ -1,6 +1,7 @@
 import React from "react";
 import injectSheet from "react-jss";
 import { Link, graphql } from "gatsby";
+import Helmet from "react-helmet";
 
 import { scale } from "../../theme/typography";
 
@@ -14,20 +15,26 @@ const NotFoundPage = ({
 	},
 	classes
 }) => (
-	<div className={classes.container}>
-		<h1 className={classes.siteTitle} title={description}>
-			<Link to="/">{title}</Link>
-		</h1>
+	<>
+		<Helmet>
+			<title>Page Not Found - {title}</title>
+		</Helmet>
 
-		<Link to="/">
-			<img
-				src={img404}
-				alt="404 Page Not Found"
-				title="Go to the front page →"
-				className={classes.image}
-			/>
-		</Link>
-	</div>
+		<div className={classes.container}>
+			<h1 className={classes.siteTitle} title={description}>
+				<Link to="/">{title}</Link>
+			</h1>
+
+			<Link to="/">
+				<img
+					src={img404}
+					alt="404 Page Not Found"
+					title="Go to the front page →"
+					className={classes.image}
+				/>
+			</Link>
+		</div>
+	</>
 );
 
 const styles = {
