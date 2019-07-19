@@ -7,6 +7,8 @@ redirect_from:
   - /2014/03/live-tv-with-hauppauge-wintv-hvr2250-in-elementary-os
 ---
 
+import Alert from "../../src/alert";
+
 I've been using [elementary OS Luna](http://elementaryos.org/) lately, an Ubuntu derivative, and I really like it so far. It is very smooth and lightweight. Anyway, since I had to reinstall my OS, I've needed to setup all of my hardware again. Here is how I got my [WinTV-HVR2250](http://hauppauge.com/site/products/data_hvr2250.html) working.
 
 I followed the [guide on linuxtv.org](http://www.linuxtv.org/wiki/index.php/Hauppauge_WinTV-HVR-2200). Here are the steps that I ran to get my setup working.
@@ -69,12 +71,11 @@ sudo apt-get update
 sudo apt-get install tvheadend
 ```
 
-<div class="alert alert-warning">
-<i class="fa fa-exclamation-circle" title="Warning"></i>
+<Alert type="warning" title="Warning">
 
 I'm using the unstable PPA because the stable version [didn't correctly parse service names](https://tvheadend.org/issues/1695) from my over-the-air signal. **v3.9.385~g7d8d81a~precise** works great for me but <abbr title="Your mileage may vary">YMMV</abbr>.
 
-</div>
+</Alert>
 
 Once you install Tvheadend, you can access the web UI from `localhost:9981`. Go to _Configuration_ <i class="fa fa-arrow-right"></i> _DVB Inputs_ <i class="fa fa-arrow-right"></i> _Networks_. Add a new ATSC network for _us_NTSC_center_frequencies_8VSB_ if you are like me and trying to pick up HDTV over the air. Don't skip the initial scan for this network. Navigate to _TV Adapters_ and enable each of the dual tuners listed (they both showed up as Samsung tuners for me) with the network you just created.
 

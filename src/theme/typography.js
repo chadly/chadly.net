@@ -3,7 +3,6 @@ import Github from "typography-theme-github";
 
 import "./global.css";
 import "./prism.css";
-import "./bs-alerts.css";
 
 Github.baseFontSize = "18px";
 

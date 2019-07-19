@@ -5,9 +5,12 @@ date: '2017-08-16'
 twitterId: '897893849896321024'
 ---
 
+import Alert from "../../../src/alert";
+
 This site now runs on [Ghost](https://ghost.org/) in [Azure](https://azure.microsoft.com/) hosted for free[^1]. Yes, this blog has officially become nothing but me switching blog engines and then writing about it, but hey, maybe someone finds it useful? 🤷
 
-<abbr title="Too long; didn't read">tl;dr</abbr>
+### <abbr title="Too long; didn't read">tl;dr</abbr>
+
 1. Make a small change to ghost source code (for [iisnode](https://github.com/tjanczuk/iisnode))
 2. Use [Azure App Service free tier](https://azure.microsoft.com/en-us/services/app-service/) to host your blog
 3. Setup an [Azure CDN](https://azure.microsoft.com/en-us/services/cdn/) with a custom domain and SSL to act as a reverse proxy
@@ -135,11 +138,11 @@ Once your site is deployed, you will want to set some environment variables. You
 
 Make sure to _Save_ after setting that setting.
 
-<div class="alert alert-info">
-  <i class="fa fa-info-circle" title="Note"></i>
+<Alert type="info" title="Note">
 
-  You don't need to set the `NODE_ENV` as iisnode will set that to `production` for you automatically.
-</div>
+You don't need to set the `NODE_ENV` as iisnode will set that to `production` for you automatically.
+
+</Alert>
 
 ### A Working Site
 
@@ -203,12 +206,11 @@ Once you have all of this setup, your site will be exposed on 3 domains, _yoursi
 
 If you are worried about search engine penalties for duplicate content, don't be. Ghost will autogenerate a [canonical link element](https://support.google.com/webmasters/answer/139066?hl=en) on each page of your site using the `url` configured in your web app's _App Settings_ (which we setup earlier). You will want to update that URL now to your custom domain with HTTPS. And, yes, [canonical link elements work cross-domain](https://webmasters.googleblog.com/2009/12/handling-legitimate-cross-domain.html).
 
-<div class="alert alert-warning">
-<i class="fa fa-exclamation-circle" title="Warning"></i>
+<Alert type="warning" title="Warning">
 
 You explicitly don't want to setup `301` redirects from your web app to the canonical domain. The CDN reverse proxy would then not be able to access the web app. Just think of the _azurewebsites.net_ version of your site as the non-cached version of your site where you can see your changes before the rest of the world sees them on your "real" site.
 
-</div>
+</Alert>
 
 ## Final Product
 

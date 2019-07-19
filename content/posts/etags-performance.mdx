@@ -5,6 +5,8 @@ date: '2017-08-19'
 twitterId: '898951056557834240'
 ---
 
+import Alert from "../../src/alert";
+
 I spent a lot of time trying to get the caching for this site right. I had [very specific goals in mind](/ghost-on-azure/#final-product) with the caching and I think I achieved them. But I had to disable [etags](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/ETag) to do it.
 
 ## What do ETags do anyway?
@@ -15,12 +17,11 @@ HTTP provides a number of different cache headers that servers can utilize to co
 * [`last-modified`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Last-Modified)
 * [`etag`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/ETag)
 
-<div class="alert alert-info">
-<i class="fa fa-info-circle" title="Aside"></i>
+<Alert type="info" title="Aside">
 
 I'm only really going to be talking about `cache-control: max-age` vs `etag`. ETags are basically a more precise version (depending on how the server implements it) of the `last-modified` header which only has precision to the nearest second.
 
-</div>
+</Alert>
 
 What those headers basically boil down to is two different strategies for caching:
 
@@ -31,12 +32,11 @@ What those headers basically boil down to is two different strategies for cachin
     * For cache hits, this requires a network request to contact the server, but avoids bandwidth costs of re-downloading.
     * Depending on the size of the content, the overhead of the request, and how the server calculates whether or not the content is stale, it might take the same amount of time & resources to do this as just redownloading the content in the first place.
 
-<div class="alert alert-info">
-<i class="fa fa-info-circle" title="Note"></i>
+<Alert type="info" title="Note">
 
 _Client_ can refer to the user's browser and/or can also refer to any reverse proxies & caches that your content passes through along the way to the user.
 
-</div>
+</Alert>
 
 Each caching strategy will provide different benefits to different parties. Is the goal to provide the most up-to-date data to the client, reduce the compute resources necessary on the server, or maybe reduce the network footprint for the client? Your answer may be different for different types of content.
 

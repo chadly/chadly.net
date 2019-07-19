@@ -9,6 +9,8 @@ redirect_from:
   - /2009/05/dependency-injection-with-nhi
 ---
 
+import Alert from "../../src/alert";
+
 [Fabio](http://fabiomaulo.blogspot.com) just recently committed changes to NHibernate which centralize all of NHibernate’s `Activator.CreateInstance` calls to an `IObjectsFactory` instance. This is exciting because this gives us an opportunity to provide dependency injection services to all of those NHibernate-specific infrastructure types (IUserType, etc.).
 
 To give you a concrete example of what I am talking about, check back to [Ayende’s EncryptedStringUserType](http://ayende.com/Blog/archive/2008/07/31/Entities-dependencies-best-practices.aspx). Rather than getting an instance of `ICryptoProvider` via a singleton accessor, it is now possible to have NHibernate inject the `ICryptoProvider` dependency through the constructor. This is very valuable in cases where the `ICryptoProvider` has other dependencies or has some parameters that need to come from configuration. You get full support from the container for that.
@@ -28,9 +30,8 @@ Then just enjoy the DI goodness integrated with NHibernate. If any type NHibern
 
 ~~The code can be found here.  I am going to contact the Autofac guys and see about putting this into the Autofac.Contrib project.~~
 
-<div class="alert alert-warning">
-<i class="fa fa-exclamation-circle" title="Update"></i>
+<Alert type="warning" title="Update">
 
-This is now included in the [Autofac.Contrib project](http://code.google.com/p/autofac/downloads/list) – [check it out here](http://code.google.com/p/autofac/source/browse/#svn/trunk/contrib/Source/AutofacContrib.NHibernate).
+This is now included in the [Autofac.Contrib project](http://code.google.com/p/autofac/downloads/list).
 
-</div>
+</Alert>

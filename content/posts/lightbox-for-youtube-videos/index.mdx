@@ -9,6 +9,7 @@ redirect_from:
 ---
 
 import Lightbox from "./lightbox";
+import Alert from "../../../src/alert";
 
 On one of my recent projects, I needed to embed YouTube videos on a page using a lightbox-type plugin.  Naturally, the first thing I do when confronted with something like this is to hit up Google.  I ended up finding a few different solutions.
 
@@ -40,9 +41,8 @@ This has the great advantage of gracefully scaling down for browsers with javasc
 
 You can see a <Lightbox href="https://www.youtube.com/watch?v=rP-2ksWFk4o">demo of it here</Lightbox> and ~~get the files here~~.
 
-<div class="alert alert-warning">
-<i class="fa fa-exclamation-circle" title="Update"></i>
+<Alert type="warning" title="Update">
 
 [Fancybox](http://fancyapps.com/fancybox/) now supports Youtube videos natively negating the need for the modified fancybox files here.
 
-</div>
+</Alert>
