@@ -1,14 +1,12 @@
 import { get, sortBy } from "lodash";
 
 export default function massage({
-	markdownRemark: {
+	mdx: {
 		frontmatter: { id, title, date, dateFormatted, twitterId },
 		fields: { slug },
-		html,
+		body,
 		excerpt,
-		fields: {
-			readingTime: { text: readingTime }
-		},
+		timeToRead,
 		fileAbsolutePath
 	},
 	site: {
@@ -61,9 +59,9 @@ export default function massage({
 			dateFormatted,
 			twitterId,
 			slug,
-			html,
+			body,
 			excerpt,
-			readingTime
+			readingTime: `${timeToRead} min read`
 		},
 		siteUrl,
 		githubLink,

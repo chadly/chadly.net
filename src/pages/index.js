@@ -11,7 +11,7 @@ import CanonicalLink from "../canonical";
 import { get } from "lodash";
 
 const RootIndex = ({ data }) => {
-	const posts = get(data, "allMarkdownRemark.edges", []);
+	const posts = get(data, "allMdx.edges", []);
 	const siteUrl = get(data, "site.siteMetadata.siteUrl");
 	const disqusComments = get(data, "allDisqusThread.edges", []).map(
 		e => e.node
@@ -64,7 +64,7 @@ export const pageQuery = graphql`
 				siteUrl
 			}
 		}
-		allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+		allMdx(sort: { fields: [frontmatter___date], order: DESC }) {
 			edges {
 				node {
 					id
@@ -76,10 +76,8 @@ export const pageQuery = graphql`
 					}
 					fields {
 						slug
-						readingTime {
-							text
-						}
 					}
+					timeToRead
 				}
 			}
 		}

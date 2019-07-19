@@ -9,10 +9,8 @@ import { calculate as calculateCanonicalUrl } from "../canonical";
 const PostStub = ({
 	post: {
 		frontmatter: { title, date, dateFormatted },
-		fields: {
-			slug,
-			readingTime: { text: readingTime }
-		}
+		fields: { slug },
+		timeToRead
 	},
 	commentCount,
 	likeCount,
@@ -30,7 +28,7 @@ const PostStub = ({
 		</header>
 
 		<footer>
-			<span>{readingTime}</span>
+			<span>{`${timeToRead} min read`}</span>
 			<FeedbackBadge
 				count={commentCount}
 				label="Comment"
