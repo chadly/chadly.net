@@ -21,7 +21,10 @@ exports.onCreateNode = async ({ node, getNode, actions, getNodes }) => {
 	}
 };
 
-exports.createPages = async ({ graphql, actions: { createPage } }) => {
+exports.createPages = async ({
+	graphql,
+	actions: { createPage, createRedirect }
+}) => {
 	const post = path.resolve("./src/post/index.js");
 
 	const result = await graphql(
@@ -32,6 +35,7 @@ exports.createPages = async ({ graphql, actions: { createPage } }) => {
 						node {
 							frontmatter {
 								id
+								redirect_from
 							}
 							fields {
 								slug
@@ -53,7 +57,7 @@ exports.createPages = async ({ graphql, actions: { createPage } }) => {
 	posts.forEach(
 		({
 			node: {
-				frontmatter: { id: threadId },
+				frontmatter: { id: threadId, redirect_from: redirectFrom },
 				fields: { slug }
 			}
 		}) => {
@@ -62,6 +66,17 @@ exports.createPages = async ({ graphql, actions: { createPage } }) => {
 				component: post,
 				context: { slug, threadId }
 			});
+
+			if (redirectFrom && redirectFrom.length) {
+				redirectFrom.forEach(from => {
+					createRedirect({
+						fromPath: from,
+						toPath: slug,
+						isPermanent: true,
+						redirectInBrowser: true
+					});
+				});
+			}
 		}
 	);
 };
