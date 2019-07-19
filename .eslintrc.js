@@ -8,7 +8,7 @@ module.exports = {
     "civicsource"
   ],
   rules:{
-    "react/jsx-no-bind": false
+    "react/jsx-no-bind": 0
   },
   parser: "babel-eslint",
   parserOptions: {
