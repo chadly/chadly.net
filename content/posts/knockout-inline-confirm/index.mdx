@@ -4,6 +4,8 @@ title: Knockout Inline Confirm Component
 date: '2014-02-02'
 ---
 
+import KnockoutDemo from "./demo";
+
 The good old native confirmation dialog -- have you ever been writing a web app and found yourself using one of these?
 
 ![Are you really sure you want to do that? No, but really, think about it before you just quickly dismiss this popup without reading it.](./confirm.png)
@@ -20,9 +22,7 @@ However, for actions that are not as severe as permanently deleting a git reposi
 
 A pattern we have been using at [CivicSource](https://www.civicsource.com/) is the inline-confirm. Try out the demo:
 
-<div id="knockout-confirm-demo" style="text-align: center">
-	<button data-bind="inlineConfirm: ['Do the thing', 'Are you sure you want to do the thing?', 'Doing the thing…'], submitFunction: doit" class="btn btn-primary"></button>
-</div>
+<KnockoutDemo />
 
 We wrapped up the code to do this in a reusable knockout binding handler. To use it, it is just as easy as slapping a `confirm` in your code.
 
