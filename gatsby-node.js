@@ -2,7 +2,6 @@
 /* eslint-disable import/no-commonjs */
 
 const path = require("path");
-const fs = require("fs");
 const { createFilePath } = require("gatsby-source-filesystem");
 
 exports.onCreateNode = async ({ node, getNode, actions, getNodes }) => {
@@ -23,7 +22,7 @@ exports.onCreateNode = async ({ node, getNode, actions, getNodes }) => {
 };
 
 exports.createPages = async ({ graphql, actions: { createPage } }) => {
-	const docPage = path.resolve("./src/post/index.js");
+	const post = path.resolve("./src/post/index.js");
 
 	const result = await graphql(
 		`
@@ -55,22 +54,12 @@ exports.createPages = async ({ graphql, actions: { createPage } }) => {
 		({
 			node: {
 				frontmatter: { id: threadId },
-				fields: { slug },
-				fileAbsolutePath
+				fields: { slug }
 			}
 		}) => {
-			let templatePath = path.join(
-				path.dirname(fileAbsolutePath),
-				"_template.js"
-			);
-
-			if (!fs.existsSync(templatePath)) {
-				templatePath = docPage;
-			}
-
 			createPage({
 				path: slug,
-				component: templatePath,
+				component: post,
 				context: { slug, threadId }
 			});
 		}
