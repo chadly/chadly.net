@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { graphql } from "gatsby";
 
-import Post from "../../post";
+import Post from "../../../src/post";
 
 import ko from "knockout";
 import "knockout-inline-confirm";

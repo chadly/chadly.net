@@ -2,7 +2,7 @@ import React from "react";
 import Helmet from "react-helmet";
 import { graphql } from "gatsby";
 
-import Post from "../../post";
+import Post from "../../../src/post";
 
 const LightboxYoutubePost = props => (
 	<>

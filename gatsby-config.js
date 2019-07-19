@@ -53,14 +53,14 @@ const plugins = [
 	{
 		resolve: "gatsby-source-filesystem",
 		options: {
-			name: "pages",
-			path: `${__dirname}/src/pages`
+			name: "posts",
+			path: `${__dirname}/content/posts`
 		}
 	},
 	{
 		resolve: "gatsby-source-disqus-xml",
 		options: {
-			filePath: `${__dirname}/src/disqus.xml`
+			filePath: `${__dirname}/content/disqus.xml`
 		}
 	},
 	"gatsby-plugin-jss",
