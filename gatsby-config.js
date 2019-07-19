@@ -50,7 +50,7 @@ const plugins = [
 		}
 	},
 	"gatsby-plugin-catch-links",
-	"gatsby-redirect-from",
+	// "gatsby-redirect-from",
 	"gatsby-plugin-react-helmet",
 	{
 		resolve: "gatsby-plugin-typography",

@@ -7,6 +7,8 @@ import Seo from "../seo";
 import Author from "../author";
 import { rhythm, scale } from "../theme/typography";
 
+import MDXRenderer from "gatsby-plugin-mdx/mdx-renderer";
+
 import CanonicalLink, { calculate as getPermalink } from "../canonical";
 import massage from "./data";
 import Feedback from "./feedback";
@@ -50,13 +52,9 @@ const BlogPostTemplate = ({ data, classes }) => {
 					</div>
 				</header>
 
-				<main
-					role="main"
-					className={`e-content ${classes.postBody}`}
-					dangerouslySetInnerHTML={{
-						__html: post.html
-					}}
-				/>
+				<main role="main" className={`e-content ${classes.postBody}`}>
+					<MDXRenderer>{post.body}</MDXRenderer>
+				</main>
 
 				<footer className={classes.postFooter}>
 					<Author />
@@ -136,7 +134,7 @@ export const pageQuery = graphql`
 				githubLink
 			}
 		}
-		markdownRemark(fields: { slug: { eq: $slug } }) {
+		mdx(fields: { slug: { eq: $slug } }) {
 			frontmatter {
 				id
 				title
@@ -147,13 +145,9 @@ export const pageQuery = graphql`
 			fields {
 				slug
 			}
-			html
+			body
 			excerpt
-			fields {
-				readingTime {
-					text
-				}
-			}
+			timeToRead
 			fileAbsolutePath
 		}
 		disqusThread(threadId: { eq: $threadId }) {

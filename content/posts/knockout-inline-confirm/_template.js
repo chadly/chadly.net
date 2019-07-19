@@ -37,7 +37,7 @@ export const pageQuery = graphql`
 				githubLink
 			}
 		}
-		markdownRemark(fields: { slug: { eq: $slug } }) {
+		mdx(fields: { slug: { eq: $slug } }) {
 			frontmatter {
 				id
 				title
@@ -47,13 +47,9 @@ export const pageQuery = graphql`
 			fields {
 				slug
 			}
-			html
+			body
 			excerpt
-			fields {
-				readingTime {
-					text
-				}
-			}
+			timeToRead
 			fileAbsolutePath
 		}
 		disqusThread(threadId: { eq: $threadId }) {
