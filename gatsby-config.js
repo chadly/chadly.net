@@ -18,27 +18,35 @@ const siteMetadata = {
 	}
 };
 
+const gatsbyRemarkPlugins = [
+	"gatsby-remark-copy-linked-files",
+	"gatsby-remark-autolink-headers",
+	"gatsby-remark-prismjs",
+	"gatsby-remark-reading-time",
+	"gatsby-remark-smartypants",
+	"@weknow/gatsby-remark-twitter",
+	{
+		resolve: "gatsby-remark-images",
+		options: {
+			maxWidth: 833, // max width of content container in px
+			linkImagesToOriginal: false
+		}
+	}
+];
+
 const plugins = [
 	"gatsby-plugin-sharp",
 	"gatsby-plugin-favicon",
 	{
+		resolve: "gatsby-plugin-mdx",
+		options: {
+			gatsbyRemarkPlugins
+		}
+	},
+	{
 		resolve: "gatsby-transformer-remark",
 		options: {
-			plugins: [
-				"gatsby-remark-copy-linked-files",
-				"gatsby-remark-autolink-headers",
-				"gatsby-remark-prismjs",
-				"gatsby-remark-reading-time",
-				"gatsby-remark-smartypants",
-				"@weknow/gatsby-remark-twitter",
-				{
-					resolve: "gatsby-remark-images",
-					options: {
-						maxWidth: 833, // max width of content container in px
-						linkImagesToOriginal: false
-					}
-				}
-			]
+			plugins: gatsbyRemarkPlugins
 		}
 	},
 	"gatsby-plugin-catch-links",
