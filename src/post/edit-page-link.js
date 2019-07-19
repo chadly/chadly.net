@@ -1,7 +1,7 @@
 import React from "react";
 
 const EditPageLink = ({ githubLink, fileAbsolutePath, className }) => {
-	const idx = fileAbsolutePath.indexOf("src/pages");
+	const idx = fileAbsolutePath.indexOf("content/posts");
 
 	if (idx < 0) return null;
 
