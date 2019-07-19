@@ -12,7 +12,7 @@
   },
   "scripts": {
     "start": "gatsby develop",
-    "lint": "eslint --ignore-pattern public --ignore-pattern static .",
+    "lint": "eslint --ignore-pattern public --ignore-pattern static --ignore-pattern fancy.js .",
     "build": "yarn run lint && gatsby build",
     "preview": "gatsby build && gatsby serve"
   },
