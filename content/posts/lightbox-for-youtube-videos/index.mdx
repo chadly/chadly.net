@@ -8,9 +8,7 @@ redirect_from:
   - /demos/video-lightbox.html
 ---
 
-import LightboxLoader from "./loader";
-
-<LightboxLoader />
+import Lightbox from "./lightbox";
 
 On one of my recent projects, I needed to embed YouTube videos on a page using a lightbox-type plugin.  Naturally, the first thing I do when confronted with something like this is to hit up Google.  I ended up finding a few different solutions.
 
@@ -40,7 +38,7 @@ $(document).ready(function() {
 
 This has the great advantage of gracefully scaling down for browsers with javascript disabled and just providing a link to the video.  For those with javascript enabled, the script automatically detects the link to YouTube (via regex) and handles embedding the video into a nice little popup window.
 
-You can see a <a href="https://www.youtube.com/watch?v=rP-2ksWFk4o" rel="fancyvideo">demo of it here</a> and ~~get the files here~~.
+You can see a <Lightbox href="https://www.youtube.com/watch?v=rP-2ksWFk4o">demo of it here</Lightbox> and ~~get the files here~~.
 
 <div class="alert alert-warning">
 <i class="fa fa-exclamation-circle" title="Update"></i>
