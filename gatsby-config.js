@@ -22,7 +22,6 @@ const gatsbyRemarkPlugins = [
 	"gatsby-remark-copy-linked-files",
 	"gatsby-remark-autolink-headers",
 	"gatsby-remark-prismjs",
-	"gatsby-remark-reading-time",
 	"gatsby-remark-smartypants",
 	"@weknow/gatsby-remark-twitter",
 	{
