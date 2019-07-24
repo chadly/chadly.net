@@ -1,6 +1,6 @@
 import React from "react";
 import { graphql } from "gatsby";
-import injectSheet from "react-jss";
+import { createUseStyles } from "react-jss";
 
 import Layout from "../layout";
 import Seo from "../seo";
@@ -14,7 +14,9 @@ import massage from "./data";
 import Feedback from "./feedback";
 import EditPageLink from "./edit-page-link";
 
-const BlogPostTemplate = ({ data, classes }) => {
+const BlogPostTemplate = ({ data }) => {
+	const classes = useStyles();
+
 	const {
 		post,
 		siteUrl,
@@ -70,7 +72,7 @@ const BlogPostTemplate = ({ data, classes }) => {
 	);
 };
 
-const styles = {
+const useStyles = createUseStyles({
 	postHeader: {
 		marginBottom: rhythm(1),
 		"& h1": {
@@ -122,9 +124,9 @@ const styles = {
 		float: "right",
 		...scale(-0.4)
 	}
-};
+});
 
-export default injectSheet(styles)(BlogPostTemplate);
+export default BlogPostTemplate;
 
 export const pageQuery = graphql`
 	query BlogPostBySlug($slug: String!, $threadId: String!) {

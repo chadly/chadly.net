@@ -1,12 +1,14 @@
 import React from "react";
-import injectSheet from "react-jss";
+import { createUseStyles } from "react-jss";
 import { useStaticQuery, graphql } from "gatsby";
 import { rhythm, scale, smallScreenMediaQuery } from "../theme/typography";
 
 import pic from "./me.jpg";
 import Social from "./social";
 
-const Author = ({ classes }) => {
+const Author = () => {
+	const classes = useStyles();
+
 	const {
 		site: {
 			siteMetadata: { author, siteUrl }
@@ -48,7 +50,7 @@ const Author = ({ classes }) => {
 	);
 };
 
-const styles = {
+const useStyles = createUseStyles({
 	container: {
 		display: "flex",
 		marginBottom: rhythm(1),
@@ -87,6 +89,6 @@ const styles = {
 			marginBottom: 0
 		}
 	}
-};
+});
 
-export default injectSheet(styles)(Author);
+export default Author;

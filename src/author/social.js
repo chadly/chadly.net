@@ -1,8 +1,10 @@
 import React from "react";
-import injectSheet from "react-jss";
+import { createUseStyles } from "react-jss";
 import { rhythm } from "../theme/typography";
 
-const AuthorSocial = ({ author: { github, twitter, keybase }, classes }) => {
+const AuthorSocial = ({ author: { github, twitter, keybase } }) => {
+	const classes = useStyles();
+
 	if (!github && !twitter && !keybase) {
 		return null;
 	}
@@ -46,7 +48,7 @@ const SocialIcon = ({ id, name, show, ...props }) => {
 	);
 };
 
-const styles = {
+const useStyles = createUseStyles({
 	container: {
 		listStyle: "none",
 		margin: 0,
@@ -64,6 +66,6 @@ const styles = {
 			}
 		}
 	}
-};
+});
 
-export default injectSheet(styles)(AuthorSocial);
+export default AuthorSocial;

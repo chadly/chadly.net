@@ -1,11 +1,13 @@
 import React from "react";
 import { Link, useStaticQuery, graphql } from "gatsby";
 import Helmet from "react-helmet";
-import injectSheet from "react-jss";
+import { createUseStyles } from "react-jss";
 
 import { rhythm, scale } from "./theme/typography";
 
-const Layout = ({ children, classes }) => {
+const Layout = ({ children, ...props }) => {
+	const classes = useStyles(props);
+
 	const {
 		site: {
 			siteMetadata: { title, description }
@@ -71,7 +73,7 @@ const Layout = ({ children, classes }) => {
 	);
 };
 
-const styles = {
+const useStyles = createUseStyles({
 	root: {
 		color: "var(--textNormal)"
 	},
@@ -102,6 +104,6 @@ const styles = {
 	webring: {
 		textAlign: "center"
 	}
-};
+});
 
-export default injectSheet(styles)(Layout);
+export default Layout;

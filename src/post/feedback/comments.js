@@ -1,9 +1,11 @@
 import React from "react";
-import injectSheet from "react-jss";
+import { createUseStyles } from "react-jss";
 import moment from "moment";
 import { rhythm, scale } from "../../theme/typography";
 
-const CommentsRoot = ({ comments, classes }) => {
+const CommentsRoot = ({ comments }) => {
+	const classes = useStyles();
+
 	if (!comments || !comments.length) return null;
 
 	return (
@@ -62,7 +64,7 @@ const Comments = ({ comments, classes }) => {
 	);
 };
 
-const styles = {
+const useStyles = createUseStyles({
 	root: {
 		margin: 0
 	},
@@ -100,6 +102,6 @@ const styles = {
 			marginBottom: 0
 		}
 	}
-};
+});
 
-export default injectSheet(styles)(CommentsRoot);
+export default CommentsRoot;

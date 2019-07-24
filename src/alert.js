@@ -1,12 +1,16 @@
 import React from "react";
-import injectSheet from "react-jss";
+import { createUseStyles } from "react-jss";
 
-const Alert = ({ type = "info", title, children, classes }) => (
-	<div className={classes[`alert-${type}`]}>
-		<Icon type={type} title={title} />
-		{children}
-	</div>
-);
+const Alert = ({ type = "info", title, children }) => {
+	const classes = useStyles();
+
+	return (
+		<div className={classes[`alert-${type}`]}>
+			<Icon type={type} title={title} />
+			{children}
+		</div>
+	);
+};
 
 const Icon = ({ type, title }) => {
 	if (type == "info") {
@@ -20,7 +24,7 @@ const Icon = ({ type, title }) => {
 	return null;
 };
 
-const styles = {
+const useStyles = createUseStyles({
 	alert: {
 		padding: "15px",
 		marginBottom: "20px",
@@ -117,6 +121,6 @@ const styles = {
 			color: "#843534"
 		}
 	}
-};
+});
 
-export default injectSheet(styles)(Alert);
+export default Alert;

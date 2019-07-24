@@ -1,8 +1,10 @@
 import React from "react";
-import injectSheet from "react-jss";
+import { createUseStyles } from "react-jss";
 import { rhythm, scale } from "../../theme/typography";
 
-const TwitterIntents = ({ twitterId, classes }) => {
+const TwitterIntents = ({ twitterId }) => {
+	const classes = useStyles();
+
 	if (!twitterId) return null;
 
 	return (
@@ -38,7 +40,7 @@ const TwitterIntents = ({ twitterId, classes }) => {
 	);
 };
 
-const styles = {
+const useStyles = createUseStyles({
 	root: {
 		textAlign: "right",
 		"& li": {
@@ -47,6 +49,6 @@ const styles = {
 			...scale(-0.2)
 		}
 	}
-};
+});
 
-export default injectSheet(styles)(TwitterIntents);
+export default TwitterIntents;

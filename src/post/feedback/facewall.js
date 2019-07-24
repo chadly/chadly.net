@@ -1,8 +1,10 @@
 import React from "react";
-import injectSheet from "react-jss";
+import { createUseStyles } from "react-jss";
 import { rhythm } from "../../theme/typography";
 
-const FaceWall = ({ faces, classes }) => {
+const FaceWall = ({ faces }) => {
+	const classes = useStyles();
+
 	if (!faces || !faces.length) return null;
 
 	return (
@@ -20,7 +22,7 @@ const FaceWall = ({ faces, classes }) => {
 	);
 };
 
-const styles = {
+const useStyles = createUseStyles({
 	root: {
 		margin: 0
 	},
@@ -34,6 +36,6 @@ const styles = {
 		width: rhythm(1),
 		height: rhythm(1)
 	}
-};
+});
 
-export default injectSheet(styles)(FaceWall);
+export default FaceWall;

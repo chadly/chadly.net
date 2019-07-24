@@ -1,5 +1,5 @@
 import React from "react";
-import injectSheet from "react-jss";
+import { createUseStyles } from "react-jss";
 import { Link, graphql } from "gatsby";
 import Helmet from "react-helmet";
 
@@ -12,32 +12,35 @@ const NotFoundPage = ({
 		site: {
 			siteMetadata: { title, description }
 		}
-	},
-	classes
-}) => (
-	<>
-		<Helmet>
-			<title>Page Not Found - {title}</title>
-		</Helmet>
+	}
+}) => {
+	const classes = useStyles();
 
-		<div className={classes.container}>
-			<h1 className={classes.siteTitle} title={description}>
-				<Link to="/">{title}</Link>
-			</h1>
+	return (
+		<>
+			<Helmet>
+				<title>Page Not Found - {title}</title>
+			</Helmet>
 
-			<Link to="/">
-				<img
-					src={img404}
-					alt="404 Page Not Found"
-					title="Go to the front page →"
-					className={classes.image}
-				/>
-			</Link>
-		</div>
-	</>
-);
+			<div className={classes.container}>
+				<h1 className={classes.siteTitle} title={description}>
+					<Link to="/">{title}</Link>
+				</h1>
 
-const styles = {
+				<Link to="/">
+					<img
+						src={img404}
+						alt="404 Page Not Found"
+						title="Go to the front page →"
+						className={classes.image}
+					/>
+				</Link>
+			</div>
+		</>
+	);
+};
+
+const useStyles = createUseStyles({
 	container: {
 		textAlign: "center",
 		color: "var(--textNormal)"
@@ -57,9 +60,9 @@ const styles = {
 			color: `inherit`
 		}
 	}
-};
+});
 
-export default injectSheet(styles)(NotFoundPage);
+export default NotFoundPage;
 
 export const pageQuery = graphql`
 	query NotFoundQuery {

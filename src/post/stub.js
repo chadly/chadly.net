@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "gatsby";
 
-import injectSheet from "react-jss";
+import { createUseStyles } from "react-jss";
 import { rhythm, scale, smallScreenMediaQuery } from "../theme/typography";
 
 import { calculate as calculateCanonicalUrl } from "../canonical";
@@ -14,31 +14,38 @@ const PostStub = ({
 	},
 	commentCount,
 	likeCount,
-	repostCount,
-	classes
-}) => (
-	<article className={`h-entry ${classes.post}`}>
-		<time dateTime={date} className="dt-published">
-			{dateFormatted}
-		</time>
-		<header>
-			<Link to={calculateCanonicalUrl({ slug })} className="u-url p-name">
-				{title}
-			</Link>
-		</header>
+	repostCount
+}) => {
+	const classes = useStyles();
 
-		<footer>
-			<span>{`${timeToRead} min read`}</span>
-			<FeedbackBadge
-				count={commentCount}
-				label="Comment"
-				icon="fas fa-comments"
-			/>
-			<FeedbackBadge count={likeCount} label="Like" icon="fas fa-heart" />
-			<FeedbackBadge count={repostCount} label="Repost" icon="fas fa-retweet" />
-		</footer>
-	</article>
-);
+	return (
+		<article className={`h-entry ${classes.post}`}>
+			<time dateTime={date} className="dt-published">
+				{dateFormatted}
+			</time>
+			<header>
+				<Link to={calculateCanonicalUrl({ slug })} className="u-url p-name">
+					{title}
+				</Link>
+			</header>
+
+			<footer>
+				<span>{`${timeToRead} min read`}</span>
+				<FeedbackBadge
+					count={commentCount}
+					label="Comment"
+					icon="fas fa-comments"
+				/>
+				<FeedbackBadge count={likeCount} label="Like" icon="fas fa-heart" />
+				<FeedbackBadge
+					count={repostCount}
+					label="Repost"
+					icon="fas fa-retweet"
+				/>
+			</footer>
+		</article>
+	);
+};
 
 const FeedbackBadge = ({ count, label, icon }) => {
 	if (!count) return null;
@@ -50,7 +57,7 @@ const FeedbackBadge = ({ count, label, icon }) => {
 	);
 };
 
-const styles = {
+const useStyles = createUseStyles({
 	post: {
 		marginTop: {
 			top: rhythm(0.5),
@@ -98,6 +105,6 @@ const styles = {
 			}
 		}
 	}
-};
+});
 
-export default injectSheet(styles)(PostStub);
+export default PostStub;
