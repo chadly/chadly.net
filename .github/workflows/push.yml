@@ -1,0 +1,16 @@
+on: push
+name: Lint on push
+jobs:
+  installDependencies:
+    name: Install Dependencies
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    - name: Install Dependencies
+      uses: nuxt/actions-yarn@master
+      with:
+        args: install
+    - name: Lint
+      uses: nuxt/actions-yarn@master
+      with:
+        args: lint
