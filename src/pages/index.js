@@ -27,6 +27,8 @@ const RootIndex = ({ data }) => {
 
 			<main role="main" className={`h-feed`}>
 				<Author />
+
+				<h1>8==========D~~~~~</h1>
 				{posts.map(({ node: { id, ...post } }) => {
 					let cm = disqusComments.find(t => t.threadId == post.frontmatter.id);
 					let wm = webmentions.filter(w => w.fields.slug == post.fields.slug);
