@@ -1,6 +1,8 @@
 /* eslint-disable import/no-commonjs */
 require("dotenv").config();
 
+const calculateCanonicalUrl = require("./src/canonical/calculate");
+
 const { NODE_ENV, CONTEXT: NETLIFY_ENV = NODE_ENV } = process.env;
 
 const siteMetadata = {
@@ -90,6 +92,70 @@ const plugins = [
 					host: null
 				}
 			}
+		}
+	},
+	{
+		resolve: `gatsby-plugin-feed`,
+		options: {
+			query: `
+			{
+				site {
+					siteMetadata {
+						title
+						description
+						siteUrl
+						site_url: siteUrl
+					}
+				}
+			}`,
+			feeds: [
+				{
+					serialize: ({ query: { site, allMdx } }) => {
+						return allMdx.edges.map(
+							({
+								node: {
+									frontmatter: { id, title, date },
+									fields: { slug },
+									excerpt
+								}
+							}) => {
+								const url = calculateCanonicalUrl({
+									siteUrl: site.siteMetadata.siteUrl,
+									slug: slug
+								});
+
+								return {
+									title,
+									description: excerpt,
+									date,
+									url,
+									guid: id
+								};
+							}
+						);
+					},
+					query: `
+					{
+						allMdx(sort: { fields: [frontmatter___date], order: DESC }) {
+							edges {
+								node {
+									frontmatter {
+										id
+										title
+										date(formatString: "YYYY-MM-DD")
+									}
+									fields {
+										slug
+									}
+									excerpt
+								}
+							}
+						}
+					}`,
+					output: "/rss.xml",
+					title: siteMetadata.title
+				}
+			]
 		}
 	}
 ];
