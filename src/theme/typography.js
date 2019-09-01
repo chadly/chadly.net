@@ -2,7 +2,6 @@ import Typography from "typography";
 import Github from "typography-theme-github";
 
 import "./global.css";
-import "./prism.css";
 
 Github.baseFontSize = "18px";
 
