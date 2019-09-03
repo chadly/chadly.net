@@ -13,7 +13,7 @@
   "scripts": {
     "start": "gatsby develop",
     "lint": "eslint --ignore-pattern public --ignore-pattern static --ignore-pattern fancy.js .",
-    "build": "npm run lint && gatsby build",
+    "build": "gatsby build",
     "preview": "gatsby build && gatsby serve"
   },
   "dependencies": {
