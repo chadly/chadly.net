@@ -4,8 +4,8 @@ import ko from "knockout";
 import "knockout-inline-confirm";
 
 function ViewModel() {
-	this.doit = function() {
-		setTimeout(function() {
+	this.doit = function () {
+		setTimeout(function () {
 			alert("the thing is done!");
 		}, 1000);
 	};

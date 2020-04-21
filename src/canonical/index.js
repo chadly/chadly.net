@@ -1,5 +1,5 @@
 import React from "react";
-import Helmet from "react-helmet";
+import { Helmet } from "react-helmet";
 import calculate from "./calculate";
 
 const CanonicalLink = ({ siteUrl, slug }) => {

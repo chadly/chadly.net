@@ -1,6 +1,6 @@
 import React from "react";
 import { Link, useStaticQuery, graphql } from "gatsby";
-import Helmet from "react-helmet";
+import { Helmet } from "react-helmet";
 import { createUseStyles } from "react-jss";
 
 import { rhythm, scale } from "./theme/typography";

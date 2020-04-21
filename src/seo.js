@@ -1,5 +1,5 @@
 import React from "react";
-import Helmet from "react-helmet";
+import { Helmet } from "react-helmet";
 import { useStaticQuery, graphql } from "gatsby";
 
 import AuthorPhoto from "./author/me.jpg";
@@ -52,9 +52,7 @@ const Seo = ({ title, description }) => {
 			) : null}
 			<meta
 				name="twitter:image"
-				content={Uri(AuthorPhoto)
-					.origin(siteUrl)
-					.toString()}
+				content={Uri(AuthorPhoto).origin(siteUrl).toString()}
 			/>
 			<meta name="twitter:title" content={title} />
 			<meta name="twitter:description" content={desc} />

@@ -14,9 +14,7 @@ module.exports = function calculateCanonicalUrl({ siteUrl, slug }) {
 		return appendSlashTo(siteUrl);
 	}
 
-	return uri(appendSlashTo(slug))
-		.origin(siteUrl)
-		.toString();
+	return uri(appendSlashTo(slug)).origin(siteUrl).toString();
 };
 
 function appendSlashTo(val) {
