@@ -35,7 +35,7 @@ const BlogPostTemplate = ({ data }) => {
 			<CanonicalLink siteUrl={siteUrl} slug={post.slug} />
 
 			<article className="h-entry">
-				<Ad hash={post.hash} />
+				<Ad hash={post.hash} className={classes.ad} />
 
 				<header className={classes.postHeader}>
 					<EditPageLink
@@ -77,6 +77,9 @@ const BlogPostTemplate = ({ data }) => {
 };
 
 const useStyles = createUseStyles({
+	ad: {
+		margin: `${rhythm(1)} auto`
+	},
 	postHeader: {
 		marginBottom: rhythm(1),
 		"& h1": {

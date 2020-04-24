@@ -1,11 +1,14 @@
 import React from "react";
 import { createUseStyles } from "react-jss";
 
-const Alert = ({ type = "info", title, children }) => {
+const Alert = ({ type = "info", title, children, className, ...props }) => {
 	const classes = useStyles();
 
 	return (
-		<div className={classes[`alert-${type}`]}>
+		<div
+			className={`${classes[`alert-${type}`]} ${className || ""}`}
+			{...props}
+		>
 			<Icon type={type} title={title} />
 			{children}
 		</div>
