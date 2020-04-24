@@ -1,12 +1,17 @@
 import React, { useMemo } from "react";
+import moment from "moment";
 
 import Alert from "./alert";
 
-const Ad = ({ hash }) => (
-	<Alert>
-		<AdContent hash={hash} />
-	</Alert>
-);
+const Ad = ({ hash }) => {
+	const date = useMemo(() => moment(new Date()).format("MMMM YYYY"), []);
+
+	return (
+		<Alert>
+			{date} <AdContent hash={hash} />
+		</Alert>
+	);
+};
 
 const AdContent = ({ hash }) => {
 	const idx = useMemo(() => hash % adCopy.length, [hash]);
