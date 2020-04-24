@@ -14,6 +14,8 @@ import massage from "./data";
 import Feedback from "./feedback";
 import EditPageLink from "./edit-page-link";
 
+import Ad from "../ad";
+
 const BlogPostTemplate = ({ data }) => {
 	const classes = useStyles();
 
@@ -33,6 +35,8 @@ const BlogPostTemplate = ({ data }) => {
 			<CanonicalLink siteUrl={siteUrl} slug={post.slug} />
 
 			<article className="h-entry">
+				<Ad hash={post.hash} />
+
 				<header className={classes.postHeader}>
 					<EditPageLink
 						githubLink={githubLink}
@@ -160,6 +164,11 @@ export const pageQuery = graphql`
 			excerpt
 			timeToRead
 			fileAbsolutePath
+			parent {
+				... on File {
+					size
+				}
+			}
 		}
 		disqusThread(threadId: { eq: $threadId }) {
 			comments {

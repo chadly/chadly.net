@@ -7,7 +7,8 @@ export default function massage({
 		body,
 		excerpt,
 		timeToRead,
-		fileAbsolutePath
+		fileAbsolutePath,
+		parent: { size: hash }
 	},
 	site: {
 		siteMetadata: { siteUrl, githubLink }
@@ -61,6 +62,7 @@ export default function massage({
 			slug,
 			body,
 			excerpt,
+			hash,
 			readingTime: `${timeToRead} min read`
 		},
 		siteUrl,
