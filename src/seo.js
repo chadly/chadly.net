@@ -2,10 +2,11 @@ import React from "react";
 import { Helmet } from "react-helmet";
 import { useStaticQuery, graphql } from "gatsby";
 
-import AuthorPhoto from "./author/me.jpg";
-
 import Uri from "urijs";
 import { get } from "lodash";
+
+import AuthorPhoto from "./author/me.jpg";
+import author from "./author/data";
 
 const Seo = ({ title, description }) => {
 	const data = useStaticQuery(graphql`
@@ -15,10 +16,6 @@ const Seo = ({ title, description }) => {
 					siteUrl
 					title
 					description
-					author {
-						name
-						twitter
-					}
 				}
 			}
 		}
@@ -27,7 +24,6 @@ const Seo = ({ title, description }) => {
 	const siteUrl = get(data, "site.siteMetadata.siteUrl");
 	const siteTitle = get(data, "site.siteMetadata.title");
 	const siteDesc = get(data, "site.siteMetadata.description");
-	const author = get(data, "site.siteMetadata.author");
 	const authorName = get(author, "name");
 
 	title = title

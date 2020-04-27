@@ -2,7 +2,7 @@ import React from "react";
 import { createUseStyles } from "react-jss";
 import { rhythm } from "../theme/typography";
 
-const AuthorSocial = ({ author: { github, twitter, keybase } }) => {
+const AuthorSocial = ({ github, twitter, keybase, className }) => {
 	const classes = useStyles();
 
 	if (!github && !twitter && !keybase) {
@@ -10,7 +10,7 @@ const AuthorSocial = ({ author: { github, twitter, keybase } }) => {
 	}
 
 	return (
-		<ul className={classes.container}>
+		<ul className={`${classes.container} ${className || ""}`}>
 			<SocialIcon
 				id="fab fa-github"
 				name="Github"
@@ -32,7 +32,13 @@ const AuthorSocial = ({ author: { github, twitter, keybase } }) => {
 				show={!!keybase}
 				rel="me"
 			/>
-			<SocialIcon id="fas fa-rss" name="RSS" href={`/rss.xml`} show />
+			<SocialIcon
+				id="fas fa-rss"
+				name="RSS"
+				href={`/rss.xml`}
+				show
+				className={classes.rss}
+			/>
 		</ul>
 	);
 };
@@ -65,7 +71,13 @@ const useStyles = createUseStyles({
 			"& a": {
 				textDecoration: "none"
 			}
+		},
+		"& li:last-child": {
+			marginRight: 0
 		}
+	},
+	rss: {
+		color: "rgb(247, 131, 34)"
 	}
 });
 

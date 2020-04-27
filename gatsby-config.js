@@ -10,14 +10,7 @@ const siteMetadata = {
 	description: "Personal blog by Chad Lee",
 	siteUrl: "https://www.chadly.net",
 	webMentionIoUsername: "www.chadly.net",
-	githubLink: "https://github.com/chadly/chadly.net",
-	author: {
-		name: "Chad Lee",
-		description: "Writer of code. Doer of things. Maker of stuff.",
-		github: "chadly",
-		twitter: "wchadly",
-		keybase: "chadly"
-	}
+	githubLink: "https://github.com/chadly/chadly.net"
 };
 
 const gatsbyRemarkPlugins = [

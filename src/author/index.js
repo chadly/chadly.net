@@ -5,26 +5,20 @@ import { rhythm, scale, smallScreenMediaQuery } from "../theme/typography";
 
 import pic from "./me.jpg";
 import Social from "./social";
+import author from "./data";
 
-const Author = () => {
+const Author = ({ children }) => {
 	const classes = useStyles();
 
 	const {
 		site: {
-			siteMetadata: { author, siteUrl }
+			siteMetadata: { siteUrl }
 		}
 	} = useStaticQuery(graphql`
 		query AuthorQuery {
 			site {
 				siteMetadata {
 					siteUrl
-					author {
-						name
-						description
-						twitter
-						github
-						keybase
-					}
 				}
 			}
 		}
@@ -39,12 +33,13 @@ const Author = () => {
 			/>
 			<div className={classes.meta}>
 				<h3>
+					{children}
 					<a href={siteUrl} className="u-url p-name">
 						{author.name}
 					</a>
 				</h3>
 				<div className={`p-note ${classes.bio}`}>{author.description}</div>
-				<Social author={author} />
+				<Social {...author} className={classes.social} />
 			</div>
 		</div>
 	);
@@ -54,7 +49,7 @@ const useStyles = createUseStyles({
 	container: {
 		display: "flex",
 		marginBottom: rhythm(1),
-		...scale(-0.25),
+		fontSize: scale(-0.25).fontSize,
 		[smallScreenMediaQuery]: {
 			display: "block",
 			textAlign: "center"
@@ -88,6 +83,9 @@ const useStyles = createUseStyles({
 		"& p": {
 			marginBottom: 0
 		}
+	},
+	social: {
+		marginTop: rhythm(0.5)
 	}
 });
 
