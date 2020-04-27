@@ -12,6 +12,7 @@
   },
   "scripts": {
     "start": "gatsby develop",
+    "clean": "gatsby clean",
     "lint": "eslint --ignore-pattern public --ignore-pattern static --ignore-pattern fancy.js .",
     "build": "GATSBY_EXPERIMENTAL_PAGE_BUILD_ON_DATA_CHANGES=true gatsby build --log-pages",
     "preview": "gatsby build && gatsby serve"
