@@ -9,7 +9,6 @@ import { rhythm, scale } from "../theme";
 
 import MDXRenderer from "gatsby-plugin-mdx/mdx-renderer";
 
-import CanonicalLink, { calculate as getPermalink } from "../canonical";
 import massage from "./data";
 import Feedback from "./feedback";
 import EditPageLink from "./edit-page-link";
@@ -29,8 +28,11 @@ const BlogPostTemplate = ({ data }) => {
 
 	return (
 		<Layout>
-			<Seo title={post.title} description={post.description || post.excerpt} />
-			<CanonicalLink siteUrl={siteUrl} slug={post.slug} />
+			<Seo
+				title={post.title}
+				description={post.description || post.excerpt}
+				type="article"
+			/>
 
 			<article className="h-entry">
 				<header className={classes.postHeader}>
@@ -41,10 +43,7 @@ const BlogPostTemplate = ({ data }) => {
 					/>
 					<h1 className="p-name">{post.title}</h1>
 					<div className={classes.meta}>
-						<a
-							href={getPermalink({ siteUrl, slug: post.slug })}
-							className="u-url"
-						>
+						<a href={`${siteUrl}${post.slug}`} className="u-url">
 							<time dateTime={post.date} className="dt-published">
 								{post.dateFormatted}
 							</time>

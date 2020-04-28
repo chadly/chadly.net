@@ -1,8 +1,6 @@
 /* eslint-disable import/no-commonjs */
 require("dotenv").config();
 
-const calculateCanonicalUrl = require("./src/canonical/calculate");
-
 const { NODE_ENV, CONTEXT: NETLIFY_ENV = NODE_ENV } = process.env;
 
 const siteMetadata = {
@@ -120,20 +118,13 @@ const plugins = [
 									fields: { slug },
 									excerpt
 								}
-							}) => {
-								const url = calculateCanonicalUrl({
-									siteUrl: site.siteMetadata.siteUrl,
-									slug: slug
-								});
-
-								return {
-									title,
-									description: excerpt,
-									date,
-									url,
-									guid: id
-								};
-							}
+							}) => ({
+								title,
+								description: excerpt,
+								date,
+								url: `${site.siteMetadata.siteUrl}${slug}`,
+								guid: id
+							})
 						);
 					},
 					query: `

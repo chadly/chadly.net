@@ -9,17 +9,11 @@ import Seo from "../seo";
 
 import Author from "../author";
 import PostStub from "../post/stub";
-import CanonicalLink, {
-	calculate as calculateCanonicalUrl
-} from "../canonical";
 
 import { union, sortBy, reverse } from "lodash";
 
-const RootIndex = ({
+const HomePage = ({
 	data: {
-		site: {
-			siteMetadata: { siteUrl }
-		},
 		allMdx: { posts },
 		allPostsJson: { externalPosts }
 	}
@@ -43,7 +37,7 @@ const RootIndex = ({
 								description,
 								date,
 								dateFormatted,
-								url: calculateCanonicalUrl({ slug }),
+								url: slug,
 								timeToRead
 							})
 						),
@@ -57,8 +51,7 @@ const RootIndex = ({
 
 	return (
 		<Layout>
-			<Seo />
-			<CanonicalLink siteUrl={siteUrl} />
+			<Seo type="website" />
 
 			<main role="main">
 				<Author />
@@ -132,15 +125,10 @@ const Item = ({ headline, href, to, children }) => {
 	);
 };
 
-export default RootIndex;
+export default HomePage;
 
 export const pageQuery = graphql`
 	query BlogQuery {
-		site {
-			siteMetadata {
-				siteUrl
-			}
-		}
 		allMdx(sort: { fields: [frontmatter___date], order: DESC }) {
 			posts: nodes {
 				id

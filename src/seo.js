@@ -1,16 +1,23 @@
 import React from "react";
 import { Helmet } from "react-helmet";
-import { useStaticQuery, graphql } from "gatsby";
+import { useLocation } from "@reach/router";
 
-import Uri from "urijs";
-import { get } from "lodash";
+import { useStaticQuery, graphql } from "gatsby";
 
 import AuthorPhoto from "./author/me.jpg";
 import author from "./author/data";
 
-const Seo = ({ title, description }) => {
-	const data = useStaticQuery(graphql`
-		query DefaultSEOQuery {
+import { get } from "lodash";
+
+const Seo = ({ title, description, image, type }) => {
+	const { pathname } = useLocation();
+
+	const {
+		site: {
+			siteMetadata: { siteUrl, title: siteTitle, description: siteDesc }
+		}
+	} = useStaticQuery(graphql`
+		query SeoQuery {
 			site {
 				siteMetadata {
 					siteUrl
@@ -21,10 +28,8 @@ const Seo = ({ title, description }) => {
 		}
 	`);
 
-	const siteUrl = get(data, "site.siteMetadata.siteUrl");
-	const siteTitle = get(data, "site.siteMetadata.title");
-	const siteDesc = get(data, "site.siteMetadata.description");
 	const authorName = get(author, "name");
+	const twitter = get(author, "twitter");
 
 	title = title
 		? `${title}${authorName ? ` | ${authorName}` : ""}`
@@ -32,26 +37,32 @@ const Seo = ({ title, description }) => {
 
 	const desc = description || siteDesc;
 
+	const url = `${siteUrl}${pathname || "/"}`;
+	const imageUrl = image ? `${siteUrl}${image}` : `${siteUrl}${AuthorPhoto}`;
+
 	return (
 		<Helmet htmlAttributes={{ lang: "en" }}>
-			<title>{title}</title>
+			<link rel="canonical" href={url} />
 
-			<meta name="description" content={desc} />
+			{title ? <title>{title}</title> : null}
+			{description ? <meta name="description" content={desc} /> : null}
+			{imageUrl ? <meta name="image" content={imageUrl} /> : null}
 
-			<meta property="og:title" content={title} />
-			<meta property="og:type" content="website" />
-			<meta property="og:description" content={desc} />
-
-			<meta name="twitter:card" content="summary" />
-			{get(author, "twitter") ? (
-				<meta name="twitter:creator" content={`@${author.twitter}`} />
+			{url ? <meta property="og:url" content={url} /> : null}
+			{type ? <meta property="og:type" content={type} /> : null}
+			{imageUrl ? <meta property="og:image" content={imageUrl} /> : null}
+			{title ? <meta property="og:title" content={title} /> : null}
+			{description ? (
+				<meta property="og:description" content={description} />
 			) : null}
-			<meta
-				name="twitter:image"
-				content={Uri(AuthorPhoto).origin(siteUrl).toString()}
-			/>
-			<meta name="twitter:title" content={title} />
-			<meta name="twitter:description" content={desc} />
+
+			<meta name="twitter:card" content="summary_large_image" />
+			{twitter ? <meta name="twitter:creator" content={`@${twitter}`} /> : null}
+			{title ? <meta name="twitter:title" content={title} /> : null}
+			{description ? (
+				<meta name="twitter:description" content={description} />
+			) : null}
+			{imageUrl ? <meta name="twitter:image" content={imageUrl} /> : null}
 		</Helmet>
 	);
 };
