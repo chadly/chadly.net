@@ -42,6 +42,7 @@ const plugins = [
 		}
 	},
 	"gatsby-transformer-json",
+	"gatsby-transformer-sharp",
 	"gatsby-plugin-catch-links",
 	"gatsby-plugin-react-helmet",
 	{

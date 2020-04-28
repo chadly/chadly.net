@@ -2,7 +2,15 @@ import { get, sortBy } from "lodash";
 
 export default function massage({
 	mdx: {
-		frontmatter: { id, title, date, description, dateFormatted, twitterId },
+		frontmatter: {
+			id,
+			title,
+			date,
+			description,
+			dateFormatted,
+			twitterId,
+			cover
+		},
 		fields: { slug },
 		body,
 		excerpt,
@@ -62,7 +70,8 @@ export default function massage({
 			slug,
 			body,
 			excerpt,
-			readingTime: `${timeToRead} min read`
+			readingTime: `${timeToRead} min read`,
+			cover: get(cover, "img.fixed.src")
 		},
 		siteUrl,
 		githubLink,

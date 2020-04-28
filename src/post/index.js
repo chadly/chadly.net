@@ -34,6 +34,7 @@ const BlogPostTemplate = ({ data }) => {
 				article={{
 					published: post.date
 				}}
+				image={post.cover}
 			/>
 
 			<article className="h-entry">
@@ -157,6 +158,13 @@ export const pageQuery = graphql`
 				date
 				dateFormatted: date(formatString: "MMMM Do, YYYY")
 				twitterId
+				cover {
+					img: childImageSharp {
+						fixed(width: 800) {
+							...GatsbyImageSharpFixed
+						}
+					}
+				}
 			}
 			fields {
 				slug
