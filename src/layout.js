@@ -40,9 +40,9 @@ const Layout = ({ children, width }) => {
 							checked={theme === "dark"}
 						/>{" "}
 						{theme == "light" ? (
-							<i className="fas fa-moon" title="Turn to the dark side" />
+							<i className="fas fa-sun" title="Turn to the dark side" />
 						) : (
-							<i className="fas fa-sun" title="Turn to the light" />
+							<i className="fas fa-moon" title="Turn to the light" />
 						)}
 					</label>
 				)}
