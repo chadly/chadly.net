@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useMemo } from "react";
 import { graphql, Link } from "gatsby";
 
 import { createUseStyles } from "react-jss";
@@ -9,15 +9,51 @@ import Seo from "../seo";
 
 import Author from "../author";
 import PostStub from "../post/stub";
-import CanonicalLink from "../canonical";
+import CanonicalLink, {
+	calculate as calculateCanonicalUrl
+} from "../canonical";
 
-import { get } from "lodash";
+import { union, sortBy, reverse } from "lodash";
 
-const RootIndex = ({ data }) => {
-	const posts = get(data, "allMdx.edges", []);
-	const siteUrl = get(data, "site.siteMetadata.siteUrl");
-
+const RootIndex = ({
+	data: {
+		site: {
+			siteMetadata: { siteUrl }
+		},
+		allMdx: { posts },
+		allPostsJson: { externalPosts }
+	}
+}) => {
 	const classes = useStyles();
+
+	const allPosts = useMemo(
+		() =>
+			reverse(
+				sortBy(
+					union(
+						posts.map(
+							({
+								id,
+								frontmatter: { title, description, date, dateFormatted },
+								fields: { slug },
+								timeToRead
+							}) => ({
+								id,
+								title,
+								description,
+								date,
+								dateFormatted,
+								url: calculateCanonicalUrl({ slug }),
+								timeToRead
+							})
+						),
+						externalPosts.map(post => ({ ...post, isExternal: true }))
+					),
+					"date"
+				)
+			),
+		[posts, externalPosts]
+	);
 
 	return (
 		<Layout>
@@ -58,8 +94,8 @@ const RootIndex = ({ data }) => {
 				<section className={`h-feed ${classes.section}`}>
 					<h2>Things I've Written</h2>
 
-					{posts.map(({ node: { id, ...post } }) => (
-						<PostStub key={id} post={post} />
+					{allPosts.map(post => (
+						<PostStub key={post.id} {...post} />
 					))}
 				</section>
 			</main>
@@ -106,21 +142,28 @@ export const pageQuery = graphql`
 			}
 		}
 		allMdx(sort: { fields: [frontmatter___date], order: DESC }) {
-			edges {
-				node {
-					id
-					frontmatter {
-						id
-						title
-						description
-						date
-						dateFormatted: date(formatString: "MMMM Do, YYYY")
-					}
-					fields {
-						slug
-					}
-					timeToRead
+			posts: nodes {
+				id
+				frontmatter {
+					title
+					description
+					date
+					dateFormatted: date(formatString: "MMMM Do, YYYY")
 				}
+				fields {
+					slug
+				}
+				timeToRead
+			}
+		}
+		allPostsJson(sort: { fields: date, order: DESC }) {
+			externalPosts: nodes {
+				id
+				title
+				description
+				date
+				dateFormatted: date(formatString: "MMMM Do, YYYY")
+				url
 			}
 		}
 	}

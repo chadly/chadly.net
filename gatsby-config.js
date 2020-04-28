@@ -43,6 +43,7 @@ const plugins = [
 			plugins: gatsbyRemarkPlugins
 		}
 	},
+	"gatsby-transformer-json",
 	"gatsby-plugin-catch-links",
 	"gatsby-plugin-react-helmet",
 	{
@@ -56,6 +57,13 @@ const plugins = [
 		options: {
 			name: "posts",
 			path: `${__dirname}/content/posts`
+		}
+	},
+	{
+		resolve: "gatsby-source-filesystem",
+		options: {
+			name: "external",
+			path: `${__dirname}/content/external`
 		}
 	},
 	{

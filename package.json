@@ -59,6 +59,7 @@
     "gatsby-remark-vscode": "^2.0.3",
     "gatsby-source-disqus-xml": "^1.0.0",
     "gatsby-source-filesystem": "^2.2.5",
+    "gatsby-transformer-json": "^2.4.0",
     "gatsby-transformer-remark": "^2.7.5",
     "prettier": "^2.0.5",
     "urijs": "^1.19.2"
