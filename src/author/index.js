@@ -1,7 +1,7 @@
 import React from "react";
 import { createUseStyles } from "react-jss";
 import { useStaticQuery, graphql } from "gatsby";
-import { rhythm, scale, smallScreenMediaQuery } from "../theme/typography";
+import { rhythm, smallScreenMediaQuery } from "../theme/typography";
 
 import pic from "./me.jpg";
 import Social from "./social";
@@ -25,7 +25,7 @@ const Author = ({ children }) => {
 	`);
 
 	return (
-		<div className={`p-author h-card ${classes.container}`}>
+		<section className={`p-author h-card ${classes.container}`}>
 			<img
 				src={pic}
 				alt={author.name}
@@ -41,28 +41,29 @@ const Author = ({ children }) => {
 				<div className={`p-note ${classes.bio}`}>{author.description}</div>
 				<Social {...author} className={classes.social} />
 			</div>
-		</div>
+		</section>
 	);
 };
 
 const useStyles = createUseStyles({
 	container: {
 		display: "flex",
+		alignItems: "center",
 		marginBottom: rhythm(1),
-		fontSize: scale(-0.25).fontSize,
+		// fontSize: scale(-0.25).fontSize,
 		[smallScreenMediaQuery]: {
 			display: "block",
 			textAlign: "center"
 		}
 	},
 	profileImg: {
-		marginRight: rhythm(1),
+		margin: `0 ${rhythm(1)} 0 0`,
 		boxShadow: "0 0 0 6px hsla(0,0%,100%,.1)",
 		background: "#e3e9ed",
 		borderRadius: "100%",
 		objectFit: "cover",
-		width: rhythm(4.5),
-		height: rhythm(4.5),
+		width: rhythm(6),
+		height: rhythm(6),
 		[smallScreenMediaQuery]: {
 			display: "block",
 			margin: `${rhythm(0.5)} auto`

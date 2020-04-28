@@ -2,15 +2,28 @@ import React from "react";
 import { createUseStyles } from "react-jss";
 import { rhythm } from "../theme/typography";
 
-const AuthorSocial = ({ github, twitter, keybase, className }) => {
+const AuthorSocial = ({
+	github,
+	twitter,
+	stackOverflow,
+	keybase,
+	className
+}) => {
 	const classes = useStyles();
 
-	if (!github && !twitter && !keybase) {
+	if (!github && !twitter && !stackOverflow && !keybase) {
 		return null;
 	}
 
 	return (
 		<ul className={`${classes.container} ${className || ""}`}>
+			<SocialIcon
+				id="fab fa-twitter"
+				name="Twitter"
+				href={`https://twitter.com/${twitter}`}
+				show={!!twitter}
+				rel="me"
+			/>
 			<SocialIcon
 				id="fab fa-github"
 				name="Github"
@@ -19,10 +32,10 @@ const AuthorSocial = ({ github, twitter, keybase, className }) => {
 				rel="me"
 			/>
 			<SocialIcon
-				id="fab fa-twitter"
-				name="Twitter"
-				href={`https://twitter.com/${twitter}`}
-				show={!!twitter}
+				id="fab fa-stack-overflow"
+				name="Stack Overflow"
+				href={`https://stackoverflow.com/users/${stackOverflow}`}
+				show={!!stackOverflow}
 				rel="me"
 			/>
 			<SocialIcon

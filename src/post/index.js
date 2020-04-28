@@ -29,7 +29,7 @@ const BlogPostTemplate = ({ data }) => {
 
 	return (
 		<Layout>
-			<Seo title={post.title} description={post.excerpt} />
+			<Seo title={post.title} description={post.description || post.excerpt} />
 			<CanonicalLink siteUrl={siteUrl} slug={post.slug} />
 
 			<article className="h-entry">
@@ -152,8 +152,9 @@ export const pageQuery = graphql`
 			frontmatter {
 				id
 				title
+				description
 				date
-				dateFormatted: date(formatString: "MMMM DD, YYYY")
+				dateFormatted: date(formatString: "MMMM Do, YYYY")
 				twitterId
 			}
 			fields {

@@ -4,14 +4,16 @@ const author = {
 	name: "Chad Lee",
 	description: (
 		<>
-			Tech lead, full stack pancake eater. I build things to make developers'
-			lives easier. I write about it sometimes. Currently building the{" "}
+			Hi! I'm Chad. I'm a web developer primarily working in .NET Core and the
+			wild world of Javascript. I like to build things to make developers' lives
+			easier. I write about it sometimes. I am currently working on the{" "}
 			<a href="https://www.runly.io/">platform for running background jobs</a>.
 		</>
 	),
 	github: "chadly",
 	twitter: "wchadly",
-	keybase: "chadly"
+	keybase: "chadly",
+	stackOverflow: "316108/chad"
 };
 
 export default author;

@@ -2,7 +2,7 @@ import { get, sortBy } from "lodash";
 
 export default function massage({
 	mdx: {
-		frontmatter: { id, title, date, dateFormatted, twitterId },
+		frontmatter: { id, title, date, description, dateFormatted, twitterId },
 		fields: { slug },
 		body,
 		excerpt,
@@ -55,6 +55,7 @@ export default function massage({
 		post: {
 			id,
 			title,
+			description,
 			date,
 			dateFormatted,
 			twitterId,
