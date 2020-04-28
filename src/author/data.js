@@ -10,6 +10,7 @@ const author = {
 			<a href="https://www.runly.io/">platform for running background jobs</a>.
 		</>
 	),
+	gender: "male",
 	github: "chadly",
 	twitter: "wchadly",
 	keybase: "chadly",

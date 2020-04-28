@@ -9,7 +9,7 @@ import author from "./author/data";
 
 import { get } from "lodash";
 
-const Seo = ({ title, description, image, type }) => {
+const Seo = ({ title, description, image, article, profile }) => {
 	const { pathname } = useLocation();
 
 	const {
@@ -39,6 +39,7 @@ const Seo = ({ title, description, image, type }) => {
 
 	const url = `${siteUrl}${pathname || "/"}`;
 	const imageUrl = image ? `${siteUrl}${image}` : `${siteUrl}${AuthorPhoto}`;
+	const isLargeImage = !!image;
 
 	return (
 		<Helmet htmlAttributes={{ lang: "en" }}>
@@ -49,14 +50,54 @@ const Seo = ({ title, description, image, type }) => {
 			{imageUrl ? <meta name="image" content={imageUrl} /> : null}
 
 			{url ? <meta property="og:url" content={url} /> : null}
-			{type ? <meta property="og:type" content={type} /> : null}
+
+			<meta
+				property="og:type"
+				content={article ? "article" : profile ? "profile" : "website"}
+			/>
+
+			{article && article.published ? (
+				<meta property="article:published_time" content={article.published} />
+			) : null}
+			{article && article.modified ? (
+				<meta property="article:modified_time" content={article.modified} />
+			) : null}
+			{article ? (
+				<meta property="article:section" content="Software Development" />
+			) : null}
+			{article ? (
+				<meta property="article:author" content={`${siteUrl}/`} />
+			) : null}
+
+			{profile && profile.name ? (
+				<meta
+					property="profile:first_name"
+					content={profile.name.split(" ")[0]}
+				/>
+			) : null}
+			{profile && profile.name ? (
+				<meta
+					property="profile:last_name"
+					content={profile.name.split(" ")[1]}
+				/>
+			) : null}
+			{profile && profile.username ? (
+				<meta property="profile:username" content={profile.username} />
+			) : null}
+			{profile && profile.gender ? (
+				<meta property="profile:gender" content={profile.gender} />
+			) : null}
+
 			{imageUrl ? <meta property="og:image" content={imageUrl} /> : null}
 			{title ? <meta property="og:title" content={title} /> : null}
 			{description ? (
 				<meta property="og:description" content={description} />
 			) : null}
 
-			<meta name="twitter:card" content="summary_large_image" />
+			<meta
+				name="twitter:card"
+				content={isLargeImage ? "summary_large_image" : "summary"}
+			/>
 			{twitter ? <meta name="twitter:creator" content={`@${twitter}`} /> : null}
 			{title ? <meta name="twitter:title" content={title} /> : null}
 			{description ? (

@@ -7,6 +7,7 @@ import { rhythm } from "../theme";
 import Layout from "../layout";
 import Seo from "../seo";
 
+import author from "../author/data";
 import Author from "../author";
 import PostStub from "../post/stub";
 
@@ -51,7 +52,13 @@ const HomePage = ({
 
 	return (
 		<Layout>
-			<Seo type="website" />
+			<Seo
+				profile={{
+					name: author.name,
+					username: author.twitter,
+					gender: author.gender
+				}}
+			/>
 
 			<main role="main">
 				<Author />

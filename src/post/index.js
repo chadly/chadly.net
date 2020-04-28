@@ -31,7 +31,9 @@ const BlogPostTemplate = ({ data }) => {
 			<Seo
 				title={post.title}
 				description={post.description || post.excerpt}
-				type="article"
+				article={{
+					published: post.date
+				}}
 			/>
 
 			<article className="h-entry">
