@@ -164,6 +164,7 @@ export const pageQuery = graphql`
 				date
 				dateFormatted: date(formatString: "MMMM Do, YYYY")
 				url
+				timeToRead
 			}
 		}
 	}
