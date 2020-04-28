@@ -6,7 +6,7 @@ const author = {
 		<>
 			Hi! I'm Chad. I'm a web developer primarily working in .NET Core and the
 			wild world of Javascript. I like to build things to make developers' lives
-			easier. I write about it sometimes. I am currently working on the{" "}
+			easier. I write about it sometimes. I am currently working on a{" "}
 			<a href="https://www.runly.io/">platform for running background jobs</a>.
 		</>
 	),

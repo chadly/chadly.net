@@ -118,6 +118,11 @@ const useStyles = createUseStyles({
 		},
 		"& div.footnotes li p": {
 			display: "inline"
+		},
+		"& .gatsby-resp-image-figure figcaption": {
+			textAlign: "center",
+			color: "var(--textMuted)",
+			...scale(-0.5)
 		}
 	},
 	postFooter: {

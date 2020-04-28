@@ -21,7 +21,8 @@ const gatsbyRemarkPlugins = [
 		resolve: "gatsby-remark-images",
 		options: {
 			maxWidth: 833, // max width of content container in px
-			linkImagesToOriginal: false
+			linkImagesToOriginal: false,
+			showCaptions: true
 		}
 	}
 ];
