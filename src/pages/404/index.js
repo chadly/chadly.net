@@ -3,7 +3,7 @@ import { createUseStyles } from "react-jss";
 import { Link, graphql } from "gatsby";
 import { Helmet } from "react-helmet";
 
-import { scale } from "../../theme/typography";
+import { scale } from "../../theme";
 
 import img404 from "./oatmeal-tumbeast-404.png";
 

@@ -49,7 +49,7 @@ const plugins = [
 	{
 		resolve: "gatsby-plugin-typography",
 		options: {
-			pathToConfigModule: "src/theme/typography"
+			pathToConfigModule: "src/theme"
 		}
 	},
 	{

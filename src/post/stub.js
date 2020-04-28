@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "gatsby";
 
 import { createUseStyles } from "react-jss";
-import { rhythm, scale } from "../theme/typography";
+import { rhythm, scale } from "../theme";
 
 const PostStub = ({
 	title,

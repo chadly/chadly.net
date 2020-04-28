@@ -1,7 +1,7 @@
 import React from "react";
 import { createUseStyles } from "react-jss";
 import { useStaticQuery, graphql } from "gatsby";
-import { rhythm, scale, smallScreenMediaQuery } from "../theme/typography";
+import { rhythm, scale, smallScreenMediaQuery } from "../theme";
 
 import pic from "./me.jpg";
 import Social from "./social";

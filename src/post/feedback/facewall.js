@@ -1,6 +1,6 @@
 import React from "react";
 import { createUseStyles } from "react-jss";
-import { rhythm } from "../../theme/typography";
+import { rhythm } from "../../theme";
 
 const FaceWall = ({ faces }) => {
 	const classes = useStyles();

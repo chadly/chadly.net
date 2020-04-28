@@ -5,7 +5,7 @@ import { createUseStyles } from "react-jss";
 import Layout from "../layout";
 import Seo from "../seo";
 import Author from "../author";
-import { rhythm, scale } from "../theme/typography";
+import { rhythm, scale } from "../theme";
 
 import MDXRenderer from "gatsby-plugin-mdx/mdx-renderer";
 

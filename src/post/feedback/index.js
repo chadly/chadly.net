@@ -6,7 +6,7 @@ import Comments from "./comments";
 import Likes from "./likes";
 import Reposts from "./reposts";
 
-import { rhythm } from "../../theme/typography";
+import { rhythm } from "../../theme";
 
 const Feedback = ({ twitterId, likes, comments, reposts }) => {
 	const classes = useStyles();

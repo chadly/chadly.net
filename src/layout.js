@@ -3,7 +3,7 @@ import { Link, useStaticQuery, graphql } from "gatsby";
 import { Helmet } from "react-helmet";
 
 import { createUseStyles } from "react-jss";
-import { rhythm, scale } from "./theme/typography";
+import { rhythm, scale } from "./theme";
 
 import { ThemeToggler } from "gatsby-plugin-dark-mode";
 

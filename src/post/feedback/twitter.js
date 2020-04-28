@@ -1,6 +1,6 @@
 import React from "react";
 import { createUseStyles } from "react-jss";
-import { rhythm, scale } from "../../theme/typography";
+import { rhythm, scale } from "../../theme";
 
 const TwitterIntents = ({ twitterId }) => {
 	const classes = useStyles();

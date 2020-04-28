@@ -2,7 +2,7 @@ import React, { useMemo } from "react";
 import { graphql, Link } from "gatsby";
 
 import { createUseStyles } from "react-jss";
-import { rhythm } from "../theme/typography";
+import { rhythm } from "../theme";
 
 import Layout from "../layout";
 import Seo from "../seo";
