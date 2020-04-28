@@ -92,7 +92,8 @@ const useStyles = createUseStyles(() => {
 		"@global": {
 			body: {
 				backgroundColor: "var(--bg)",
-				"-webkit-font-smoothing": "antialiased"
+				"-webkit-font-smoothing": "antialiased",
+				transition: "color 0.2s ease-out, background 0.2s ease-out"
 			},
 			"body.light": {
 				"--bg": "#fff",
