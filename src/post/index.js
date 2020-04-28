@@ -59,7 +59,7 @@ const BlogPostTemplate = ({ data }) => {
 				</main>
 
 				<footer className={classes.postFooter}>
-					<Author>Written by </Author>
+					<Author small>Written by </Author>
 					<Feedback
 						twitterId={post.twitterId}
 						likes={likes}

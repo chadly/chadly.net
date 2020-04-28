@@ -1,14 +1,14 @@
 import React from "react";
 import { createUseStyles } from "react-jss";
 import { useStaticQuery, graphql } from "gatsby";
-import { rhythm, smallScreenMediaQuery } from "../theme/typography";
+import { rhythm, scale, smallScreenMediaQuery } from "../theme/typography";
 
 import pic from "./me.jpg";
 import Social from "./social";
 import author from "./data";
 
-const Author = ({ children }) => {
-	const classes = useStyles();
+const Author = ({ small, children }) => {
+	const classes = useStyles({ small });
 
 	const {
 		site: {
@@ -50,7 +50,7 @@ const useStyles = createUseStyles({
 		display: "flex",
 		alignItems: "center",
 		marginBottom: rhythm(1),
-		// fontSize: scale(-0.25).fontSize,
+		fontSize: ({ small }) => (small ? scale(-0.25).fontSize : undefined),
 		[smallScreenMediaQuery]: {
 			display: "block",
 			textAlign: "center"
@@ -62,8 +62,8 @@ const useStyles = createUseStyles({
 		background: "#e3e9ed",
 		borderRadius: "100%",
 		objectFit: "cover",
-		width: rhythm(6),
-		height: rhythm(6),
+		width: ({ small }) => rhythm(small ? 4.5 : 6),
+		height: ({ small }) => rhythm(small ? 4.5 : 6),
 		[smallScreenMediaQuery]: {
 			display: "block",
 			margin: `${rhythm(0.5)} auto`
@@ -73,6 +73,8 @@ const useStyles = createUseStyles({
 		"& h3": {
 			marginTop: rhythm(0.25),
 			marginBottom: rhythm(0.25),
+
+			fontSize: ({ small }) => (small ? scale(0.1).fontSize : undefined),
 
 			"& a": {
 				textDecoration: "none",
