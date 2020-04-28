@@ -5,8 +5,8 @@ const author = {
 	description: (
 		<>
 			Tech lead, full stack pancake eater. I build things to make developers'
-			lives easier. I write about it sometimes. Currently building{" "}
-			<a href="https://www.runly.io/">runly.io</a>.
+			lives easier. I write about it sometimes. Currently building the{" "}
+			<a href="https://www.runly.io/">platform for running background jobs</a>.
 		</>
 	),
 	github: "chadly",
