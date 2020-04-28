@@ -58,7 +58,7 @@ const useStyles = createUseStyles({
 	},
 	profileImg: {
 		margin: `0 ${rhythm(1)} 0 0`,
-		boxShadow: "0 0 0 6px hsla(0,0%,100%,.1)",
+		boxShadow: "0 0 0 6px var(--glow)",
 		background: "#e3e9ed",
 		borderRadius: "100%",
 		objectFit: "cover",

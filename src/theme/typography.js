@@ -1,8 +1,6 @@
 import Typography from "typography";
 import Github from "typography-theme-github";
 
-import "./global.css";
-
 Github.baseFontSize = "18px";
 
 Github.overrideThemeStyles = () => ({
@@ -25,11 +23,9 @@ Github.overrideThemeStyles = () => ({
 	"p code": {
 		fontSize: "1rem"
 	},
-	h1: {
-		borderBottomColor: "var(--hr)"
-	},
 	"h1, h2, h3, h4": {
-		color: "var(--textTitle)"
+		color: "var(--textTitle)",
+		borderBottomColor: "var(--hr)"
 	},
 	// TODO: why tho
 	"h1 code, h2 code, h3 code, h4 code, h5 code, h6 code": {

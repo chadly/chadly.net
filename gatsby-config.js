@@ -73,6 +73,7 @@ const plugins = [
 		}
 	},
 	"gatsby-plugin-jss",
+	"gatsby-plugin-dark-mode",
 	"gatsby-plugin-sitemap",
 	{
 		resolve: "gatsby-plugin-robots-txt",

@@ -1,12 +1,14 @@
 import React from "react";
 import { Link, useStaticQuery, graphql } from "gatsby";
 import { Helmet } from "react-helmet";
-import { createUseStyles } from "react-jss";
 
+import { createUseStyles } from "react-jss";
 import { rhythm, scale } from "./theme/typography";
 
-const Layout = ({ children, ...props }) => {
-	const classes = useStyles(props);
+import { ThemeToggler } from "gatsby-plugin-dark-mode";
+
+const Layout = ({ children, width }) => {
+	const classes = useStyles({ width });
 
 	const {
 		site: {
@@ -28,6 +30,23 @@ const Layout = ({ children, ...props }) => {
 			<h1 className={classes.siteTitle} title={description}>
 				<Link to="/">{title}</Link>
 			</h1>
+
+			<ThemeToggler>
+				{({ theme, toggleTheme }) => (
+					<label className={classes.darkToggle}>
+						<input
+							type="checkbox"
+							onChange={e => toggleTheme(e.target.checked ? "dark" : "light")}
+							checked={theme === "dark"}
+						/>{" "}
+						{theme == "light" ? (
+							<i className="fas fa-moon" title="Turn to the dark side" />
+						) : (
+							<i className="fas fa-sun" title="Turn to the light" />
+						)}
+					</label>
+				)}
+			</ThemeToggler>
 
 			<div className={classes.container}>
 				<Helmet>
@@ -63,34 +82,77 @@ const Layout = ({ children, ...props }) => {
 	);
 };
 
-const useStyles = createUseStyles({
-	root: {
-		color: "var(--textNormal)"
-	},
-	container: {
-		marginLeft: `auto`,
-		marginRight: `auto`,
-		maxWidth: ({ width = 30 }) => rhythm(width),
-		padding: `${rhythm(1.5)} ${rhythm(0.75)}`
-	},
-	siteTitle: {
-		float: "left",
-		border: "none",
+const useStyles = createUseStyles(() => {
+	const topSpacing = {
 		margin: 0,
-		padding: `${rhythm(0.3)} ${rhythm(0.75)}`,
-		...scale(0.2),
+		padding: `${rhythm(0.3)} ${rhythm(0.75)}`
+	};
 
-		"& a": {
-			boxShadow: `none`,
-			textDecoration: `none`,
-			color: `inherit`
+	return {
+		"@global": {
+			body: {
+				backgroundColor: "var(--bg)",
+				"-webkit-font-smoothing": "antialiased"
+			},
+			"body.light": {
+				"--bg": "#fff",
+				"--header": "#333332",
+				"--textNormal": "#333332",
+				"--textMuted": "rgba(95, 95, 95, 0.8)",
+				"--textTitle": "#333332",
+				"--textLink": "#d40000",
+				"--hr": "#cfcfcf",
+				"--glow": "hsla(0, 100%, 0%, 0.2)"
+			},
+			"body.dark": {
+				"--bg": "#282c35",
+				"--header": "#ffffff",
+				"--textNormal": "rgba(255, 255, 255, 0.88)",
+				"--textMuted": "rgba(255, 255, 255, 0.60)",
+				"--textTitle": "#ffffff",
+				"--textLink": "#97ff10",
+				"--hr": "hsla(0, 0%, 100%, 0.2)",
+				"--glow": "hsla(0, 0%, 100%, 0.1)"
+			}
+		},
+		darkToggle: {
+			display: "block",
+			float: "right",
+			...topSpacing,
+			"& input": {
+				display: "none"
+			},
+			"& i": {
+				cursor: "pointer"
+			}
+		},
+		root: {
+			color: "var(--textNormal)"
+		},
+		container: {
+			marginLeft: `auto`,
+			marginRight: `auto`,
+			maxWidth: ({ width = 30 }) => rhythm(width),
+			padding: `${rhythm(1.5)} ${rhythm(0.75)}`
+		},
+		siteTitle: {
+			float: "left",
+			border: "none",
+			...topSpacing,
+			...scale(0.2),
+
+			"& a": {
+				boxShadow: `none`,
+				textDecoration: `none`,
+				color: `inherit`
+			}
+		},
+		footer: {
+			borderTop: "1px solid var(--hr)",
+			marginTop: rhythm(1),
+			...scale(-0.5)
 		}
-	},
-	footer: {
-		borderTop: "1px solid var(--hr)",
-		marginTop: rhythm(1),
-		...scale(-0.5)
-	}
+	};
 });
 
 export default Layout;
