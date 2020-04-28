@@ -82,78 +82,76 @@ const Layout = ({ children, width }) => {
 	);
 };
 
-const useStyles = createUseStyles(() => {
-	const topSpacing = {
-		margin: 0,
-		padding: `${rhythm(0.3)} ${rhythm(0.75)}`
-	};
+const topSpacing = {
+	margin: 0,
+	padding: `${rhythm(0.3)} ${rhythm(0.75)}`
+};
 
-	return {
-		"@global": {
-			body: {
-				backgroundColor: "var(--bg)",
-				"-webkit-font-smoothing": "antialiased",
-				transition: "color 0.2s ease-out, background 0.2s ease-out"
-			},
-			"body.light": {
-				"--bg": "#fff",
-				"--header": "#333332",
-				"--textNormal": "#333332",
-				"--textMuted": "rgba(95, 95, 95, 0.8)",
-				"--textTitle": "#333332",
-				"--textLink": "#d40000",
-				"--hr": "#cfcfcf",
-				"--glow": "hsla(0, 100%, 0%, 0.2)"
-			},
-			"body.dark": {
-				"--bg": "#282c35",
-				"--header": "#ffffff",
-				"--textNormal": "rgba(255, 255, 255, 0.88)",
-				"--textMuted": "rgba(255, 255, 255, 0.60)",
-				"--textTitle": "#ffffff",
-				"--textLink": "#97ff10",
-				"--hr": "hsla(0, 0%, 100%, 0.2)",
-				"--glow": "hsla(0, 0%, 100%, 0.1)"
-			}
+const useStyles = createUseStyles({
+	"@global": {
+		body: {
+			backgroundColor: "var(--bg)",
+			"-webkit-font-smoothing": "antialiased",
+			transition: "color 0.2s ease-out, background 0.2s ease-out"
 		},
-		darkToggle: {
-			display: "block",
-			float: "right",
-			...topSpacing,
-			"& input": {
-				display: "none"
-			},
-			"& i": {
-				cursor: "pointer"
-			}
+		"body.light": {
+			"--bg": "#fff",
+			"--header": "#333332",
+			"--textNormal": "#333332",
+			"--textMuted": "rgba(95, 95, 95, 0.8)",
+			"--textTitle": "#333332",
+			"--textLink": "#d40000",
+			"--hr": "#cfcfcf",
+			"--glow": "hsla(0, 100%, 0%, 0.2)"
 		},
-		root: {
-			color: "var(--textNormal)"
-		},
-		container: {
-			marginLeft: `auto`,
-			marginRight: `auto`,
-			maxWidth: ({ width = 30 }) => rhythm(width),
-			padding: `${rhythm(1.5)} ${rhythm(0.75)}`
-		},
-		siteTitle: {
-			float: "left",
-			border: "none",
-			...topSpacing,
-			...scale(0.2),
-
-			"& a": {
-				boxShadow: `none`,
-				textDecoration: `none`,
-				color: `inherit`
-			}
-		},
-		footer: {
-			borderTop: "1px solid var(--hr)",
-			marginTop: rhythm(1),
-			...scale(-0.5)
+		"body.dark": {
+			"--bg": "#282c35",
+			"--header": "#ffffff",
+			"--textNormal": "rgba(255, 255, 255, 0.88)",
+			"--textMuted": "rgba(255, 255, 255, 0.60)",
+			"--textTitle": "#ffffff",
+			"--textLink": "#97ff10",
+			"--hr": "hsla(0, 0%, 100%, 0.2)",
+			"--glow": "hsla(0, 0%, 100%, 0.1)"
 		}
-	};
+	},
+	darkToggle: {
+		display: "block",
+		float: "right",
+		...topSpacing,
+		"& input": {
+			display: "none"
+		},
+		"& i": {
+			cursor: "pointer"
+		}
+	},
+	root: {
+		color: "var(--textNormal)"
+	},
+	container: {
+		marginLeft: `auto`,
+		marginRight: `auto`,
+		maxWidth: ({ width = 30 }) => rhythm(width),
+		padding: `${rhythm(1.5)} ${rhythm(0.75)}`
+	},
+	siteTitle: {
+		float: "left",
+		border: "none",
+		...topSpacing,
+		...scale(0.2),
+
+		"& a": {
+			boxShadow: `none`,
+			textDecoration: `none`,
+			color: `inherit`
+		}
+	},
+	footer: {
+		borderTop: "1px solid var(--hr)",
+		marginTop: rhythm(1),
+		...scale(-0.5)
+	}
 });
 
 export default Layout;
