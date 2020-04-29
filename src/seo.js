@@ -29,7 +29,7 @@ const Seo = ({ title, description, image, article, profile }) => {
 						twitter
 						avatar {
 							img: childImageSharp {
-								fixed(width: 150) {
+								fixed(width: 300) {
 									src
 								}
 							}
