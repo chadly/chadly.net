@@ -136,9 +136,9 @@ export const pageQuery = graphql`
 			filter: { sourceInstanceName: { eq: "posts" }, extension: { eq: "mdx" } }
 		) {
 			posts: nodes {
-				id
 				childMdx {
 					frontmatter {
+						id
 						title
 						description
 						date
@@ -154,7 +154,7 @@ export const pageQuery = graphql`
 		}
 		externalPostFiles: allPostsJson(sort: { fields: date, order: DESC }) {
 			externalPosts: nodes {
-				id
+				postId
 				title
 				description
 				date

@@ -30,9 +30,14 @@ exports.createPages = async ({
 	const result = await graphql(
 		`
 			{
-				allMdx(sort: { fields: [frontmatter___date], order: DESC }) {
-					edges {
-						node {
+				postFiles: allFile(
+					filter: {
+						sourceInstanceName: { eq: "posts" }
+						extension: { eq: "mdx" }
+					}
+				) {
+					posts: nodes {
+						childMdx {
 							frontmatter {
 								id
 								redirect_from
@@ -40,7 +45,6 @@ exports.createPages = async ({
 							fields {
 								slug
 							}
-							fileAbsolutePath
 						}
 					}
 				}
@@ -53,10 +57,9 @@ exports.createPages = async ({
 		throw result.errors;
 	}
 
-	const posts = result.data.allMdx.edges;
-	posts.forEach(
+	result.data.postFiles.posts.forEach(
 		({
-			node: {
+			childMdx: {
 				frontmatter: { id: threadId, redirect_from: redirectFrom },
 				fields: { slug }
 			}

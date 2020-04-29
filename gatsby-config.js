@@ -163,9 +163,9 @@ const plugins = [
 							filter: { sourceInstanceName: { eq: "posts" }, extension: { eq: "mdx" } }
 						) {
 							posts: nodes {
-								id
 								childMdx {
 									frontmatter {
+										id
 										title
 										description
 										date
@@ -179,7 +179,7 @@ const plugins = [
 						}
 						externalPostFiles: allPostsJson(sort: { fields: date, order: DESC }) {
 							externalPosts: nodes {
-								id
+								postId
 								title
 								description
 								date

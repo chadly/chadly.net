@@ -6,9 +6,8 @@ export const massageList = ({ posts, externalPosts }) =>
 			union(
 				posts.map(
 					({
-						id,
 						childMdx: {
-							frontmatter: { title, description, date, dateFormatted },
+							frontmatter: { id, title, description, date, dateFormatted },
 							fields: { slug },
 							excerpt,
 							timeToRead
@@ -23,7 +22,11 @@ export const massageList = ({ posts, externalPosts }) =>
 						timeToRead
 					})
 				),
-				externalPosts.map(post => ({ ...post, isExternal: true }))
+				externalPosts.map(({ postId, ...post }) => ({
+					id: postId,
+					...post,
+					isExternal: true
+				}))
 			),
 			"date"
 		)
