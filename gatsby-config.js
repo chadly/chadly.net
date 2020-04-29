@@ -44,7 +44,12 @@ const gatsbyRemarkPlugins = [
 
 const plugins = [
 	"gatsby-plugin-sharp",
-	"gatsby-plugin-favicon",
+	{
+		resolve: "gatsby-plugin-favicon",
+		options: {
+			logo: "./content/favicon.png"
+		}
+	},
 	{
 		resolve: "gatsby-plugin-mdx",
 		options: {
