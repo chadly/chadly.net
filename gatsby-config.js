@@ -31,7 +31,12 @@ const gatsbyRemarkPlugins = [
 	"gatsby-remark-autolink-headers",
 	"gatsby-remark-smartypants",
 	"@weknow/gatsby-remark-twitter",
-	"gatsby-remark-vscode",
+	{
+		resolve: "gatsby-remark-vscode",
+		options: {
+			injectStyles: false
+		}
+	},
 	{
 		resolve: "gatsby-remark-images",
 		options: {
