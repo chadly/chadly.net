@@ -9,7 +9,7 @@ import { rhythm, scale } from "../theme";
 
 import MDXRenderer from "gatsby-plugin-mdx/mdx-renderer";
 
-import massage from "./data";
+import { massage } from "./data";
 import Feedback from "./feedback";
 import EditPageLink from "./edit-page-link";
 
@@ -30,7 +30,7 @@ const BlogPostTemplate = ({ data }) => {
 		<Layout>
 			<Seo
 				title={post.title}
-				description={post.description || post.excerpt}
+				description={post.description}
 				article={{
 					published: post.date
 				}}

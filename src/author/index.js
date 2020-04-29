@@ -3,9 +3,10 @@ import { createUseStyles } from "react-jss";
 import { useStaticQuery, graphql } from "gatsby";
 import { rhythm, scale, smallScreenMediaQuery } from "../theme";
 
-import pic from "./me.jpg";
+import Img from "gatsby-image";
+import MDXRenderer from "gatsby-plugin-mdx/mdx-renderer";
+
 import Social from "./social";
-import author from "./data";
 
 const Author = ({ small, children }) => {
 	const classes = useStyles({ small });
@@ -13,6 +14,9 @@ const Author = ({ small, children }) => {
 	const {
 		site: {
 			siteMetadata: { siteUrl }
+		},
+		file: {
+			childMdx: { author, bio }
 		}
 	} = useStaticQuery(graphql`
 		query AuthorQuery {
@@ -21,16 +25,45 @@ const Author = ({ small, children }) => {
 					siteUrl
 				}
 			}
+			file(sourceInstanceName: { eq: "author" }, extension: { eq: "mdx" }) {
+				childMdx {
+					author: frontmatter {
+						name
+						gender
+						github
+						twitter
+						stackOverflow
+						keybase
+						avatar {
+							imgLarge: childImageSharp {
+								fixed(width: 175) {
+									...GatsbyImageSharpFixed
+								}
+							}
+							imgSmall: childImageSharp {
+								fixed(width: 130) {
+									...GatsbyImageSharpFixed
+								}
+							}
+						}
+					}
+					bio: body
+				}
+			}
 		}
 	`);
 
 	return (
 		<section className={`p-author h-card ${classes.container}`}>
-			<img
-				src={pic}
-				alt={author.name}
-				className={`u-photo ${classes.profileImg}`}
-			/>
+			<div className={classes.profileImgContainer}>
+				<Img
+					fixed={
+						small ? author.avatar.imgSmall.fixed : author.avatar.imgLarge.fixed
+					}
+					alt={author.name}
+					className={`u-photo ${classes.profileImg}`}
+				/>
+			</div>
 			<div className={classes.meta}>
 				<h3>
 					{children}
@@ -38,7 +71,9 @@ const Author = ({ small, children }) => {
 						{author.name}
 					</a>
 				</h3>
-				<div className={`p-note ${classes.bio}`}>{author.description}</div>
+				<div className={`p-note ${classes.bio}`}>
+					<MDXRenderer>{bio}</MDXRenderer>
+				</div>
 				<Social {...author} className={classes.social} />
 			</div>
 		</section>
@@ -56,18 +91,17 @@ const useStyles = createUseStyles({
 			textAlign: "center"
 		}
 	},
-	profileImg: {
+	profileImgContainer: {
 		margin: `0 ${rhythm(1)} 0 0`,
-		boxShadow: "0 0 0 6px var(--glow)",
-		background: "#e3e9ed",
-		borderRadius: "100%",
-		objectFit: "cover",
-		width: ({ small }) => rhythm(small ? 4.5 : 6),
-		height: ({ small }) => rhythm(small ? 4.5 : 6),
 		[smallScreenMediaQuery]: {
 			display: "block",
 			margin: `${rhythm(0.5)} auto`
 		}
+	},
+	profileImg: {
+		boxShadow: "0 0 0 6px var(--glow)",
+		borderRadius: "100%",
+		objectFit: "cover"
 	},
 	meta: {
 		"& h3": {

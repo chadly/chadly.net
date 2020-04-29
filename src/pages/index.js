@@ -1,64 +1,42 @@
 import React, { useMemo } from "react";
-import { graphql, Link } from "gatsby";
+import { graphql } from "gatsby";
 
 import { createUseStyles } from "react-jss";
 import { rhythm } from "../theme";
 
+import MDXRenderer from "gatsby-plugin-mdx/mdx-renderer";
+
 import Layout from "../layout";
 import Seo from "../seo";
 
-import author from "../author/data";
 import Author from "../author";
 import PostStub from "../post/stub";
 
-import { union, sortBy, reverse } from "lodash";
+import { massageList } from "../post/data";
 
 const HomePage = ({
 	data: {
-		allMdx: { posts },
-		allPostsJson: { externalPosts }
+		site: {
+			siteMetadata: { description }
+		},
+		authorFile: {
+			childMdx: { author, bio }
+		},
+		projectFiles: { projects },
+		postFiles: { posts },
+		externalPostFiles: { externalPosts }
 	}
 }) => {
 	const classes = useStyles();
 
-	const allPosts = useMemo(
-		() =>
-			reverse(
-				sortBy(
-					union(
-						posts.map(
-							({
-								id,
-								frontmatter: { title, description, date, dateFormatted },
-								fields: { slug },
-								timeToRead
-							}) => ({
-								id,
-								title,
-								description,
-								date,
-								dateFormatted,
-								url: slug,
-								timeToRead
-							})
-						),
-						externalPosts.map(post => ({ ...post, isExternal: true }))
-					),
-					"date"
-				)
-			),
-		[posts, externalPosts]
-	);
+	const allPosts = useMemo(() => massageList({ posts, externalPosts }), [
+		posts,
+		externalPosts
+	]);
 
 	return (
 		<Layout>
-			<Seo
-				profile={{
-					name: author.name,
-					username: author.twitter,
-					gender: author.gender
-				}}
-			/>
+			<Seo title={description} description={bio} profile={author} />
 
 			<main role="main">
 				<Author />
@@ -66,29 +44,19 @@ const HomePage = ({
 				<section className={classes.section}>
 					<h2>Things I've Built</h2>
 
-					<Item headline="Runly" href="https://www.runly.io/">
-						The easiest way to deploy and scale your background jobs for .NET
-						Core. Offload work from the web to create a snappy UX and a fault
-						tolerant application.
-					</Item>
-
-					<Item
-						headline="Geocoding.net"
-						href="https://github.com/chadly/Geocoding.net"
-					>
-						C# GeoCoding / Address Validation API that integrates with five
-						popular Geocoding providers. Perform address validation, real time
-						mapping of user-entered addresses, distance calculations, and more.
-					</Item>
-
-					<Item
-						headline="React Bootstrap Notifier"
-						href="https://github.com/chadly/react-bs-notifier"
-					>
-						A react component to show growl-like notifications using bootstrap
-						alerts. See a{" "}
-						<a href="https://chadly.github.io/react-bs-notifier/">live demo</a>.
-					</Item>
+					{projects.map(
+						({
+							id,
+							childMdx: {
+								frontmatter: { headline, href },
+								description
+							}
+						}) => (
+							<Project key={id} headline={headline} href={href}>
+								{description}
+							</Project>
+						)
+					)}
 				</section>
 
 				<section className={`h-feed ${classes.section}`}>
@@ -115,43 +83,76 @@ const useStyles = createUseStyles({
 	}
 });
 
-const Item = ({ headline, href, to, children }) => {
-	const headlineText = to ? (
-		<Link to={to}>{headline}</Link>
-	) : href ? (
-		<a href={href}>{headline}</a>
-	) : (
-		<>{headline}</>
-	);
-
-	return (
-		<article>
-			<h4>{headlineText}</h4>
-			<p>{children}</p>
-		</article>
-	);
-};
+const Project = ({ headline, href, children }) => (
+	<article>
+		<h4>
+			<a href={href}>{headline}</a>
+		</h4>
+		<MDXRenderer>{children}</MDXRenderer>
+	</article>
+);
 
 export default HomePage;
 
 export const pageQuery = graphql`
-	query BlogQuery {
-		allMdx(sort: { fields: [frontmatter___date], order: DESC }) {
-			posts: nodes {
-				id
-				frontmatter {
-					title
-					description
-					date
-					dateFormatted: date(formatString: "MMMM Do, YYYY")
-				}
-				fields {
-					slug
-				}
-				timeToRead
+	query HomeQuery {
+		site {
+			siteMetadata {
+				description
 			}
 		}
-		allPostsJson(sort: { fields: date, order: DESC }) {
+		authorFile: file(
+			sourceInstanceName: { eq: "author" }
+			extension: { eq: "mdx" }
+		) {
+			childMdx {
+				author: frontmatter {
+					name
+					username: twitter
+					gender
+				}
+				bio: excerpt(pruneLength: 500)
+			}
+		}
+		projectFiles: allFile(
+			filter: {
+				sourceInstanceName: { eq: "projects" }
+				extension: { eq: "mdx" }
+			}
+			sort: { fields: childMdx___frontmatter___sort }
+		) {
+			projects: nodes {
+				id
+				childMdx {
+					frontmatter {
+						headline
+						href
+					}
+					description: body
+				}
+			}
+		}
+		postFiles: allFile(
+			filter: { sourceInstanceName: { eq: "posts" }, extension: { eq: "mdx" } }
+		) {
+			posts: nodes {
+				id
+				childMdx {
+					frontmatter {
+						title
+						description
+						date
+						dateFormatted: date(formatString: "MMMM Do, YYYY")
+					}
+					fields {
+						slug
+					}
+					timeToRead
+					excerpt
+				}
+			}
+		}
+		externalPostFiles: allPostsJson(sort: { fields: date, order: DESC }) {
 			externalPosts: nodes {
 				id
 				title

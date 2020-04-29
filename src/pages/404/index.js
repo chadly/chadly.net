@@ -19,7 +19,7 @@ const NotFoundPage = ({
 	return (
 		<>
 			<Helmet>
-				<title>Page Not Found - {title}</title>
+				<title>Page Not Found</title>
 			</Helmet>
 
 			<div className={classes.container}>

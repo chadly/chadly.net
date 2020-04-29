@@ -1,6 +1,35 @@
-import { get, sortBy } from "lodash";
+import { get, sortBy, union, reverse } from "lodash";
 
-export default function massage({
+export const massageList = ({ posts, externalPosts }) =>
+	reverse(
+		sortBy(
+			union(
+				posts.map(
+					({
+						id,
+						childMdx: {
+							frontmatter: { title, description, date, dateFormatted },
+							fields: { slug },
+							excerpt,
+							timeToRead
+						}
+					}) => ({
+						id,
+						title,
+						description: description || excerpt,
+						date,
+						dateFormatted,
+						url: slug,
+						timeToRead
+					})
+				),
+				externalPosts.map(post => ({ ...post, isExternal: true }))
+			),
+			"date"
+		)
+	);
+
+export function massage({
 	mdx: {
 		frontmatter: {
 			id,
@@ -63,13 +92,12 @@ export default function massage({
 		post: {
 			id,
 			title,
-			description,
+			description: description || excerpt,
 			date,
 			dateFormatted,
 			twitterId,
 			slug,
 			body,
-			excerpt,
 			readingTime: `${timeToRead} min read`,
 			cover: get(cover, "img.fixed.src")
 		},

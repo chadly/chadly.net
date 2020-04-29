@@ -1,11 +1,26 @@
 /* eslint-disable import/no-commonjs */
 require("dotenv").config();
 
+require("@babel/register")({
+	presets: [
+		[
+			"@babel/env",
+			{
+				targets: {
+					node: "current"
+				}
+			}
+		]
+	]
+});
+
+const { massageList } = require("./src/post/data");
+
 const { NODE_ENV, CONTEXT: NETLIFY_ENV = NODE_ENV } = process.env;
 
 const siteMetadata = {
 	title: "chadly.net",
-	description: "Personal blog by Chad Lee",
+	description: "Personal blog",
 	siteUrl: "https://www.chadly.net",
 	webMentionIoUsername: "www.chadly.net",
 	githubLink: "https://github.com/chadly/chadly.net"
@@ -67,6 +82,20 @@ const plugins = [
 		}
 	},
 	{
+		resolve: "gatsby-source-filesystem",
+		options: {
+			name: "author",
+			path: `${__dirname}/content/author`
+		}
+	},
+	{
+		resolve: "gatsby-source-filesystem",
+		options: {
+			name: "projects",
+			path: `${__dirname}/content/projects`
+		}
+	},
+	{
 		resolve: "gatsby-source-disqus-xml",
 		options: {
 			filePath: `${__dirname}/content/disqus.xml`
@@ -112,38 +141,49 @@ const plugins = [
 			}`,
 			feeds: [
 				{
-					serialize: ({ query: { site, allMdx } }) => {
-						return allMdx.edges.map(
-							({
-								node: {
-									frontmatter: { id, title, date },
-									fields: { slug },
-									excerpt
-								}
-							}) => ({
-								title,
-								description: excerpt,
-								date,
-								url: `${site.siteMetadata.siteUrl}${slug}`,
-								guid: id
-							})
-						);
-					},
+					serialize: ({
+						query: {
+							site,
+							postFiles: { posts },
+							externalPostFiles: { externalPosts }
+						}
+					}) =>
+						massageList({ posts, externalPosts }).map(post => ({
+							guid: post.id,
+							title: post.title,
+							description: post.description,
+							date: post.date,
+							url: post.url.startsWith("http")
+								? post.url
+								: `${site.siteMetadata.siteUrl}${post.url}`
+						})),
 					query: `
 					{
-						allMdx(sort: { fields: [frontmatter___date], order: DESC }) {
-							edges {
-								node {
+						postFiles: allFile(
+							filter: { sourceInstanceName: { eq: "posts" }, extension: { eq: "mdx" } }
+						) {
+							posts: nodes {
+								id
+								childMdx {
 									frontmatter {
-										id
 										title
-										date(formatString: "YYYY-MM-DD")
+										description
+										date
 									}
 									fields {
 										slug
 									}
 									excerpt
 								}
+							}
+						}
+						externalPostFiles: allPostsJson(sort: { fields: date, order: DESC }) {
+							externalPosts: nodes {
+								id
+								title
+								description
+								date
+								url
 							}
 						}
 					}`,

@@ -13,6 +13,11 @@ const Layout = ({ children, width }) => {
 	const {
 		site: {
 			siteMetadata: { title, description }
+		},
+		file: {
+			childMdx: {
+				author: { name }
+			}
 		}
 	} = useStaticQuery(graphql`
 		query LayoutQuery {
@@ -22,11 +27,27 @@ const Layout = ({ children, width }) => {
 					description
 				}
 			}
+			file(sourceInstanceName: { eq: "author" }, extension: { eq: "mdx" }) {
+				childMdx {
+					author: frontmatter {
+						name
+					}
+				}
+			}
 		}
 	`);
 
 	return (
 		<div className={classes.root}>
+			<Helmet titleTemplate={`%s | ${name}`}>
+				<link
+					rel="stylesheet"
+					href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+					integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+					crossOrigin="anonymous"
+				/>
+			</Helmet>
+
 			<h1 className={classes.siteTitle} title={description}>
 				<Link to="/">{title}</Link>
 			</h1>
@@ -49,15 +70,6 @@ const Layout = ({ children, width }) => {
 			</ThemeToggler>
 
 			<div className={classes.container}>
-				<Helmet>
-					<link
-						rel="stylesheet"
-						href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
-						integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
-						crossOrigin="anonymous"
-					/>
-				</Helmet>
-
 				{children}
 
 				<footer className={classes.footer}>

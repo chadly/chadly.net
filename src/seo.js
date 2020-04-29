@@ -4,41 +4,46 @@ import { useLocation } from "@reach/router";
 
 import { useStaticQuery, graphql } from "gatsby";
 
-import AuthorPhoto from "./author/me.jpg";
-import author from "./author/data";
-
-import { get } from "lodash";
-
 const Seo = ({ title, description, image, article, profile }) => {
 	const { pathname } = useLocation();
 
 	const {
 		site: {
-			siteMetadata: { siteUrl, title: siteTitle, description: siteDesc }
+			siteMetadata: { siteUrl }
+		},
+		file: {
+			childMdx: {
+				author: { twitter, avatar }
+			}
 		}
 	} = useStaticQuery(graphql`
 		query SeoQuery {
 			site {
 				siteMetadata {
 					siteUrl
-					title
-					description
+				}
+			}
+			file(sourceInstanceName: { eq: "author" }, extension: { eq: "mdx" }) {
+				childMdx {
+					author: frontmatter {
+						twitter
+						avatar {
+							img: childImageSharp {
+								fixed(width: 150) {
+									src
+								}
+							}
+						}
+					}
 				}
 			}
 		}
 	`);
 
-	const authorName = get(author, "name");
-	const twitter = get(author, "twitter");
-
-	title = title
-		? `${title}${authorName ? ` | ${authorName}` : ""}`
-		: `${siteTitle} | ${siteDesc}`;
-
-	const desc = description || siteDesc;
-
 	const url = `${siteUrl}${pathname || "/"}`;
-	const imageUrl = image ? `${siteUrl}${image}` : `${siteUrl}${AuthorPhoto}`;
+	const imageUrl = image
+		? `${siteUrl}${image}`
+		: `${siteUrl}${avatar.img.fixed.src}`;
 	const isLargeImage = !!image;
 
 	return (
@@ -46,7 +51,7 @@ const Seo = ({ title, description, image, article, profile }) => {
 			<link rel="canonical" href={url} />
 
 			{title ? <title>{title}</title> : null}
-			{description ? <meta name="description" content={desc} /> : null}
+			{description ? <meta name="description" content={description} /> : null}
 			{imageUrl ? <meta name="image" content={imageUrl} /> : null}
 
 			{url ? <meta property="og:url" content={url} /> : null}
