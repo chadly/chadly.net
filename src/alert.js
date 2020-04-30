@@ -10,7 +10,7 @@ const Alert = ({ type = "info", title, children, className, ...props }) => {
 			{...props}
 		>
 			<Icon type={type} title={title} />
-			{children}
+			<div className={classes.content}>{children}</div>
 		</div>
 	);
 };
@@ -33,13 +33,17 @@ const useStyles = createUseStyles({
 		marginBottom: "20px",
 		border: "1px solid transparent",
 		borderRadius: "4px",
-		display: "table",
+		display: "flex",
+		alignItems: "flex-start",
 
-		"& h4": {
-			marginTop: 0,
-			color: "inherit"
-		},
+		"& .fas": {
+			padding: "0 0.5em 0 0.2em",
+			opacity: 0.2,
+			fontSize: "1.5em"
+		}
+	},
 
+	content: {
 		"& a": {
 			fontWeight: "bold"
 		},
@@ -50,18 +54,6 @@ const useStyles = createUseStyles({
 
 		"> p + p": {
 			marginTop: "5px"
-		},
-
-		"& .fas": {
-			display: "table-cell",
-			padding: "0 0.5em 0 0.2em",
-			opacity: 0.2,
-			fontSize: "1.5em",
-			verticalAlign: "middle"
-		},
-
-		"& p": {
-			display: "table-cell"
 		}
 	},
 

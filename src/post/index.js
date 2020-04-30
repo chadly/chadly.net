@@ -7,11 +7,14 @@ import Seo from "../seo";
 import Author from "../author";
 import { rhythm, scale } from "../theme";
 
+import { MDXProvider } from "@mdx-js/react";
 import MDXRenderer from "gatsby-plugin-mdx/mdx-renderer";
 
 import { massage } from "./data";
 import Feedback from "./feedback";
 import EditPageLink from "./edit-page-link";
+
+import Alert from "../alert";
 
 const BlogPostTemplate = ({ data }) => {
 	const classes = useStyles();
@@ -57,7 +60,9 @@ const BlogPostTemplate = ({ data }) => {
 				</header>
 
 				<main role="main" className={`e-content ${classes.postBody}`}>
-					<MDXRenderer>{post.body}</MDXRenderer>
+					<MDXProvider components={{ Alert }}>
+						<MDXRenderer>{post.body}</MDXRenderer>
+					</MDXProvider>
 				</main>
 
 				<footer className={classes.postFooter}>
