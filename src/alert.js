@@ -9,8 +9,11 @@ const Alert = ({ type = "info", title, children, className, ...props }) => {
 			className={`${classes[`alert-${type}`]} ${className || ""}`}
 			{...props}
 		>
-			<Icon type={type} title={title} />
-			<div className={classes.content}>{children}</div>
+			<Icon type={type} />
+			<div className={classes.content}>
+				{title ? <h4>{title}</h4> : null}
+				{children}
+			</div>
 		</div>
 	);
 };
@@ -44,6 +47,11 @@ const useStyles = createUseStyles({
 	},
 
 	content: {
+		"& h4": {
+			marginTop: "0.25em",
+			color: "inherit"
+		},
+
 		"& a": {
 			fontWeight: "bold"
 		},
