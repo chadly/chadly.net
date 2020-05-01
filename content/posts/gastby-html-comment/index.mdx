@@ -4,6 +4,7 @@ title: Add a Developer Greeting in the Source of your Gatsby Site
 description: How to add HTML comments to a website in 2020.
 cover: keybase.png
 date: '2020-05-01'
+twitterId: 1256230810228850688
 ---
 
 <Alert>
@@ -100,7 +101,7 @@ exports.onPreRenderHTML = ({ getHeadComponents, replaceHeadComponents }) => {
 };
 ```
 
-This will add a `script` tag as the first element in your `head` with it's content set to a JS comment. Although this works and has the benefit of being able to be packaged up into a plugin that can easily be reused across all of your sites, it isn't exactly what we want. If you open dev tools with this solution:
+This will add a `script` tag as the first element in your `head` with its content set to a JS comment. Although this works and has the benefit of being able to be packaged up into a plugin that can easily be reused across all of your sites, it isn't exactly what we want. If you open dev tools with this solution:
 
 ![bad comment](./bad-comment.png "Where is my comment?")
 
