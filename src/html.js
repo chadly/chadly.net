@@ -20,6 +20,7 @@ on GitHub: https://github.com/chadly/chadly.net. It's OSS and all this HTML/JS
 is optimized and not that readable.
 
 Want to know how to add a message like this to your Gatsby site? Checkout
+https://www.chadly.net/gastby-html-comment/
 ------------------------------------------------------------------------>
 				${renderedChildren}
 			`
