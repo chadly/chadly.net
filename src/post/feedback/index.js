@@ -1,19 +1,18 @@
 import React from "react";
 import { createUseStyles } from "react-jss";
 
-import TwitterIntents from "./twitter";
 import Comments from "./comments";
 import Likes from "./likes";
 import Reposts from "./reposts";
 
-import { rhythm } from "../../theme";
-
-const Feedback = ({ twitterId, likes, comments, reposts }) => {
+const Feedback = ({ likes, comments, reposts }) => {
 	const classes = useStyles();
+
+	const any = likes.length || comments.length || reposts.length;
+	if (!any) return null;
 
 	return (
 		<div className={classes.root}>
-			<TwitterIntents twitterId={twitterId} />
 			<Likes likes={likes} />
 			<Reposts reposts={reposts} />
 			<Comments comments={comments} />
@@ -23,9 +22,7 @@ const Feedback = ({ twitterId, likes, comments, reposts }) => {
 
 const useStyles = createUseStyles({
 	root: {
-		borderTop: "1px solid var(--hr)",
-		paddingTop: rhythm(0.5),
-		marginTop: rhythm(1)
+		borderBottom: "1px solid var(--hr)"
 	}
 });
 

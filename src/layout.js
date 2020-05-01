@@ -161,7 +161,6 @@ const useStyles = createUseStyles({
 	},
 	footer: {
 		textAlign: "center",
-		borderTop: "1px solid var(--hr)",
 		marginTop: rhythm(1),
 		...scale(-0.5)
 	}

@@ -8,7 +8,7 @@ import MDXRenderer from "gatsby-plugin-mdx/mdx-renderer";
 
 import Social from "./social";
 
-const Author = ({ small, children }) => {
+const Author = ({ small, children, className }) => {
 	const classes = useStyles({ small });
 
 	const {
@@ -54,7 +54,9 @@ const Author = ({ small, children }) => {
 	`);
 
 	return (
-		<section className={`p-author h-card ${classes.container}`}>
+		<section
+			className={`p-author h-card ${classes.container} ${className || ""}`}
+		>
 			<div className={classes.profileImgContainer}>
 				<Img
 					fixed={
