@@ -64,10 +64,12 @@ exports.createPages = async ({
 				fields: { slug }
 			}
 		}) => {
+			const slugs = [slug, ...(redirectFrom || [])];
+
 			createPage({
 				path: slug,
 				component: post,
-				context: { slug, threadId }
+				context: { slug, threadId, slugs }
 			});
 
 			if (redirectFrom && redirectFrom.length) {

@@ -154,7 +154,7 @@ const useStyles = createUseStyles({
 export default BlogPostTemplate;
 
 export const pageQuery = graphql`
-	query BlogPostBySlug($slug: String!, $threadId: String!) {
+	query BlogPostBySlug($slug: String!, $threadId: String!, $slugs: [String]) {
 		site {
 			siteMetadata {
 				siteUrl
@@ -197,7 +197,7 @@ export const pageQuery = graphql`
 				message
 			}
 		}
-		allWebMentionEntry(filter: { fields: { slug: { eq: $slug } } }) {
+		allWebMentionEntry(filter: { fields: { slug: { in: $slugs } } }) {
 			edges {
 				node {
 					id
