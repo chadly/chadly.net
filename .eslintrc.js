@@ -7,10 +7,8 @@ module.exports = {
 	globals: {
 		location: "off"
 	},
-	extends: [
-		"@runly"
-	],
-	rules:{
-		"react/jsx-no-bind":"off"
+	extends: ["@runly"],
+	rules: {
+		"react/jsx-no-bind": "off"
 	}
 };
