@@ -141,10 +141,6 @@ const useStyles = createUseStyles({
 		...scale(-0.4)
 	},
 	"@global": {
-		".vscode-highlight .vscode-highlight-line-highlighted": {
-			backgroundColor: "rgba(255, 255, 255, 0.2)",
-			boxShadow: "inset 2px 0 0 0 rgba(255, 255, 255, 0.5)"
-		},
 		".grvsc-container": {
 			tabSize: 4
 		}
