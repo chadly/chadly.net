@@ -54,12 +54,12 @@ const useStyles = createUseStyles({
 		"& li": {
 			display: "inline-block",
 			margin: `0 ${rhythm(0.2)}`,
-			...scale(-0.2)
+			...scale(-0.3)
 		}
 	},
 	desc: {
 		color: "var(--textMuted)",
-		fontSize: "0.75rem"
+		...scale(-0.3)
 	}
 });
 

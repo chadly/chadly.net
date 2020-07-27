@@ -5,7 +5,7 @@ import TwitterIntents from "./twitter";
 import Comments from "./comments";
 import Likes from "./likes";
 import Reposts from "./reposts";
-import { rhythm } from "../../theme";
+import { rhythm, scale } from "../../theme";
 
 const Feedback = ({ likes, comments, reposts, twitterId }) => {
 	const classes = useStyles();
@@ -59,7 +59,7 @@ const useStyles = createUseStyles({
 		"& a": {
 			color: "var(--textMuted)",
 			textDecoration: "underline",
-			fontSize: "0.75rem"
+			...scale(-0.3)
 		}
 	}
 });
