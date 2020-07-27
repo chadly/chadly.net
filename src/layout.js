@@ -1,4 +1,6 @@
 import React from "react";
+import { useStaticQuery, graphql } from "gatsby";
+
 import { createUseStyles } from "react-jss";
 import { rhythm, scale } from "./theme";
 
@@ -6,6 +8,27 @@ import { ThemeToggler } from "gatsby-plugin-dark-mode";
 
 const Layout = ({ children, width }) => {
 	const classes = useStyles({ width });
+
+	const {
+		authorFile: {
+			childMdx: {
+				author: { name }
+			}
+		}
+	} = useStaticQuery(graphql`
+		query LayoutQuery {
+			authorFile: file(
+				sourceInstanceName: { eq: "author" }
+				extension: { eq: "mdx" }
+			) {
+				childMdx {
+					author: frontmatter {
+						name
+					}
+				}
+			}
+		}
+	`);
 
 	return (
 		<div className={classes.root}>
@@ -30,21 +53,7 @@ const Layout = ({ children, width }) => {
 				{children}
 
 				<footer className={classes.footer}>
-					All content (except code snippets) licensed{" "}
-					<a
-						rel="license"
-						href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en_US"
-					>
-						CC BY-NC-SA 4.0
-					</a>
-					. All code snippets licensed under{" "}
-					<a
-						rel="license"
-						href="https://github.com/chadly/chadly.net/blob/master/LICENSE"
-					>
-						MIT License
-					</a>
-					.
+					© {name} {new Date().getFullYear()}
 				</footer>
 			</div>
 		</div>
