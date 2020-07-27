@@ -13,7 +13,6 @@ import MDXRenderer from "gatsby-plugin-mdx/mdx-renderer";
 import { massage } from "./data";
 import Feedback from "./feedback";
 import EditPageLink from "./edit-page-link";
-import TwitterIntents from "./feedback/twitter";
 
 import Alert from "../alert";
 
@@ -67,12 +66,15 @@ const BlogPostTemplate = ({ data }) => {
 				</main>
 
 				<footer className={classes.postFooter}>
-					<TwitterIntents twitterId={post.twitterId} />
-
 					<Author small className={classes.author}>
 						Written by{" "}
 					</Author>
-					<Feedback likes={likes} comments={comments} reposts={reposts} />
+					<Feedback
+						likes={likes}
+						comments={comments}
+						reposts={reposts}
+						twitterId={post.twitterId}
+					/>
 				</footer>
 			</article>
 		</Layout>
