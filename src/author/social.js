@@ -2,6 +2,13 @@ import React from "react";
 import { createUseStyles } from "react-jss";
 import { rhythm } from "../theme";
 
+import SvgIcon from "../icon";
+import TwitterIcon from "./twitter.svg";
+import GitHubIcon from "./github.svg";
+import StackOverflowIcon from "./stack-overflow.svg";
+import KeybaseIcon from "./keybase.svg";
+import RssIcon from "./rss.svg";
+
 const AuthorSocial = ({
 	github,
 	twitter,
@@ -18,35 +25,35 @@ const AuthorSocial = ({
 	return (
 		<ul className={`${classes.container} ${className || ""}`}>
 			<SocialIcon
-				id="fab fa-twitter"
+				id="twitter"
 				name="Twitter"
 				href={`https://twitter.com/${twitter}`}
 				show={!!twitter}
 				rel="me"
 			/>
 			<SocialIcon
-				id="fab fa-github"
-				name="Github"
+				id="github"
+				name="GitHub"
 				href={`https://github.com/${github}`}
 				show={!!github}
 				rel="me"
 			/>
 			<SocialIcon
-				id="fab fa-stack-overflow"
+				id="stack-overflow"
 				name="Stack Overflow"
 				href={`https://stackoverflow.com/users/${stackOverflow}`}
 				show={!!stackOverflow}
 				rel="me"
 			/>
 			<SocialIcon
-				id="fab fa-keybase"
+				id="keybase"
 				name="Keybase"
 				href={`https://keybase.io/${keybase}`}
 				show={!!keybase}
 				rel="me"
 			/>
 			<SocialIcon
-				id="fas fa-rss"
+				id="rss"
 				name="RSS"
 				href={`/rss.xml`}
 				show
@@ -62,10 +69,29 @@ const SocialIcon = ({ id, name, show, ...props }) => {
 	return (
 		<li>
 			<a title={name} {...props}>
-				<i className={id} />
+				<SvgIcon>
+					<WhichIcon id={id} />
+				</SvgIcon>
 			</a>
 		</li>
 	);
+};
+
+const WhichIcon = ({ id, ...props }) => {
+	switch (id) {
+		case "twitter":
+			return <TwitterIcon {...props} />;
+		case "github":
+			return <GitHubIcon {...props} />;
+		case "stack-overflow":
+			return <StackOverflowIcon {...props} />;
+		case "keybase":
+			return <KeybaseIcon {...props} />;
+		case "rss":
+			return <RssIcon {...props} />;
+		default:
+			return null;
+	}
 };
 
 const useStyles = createUseStyles({

@@ -14,7 +14,7 @@ const EditPageLink = ({ githubLink, fileAbsolutePath, className }) => {
 			href={url}
 			title="Suggest an edit on Github"
 		>
-			<i className="fas fa-pencil-alt" />
+			✏️
 		</a>
 	);
 };

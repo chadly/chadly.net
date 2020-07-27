@@ -1,6 +1,4 @@
 import React from "react";
-import { Helmet } from "react-helmet";
-
 import { createUseStyles } from "react-jss";
 import { rhythm, scale } from "./theme";
 
@@ -11,15 +9,6 @@ const Layout = ({ children, width }) => {
 
 	return (
 		<div className={classes.root}>
-			<Helmet>
-				<link
-					rel="stylesheet"
-					href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
-					integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
-					crossOrigin="anonymous"
-				/>
-			</Helmet>
-
 			<ThemeToggler>
 				{({ theme, toggleTheme }) => (
 					<label className={classes.darkToggle}>
@@ -29,9 +18,9 @@ const Layout = ({ children, width }) => {
 							checked={theme === "dark"}
 						/>{" "}
 						{theme == "light" ? (
-							<i className="fas fa-sun" title="Turn to the dark side" />
+							<span title="Turn to the dark side">☀️</span>
 						) : (
-							<i className="fas fa-moon" title="Turn to the light" />
+							<span title="Turn to the light">🌙</span>
 						)}
 					</label>
 				)}

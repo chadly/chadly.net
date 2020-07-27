@@ -112,6 +112,7 @@ const plugins = [
 	"gatsby-plugin-jss",
 	"gatsby-plugin-dark-mode",
 	"gatsby-plugin-sitemap",
+	"gatsby-plugin-react-svg",
 	{
 		resolve: "gatsby-plugin-robots-txt",
 		options: {

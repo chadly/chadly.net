@@ -112,7 +112,11 @@ const useStyles = createUseStyles({
 		marginLeft: rhythm(-1.3),
 		marginRight: 0,
 		...scale(0.6),
-		visibility: "hidden"
+		visibility: "hidden",
+
+		"& :hover": {
+			textDecoration: "none"
+		}
 	},
 	meta: {
 		color: "var(--textMuted)",

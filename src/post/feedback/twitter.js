@@ -2,6 +2,11 @@ import React from "react";
 import { createUseStyles } from "react-jss";
 import { rhythm, scale } from "../../theme";
 
+import SvgIcon from "../../icon";
+import ReplyIcon from "./reply.svg";
+import RetweetIcon from "./retweet.svg";
+import HeartIcon from "./heart.svg";
+
 const TwitterIntents = ({ twitterId }) => {
 	const classes = useStyles();
 
@@ -16,7 +21,10 @@ const TwitterIntents = ({ twitterId }) => {
 						target="_blank"
 						rel="noopener noreferrer"
 					>
-						<i className="fas fa-reply" /> Reply
+						<SvgIcon>
+							<ReplyIcon />
+						</SvgIcon>{" "}
+						Reply
 					</a>
 				</li>
 				<li>
@@ -25,7 +33,10 @@ const TwitterIntents = ({ twitterId }) => {
 						target="_blank"
 						rel="noopener noreferrer"
 					>
-						<i className="fas fa-retweet" /> Repost
+						<SvgIcon>
+							<RetweetIcon />
+						</SvgIcon>{" "}
+						Repost
 					</a>
 				</li>
 				<li>
@@ -34,7 +45,10 @@ const TwitterIntents = ({ twitterId }) => {
 						target="_blank"
 						rel="noopener noreferrer"
 					>
-						<i className="fas fa-heart" /> Like
+						<SvgIcon>
+							<HeartIcon />
+						</SvgIcon>{" "}
+						Like
 					</a>
 				</li>
 			</ul>
