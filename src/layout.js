@@ -11,26 +11,16 @@ const Layout = ({ children, width }) => {
 	const classes = useStyles({ width });
 
 	const {
-		site: {
-			siteMetadata: { title, description }
-		},
 		file: {
-			childMdx: {
-				author: { name }
-			}
+			childMdx: { author }
 		}
 	} = useStaticQuery(graphql`
 		query LayoutQuery {
-			site {
-				siteMetadata {
-					title
-					description
-				}
-			}
 			file(sourceInstanceName: { eq: "author" }, extension: { eq: "mdx" }) {
 				childMdx {
 					author: frontmatter {
 						name
+						description
 					}
 				}
 			}
@@ -48,8 +38,8 @@ const Layout = ({ children, width }) => {
 				/>
 			</Helmet>
 
-			<h1 className={classes.siteTitle} title={description}>
-				<Link to="/">{title}</Link>
+			<h1 className={classes.siteTitle} title={author.description}>
+				<Link to="/">{author.name}</Link>
 			</h1>
 
 			<ThemeToggler>

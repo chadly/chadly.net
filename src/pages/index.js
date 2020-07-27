@@ -16,11 +16,8 @@ import { massageList } from "../post/data";
 
 const HomePage = ({
 	data: {
-		site: {
-			siteMetadata: { description }
-		},
 		authorFile: {
-			childMdx: { author, bio }
+			childMdx: { author }
 		},
 		projectFiles: { projects },
 		postFiles: { posts },
@@ -36,7 +33,11 @@ const HomePage = ({
 
 	return (
 		<Layout>
-			<Seo title={description} description={bio} profile={author} />
+			<Seo
+				title={author.name}
+				description={author.description}
+				profile={author}
+			/>
 
 			<main role="main">
 				<Author />
@@ -96,11 +97,6 @@ export default HomePage;
 
 export const pageQuery = graphql`
 	query HomeQuery {
-		site {
-			siteMetadata {
-				description
-			}
-		}
 		authorFile: file(
 			sourceInstanceName: { eq: "author" }
 			extension: { eq: "mdx" }
@@ -108,10 +104,10 @@ export const pageQuery = graphql`
 			childMdx {
 				author: frontmatter {
 					name
+					description
 					username: twitter
 					gender
 				}
-				bio: excerpt(pruneLength: 500)
 			}
 		}
 		projectFiles: allFile(

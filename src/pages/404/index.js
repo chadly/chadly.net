@@ -9,8 +9,10 @@ import img404 from "./oatmeal-tumbeast-404.png";
 
 const NotFoundPage = ({
 	data: {
-		site: {
-			siteMetadata: { title, description }
+		authorFile: {
+			childMdx: {
+				author: { name, description }
+			}
 		}
 	}
 }) => {
@@ -24,7 +26,7 @@ const NotFoundPage = ({
 
 			<div className={classes.container}>
 				<h1 className={classes.siteTitle} title={description}>
-					<Link to="/">{title}</Link>
+					<Link to="/">{name}</Link>
 				</h1>
 
 				<Link to="/">
@@ -66,10 +68,15 @@ export default NotFoundPage;
 
 export const pageQuery = graphql`
 	query NotFoundQuery {
-		site {
-			siteMetadata {
-				title
-				description
+		authorFile: file(
+			sourceInstanceName: { eq: "author" }
+			extension: { eq: "mdx" }
+		) {
+			childMdx {
+				author: frontmatter {
+					name
+					description
+				}
 			}
 		}
 	}

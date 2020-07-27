@@ -19,8 +19,6 @@ const { massageList } = require("./src/post/data");
 const { NODE_ENV, CONTEXT: NETLIFY_ENV = NODE_ENV } = process.env;
 
 const siteMetadata = {
-	title: "chadly.net",
-	description: "Personal blog",
 	siteUrl: "https://www.chadly.net",
 	webMentionIoUsername: "www.chadly.net",
 	githubLink: "https://github.com/chadly/chadly.net"
@@ -142,10 +140,16 @@ const plugins = [
 			{
 				site {
 					siteMetadata {
-						title
-						description
 						siteUrl
 						site_url: siteUrl
+					}
+				}
+				file(sourceInstanceName: { eq: "author" }, extension: { eq: "mdx" }) {
+					childMdx {
+						author: frontmatter {
+							name
+							description
+						}
 					}
 				}
 			}`,
@@ -198,7 +202,7 @@ const plugins = [
 						}
 					}`,
 					output: "/rss.xml",
-					title: siteMetadata.title
+					title: "Chad Lee"
 				}
 			]
 		}
