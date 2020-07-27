@@ -24,17 +24,25 @@ const FaceWall = ({ faces }) => {
 
 const useStyles = createUseStyles({
 	root: {
-		margin: 0
+		margin: 0,
+
+		"&:hover $container": {
+			marginRight: rhythm(0.3)
+		}
 	},
 	container: {
 		display: "inline-block",
-		marginRight: rhythm(0.3)
+		marginRight: rhythm(-1),
+
+		transitionProperty: "margin-right",
+		transitionDuration: "0.5s"
 	},
 	avatar: {
+		border: "solid 1px #000",
 		borderRadius: "100%",
 		objectFit: "cover",
-		width: rhythm(1),
-		height: rhythm(1)
+		width: rhythm(2),
+		height: rhythm(2)
 	}
 });
 
