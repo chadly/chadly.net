@@ -53,6 +53,8 @@ const Author = ({ small, children, className }) => {
 		}
 	`);
 
+	const H = small ? "p" : "h1";
+
 	return (
 		<section
 			className={`p-author h-card ${classes.container} ${className || ""}`}
@@ -66,13 +68,13 @@ const Author = ({ small, children, className }) => {
 					className={`u-photo ${classes.profileImg}`}
 				/>
 			</div>
-			<div className={classes.meta}>
-				<h3>
+			<div>
+				<H className={classes.byline}>
 					{children}
 					<a href={siteUrl} className="u-url p-name">
 						{author.name}
 					</a>
-				</h3>
+				</H>
 				<div className={`p-note ${classes.bio}`}>
 					<MDXRenderer>{bio}</MDXRenderer>
 				</div>
@@ -105,17 +107,16 @@ const useStyles = createUseStyles({
 		borderRadius: "100%",
 		objectFit: "cover"
 	},
-	meta: {
-		"& h3": {
-			marginTop: rhythm(0.25),
-			marginBottom: rhythm(0.25),
+	byline: {
+		marginTop: rhythm(0.25),
+		marginBottom: rhythm(0.25),
+		border: "none",
 
-			fontSize: ({ small }) => (small ? scale(0.1).fontSize : undefined),
+		fontSize: ({ small }) => (small ? scale(0.1).fontSize : undefined),
 
-			"& a": {
-				textDecoration: "none",
-				color: "var(--textNormal)"
-			}
+		"& a": {
+			textDecoration: "none",
+			color: "var(--textNormal)"
 		}
 	},
 	bio: {

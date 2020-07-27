@@ -3,18 +3,20 @@ import { createUseStyles } from "react-jss";
 import moment from "moment";
 import { rhythm, scale } from "../../theme";
 
-const CommentsRoot = ({ comments }) => {
+const CommentsRoot = ({ comments, ...props }) => {
 	const classes = useStyles();
 
 	if (!comments || !comments.length) return null;
 
 	return (
-		<section>
-			<h4>
-				{comments.totalCount} Comment{comments.totalCount != 1 ? "s" : ""}
-			</h4>
+		<div {...props}>
+			<p>
+				<strong>
+					{comments.totalCount} Comment{comments.totalCount != 1 ? "s" : ""}
+				</strong>
+			</p>
 			<Comments comments={comments} classes={classes} />
-		</section>
+		</div>
 	);
 };
 
@@ -34,15 +36,17 @@ const Comments = ({ comments, classes }) => {
 							className={classes.avatar}
 						/>
 						<div className={classes.body}>
-							<h4>
-								{c.url ? (
-									<a href={c.url}>{c.author.name}</a>
-								) : c.author.url ? (
-									<a href={c.author.url}>{c.author.name}</a>
-								) : (
-									c.author.name
-								)}
-							</h4>
+							<span className="name">
+								<strong>
+									{c.url ? (
+										<a href={c.url}>{c.author.name}</a>
+									) : c.author.url ? (
+										<a href={c.author.url}>{c.author.name}</a>
+									) : (
+										c.author.name
+									)}
+								</strong>
+							</span>
 							<time
 								dateTime={c.date}
 								title={date.format("MMMM Do, YYYY h:mm a")}
@@ -83,8 +87,10 @@ const useStyles = createUseStyles({
 	},
 	body: {
 		marginLeft: rhythm(3),
-		"& h4": {
-			marginBottom: 0
+		"& .name": {
+			display: "inline-block",
+			margin: 0,
+			marginRight: rhythm(0.25)
 		},
 		"& time": {
 			color: "var(--textMuted)",

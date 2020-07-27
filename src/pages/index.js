@@ -34,14 +34,14 @@ const HomePage = ({
 	return (
 		<Layout>
 			<Seo
-				title={author.name}
+				title={`${author.name} | ${author.description}`}
 				description={author.description}
 				profile={author}
 			/>
 
-			<main role="main">
-				<Author />
+			<Author />
 
+			<main role="main">
 				<section className={classes.section}>
 					<h2>Things I've Built</h2>
 

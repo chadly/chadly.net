@@ -5,6 +5,7 @@ import { createUseStyles } from "react-jss";
 import Layout from "../layout";
 import Seo from "../seo";
 import Author from "../author";
+import SiteHeader from "../site-header";
 import { rhythm, scale } from "../theme";
 
 import { MDXProvider } from "@mdx-js/react";
@@ -40,43 +41,47 @@ const BlogPostTemplate = ({ data }) => {
 				image={post.cover}
 			/>
 
-			<article className="h-entry">
-				<header className={classes.postHeader}>
-					<EditPageLink
-						githubLink={githubLink}
-						fileAbsolutePath={fileAbsolutePath}
-						className={classes.editLink}
-					/>
-					<h1 className="p-name">{post.title}</h1>
-					<div className={classes.meta}>
-						<a href={`${siteUrl}${post.slug}`} className="u-url">
-							<time dateTime={post.date} className="dt-published">
-								{post.dateFormatted}
-							</time>
-						</a>
+			<SiteHeader />
 
-						<span className={classes.readingTime}>{post.readingTime}</span>
+			<main role="main">
+				<article className="h-entry">
+					<header className={classes.postHeader}>
+						<EditPageLink
+							githubLink={githubLink}
+							fileAbsolutePath={fileAbsolutePath}
+							className={classes.editLink}
+						/>
+						<h1 className="p-name">{post.title}</h1>
+						<div className={classes.meta}>
+							<a href={`${siteUrl}${post.slug}`} className="u-url">
+								<time dateTime={post.date} className="dt-published">
+									{post.dateFormatted}
+								</time>
+							</a>
+
+							<span className={classes.readingTime}>{post.readingTime}</span>
+						</div>
+					</header>
+
+					<div className={`e-content ${classes.postBody}`}>
+						<MDXProvider components={{ Alert }}>
+							<MDXRenderer>{post.body}</MDXRenderer>
+						</MDXProvider>
 					</div>
-				</header>
 
-				<main role="main" className={`e-content ${classes.postBody}`}>
-					<MDXProvider components={{ Alert }}>
-						<MDXRenderer>{post.body}</MDXRenderer>
-					</MDXProvider>
-				</main>
-
-				<footer className={classes.postFooter}>
-					<Author small className={classes.author}>
-						Written by{" "}
-					</Author>
-					<Feedback
-						likes={likes}
-						comments={comments}
-						reposts={reposts}
-						twitterId={post.twitterId}
-					/>
-				</footer>
-			</article>
+					<footer className={classes.postFooter}>
+						<Author small className={classes.author}>
+							Written by{" "}
+						</Author>
+						<Feedback
+							likes={likes}
+							comments={comments}
+							reposts={reposts}
+							twitterId={post.twitterId}
+						/>
+					</footer>
+				</article>
+			</main>
 		</Layout>
 	);
 };

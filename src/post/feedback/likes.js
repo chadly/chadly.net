@@ -1,16 +1,18 @@
 import React from "react";
 import FaceWall from "./facewall";
 
-const Likes = ({ likes }) => {
+const Likes = ({ likes, ...props }) => {
 	if (!likes || !likes.length) return null;
 
 	return (
-		<section>
-			<h4>
-				{likes.length} Like{likes.length != 1 ? "s" : ""}
-			</h4>
+		<div {...props}>
+			<p>
+				<strong>
+					{likes.length} Like{likes.length != 1 ? "s" : ""}
+				</strong>
+			</p>
 			<FaceWall faces={likes} />
-		</section>
+		</div>
 	);
 };
 

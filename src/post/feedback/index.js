@@ -25,19 +25,20 @@ const Feedback = ({ likes, comments, reposts, twitterId }) => {
 		);
 
 	return (
-		<div className={classes.root}>
+		<section className={classes.root}>
 			<div className={classes.header}>
-				<h3 className={classes.title}>Webmentions</h3>
+				<p className={classes.title}>Webmentions</p>
 				<p className={classes.subtitle}>
 					<a href="https://indieweb.org/Webmention">What is this?</a>
 				</p>
 			</div>
 
 			<TwitterIntents twitterId={twitterId} />
-			<Likes likes={likes} />
-			<Reposts reposts={reposts} />
-			<Comments comments={comments} />
-		</div>
+
+			<Likes likes={likes} className={classes.section} />
+			<Reposts reposts={reposts} className={classes.section} />
+			<Comments comments={comments} className={classes.section} />
+		</section>
 	);
 };
 
@@ -50,7 +51,9 @@ const useStyles = createUseStyles({
 	},
 	title: {
 		textAlign: "center",
-		margin: 0
+		margin: 0,
+		...scale(0.5),
+		fontWeight: "bold"
 	},
 	subtitle: {
 		textAlign: "center",
@@ -61,6 +64,9 @@ const useStyles = createUseStyles({
 			textDecoration: "underline",
 			...scale(-0.3)
 		}
+	},
+	section: {
+		marginTop: rhythm(1)
 	}
 });
 

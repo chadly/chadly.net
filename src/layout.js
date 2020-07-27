@@ -1,5 +1,4 @@
 import React from "react";
-import { Link, useStaticQuery, graphql } from "gatsby";
 import { Helmet } from "react-helmet";
 
 import { createUseStyles } from "react-jss";
@@ -10,26 +9,9 @@ import { ThemeToggler } from "gatsby-plugin-dark-mode";
 const Layout = ({ children, width }) => {
 	const classes = useStyles({ width });
 
-	const {
-		file: {
-			childMdx: { author }
-		}
-	} = useStaticQuery(graphql`
-		query LayoutQuery {
-			file(sourceInstanceName: { eq: "author" }, extension: { eq: "mdx" }) {
-				childMdx {
-					author: frontmatter {
-						name
-						description
-					}
-				}
-			}
-		}
-	`);
-
 	return (
 		<div className={classes.root}>
-			<Helmet titleTemplate={`%s | ${name}`}>
+			<Helmet>
 				<link
 					rel="stylesheet"
 					href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
@@ -37,10 +19,6 @@ const Layout = ({ children, width }) => {
 					crossOrigin="anonymous"
 				/>
 			</Helmet>
-
-			<h1 className={classes.siteTitle} title={author.description}>
-				<Link to="/">{author.name}</Link>
-			</h1>
 
 			<ThemeToggler>
 				{({ theme, toggleTheme }) => (
@@ -84,11 +62,6 @@ const Layout = ({ children, width }) => {
 	);
 };
 
-const topSpacing = {
-	margin: 0,
-	padding: `${rhythm(0.3)} ${rhythm(0.75)}`
-};
-
 const useStyles = createUseStyles({
 	"@global": {
 		body: {
@@ -120,7 +93,10 @@ const useStyles = createUseStyles({
 	darkToggle: {
 		display: "block",
 		float: "right",
-		...topSpacing,
+
+		margin: 0,
+		padding: `${rhythm(0.3)} ${rhythm(0.75)}`,
+
 		"& input": {
 			display: "none"
 		},
@@ -136,18 +112,6 @@ const useStyles = createUseStyles({
 		marginRight: `auto`,
 		maxWidth: ({ width = 30 }) => rhythm(width),
 		padding: `${rhythm(1.5)} ${rhythm(0.75)}`
-	},
-	siteTitle: {
-		float: "left",
-		border: "none",
-		...topSpacing,
-		...scale(0.2),
-
-		"& a": {
-			boxShadow: `none`,
-			textDecoration: `none`,
-			color: `inherit`
-		}
 	},
 	footer: {
 		textAlign: "center",

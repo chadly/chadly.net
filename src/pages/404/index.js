@@ -1,34 +1,26 @@
 import React from "react";
 import { createUseStyles } from "react-jss";
-import { Link, graphql } from "gatsby";
+import { Link } from "gatsby";
 import { Helmet } from "react-helmet";
 
-import { scale } from "../../theme";
+import Layout from "../../layout";
+import SiteHeader from "../../site-header";
+import { rhythm } from "../../theme";
 
 import img404 from "./oatmeal-tumbeast-404.png";
 
-const NotFoundPage = ({
-	data: {
-		authorFile: {
-			childMdx: {
-				author: { name, description }
-			}
-		}
-	}
-}) => {
+const NotFoundPage = () => {
 	const classes = useStyles();
 
 	return (
-		<>
+		<Layout>
 			<Helmet>
 				<title>Page Not Found</title>
 			</Helmet>
 
-			<div className={classes.container}>
-				<h1 className={classes.siteTitle} title={description}>
-					<Link to="/">{name}</Link>
-				</h1>
+			<SiteHeader />
 
+			<main role="main">
 				<Link to="/">
 					<img
 						src={img404}
@@ -37,47 +29,16 @@ const NotFoundPage = ({
 						className={classes.image}
 					/>
 				</Link>
-			</div>
-		</>
+			</main>
+		</Layout>
 	);
 };
 
 const useStyles = createUseStyles({
-	container: {
-		textAlign: "center",
-		color: "var(--textNormal)"
-	},
-	siteTitle: {
-		border: "none",
-		...scale(0.2),
-		marginLeft: 60, // because of the img drop shadow, this doesn't look centered otherwise
-		"@media (max-width:500px)": {
-			// at smaller viewports, it doesn't look right
-			marginLeft: 40
-		},
-
-		"& a": {
-			boxShadow: `none`,
-			textDecoration: `none`,
-			color: `inherit`
-		}
+	image: {
+		display: "block",
+		margin: `${rhythm(2)} auto`
 	}
 });
 
 export default NotFoundPage;
-
-export const pageQuery = graphql`
-	query NotFoundQuery {
-		authorFile: file(
-			sourceInstanceName: { eq: "author" }
-			extension: { eq: "mdx" }
-		) {
-			childMdx {
-				author: frontmatter {
-					name
-					description
-				}
-			}
-		}
-	}
-`;
