@@ -11,7 +11,18 @@ const Feedback = ({ likes, comments, reposts, twitterId }) => {
 	const classes = useStyles();
 
 	const any = likes.length || comments.length || reposts.length;
-	if (!any) return null;
+
+	if (!any)
+		return (
+			<div className={classes.root}>
+				<div className={classes.header}>
+					<h3 className={classes.title}>Send me a Webmention</h3>
+					<p className={classes.subtitle}>
+						<a href="https://indieweb.org/Webmention">What is this?</a>
+					</p>
+				</div>
+			</div>
+		);
 
 	return (
 		<div className={classes.root}>
