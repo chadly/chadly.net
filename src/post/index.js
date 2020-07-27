@@ -13,25 +13,13 @@ import MDXRenderer from "gatsby-plugin-mdx/mdx-renderer";
 
 import { massage } from "./data";
 import Feedback from "./feedback";
-import EditPageLink from "./edit-page-link";
 
 import Alert from "../alert";
 
 const BlogPostTemplate = ({ data }) => {
 	const classes = useStyles();
 
-	console.log(data);
-
-	const {
-		post,
-		author,
-		siteUrl,
-		githubLink,
-		fileAbsolutePath,
-		comments,
-		likes,
-		reposts
-	} = massage(data);
+	const { post, author, siteUrl, comments, likes, reposts } = massage(data);
 
 	return (
 		<Layout>
@@ -49,11 +37,6 @@ const BlogPostTemplate = ({ data }) => {
 			<main role="main">
 				<article className="h-entry">
 					<header className={classes.postHeader}>
-						<EditPageLink
-							githubLink={githubLink}
-							fileAbsolutePath={fileAbsolutePath}
-							className={classes.editLink}
-						/>
 						<h1 className="p-name">{post.title}</h1>
 						<div className={classes.meta}>
 							<a href={`${siteUrl}${post.slug}`} className="u-url">
@@ -103,19 +86,6 @@ const useStyles = createUseStyles({
 		},
 		"&:hover $editLink": {
 			visibility: "visible"
-		}
-	},
-	editLink: {
-		float: "left",
-		boxShadow: "none",
-		paddingRight: rhythm(0.4),
-		marginLeft: rhythm(-1.3),
-		marginRight: 0,
-		...scale(0.6),
-		visibility: "hidden",
-
-		"& :hover": {
-			textDecoration: "none"
 		}
 	},
 	meta: {
@@ -168,7 +138,6 @@ export const pageQuery = graphql`
 		site {
 			siteMetadata {
 				siteUrl
-				githubLink
 			}
 		}
 		authorFile: file(
@@ -203,7 +172,6 @@ export const pageQuery = graphql`
 			body
 			excerpt
 			timeToRead
-			fileAbsolutePath
 		}
 		disqusThread(threadId: { eq: $threadId }) {
 			comments {

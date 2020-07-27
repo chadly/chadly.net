@@ -20,8 +20,7 @@ const { NODE_ENV, CONTEXT: NETLIFY_ENV = NODE_ENV } = process.env;
 
 const siteMetadata = {
 	siteUrl: "https://www.chadly.net",
-	webMentionIoUsername: "www.chadly.net",
-	githubLink: "https://github.com/chadly/chadly.net"
+	webMentionIoUsername: "www.chadly.net"
 };
 
 const gatsbyRemarkPlugins = [

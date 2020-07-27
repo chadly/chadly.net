@@ -46,11 +46,10 @@ export function massage({
 		fields: { slug },
 		body,
 		excerpt,
-		timeToRead,
-		fileAbsolutePath
+		timeToRead
 	},
 	site: {
-		siteMetadata: { siteUrl, githubLink }
+		siteMetadata: { siteUrl }
 	},
 	authorFile: {
 		childMdx: { author }
@@ -109,8 +108,6 @@ export function massage({
 		},
 		author,
 		siteUrl,
-		githubLink,
-		fileAbsolutePath,
 		comments,
 		likes,
 		reposts
