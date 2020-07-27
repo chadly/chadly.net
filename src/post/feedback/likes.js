@@ -6,9 +6,9 @@ const Likes = ({ likes }) => {
 
 	return (
 		<section>
-			<h3>
+			<h4>
 				{likes.length} Like{likes.length != 1 ? "s" : ""}
-			</h3>
+			</h4>
 			<FaceWall faces={likes} />
 		</section>
 	);

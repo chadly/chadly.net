@@ -6,9 +6,9 @@ const Reposts = ({ reposts }) => {
 
 	return (
 		<section>
-			<h3>
+			<h4>
 				{reposts.length} Repost{reposts.length != 1 ? "s" : ""}
-			</h3>
+			</h4>
 			<FaceWall faces={reposts} />
 		</section>
 	);

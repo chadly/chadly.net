@@ -14,7 +14,7 @@ const Feedback = ({ likes, comments, reposts, twitterId }) => {
 	if (!any) return null;
 
 	return (
-		<section className={classes.root}>
+		<div className={classes.root}>
 			<div className={classes.header}>
 				<h3 className={classes.title}>Webmentions</h3>
 				<p className={classes.subtitle}>
@@ -26,7 +26,7 @@ const Feedback = ({ likes, comments, reposts, twitterId }) => {
 			<Likes likes={likes} />
 			<Reposts reposts={reposts} />
 			<Comments comments={comments} />
-		</section>
+		</div>
 	);
 };
 

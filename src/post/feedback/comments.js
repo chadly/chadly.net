@@ -10,9 +10,9 @@ const CommentsRoot = ({ comments }) => {
 
 	return (
 		<section>
-			<h3>
+			<h4>
 				{comments.totalCount} Comment{comments.totalCount != 1 ? "s" : ""}
-			</h3>
+			</h4>
 			<Comments comments={comments} classes={classes} />
 		</section>
 	);
