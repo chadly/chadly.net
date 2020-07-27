@@ -52,6 +52,9 @@ export function massage({
 	site: {
 		siteMetadata: { siteUrl, githubLink }
 	},
+	authorFile: {
+		childMdx: { author }
+	},
 	disqusThread,
 	allWebMentionEntry
 }) {
@@ -104,6 +107,7 @@ export function massage({
 			readingTime: `${timeToRead} min read`,
 			cover: get(cover, "img.fixed.src")
 		},
+		author,
 		siteUrl,
 		githubLink,
 		fileAbsolutePath,

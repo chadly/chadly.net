@@ -20,8 +20,11 @@ import Alert from "../alert";
 const BlogPostTemplate = ({ data }) => {
 	const classes = useStyles();
 
+	console.log(data);
+
 	const {
 		post,
+		author,
 		siteUrl,
 		githubLink,
 		fileAbsolutePath,
@@ -33,7 +36,7 @@ const BlogPostTemplate = ({ data }) => {
 	return (
 		<Layout>
 			<Seo
-				title={post.title}
+				title={`${post.title} | ${author.name}`}
 				description={post.description}
 				article={{
 					published: post.date
@@ -162,6 +165,16 @@ export const pageQuery = graphql`
 			siteMetadata {
 				siteUrl
 				githubLink
+			}
+		}
+		authorFile: file(
+			sourceInstanceName: { eq: "author" }
+			extension: { eq: "mdx" }
+		) {
+			childMdx {
+				author: frontmatter {
+					name
+				}
 			}
 		}
 		mdx(fields: { slug: { eq: $slug } }) {
