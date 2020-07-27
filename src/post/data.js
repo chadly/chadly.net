@@ -70,26 +70,26 @@ export function massage({
 	}));
 	let comments = nestComments(allComments);
 
-	const webMentionComments = get(allWebMentionEntry, "edges", [])
-		.filter(w => w.node.wmProperty == "in-reply-to")
-		.map(w => ({
-			id: w.node.id,
-			author: w.node.author,
-			url: w.node.url,
-			date: w.node.published,
-			message: get(w.node, "content.text")
+	const webMentionComments = get(allWebMentionEntry, "nodes", [])
+		.filter(w => w.wmProperty == "in-reply-to")
+		.map(node => ({
+			id: node.id,
+			author: node.author,
+			url: node.url,
+			date: node.published,
+			message: get(node, "content.text")
 		}));
 
 	comments = sortBy([...comments, ...webMentionComments], "date");
 	comments.totalCount = allComments.length + webMentionComments.length;
 
-	const likes = get(allWebMentionEntry, "edges", [])
-		.filter(w => w.node.wmProperty == "like-of")
-		.map(w => w.node.author);
+	const likes = get(allWebMentionEntry, "nodes", [])
+		.filter(w => w.wmProperty == "like-of")
+		.map(w => w.author);
 
-	const reposts = get(allWebMentionEntry, "edges", [])
-		.filter(w => w.node.wmProperty == "repost-of")
-		.map(w => w.node.author);
+	const reposts = get(allWebMentionEntry, "nodes", [])
+		.filter(w => w.wmProperty == "repost-of")
+		.map(w => w.author);
 
 	return {
 		post: {

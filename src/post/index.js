@@ -196,21 +196,19 @@ export const pageQuery = graphql`
 			}
 		}
 		allWebMentionEntry(filter: { fields: { slug: { in: $slugs } } }) {
-			edges {
-				node {
-					id
-					author {
-						name
-						photo
-						url
-					}
+			nodes {
+				id
+				author {
+					name
+					photo
 					url
-					published
-					wmTarget
-					wmProperty
-					content {
-						text
-					}
+				}
+				url
+				published
+				wmTarget
+				wmProperty
+				content {
+					text
 				}
 			}
 		}
