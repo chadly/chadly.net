@@ -52,8 +52,8 @@ const Layout = ({ children, width }) => {
 			<div className={classes.container}>
 				{children}
 
-				<footer className={classes.footer}>
-					© {name} {new Date().getFullYear()}
+				<footer className={classes.footer} title="Copyright">
+					© {name} {new Date().getFullYear()}. All rights reserved.
 				</footer>
 			</div>
 		</div>
