@@ -115,7 +115,7 @@ export const pageQuery = graphql`
 				sourceInstanceName: { eq: "projects" }
 				extension: { eq: "mdx" }
 			}
-			sort: { fields: childMdx___frontmatter___sort }
+			sort: { fields: childMdx___frontmatter___sorting }
 		) {
 			projects: nodes {
 				id
