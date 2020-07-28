@@ -58,6 +58,14 @@ const HomePage = ({
 							</Project>
 						)
 					)}
+
+					<p className={classes.projectFooter}>
+						See my GitHub profile for even{" "}
+						<a href={`https://github.com/${author.github}`}>
+							MOAR OSS PROJECTS
+						</a>
+						.
+					</p>
 				</section>
 
 				<section className={`h-feed ${classes.section}`}>
@@ -81,6 +89,9 @@ const useStyles = createUseStyles({
 		"& article:last-child": {
 			marginBottom: 0
 		}
+	},
+	projectFooter: {
+		margin: `${rhythm(3)} 0`
 	}
 });
 
@@ -107,6 +118,7 @@ export const pageQuery = graphql`
 					description
 					username: twitter
 					gender
+					github
 				}
 			}
 		}
