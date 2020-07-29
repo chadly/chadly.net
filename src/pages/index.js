@@ -19,7 +19,7 @@ import { massageList } from "../post/data";
 const HomePage = ({
 	data: {
 		authorFile: {
-			childMdx: { author }
+			childMdx: { author, pageDescription }
 		},
 		projectFiles: { projects },
 		postFiles: { posts },
@@ -37,7 +37,7 @@ const HomePage = ({
 		<Layout>
 			<Seo
 				title={`${author.name} | ${author.description}`}
-				description={author.description}
+				description={pageDescription}
 				profile={author}
 			/>
 
@@ -140,6 +140,7 @@ export const pageQuery = graphql`
 					gender
 					github
 				}
+				pageDescription: excerpt(pruneLength: 500)
 			}
 		}
 		projectFiles: allFile(
