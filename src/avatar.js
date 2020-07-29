@@ -12,7 +12,7 @@ const Avatar = ({ small, src, className, alt, imgClassName }) => {
 	return (
 		<div className={`${className || ""} ${classes.container}`}>
 			<Img
-				fixed={src.img.fixed}
+				{...src.img}
 				alt={alt}
 				className={`${imgClassName || ""} ${classes.image}`}
 			/>
