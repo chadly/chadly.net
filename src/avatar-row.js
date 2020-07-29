@@ -8,9 +8,10 @@ const AvatarRow = ({
 	component: Component = "div",
 	children,
 	className,
+	align = "center",
 	...avatar
 }) => {
-	const classes = useStyles();
+	const classes = useStyles({ align });
 
 	return (
 		<Component className={`${classes.container} ${className || ""}`}>
@@ -23,7 +24,7 @@ const AvatarRow = ({
 const useStyles = createUseStyles({
 	container: {
 		display: "flex",
-		alignItems: "flex-start",
+		alignItems: ({ align }) => align,
 		[smallScreenMediaQuery]: {
 			display: "block",
 			textAlign: "center"

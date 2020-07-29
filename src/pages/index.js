@@ -105,7 +105,12 @@ const Project = ({ headline, href, logo, children }) => {
 	const classes = useProjectStyles();
 
 	return (
-		<AvatarRow component="article" src={logo} className={classes.container}>
+		<AvatarRow
+			component="article"
+			src={logo}
+			align="flex-start"
+			className={classes.container}
+		>
 			<h4>
 				<a href={href}>{headline}</a>
 			</h4>
