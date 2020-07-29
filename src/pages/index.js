@@ -2,7 +2,7 @@ import React, { useMemo } from "react";
 import { graphql } from "gatsby";
 
 import { createUseStyles } from "react-jss";
-import { rhythm } from "../theme";
+import { rhythm, scale } from "../theme";
 
 import MDXRenderer from "gatsby-plugin-mdx/mdx-renderer";
 
@@ -90,8 +90,14 @@ const useStyles = createUseStyles({
 		}
 	},
 	projectFooter: {
-		margin: `${rhythm(3)} 0`,
-		textAlign: "center"
+		...scale(-0.25),
+		color: "var(--textMuted)",
+		textAlign: "center",
+
+		"& a": {
+			color: "inherit",
+			textDecoration: "underline"
+		}
 	}
 });
 
