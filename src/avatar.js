@@ -1,6 +1,6 @@
 import React from "react";
 import { createUseStyles } from "react-jss";
-import { rhythm, smallScreenMediaQuery } from "./theme";
+import { rhythm } from "./theme";
 
 import Img from "gatsby-image";
 
@@ -22,11 +22,7 @@ const Avatar = ({ small, src, className, alt, imgClassName }) => {
 
 const useStyles = createUseStyles({
 	container: {
-		margin: `0 ${rhythm(1)} 0 0`,
-		[smallScreenMediaQuery]: {
-			display: "block",
-			margin: `${rhythm(0.5)} auto`
-		}
+		margin: `0 ${rhythm(1)} 0 0`
 	},
 	image: {
 		boxShadow: "0 0 0 6px var(--glow)",

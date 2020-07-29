@@ -6,7 +6,7 @@ import { rhythm } from "../theme";
 
 import MDXRenderer from "gatsby-plugin-mdx/mdx-renderer";
 
-import Avatar from "../avatar";
+import AvatarRow from "../avatar-row";
 
 import Layout from "../layout";
 import Seo from "../seo";
@@ -99,23 +99,18 @@ const Project = ({ headline, href, logo, children }) => {
 	const classes = useProjectStyles();
 
 	return (
-		<article className={classes.container}>
-			{logo ? <Avatar src={logo} /> : null}
-			<div>
-				<h4>
-					<a href={href}>{headline}</a>
-				</h4>
-				<MDXRenderer>{children}</MDXRenderer>
-			</div>
-		</article>
+		<AvatarRow component="article" src={logo} className={classes.container}>
+			<h4>
+				<a href={href}>{headline}</a>
+			</h4>
+			<MDXRenderer>{children}</MDXRenderer>
+		</AvatarRow>
 	);
 };
 
 const useProjectStyles = createUseStyles({
 	container: {
-		display: "flex",
-		alignItems: "flex-start",
-		margin: `${rhythm(1)} 0`,
+		margin: `${rhythm(2)} 0`,
 
 		"& h4": {
 			marginTop: 0

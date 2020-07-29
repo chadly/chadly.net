@@ -1,11 +1,11 @@
 import React from "react";
 import { createUseStyles } from "react-jss";
 import { useStaticQuery, graphql } from "gatsby";
-import { rhythm, scale, smallScreenMediaQuery } from "../theme";
+import { rhythm, scale } from "../theme";
 
 import MDXRenderer from "gatsby-plugin-mdx/mdx-renderer";
 
-import Avatar from "../avatar";
+import AvatarRow from "../avatar-row";
 import Social from "./social";
 
 const Author = ({ small, children, className }) => {
@@ -60,36 +60,30 @@ const Author = ({ small, children, className }) => {
 		: { img: author.avatar.imgLarge };
 
 	return (
-		<section
+		<AvatarRow
+			component="section"
 			className={`p-author h-card ${classes.container} ${className || ""}`}
+			src={avatarSrc}
+			imgClassName="u-photo"
+			alt={author.name}
 		>
-			<Avatar src={avatarSrc} imgClassName="u-photo" alt={author.name} />
-			<div>
-				<H className={classes.byline}>
-					{children}
-					<a href={siteUrl} className="u-url p-name">
-						{author.name}
-					</a>
-				</H>
-				<div className={`p-note ${classes.bio}`}>
-					<MDXRenderer>{bio}</MDXRenderer>
-				</div>
-				<Social {...author} className={classes.social} />
+			<H className={classes.byline}>
+				{children}
+				<a href={siteUrl} className="u-url p-name">
+					{author.name}
+				</a>
+			</H>
+			<div className={`p-note ${classes.bio}`}>
+				<MDXRenderer>{bio}</MDXRenderer>
 			</div>
-		</section>
+			<Social {...author} className={classes.social} />
+		</AvatarRow>
 	);
 };
 
 const useStyles = createUseStyles({
 	container: {
-		display: "flex",
-		alignItems: "center",
-		marginBottom: rhythm(1),
-		fontSize: ({ small }) => (small ? scale(-0.25).fontSize : undefined),
-		[smallScreenMediaQuery]: {
-			display: "block",
-			textAlign: "center"
-		}
+		fontSize: ({ small }) => (small ? scale(-0.25).fontSize : undefined)
 	},
 	byline: {
 		marginTop: rhythm(0.25),
