@@ -62,11 +62,8 @@ const HomePage = ({
 					)}
 
 					<p className={classes.projectFooter}>
-						See my GitHub profile for even{" "}
-						<a href={`https://github.com/${author.github}`}>
-							MOAR OSS PROJECTS
-						</a>
-						.
+						See{" "}
+						<a href={`https://github.com/${author.github}`}>more on GitHub</a>.
 					</p>
 				</section>
 
@@ -93,7 +90,8 @@ const useStyles = createUseStyles({
 		}
 	},
 	projectFooter: {
-		margin: `${rhythm(3)} 0`
+		margin: `${rhythm(3)} 0`,
+		textAlign: "center"
 	}
 });
 
