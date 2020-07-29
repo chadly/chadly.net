@@ -4,14 +4,19 @@ import { rhythm, smallScreenMediaQuery } from "./theme";
 
 import Avatar from "./avatar";
 
-const AvatarRow = ({ component = "div", children, className, ...avatar }) => {
+const AvatarRow = ({
+	component: Component = "div",
+	children,
+	className,
+	...avatar
+}) => {
 	const classes = useStyles();
 
 	return (
-		<component className={`${classes.container} ${className || ""}`}>
+		<Component className={`${classes.container} ${className || ""}`}>
 			<Avatar className={classes.avatar} {...avatar} />
 			<div>{children}</div>
-		</component>
+		</Component>
 	);
 };
 
