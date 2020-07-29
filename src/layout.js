@@ -68,7 +68,7 @@ const useStyles = createUseStyles({
 			transition: "color 0.2s ease-out, background 0.2s ease-out"
 		},
 		"body.light": {
-			"--bg": "#fff",
+			"--bg": "#f5fffa",
 			"--header": "#333332",
 			"--textNormal": "#333332",
 			"--textMuted": "rgba(95, 95, 95, 0.8)",
