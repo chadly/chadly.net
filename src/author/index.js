@@ -3,9 +3,9 @@ import { createUseStyles } from "react-jss";
 import { useStaticQuery, graphql } from "gatsby";
 import { rhythm, scale, smallScreenMediaQuery } from "../theme";
 
-import Img from "gatsby-image";
 import MDXRenderer from "gatsby-plugin-mdx/mdx-renderer";
 
+import Avatar from "../avatar";
 import Social from "./social";
 
 const Author = ({ small, children, className }) => {
@@ -55,19 +55,15 @@ const Author = ({ small, children, className }) => {
 
 	const H = small ? "p" : "h1";
 
+	const avatarSrc = small
+		? { img: author.avatar.imgSmall }
+		: { img: author.avatar.imgLarge };
+
 	return (
 		<section
 			className={`p-author h-card ${classes.container} ${className || ""}`}
 		>
-			<div className={classes.profileImgContainer}>
-				<Img
-					fixed={
-						small ? author.avatar.imgSmall.fixed : author.avatar.imgLarge.fixed
-					}
-					alt={author.name}
-					className={`u-photo ${classes.profileImg}`}
-				/>
-			</div>
+			<Avatar src={avatarSrc} imgClassName="u-photo" alt={author.name} />
 			<div>
 				<H className={classes.byline}>
 					{children}
@@ -94,18 +90,6 @@ const useStyles = createUseStyles({
 			display: "block",
 			textAlign: "center"
 		}
-	},
-	profileImgContainer: {
-		margin: `0 ${rhythm(1)} 0 0`,
-		[smallScreenMediaQuery]: {
-			display: "block",
-			margin: `${rhythm(0.5)} auto`
-		}
-	},
-	profileImg: {
-		boxShadow: "0 0 0 6px var(--glow)",
-		borderRadius: "100%",
-		objectFit: "cover"
 	},
 	byline: {
 		marginTop: rhythm(0.25),

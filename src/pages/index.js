@@ -6,6 +6,8 @@ import { rhythm } from "../theme";
 
 import MDXRenderer from "gatsby-plugin-mdx/mdx-renderer";
 
+import Avatar from "../avatar";
+
 import Layout from "../layout";
 import Seo from "../seo";
 
@@ -49,11 +51,11 @@ const HomePage = ({
 						({
 							id,
 							childMdx: {
-								frontmatter: { headline, href },
+								frontmatter: { headline, href, logo },
 								description
 							}
 						}) => (
-							<Project key={id} headline={headline} href={href}>
+							<Project key={id} headline={headline} href={href} logo={logo}>
 								{description}
 							</Project>
 						)
@@ -95,14 +97,33 @@ const useStyles = createUseStyles({
 	}
 });
 
-const Project = ({ headline, href, children }) => (
-	<article>
-		<h4>
-			<a href={href}>{headline}</a>
-		</h4>
-		<MDXRenderer>{children}</MDXRenderer>
-	</article>
-);
+const Project = ({ headline, href, logo, children }) => {
+	const classes = useProjectStyles();
+
+	return (
+		<article className={classes.container}>
+			{logo ? <Avatar src={logo} /> : null}
+			<div>
+				<h4>
+					<a href={href}>{headline}</a>
+				</h4>
+				<MDXRenderer>{children}</MDXRenderer>
+			</div>
+		</article>
+	);
+};
+
+const useProjectStyles = createUseStyles({
+	container: {
+		display: "flex",
+		alignItems: "flex-start",
+		margin: `${rhythm(1)} 0`,
+
+		"& h4": {
+			marginTop: 0
+		}
+	}
+});
 
 export default HomePage;
 
@@ -135,6 +156,13 @@ export const pageQuery = graphql`
 					frontmatter {
 						headline
 						href
+						logo {
+							img: childImageSharp {
+								fixed(width: 100) {
+									...GatsbyImageSharpFixed
+								}
+							}
+						}
 					}
 					description: body
 				}
