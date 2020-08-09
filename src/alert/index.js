@@ -1,6 +1,11 @@
 import React from "react";
 import { createUseStyles } from "react-jss";
 
+import SvgIcon from "../icon";
+import InfoIcon from "./info-circle.svg";
+import ExclamationIcon from "./exclamation-circle.svg";
+import { rhythm, scale } from "../theme";
+
 const Alert = ({ type = "info", title, children, className, ...props }) => {
 	const classes = useStyles();
 
@@ -18,13 +23,21 @@ const Alert = ({ type = "info", title, children, className, ...props }) => {
 	);
 };
 
-const Icon = ({ type, title }) => {
+const Icon = ({ type }) => {
 	if (type == "info") {
-		return <i title={title} className="fas fa-info-circle" />;
+		return (
+			<SvgIcon>
+				<InfoIcon />
+			</SvgIcon>
+		);
 	}
 
 	if (type == "warning") {
-		return <i title={title} className="fas fa-exclamation-circle" />;
+		return (
+			<SvgIcon>
+				<ExclamationIcon />
+			</SvgIcon>
+		);
 	}
 
 	return null;
@@ -39,10 +52,10 @@ const useStyles = createUseStyles({
 		display: "flex",
 		alignItems: "flex-start",
 
-		"& .fas": {
-			padding: "0 0.5em 0 0.2em",
+		"& svg": {
+			padding: `0 ${rhythm(0.5)} 0 ${rhythm(0.2)}`,
 			opacity: 0.2,
-			fontSize: "1.5em"
+			...scale(1.5)
 		}
 	},
 
