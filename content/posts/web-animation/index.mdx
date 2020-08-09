@@ -1,0 +1,124 @@
+---
+id: 09a41b3f-f8aa-4eed-a251-e7290b565cf8
+title: Making Lottie Web Animations Accessible with Gatsby
+description: Create web animations for everyone, even those weirdos who browse the internet without javascript.
+date: '2020-08-10'
+---
+
+import { Box, BackgroundBox } from "./box";
+
+<Alert>
+
+**<abbr title="too long;didn't read">tl;dr</abbr>**: I [made a Gatsby Remark plugin](https://github.com/chadly/gatsby-remark-lottie) that makes it easy to drop Lottie JSON animation files into your Markdown/MDX.
+
+</Alert>
+
+Over the past couple of weeks, I've been spending a lot of time in After Effects. We've been working on producing [tutorial videos for Runly](https://www.runly.io/youtube/) and I've taken it upon myself to do the motion grahpics for the videos.
+
+I've always [dabbled with video editing](https://www.youtube.com/watch?v=rP-2ksWFk4o) and [special effects](https://vimeo.com/1524951) in the past, but I've never had an excuse to use it for something real.
+
+I generally don't think of myself as one of the "creatives" but I've been having a lot of fun playing with motion graphics over the past few days. I've even watched three or four tutorial videos on YouTube, so naturally, I'm an expert now. Take a look at part of the intro I made:
+
+<BackgroundBox>
+
+![runly](runly.json)
+
+</BackgroundBox>
+
+## Using After Effects Motion Graphics on the Web
+
+You should go ahead and inspect that animation above. You may be wondering how I was able to render that animation without embedding a video or an animated GIF (or maybe you aren't wondering and you already know -- don't get ahead of me).
+
+Well, my dear internet friend, you can thank [Lottie](https://github.com/airbnb/lottie-web) and her sister [Bodymovin](https://exchange.adobe.com/creativecloud.details.12557.bodymovin.html) for bringing you that great animation.
+
+https://twitter.com/wongmjane/status/1290469390710956041
+
+When I first read that tweet, I had no idea what she was talking about. I thought these were all made-up words (I mean technically, that is true -- all words are made-up). But, then I started to look into it and I discovered some cool stuff.
+
+Apparently, if one is so inclined, one can make an animation in After Effects, export it to a JSON file (using the Bodymovin plugin), and then render it on the web as an animated SVG (using the Lottie JS package).
+
+It seemed too serendiptious for me to stumble upon this tweet just as I was starting to get into motion graphics with After Effects. The stars just happened to align.
+
+<Box>
+
+![star strike emoji](star-strike-emoji.json)
+
+</Box>
+
+Naturally, I immediately started playing with it and coming up with all sorts of reasons to use animated SVGs everywhere. Now that I have a new hammer, everything looks like a nail.
+
+## Performance of CSS Animations vs JS Animations
+
+Before I get into it further, I hear some people in the back grumbling about animated SVGs aleady being a thing without needing to involve any JS scripts.
+
+Well, dear peanut gallery, I implore you to read up on how [JS animations outperform CSS animations](https://css-tricks.com/myth-busting-css-animations-vs-javascript/) written by people doing this web animation thing for longer than me. An animated SVG (without scripts) is using CSS to do its animations.
+
+The gist is that JS animations are more better than CSS-animated SVGs. 🤷
+
+## Accessibility of Lottie Animations
+
+One thing that started to worry me as I started to put animations in **all the places** was that maybe this wasn't as accessible as I had hoped. Before the Lottie script loads to animate the SVG, the page is rendered with an empty container element:
+
+```html
+<div id="myanimation"></div>
+```
+
+That kind of sucks. What about the poor search engines who go to index your site and don't know what the hell that `div` is? Or what about the people who browse with JS disabled who will never see anything in that `div` (are there still people who do that in 2020)?
+
+Ideally, I thought, we could follow the principle of graceful degradation and render a static SVG in that `div` for the search engines and the no-JS people. That way they would still have an idea of what was going on there -- it just wouldn't animate.
+
+### Enter Gatsby Plugin
+
+I like using [Gatsby](https://www.gatsbyjs.org/) due to the way it renders my React components ahead of time so that my site serves static HTML. After the site initially loads, a SPA is loaded on the client side to offer faster navigation and other perks. But, the site can work completely without JS.
+
+Gatsby seems like a perfect fit to create a plugin that can take a Lottie JSON file and render it to a static SVG which is then "enhanced" with animation after the `lottie-web` script loads.
+
+So, that's exactly what I did. I created a [Gatsby Remark plugin](https://github.com/chadly/gatsby-remark-lottie) to allow you to easily drop Lottie JSONs into your Markdown/MDX which then generates "placeholder" SVGs which are animated after the fact.
+
+```markdown
+Hi here is a cool animation:
+
+![alt text](myanimation.json)
+```
+
+Wow, it's so easy! No need to muck with the `lottie-web` scripts or worry about pre-rendering the JSON files to SVG. The plugin takes care of all of it for you! Wow, again! Much impress!
+
+You can see it in action on this page by disabling javascript and scrolling around looking at the animations. With JS disabled, you should still see the static SVG as a placeholder.
+
+<Alert title="Disable JS in Chrome">
+
+1. `F12` to open dev tools
+2. `F1` to open dev tools settings
+3. Check _Disable Javascript_
+4. Refresh the page
+5. Bask in the static SVGs
+
+</Alert>
+
+<Box>
+
+![rocket](rocket.json)
+
+</Box>
+
+Won't you hop aboard the web animation rocket with me? There are so many places throughout the web that are dying for your animated touch.
+
+## What's the use case for this?
+
+I think where this web animation stuff really shines is in interaction design. With `lottie-web`, you can make an animation start or stop in response to a user action (e.g. liking something on Twitter). Subtle uses like that can really enhance the overall user experience of your app.
+
+The way I am using animations on this page are more like glorified animated GIFs. I think the use case for this plugin is not in interaction design, but in "statically" showing animations (if that makes sense).
+
+I'm thinking you can use this in a header or somewhere where you want to capture your reader's attention without loading a large video or GIF file. Like, maybe a "summer sale" animation:
+
+<Box>
+
+![summer sale](summer-sale.json)
+
+</Box>
+
+For interaction design, I think you would be better off integrating the lottie-web library directly. This plugin is really just to make it easy to show some animations throughout your site -- less focused on interaction.
+
+------------------------------
+
+Like I said before, I'm new to this whole web animation thing. Let me know what you think on Twitter. [Follow me @wchadly](https://twitter.com/wchadly) while you are there for more content like this.

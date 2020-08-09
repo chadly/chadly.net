@@ -28,6 +28,7 @@ const gatsbyRemarkPlugins = [
 	"gatsby-remark-autolink-headers",
 	"gatsby-remark-smartypants",
 	"@weknow/gatsby-remark-twitter",
+	"gatsby-remark-lottie",
 	{
 		resolve: "gatsby-remark-vscode",
 		options: {
