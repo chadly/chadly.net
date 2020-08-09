@@ -2,19 +2,18 @@ import React from "react";
 import { createUseStyles } from "react-jss";
 import { rhythm, smallScreenMediaQuery } from "../../../src/theme";
 
-export const Box = ({ children }) => {
+export const Box = ({ children, bg }) => {
 	const classes = useStyles();
-	return <div className={classes.root}>{children}</div>;
+	return (
+		<div className={`${classes.root} ${bg ? classes.bg : ""}`}>{children}</div>
+	);
 };
 
-export const BackgroundBox = ({ children }) => {
+export const FlexBox = ({ children, bg }) => {
 	const classes = useStyles();
-	return <div className={classes.rootWithBg}>{children}</div>;
-};
-
-export const FlexBox = ({ children }) => {
-	const classes = useStyles();
-	return <div className={classes.flex}>{children}</div>;
+	return (
+		<div className={`${classes.flex} ${bg ? classes.bg : ""}`}>{children}</div>
+	);
 };
 
 const useStyles = createUseStyles({
@@ -33,8 +32,7 @@ const useStyles = createUseStyles({
 			}
 		}
 	},
-	rootWithBg: {
-		composes: "$root",
+	bg: {
 		"& .lottie svg": {
 			backgroundColor: "#000"
 		}
