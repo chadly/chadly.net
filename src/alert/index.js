@@ -16,7 +16,7 @@ const Alert = ({ type = "info", title, children, className, ...props }) => {
 		>
 			<Icon type={type} />
 			<div className={classes.content}>
-				{title ? <h4>{title}</h4> : null}
+				{title ? <strong>{title}</strong> : null}
 				{children}
 			</div>
 		</div>
@@ -45,14 +45,15 @@ const Icon = ({ type }) => {
 
 const useStyles = createUseStyles({
 	alert: {
-		padding: "15px",
-		marginBottom: "20px",
+		padding: rhythm(1),
+		margin: `${rhythm(1)} 0`,
 		border: "1px solid transparent",
 		borderRadius: "4px",
 		display: "flex",
 		alignItems: "flex-start",
 
 		"& svg": {
+			marginTop: -8,
 			padding: `0 ${rhythm(0.5)} 0 ${rhythm(0.2)}`,
 			opacity: 0.2,
 			...scale(1.5)
@@ -60,11 +61,6 @@ const useStyles = createUseStyles({
 	},
 
 	content: {
-		"& h4": {
-			marginTop: "0.25em",
-			color: "inherit"
-		},
-
 		"& a": {
 			fontWeight: "bold"
 		},

@@ -23,7 +23,7 @@ const useStyles = createUseStyles({
 		flexWrap: "wrap",
 		justifyContent: "space-around",
 
-		margin: `${rhythm(2)} 0`,
+		margin: `${rhythm(1)} 0`,
 
 		"& .lottie": {
 			width: "50%",
