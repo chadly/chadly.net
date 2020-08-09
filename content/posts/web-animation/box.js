@@ -25,7 +25,7 @@ const useStyles = createUseStyles({
 		margin: `${rhythm(1)} 0`,
 
 		"& .lottie": {
-			width: "45%",
+			width: "75%",
 
 			[smallScreenMediaQuery]: {
 				width: "100%"
@@ -43,6 +43,10 @@ const useStyles = createUseStyles({
 		flexWrap: "wrap",
 		alignItems: "center",
 		justifyContent: "space-between",
+
+		"& .lottie": {
+			width: "45%"
+		},
 
 		"& p": {
 			width: "45%"
