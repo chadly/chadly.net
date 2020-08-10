@@ -14,7 +14,7 @@
     "start": "gatsby develop -p 8080",
     "clean": "gatsby clean",
     "lint": "eslint --ignore-pattern public --ignore-pattern static --ignore-pattern fancy.js --ignore-pattern .eslintrc.js .",
-    "build": "GATSBY_EXPERIMENTAL_PAGE_BUILD_ON_DATA_CHANGES=true gatsby build --log-pages",
+    "build": "gatsby build",
     "preview": "gatsby build && gatsby serve"
   },
   "dependencies": {
