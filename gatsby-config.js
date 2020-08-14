@@ -21,7 +21,8 @@ const { NODE_ENV, CONTEXT: NETLIFY_ENV = NODE_ENV } = process.env;
 const siteMetadata = {
 	siteUrl: "https://www.chadly.net",
 	webMentionIoUsername: "www.chadly.net",
-	domain: "chadly.net"
+	domain: "chadly.net",
+	trackingDomain: "stats.chadly.net" // see plausible.io
 };
 
 const gatsbyRemarkPlugins = [
@@ -229,7 +230,8 @@ if (NETLIFY_ENV === "production") {
 	plugins.push({
 		resolve: "gatsby-plugin-plausible",
 		options: {
-			trackingId: siteMetadata.domain
+			domain: siteMetadata.domain,
+			customDomain: siteMetadata.trackingDomain
 		}
 	});
 }
