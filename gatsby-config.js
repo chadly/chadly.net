@@ -20,7 +20,8 @@ const { NODE_ENV, CONTEXT: NETLIFY_ENV = NODE_ENV } = process.env;
 
 const siteMetadata = {
 	siteUrl: "https://www.chadly.net",
-	webMentionIoUsername: "www.chadly.net"
+	webMentionIoUsername: "www.chadly.net",
+	domain: "chadly.net"
 };
 
 const gatsbyRemarkPlugins = [
@@ -224,11 +225,11 @@ if (process.env.WEBMENTIONS_TOKEN) {
 	});
 }
 
-if (process.env.GOOGLE_ANALYTICS_TRACKING_ID) {
+if (NETLIFY_ENV === "production") {
 	plugins.push({
-		resolve: "gatsby-plugin-google-analytics",
+		resolve: "gatsby-plugin-plausible",
 		options: {
-			trackingId: process.env.GOOGLE_ANALYTICS_TRACKING_ID
+			trackingId: siteMetadata.domain
 		}
 	});
 }
