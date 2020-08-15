@@ -61,3 +61,31 @@ export const scale = typography.scale;
 
 export const smallScreenMediaQuery = "@media (max-width:700px)";
 export const bigScreenMediaQuery = "@media (min-width:701px)";
+
+export const cssVars = {
+	body: {
+		backgroundColor: "var(--bg)",
+		"-webkit-font-smoothing": "antialiased",
+		transition: "color 0.2s ease-out, background 0.2s ease-out"
+	},
+	"body.light": {
+		"--bg": "#f5fffa",
+		"--header": "#333332",
+		"--textNormal": "#333332",
+		"--textMuted": "rgba(95, 95, 95, 0.8)",
+		"--textTitle": "#333332",
+		"--textLink": "#d40000",
+		"--hr": "#cfcfcf",
+		"--glow": "hsla(0, 100%, 0%, 0.2)"
+	},
+	"body.dark": {
+		"--bg": "#282c35",
+		"--header": "#ffffff",
+		"--textNormal": "rgba(255, 255, 255, 0.88)",
+		"--textMuted": "rgba(255, 255, 255, 0.60)",
+		"--textTitle": "#ffffff",
+		"--textLink": "#97ff10",
+		"--hr": "hsla(0, 0%, 100%, 0.2)",
+		"--glow": "hsla(0, 0%, 100%, 0.1)"
+	}
+};

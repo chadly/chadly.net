@@ -10,6 +10,7 @@ import AvatarRow from "../avatar-row";
 
 import Layout from "../layout";
 import Seo from "../seo";
+import Container from "../container";
 
 import Author from "../author";
 import PostStub from "../post/stub";
@@ -41,40 +42,43 @@ const HomePage = ({
 				profile={author}
 			/>
 
-			<Author />
+			<Container>
+				<Author />
 
-			<main role="main">
-				<section className={classes.section}>
-					<h2>Things I've Built</h2>
+				<main role="main">
+					<section className={classes.section}>
+						<h2>Things I've Built</h2>
 
-					{projects.map(
-						({
-							id,
-							childMdx: {
-								frontmatter: { headline, href, logo },
-								description
-							}
-						}) => (
-							<Project key={id} headline={headline} href={href} logo={logo}>
-								{description}
-							</Project>
-						)
-					)}
+						{projects.map(
+							({
+								id,
+								childMdx: {
+									frontmatter: { headline, href, logo },
+									description
+								}
+							}) => (
+								<Project key={id} headline={headline} href={href} logo={logo}>
+									{description}
+								</Project>
+							)
+						)}
 
-					<p className={classes.projectFooter}>
-						See{" "}
-						<a href={`https://github.com/${author.github}`}>more on GitHub</a>.
-					</p>
-				</section>
+						<p className={classes.projectFooter}>
+							See{" "}
+							<a href={`https://github.com/${author.github}`}>more on GitHub</a>
+							.
+						</p>
+					</section>
 
-				<section className={`h-feed ${classes.section}`}>
-					<h2>Things I've Written</h2>
+					<section className={`h-feed ${classes.section}`}>
+						<h2>Things I've Written</h2>
 
-					{allPosts.map(post => (
-						<PostStub key={post.id} {...post} />
-					))}
-				</section>
-			</main>
+						{allPosts.map(post => (
+							<PostStub key={post.id} {...post} />
+						))}
+					</section>
+				</main>
+			</Container>
 		</Layout>
 	);
 };

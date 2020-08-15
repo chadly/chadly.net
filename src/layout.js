@@ -2,12 +2,12 @@ import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 
 import { createUseStyles } from "react-jss";
-import { rhythm, scale } from "./theme";
+import { rhythm, scale, cssVars } from "./theme";
 
 import { ThemeToggler } from "gatsby-plugin-dark-mode";
 
-const Layout = ({ children, width }) => {
-	const classes = useStyles({ width });
+const Layout = ({ children, license }) => {
+	const classes = useStyles();
 
 	const {
 		authorFile: {
@@ -49,44 +49,40 @@ const Layout = ({ children, width }) => {
 				)}
 			</ThemeToggler>
 
-			<div className={classes.container}>
-				{children}
+			{children}
 
-				<footer className={classes.footer} title="Copyright">
-					© {name} {new Date().getFullYear()}. All rights reserved.
-				</footer>
-			</div>
+			<footer className={classes.footer} title="Copyright">
+				{<License name={name} license={license} />}
+			</footer>
 		</div>
 	);
 };
 
+const License = ({ name, license }) => {
+	switch (license) {
+		case "CC BY-NC-SA 4.0":
+			return (
+				<>
+					Licensed as{" "}
+					<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+						Attribution-NonCommercial-ShareAlike 4.0 International
+					</a>
+				</>
+			);
+
+		default:
+			return (
+				<>
+					© {name} {new Date().getFullYear()}. All rights reserved.
+				</>
+			);
+	}
+};
+
 const useStyles = createUseStyles({
-	"@global": {
-		body: {
-			backgroundColor: "var(--bg)",
-			"-webkit-font-smoothing": "antialiased",
-			transition: "color 0.2s ease-out, background 0.2s ease-out"
-		},
-		"body.light": {
-			"--bg": "#f5fffa",
-			"--header": "#333332",
-			"--textNormal": "#333332",
-			"--textMuted": "rgba(95, 95, 95, 0.8)",
-			"--textTitle": "#333332",
-			"--textLink": "#d40000",
-			"--hr": "#cfcfcf",
-			"--glow": "hsla(0, 100%, 0%, 0.2)"
-		},
-		"body.dark": {
-			"--bg": "#282c35",
-			"--header": "#ffffff",
-			"--textNormal": "rgba(255, 255, 255, 0.88)",
-			"--textMuted": "rgba(255, 255, 255, 0.60)",
-			"--textTitle": "#ffffff",
-			"--textLink": "#97ff10",
-			"--hr": "hsla(0, 0%, 100%, 0.2)",
-			"--glow": "hsla(0, 0%, 100%, 0.1)"
-		}
+	"@global": cssVars,
+	root: {
+		color: "var(--textNormal)"
 	},
 	darkToggle: {
 		display: "block",
@@ -101,15 +97,6 @@ const useStyles = createUseStyles({
 		"& i": {
 			cursor: "pointer"
 		}
-	},
-	root: {
-		color: "var(--textNormal)"
-	},
-	container: {
-		marginLeft: `auto`,
-		marginRight: `auto`,
-		maxWidth: ({ width = 30 }) => rhythm(width),
-		padding: `${rhythm(1.5)} ${rhythm(0.75)}`
 	},
 	footer: {
 		textAlign: "center",

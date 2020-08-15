@@ -1,0 +1,49 @@
+import Seo from "../seo";
+
+import Layout from "../layout";
+import SiteHeader from "../site-header";
+import Container from "../container";
+
+import Trogdor from "../trogdor";
+import Cover from "./trogdor.jpg";
+
+<Layout license="CC BY-NC-SA 4.0">
+<Seo
+	title="Trogdor the Burninator"
+	image={Cover}
+	description="Trogdor was a man. He was a dragon man. Uh, then he was just a dragon. But he was still Trogdor! Trogdor! Burninating the country side. Burninating the peasants. Burninating all da' peoples and their thatched-roof cottages! Thatched-roof cottages! And then Trogdor comes in the NIGHT!"
+/>
+
+<main role="main">
+
+<Container>
+<SiteHeader />
+</Container>
+
+<Trogdor />
+
+<Container component="article">
+
+# Ode to Trogdor
+
+Trogdor was a man. He was a dragon man. Uh, then he was just a dragon. But he was still TROGDOR! TROGDOR! Burninating the country side. Burninating the peasants. Burninating all da' peoples and their thatched-roof cottages! Thatched-roof cottages! And then Trogdor comes in the NIIIIIIIIIIIIIIGHT!
+
+## Credits
+
+I made this using After Effects with [Bodymovin and Lottie](http://airbnb.io/lottie/).
+
+Illustration [credit to Whitney Champion](https://twitter.com/shortxstack/status/1294449843658731520).
+
+And of course the [OG Trogdor by Homestar Runner](https://youtu.be/90X5NJleYJQ).
+
+Check out the [After Effects project](https://github.com/chadly/trogdor) on GitHub.
+
+See how the [lottie animation files are integrated via React](https://github.com/chadly/chadly.net/blob/master/src/trogdor/index.js) onto this page.
+
+---------------------
+
+If you liked this, give me a [follow on Twitter](https://twitter.com/wchadly). It helps when I can show my wife how much internet points I got after spending all day animating Trogdor. 😉
+
+</Container>
+</main>
+</Layout>
