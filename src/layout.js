@@ -87,6 +87,7 @@ const useStyles = createUseStyles({
 	darkToggle: {
 		display: "block",
 		float: "right",
+		cursor: "pointer",
 
 		margin: 0,
 		padding: `${rhythm(0.3)} ${rhythm(0.75)}`,
