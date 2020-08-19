@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect } from "react";
+import React, { useRef, useState, useEffect, useCallback } from "react";
 
 import { createUseStyles } from "react-jss";
 import { rhythm } from "../theme";
@@ -8,6 +8,8 @@ import lottie from "lottie-web";
 import BurninateData from "./burninate";
 import RestingData from "./resting";
 import Yell from "./trogdor.mp3";
+
+import track from "../analytics";
 
 const Trogdor = () => {
 	const classes = useStyles();
@@ -21,6 +23,11 @@ const Trogdor = () => {
 		}
 	}, [isBurninating, yell]);
 
+	const burninate = useCallback(() => {
+		setIsBurninating(true);
+		track("Burninate");
+	}, []);
+
 	return (
 		<section>
 			<audio preload="auto" src={Yell} ref={yell} />
@@ -30,7 +37,7 @@ const Trogdor = () => {
 				onComplete={() => setIsBurninating(false)}
 			/>
 			<div className={classes.actions}>
-				<button onClick={() => setIsBurninating(true)} disabled={isBurninating}>
+				<button onClick={burninate} disabled={isBurninating}>
 					{!isBurninating ? <>🔥 Burninate 🔥</> : <>🔥🔥🔥🔥🔥🔥</>}
 				</button>
 			</div>
