@@ -7,6 +7,7 @@ import TwitterIcon from "./twitter.svg";
 import GitHubIcon from "./github.svg";
 import StackOverflowIcon from "./stack-overflow.svg";
 import KeybaseIcon from "./keybase.svg";
+import LinkedInIcon from "./linkedin.svg";
 import RssIcon from "./rss.svg";
 
 const AuthorSocial = ({
@@ -14,6 +15,7 @@ const AuthorSocial = ({
 	twitter,
 	stackOverflow,
 	keybase,
+	linkedin,
 	className
 }) => {
 	const classes = useStyles();
@@ -53,6 +55,13 @@ const AuthorSocial = ({
 				rel="me"
 			/>
 			<SocialIcon
+				id="linkedin"
+				name="LinkedIn"
+				href={`https://www.linkedin.com/in/${linkedin}/`}
+				show={!!linkedin}
+				rel="me"
+			/>
+			<SocialIcon
 				id="rss"
 				name="RSS"
 				href={`/rss.xml`}
@@ -87,6 +96,8 @@ const WhichIcon = ({ id, ...props }) => {
 			return <StackOverflowIcon {...props} />;
 		case "keybase":
 			return <KeybaseIcon {...props} />;
+		case "linkedin":
+			return <LinkedInIcon {...props} />;
 		case "rss":
 			return <RssIcon {...props} />;
 		default:

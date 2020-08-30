@@ -34,6 +34,7 @@ const Author = ({ small, children, className }) => {
 						twitter
 						stackOverflow
 						keybase
+						linkedin
 						avatar {
 							imgLarge: childImageSharp {
 								fixed(width: 175) {
