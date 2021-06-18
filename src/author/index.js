@@ -36,14 +36,10 @@ const Author = ({ small, children, className }) => {
 						linkedin
 						avatar {
 							imgLarge: childImageSharp {
-								fixed(width: 175) {
-									...GatsbyImageSharpFixed
-								}
+								gatsbyImageData(layout: FIXED, width: 175)
 							}
 							imgSmall: childImageSharp {
-								fixed(width: 130) {
-									...GatsbyImageSharpFixed
-								}
+								gatsbyImageData(layout: FIXED, width: 130)
 							}
 						}
 					}
@@ -55,7 +51,7 @@ const Author = ({ small, children, className }) => {
 
 	const H = small ? "p" : "h1";
 
-	const avatarSrc = small
+	const avatarImage = small
 		? { img: author.avatar.imgSmall }
 		: { img: author.avatar.imgLarge };
 
@@ -63,7 +59,7 @@ const Author = ({ small, children, className }) => {
 		<AvatarRow
 			component="section"
 			className={`p-author h-card ${classes.container} ${className || ""}`}
-			src={avatarSrc}
+			image={avatarImage}
 			imgClassName="u-photo"
 			alt={author.name}
 		>

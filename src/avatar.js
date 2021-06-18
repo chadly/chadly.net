@@ -1,18 +1,18 @@
-import Img from "gatsby-image";
+import { GatsbyImage as Img, getImage } from "gatsby-plugin-image";
 import React from "react";
 import { createUseStyles } from "react-jss";
 
 import { rhythm } from "./theme";
 
-const Avatar = ({ small, src, className, alt, imgClassName }) => {
-	const classes = useStyles({ small });
+const Avatar = ({ className, image, alt, imgClassName }) => {
+	const classes = useStyles();
 
-	if (!src) return null;
+	if (!image) return null;
 
 	return (
 		<div className={`${className || ""} ${classes.container}`}>
 			<Img
-				{...src.img}
+				image={getImage(image.img)}
 				alt={alt}
 				className={`${imgClassName || ""} ${classes.image}`}
 			/>

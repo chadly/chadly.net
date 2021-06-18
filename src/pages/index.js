@@ -106,7 +106,7 @@ const Project = ({ headline, href, logo, children }) => {
 	return (
 		<AvatarRow
 			component="article"
-			src={logo}
+			image={logo}
 			align="flex-start"
 			className={classes.container}
 		>
@@ -162,9 +162,7 @@ export const pageQuery = graphql`
 						href
 						logo {
 							img: childImageSharp {
-								fixed(width: 100) {
-									...GatsbyImageSharpFixed
-								}
+								gatsbyImageData(layout: FIXED, width: 100)
 							}
 						}
 					}

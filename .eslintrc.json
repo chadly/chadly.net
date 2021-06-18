@@ -1,0 +1,15 @@
+{
+	"extends": ["@growflow"],
+	"parserOptions": {
+		"project": "tsconfig.json"
+	},
+	"ignorePatterns": [
+		"public",
+		"static",
+		"content/posts/lightbox-for-youtube-videos"
+	],
+	"rules": {
+		"unicorn/no-null": "off",
+		"react/jsx-filename-extension": "off"
+	}
+}

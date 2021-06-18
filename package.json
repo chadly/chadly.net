@@ -19,7 +19,7 @@
     "preview": "gatsby build && gatsby serve"
   },
   "dependencies": {
-    "gatsby-image": "^3.7.1",
+    "gatsby-plugin-image": "^1.7.1",
     "gatsby-plugin-dark-mode": "^1.1.2",
     "knockout": "^3.5.1",
     "knockout-inline-confirm": "^2.0.0",

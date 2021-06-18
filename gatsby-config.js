@@ -1,4 +1,3 @@
-/* eslint-disable import/no-commonjs */
 require("dotenv").config();
 
 require("@babel/register")({

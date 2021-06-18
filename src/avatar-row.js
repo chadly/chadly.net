@@ -9,13 +9,13 @@ const AvatarRow = ({
 	children,
 	className,
 	align = "center",
-	...avatar
+	image
 }) => {
 	const classes = useStyles({ align });
 
 	return (
 		<Component className={`${classes.container} ${className || ""}`}>
-			<Avatar className={classes.avatar} {...avatar} />
+			<Avatar className={classes.avatar} image={image} />
 			<div>{children}</div>
 		</Component>
 	);
