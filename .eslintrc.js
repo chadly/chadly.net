@@ -1,15 +1,11 @@
-/* eslint-disable import/no-commonjs */
 module.exports = {
-	env: {
-		browser: true,
-		es6: true,
-		node: true
+	extends: ["@growflow"],
+	parserOptions: {
+		project: "tsconfig.json", // if using typescript
 	},
-	globals: {
-		location: "off"
-	},
-	extends: ["@runly"],
-	rules: {
-		"react/jsx-no-bind": "off"
-	}
+	ignorePatterns: [
+		"public",
+		"static",
+		"content/posts/lightbox-for-youtube-videos",
+	],
 };
