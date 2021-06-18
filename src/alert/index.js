@@ -2,9 +2,9 @@ import React from "react";
 import { createUseStyles } from "react-jss";
 
 import SvgIcon from "../icon";
-import InfoIcon from "./info-circle.svg";
-import ExclamationIcon from "./exclamation-circle.svg";
 import { rhythm, scale } from "../theme";
+import ExclamationIcon from "./exclamation-circle.svg";
+import InfoIcon from "./info-circle.svg";
 
 const Alert = ({ type = "info", title, children, className, ...props }) => {
 	const classes = useStyles();

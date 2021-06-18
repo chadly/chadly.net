@@ -1,14 +1,14 @@
 import React from "react";
 import { createUseStyles } from "react-jss";
-import { rhythm } from "../theme";
 
 import SvgIcon from "../icon";
-import TwitterIcon from "./twitter.svg";
+import { rhythm } from "../theme";
 import GitHubIcon from "./github.svg";
-import StackOverflowIcon from "./stack-overflow.svg";
 import KeybaseIcon from "./keybase.svg";
 import LinkedInIcon from "./linkedin.svg";
 import RssIcon from "./rss.svg";
+import StackOverflowIcon from "./stack-overflow.svg";
+import TwitterIcon from "./twitter.svg";
 
 const AuthorSocial = ({
 	github,
@@ -64,7 +64,7 @@ const AuthorSocial = ({
 			<SocialIcon
 				id="rss"
 				name="RSS"
-				href={`/rss.xml`}
+				href="/rss.xml"
 				show
 				className={classes.rss}
 			/>

@@ -1,6 +1,7 @@
+import moment from "moment";
 import React from "react";
 import { createUseStyles } from "react-jss";
-import moment from "moment";
+
 import { rhythm, scale } from "../../theme";
 
 const CommentsRoot = ({ comments, ...props }) => {

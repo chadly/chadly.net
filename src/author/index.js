@@ -1,11 +1,10 @@
+import { graphql, useStaticQuery } from "gatsby";
+import MDXRenderer from "gatsby-plugin-mdx/mdx-renderer";
 import React from "react";
 import { createUseStyles } from "react-jss";
-import { useStaticQuery, graphql } from "gatsby";
-import { rhythm, scale } from "../theme";
-
-import MDXRenderer from "gatsby-plugin-mdx/mdx-renderer";
 
 import AvatarRow from "../avatar-row";
+import { rhythm, scale } from "../theme";
 import Social from "./social";
 
 const Author = ({ small, children, className }) => {

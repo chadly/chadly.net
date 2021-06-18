@@ -1,21 +1,16 @@
-import React, { useMemo } from "react";
 import { graphql } from "gatsby";
-
-import { createUseStyles } from "react-jss";
-import { rhythm, scale } from "../theme";
-
 import MDXRenderer from "gatsby-plugin-mdx/mdx-renderer";
-
-import AvatarRow from "../avatar-row";
-
-import Layout from "../layout";
-import Seo from "../seo";
-import Container from "../container";
+import React, { useMemo } from "react";
+import { createUseStyles } from "react-jss";
 
 import Author from "../author";
-import PostStub from "../post/stub";
-
+import AvatarRow from "../avatar-row";
+import Container from "../container";
+import Layout from "../layout";
 import { massageList } from "../post/data";
+import PostStub from "../post/stub";
+import Seo from "../seo";
+import { rhythm, scale } from "../theme";
 
 const HomePage = ({
 	data: {
@@ -29,10 +24,10 @@ const HomePage = ({
 }) => {
 	const classes = useStyles();
 
-	const allPosts = useMemo(() => massageList({ posts, externalPosts }), [
-		posts,
-		externalPosts
-	]);
+	const allPosts = useMemo(
+		() => massageList({ posts, externalPosts }),
+		[posts, externalPosts]
+	);
 
 	return (
 		<Layout>

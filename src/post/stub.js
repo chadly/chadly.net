@@ -1,7 +1,7 @@
-import React from "react";
 import { Link } from "gatsby";
-
+import React from "react";
 import { createUseStyles } from "react-jss";
+
 import { rhythm, scale } from "../theme";
 
 const PostStub = ({

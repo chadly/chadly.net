@@ -49,7 +49,7 @@ const Root = ({
 		<body {...bodyAttributes}>
 			{preBodyComponents}
 			<div
-				key={`body`}
+				key="body"
 				id="___gatsby"
 				dangerouslySetInnerHTML={{ __html: body }}
 			/>

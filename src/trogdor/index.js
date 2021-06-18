@@ -1,15 +1,12 @@
-import React, { useRef, useState, useEffect, useCallback } from "react";
-
-import { createUseStyles } from "react-jss";
-import { rhythm } from "../theme";
-
 import lottie from "lottie-web";
+import React, { useCallback, useEffect, useRef, useState } from "react";
+import { createUseStyles } from "react-jss";
 
+import track from "../analytics";
+import { rhythm } from "../theme";
 import BurninateData from "./burninate";
 import RestingData from "./resting";
 import Yell from "./trogdor.mp3";
-
-import track from "../analytics";
 
 const Trogdor = () => {
 	const classes = useStyles();
@@ -115,9 +112,7 @@ const Animation = ({ data, loop, play, onComplete }) => {
 		}
 	}, [play]);
 
-	return (
-		<div style={{ display: play ? "block" : "none" }} ref={container}></div>
-	);
+	return <div style={{ display: play ? "block" : "none" }} ref={container} />;
 };
 
 export default Trogdor;

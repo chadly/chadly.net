@@ -1,8 +1,8 @@
 import React from "react";
 import { createUseStyles } from "react-jss";
-import { rhythm, smallScreenMediaQuery } from "./theme";
 
 import Avatar from "./avatar";
+import { rhythm, smallScreenMediaQuery } from "./theme";
 
 const AvatarRow = ({
 	component: Component = "div",

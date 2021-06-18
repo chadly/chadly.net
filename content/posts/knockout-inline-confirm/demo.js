@@ -1,7 +1,7 @@
-import React, { useEffect } from "react";
+import "knockout-inline-confirm";
 
 import ko from "knockout";
-import "knockout-inline-confirm";
+import React, { useEffect } from "react";
 
 function ViewModel() {
 	this.doit = function () {
@@ -24,7 +24,7 @@ const KnockoutInlineConfirmDemo = () => {
 			<button
 				data-bind="inlineConfirm: ['Do the thing', 'Are you sure you want to do the thing?', 'Doing the thing…'], submitFunction: doit"
 				className="btn btn-primary"
-			></button>
+			/>
 		</div>
 	);
 };

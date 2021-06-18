@@ -1,11 +1,11 @@
 import React from "react";
 import { createUseStyles } from "react-jss";
 
-import TwitterIntents from "./twitter";
+import { rhythm, scale } from "../../theme";
 import Comments from "./comments";
 import Likes from "./likes";
 import Reposts from "./reposts";
-import { rhythm, scale } from "../../theme";
+import TwitterIntents from "./twitter";
 
 const Feedback = ({ likes, comments, reposts, twitterId }) => {
 	const classes = useStyles();

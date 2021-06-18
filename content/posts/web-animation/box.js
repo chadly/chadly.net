@@ -1,5 +1,6 @@
 import React from "react";
 import { createUseStyles } from "react-jss";
+
 import { rhythm, smallScreenMediaQuery } from "../../../src/theme";
 
 export const Box = ({ children, bg }) => {

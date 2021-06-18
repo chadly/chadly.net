@@ -1,12 +1,11 @@
-import React from "react";
-import { createUseStyles } from "react-jss";
 import { Link } from "gatsby";
+import React from "react";
 import { Helmet } from "react-helmet";
+import { createUseStyles } from "react-jss";
 
 import Layout from "../../layout";
 import SiteHeader from "../../site-header";
 import { rhythm } from "../../theme";
-
 import img404 from "./oatmeal-tumbeast-404.png";
 
 const NotFoundPage = () => {

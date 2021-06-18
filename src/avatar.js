@@ -1,8 +1,8 @@
+import Img from "gatsby-image";
 import React from "react";
 import { createUseStyles } from "react-jss";
-import { rhythm } from "./theme";
 
-import Img from "gatsby-image";
+import { rhythm } from "./theme";
 
 const Avatar = ({ small, src, className, alt, imgClassName }) => {
 	const classes = useStyles({ small });

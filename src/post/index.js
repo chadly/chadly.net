@@ -1,21 +1,18 @@
-import React from "react";
+import { MDXProvider } from "@mdx-js/react";
 import { graphql } from "gatsby";
+import MDXRenderer from "gatsby-plugin-mdx/mdx-renderer";
+import React from "react";
 import { createUseStyles } from "react-jss";
 
-import Layout from "../layout";
-import Container from "../container";
-import Seo from "../seo";
+import Alert from "../alert";
 import Author from "../author";
+import Container from "../container";
+import Layout from "../layout";
+import Seo from "../seo";
 import SiteHeader from "../site-header";
 import { rhythm, scale } from "../theme";
-
-import { MDXProvider } from "@mdx-js/react";
-import MDXRenderer from "gatsby-plugin-mdx/mdx-renderer";
-
 import { massage } from "./data";
 import Feedback from "./feedback";
-
-import Alert from "../alert";
 
 const BlogPostTemplate = ({ data }) => {
 	const classes = useStyles();

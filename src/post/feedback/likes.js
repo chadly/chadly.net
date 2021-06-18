@@ -1,4 +1,5 @@
 import React from "react";
+
 import FaceWall from "./facewall";
 
 const Likes = ({ likes, ...props }) => {

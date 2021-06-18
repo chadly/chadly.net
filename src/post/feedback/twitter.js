@@ -1,12 +1,12 @@
 import React from "react";
 import { createUseStyles } from "react-jss";
-import { rhythm, scale } from "../../theme";
 
+import TwitterIcon from "../../author/twitter.svg";
 import SvgIcon from "../../icon";
+import { rhythm, scale } from "../../theme";
+import HeartIcon from "./heart.svg";
 import ReplyIcon from "./reply.svg";
 import RetweetIcon from "./retweet.svg";
-import HeartIcon from "./heart.svg";
-import TwitterIcon from "../../author/twitter.svg";
 
 const TwitterIntents = ({ twitterId }) => {
 	const classes = useStyles();

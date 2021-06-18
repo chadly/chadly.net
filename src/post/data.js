@@ -1,4 +1,4 @@
-import { get, sortBy, union, reverse } from "lodash";
+import { get, reverse, sortBy, union } from "lodash";
 
 export const massageList = ({ posts, externalPosts }) =>
 	reverse(

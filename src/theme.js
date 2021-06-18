@@ -56,8 +56,8 @@ if (process.env.NODE_ENV !== `production`) {
 }
 
 export default typography;
-export const rhythm = typography.rhythm;
-export const scale = typography.scale;
+export const { rhythm } = typography;
+export const { scale } = typography;
 
 export const smallScreenMediaQuery = "@media (max-width:700px)";
 export const bigScreenMediaQuery = "@media (min-width:701px)";

@@ -1,8 +1,7 @@
+import { useLocation } from "@reach/router";
+import { graphql, useStaticQuery } from "gatsby";
 import React from "react";
 import { Helmet } from "react-helmet";
-import { useLocation } from "@reach/router";
-
-import { useStaticQuery, graphql } from "gatsby";
 
 const Seo = ({ title, description, image, article, profile }) => {
 	const { pathname } = useLocation();

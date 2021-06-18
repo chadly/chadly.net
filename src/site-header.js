@@ -1,7 +1,7 @@
+import { graphql, Link, useStaticQuery } from "gatsby";
 import React from "react";
-import { Link, useStaticQuery, graphql } from "gatsby";
-
 import { createUseStyles } from "react-jss";
+
 import { scale } from "./theme";
 
 const SiteHeader = () => {

@@ -1,10 +1,9 @@
-import React from "react";
-import { useStaticQuery, graphql } from "gatsby";
-
-import { createUseStyles } from "react-jss";
-import { rhythm, scale, cssVars } from "./theme";
-
+import { graphql, useStaticQuery } from "gatsby";
 import { ThemeToggler } from "gatsby-plugin-dark-mode";
+import React from "react";
+import { createUseStyles } from "react-jss";
+
+import { cssVars, rhythm, scale } from "./theme";
 
 const Layout = ({ children, license }) => {
 	const classes = useStyles();
@@ -52,7 +51,7 @@ const Layout = ({ children, license }) => {
 			{children}
 
 			<footer className={classes.footer} title="Copyright">
-				{<License name={name} license={license} />}
+				<License name={name} license={license} />
 			</footer>
 		</div>
 	);
