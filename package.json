@@ -70,6 +70,6 @@
     "gatsby-transformer-remark": "^2.8.15",
     "gatsby-transformer-sharp": "^2.5.5",
     "prettier": "^2.0.5",
-    "urijs": "^1.19.2"
+    "urijs": "^1.19.11"
   }
 }
