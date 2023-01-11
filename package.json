@@ -67,7 +67,7 @@
     "gatsby-source-disqus-xml": "^1.0.0",
     "gatsby-source-filesystem": "^2.3.11",
     "gatsby-transformer-json": "^2.4.5",
-    "gatsby-transformer-remark": "^2.8.15",
+    "gatsby-transformer-remark": "^5.25.1",
     "gatsby-transformer-sharp": "^2.5.5",
     "prettier": "^2.0.5",
     "urijs": "^1.19.2"
