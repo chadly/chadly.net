@@ -19,7 +19,7 @@ const { massageList } = require("./src/post/data");
 const { NODE_ENV, CONTEXT: NETLIFY_ENV = NODE_ENV } = process.env;
 
 const siteMetadata = {
-	siteUrl: "https://www.chadly.net",
+	siteUrl: "https://www.chadly.net/blog",
 	webMentionIoUsername: "www.chadly.net",
 	domain: "chadly.net",
 	trackingDomain: "stats.chadly.net" // see plausible.io
