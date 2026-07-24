@@ -22,7 +22,7 @@
 		"@mdx-js/loader": "^3.1.1",
 		"@mdx-js/react": "^3.1.1",
 		"@next/mdx": "^16.2.10",
-		"fast-xml-parser": "^5.9.3",
+		"fast-xml-parser": "^5.10.1",
 		"gray-matter": "^4.0.3",
 		"knockout": "^3.5.1",
 		"knockout-inline-confirm": "^2.0.0",
