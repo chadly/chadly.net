@@ -10,8 +10,6 @@ import { formatDate } from "@/lib/dates";
 import { author } from "@/lib/author";
 import { SITE_URL } from "@/lib/site";
 
-// webmentions refresh hourly via ISR (replaces the daily cron rebuild)
-export const revalidate = 3600;
 export const dynamicParams = false;
 
 export function generateStaticParams() {
@@ -62,10 +60,8 @@ export default async function PostPage({
 	const post = getPost(slug);
 	if (!post) notFound();
 
-	const [{ default: MDXContent }, feedback] = await Promise.all([
-		post.load(),
-		getFeedback(post)
-	]);
+	const { default: MDXContent } = await post.load();
+	const feedback = getFeedback(post);
 
 	return (
 		<Container>
@@ -103,7 +99,7 @@ export default async function PostPage({
 						<Author small className="my-6 border-y border-[color:var(--hr)] py-6">
 							Written by{" "}
 						</Author>
-						<Feedback feedback={feedback} twitterId={post.twitterId} />
+						<Feedback feedback={feedback} />
 					</footer>
 				</article>
 			</main>

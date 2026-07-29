@@ -1,0 +1,650 @@
+{
+	"embracing-the-indieweb": [
+		{
+			"id": "1097211",
+			"property": "in-reply-to",
+			"author": {
+				"name": "Khalid ✨",
+				"photo": "https://avatars.webmention.io/pbs.twimg.com/df0132289effe48135f4fa35d680048d2f100b1bed42008378107b4759b76e9d.jpg",
+				"url": "https://twitter.com/buhakmeh"
+			},
+			"url": "https://twitter.com/buhakmeh/status/1376262055527915522",
+			"published": "2021-03-28T19:56:58+00:00",
+			"text": "I'll have to check that out."
+		},
+		{
+			"id": "1097212",
+			"property": "like-of",
+			"author": {
+				"name": "Khalid ✨",
+				"photo": "https://avatars.webmention.io/pbs.twimg.com/df0132289effe48135f4fa35d680048d2f100b1bed42008378107b4759b76e9d.jpg",
+				"url": "https://twitter.com/buhakmeh"
+			},
+			"url": "https://twitter.com/wchadly/status/1376260889964339201#favorited-by-72354175",
+			"published": "2021-03-29T07:56:24Z",
+			"text": null
+		},
+		{
+			"id": "819839",
+			"property": "like-of",
+			"author": {
+				"name": "Muhammad Rehan Saeed",
+				"photo": "https://avatars.webmention.io/pbs.twimg.com/f148a2ae801babe402c7ddb058045d0646701309e27a3851852c81ecf353c1e9.png",
+				"url": "https://twitter.com/RehanSaeedUK"
+			},
+			"url": "https://twitter.com/wchadly/status/1278724405636616192#favorited-by-191059018",
+			"published": "2020-07-03T12:49:57Z",
+			"text": null
+		},
+		{
+			"id": "819840",
+			"property": "like-of",
+			"author": {
+				"name": "Khalid",
+				"photo": "https://avatars.webmention.io/pbs.twimg.com/e5fdbde9d3343ae061061b833831c0d0b4a5834795ec6c42d0ac7288400c55f6.png",
+				"url": "https://twitter.com/buhakmeh"
+			},
+			"url": "https://twitter.com/wchadly/status/1278724405636616192#favorited-by-72354175",
+			"published": "2020-07-03T12:49:57Z",
+			"text": null
+		},
+		{
+			"id": "720902",
+			"property": "like-of",
+			"author": {
+				"name": "Dudley Storey",
+				"photo": "https://avatars.webmention.io/pbs.twimg.com/adf319c230c55218884497d8e40667acfb365b1dccddb6e5f67d1b33dd9cb276.jpg",
+				"url": "https://twitter.com/dudleystorey"
+			},
+			"url": "https://twitter.com/wchadly/status/1103803489212354560#favorited-by-133129567",
+			"published": "2019-11-03T17:13:16Z",
+			"text": null
+		},
+		{
+			"id": "720901",
+			"property": "like-of",
+			"author": {
+				"name": "John F Croston III",
+				"photo": "https://avatars.webmention.io/pbs.twimg.com/f1fc1ef20ea276a620f675238078672f57d00e9fe48dfb815e286c55737c153f.jpeg",
+				"url": "https://twitter.com/jfc3"
+			},
+			"url": "https://twitter.com/wchadly/status/1103803489212354560#favorited-by-7801382",
+			"published": "2019-11-03T17:13:14Z",
+			"text": null
+		},
+		{
+			"id": "720899",
+			"property": "like-of",
+			"author": {
+				"name": "Michael Spellacy (Spell)",
+				"photo": "https://avatars.webmention.io/pbs.twimg.com/5fbf524821ae83985517889d9a63ee4ca5bf40bc9cc9ed49b0421373f2911a01.jpg",
+				"url": "https://twitter.com/Spellacy"
+			},
+			"url": "https://twitter.com/wchadly/status/1103803489212354560#favorited-by-132282117",
+			"published": "2019-11-03T17:13:12Z",
+			"text": null
+		},
+		{
+			"id": "720900",
+			"property": "repost-of",
+			"author": {
+				"name": "Raghavendra Satish P",
+				"photo": "https://avatars.webmention.io/pbs.twimg.com/8ef0f25996e2b2491c1941cad2a01d5721d015b69a0078dee9acd88346a3c517.jpg",
+				"url": "https://twitter.com/artofvision"
+			},
+			"url": "https://twitter.com/artofvision/status/1190794546621243392",
+			"published": "2019-11-03T00:55:18+00:00",
+			"text": "How I dumped Disqus comments on my @gatsbyjs site in favor of @indiewebcamp WebMentions and created a source plugin along the way\n\nhttps://"
+		},
+		{
+			"id": "720897",
+			"property": "repost-of",
+			"author": {
+				"name": "Steve Faulkner",
+				"photo": "https://avatars.webmention.io/pbs.twimg.com/099988502e36efb76d189aaebb8b8b9a97f647e348fca3f4814ba0d75043b4c7.jpg",
+				"url": "https://twitter.com/stevefaulkner"
+			},
+			"url": "https://twitter.com/stevefaulkner/status/1190722678979809281",
+			"published": "2019-11-02T20:09:43+00:00",
+			"text": "How I dumped Disqus comments on my @gatsbyjs site in favor of @indiewebcamp WebMentions and created a source plugin along the way\n\nhttps://"
+		},
+		{
+			"id": "720898",
+			"property": "repost-of",
+			"author": {
+				"name": "Michael Spellacy (Spell)",
+				"photo": "https://avatars.webmention.io/pbs.twimg.com/5fbf524821ae83985517889d9a63ee4ca5bf40bc9cc9ed49b0421373f2911a01.jpg",
+				"url": "https://twitter.com/Spellacy"
+			},
+			"url": "https://twitter.com/Spellacy/status/1190713464517476353",
+			"published": "2019-11-02T19:33:06+00:00",
+			"text": "How I dumped Disqus comments on my @gatsbyjs site in favor of @indiewebcamp WebMentions and created a source plugin along the way\n\nhttps://"
+		},
+		{
+			"id": "649238",
+			"property": "mention-of",
+			"author": {
+				"name": "Drei aka Bitcoin Master",
+				"photo": "https://avatars.webmention.io/pbs.twimg.com/2acc8b4295a7864727af70049bc2440bb1dfa283c640d08f7e11f20a12220d6f.jpg",
+				"url": "https://oliodigest.com"
+			},
+			"url": "https://oliodigest.com/site-development/Comments-for-static-sites/",
+			"published": "2019-07-18T00:00:00+00:00",
+			"text": "I would like to thank Nicolas Hoizey for introducing me to webmentions\nand Bridgy.\n\nGlad to know that I’m not alone in thinking we netizens shouldn’t always rely on centralized internet services such as Disqus, Facebook, and even Twitter, in spite of \nthe ease of use, we should be independent of them.\n\nAlso Chad Lee’s post provided the perfect use of the H-Card and H-Entry for Microformats.\n\nThis all started when I was looking for a commenting system for my static blog. Most don’t like commenting through Facebook and Disqus because they are heavily moderated by\nparent sites - no negative comments allowed even if it’s the truth.\n\nI’m also excited to see what my comment will look like when it comes out in Aaron Parecki’s test post.\n\nWhat You Need\n\nAdd an H-Card to your website so you can use your social media credentials to log in to Indieweb websites.\n  Sign up to https://webmention.io/ and https://brid.gy/. Bridgy will poll all your Twitter and Instagram posts mentioning your website/blog and then it will ping \nWebmention in your behalf the replies you get from those sites and then Webmention.io will host all your webmentions in which you can then display in your site.\n  Install the https://github.com/PlaidWeb/webmention.js so that you can render the comments in your static site via javascript.\n  For commenting on Webmention-enabled sites, I like using https://telegraph.p3k.io/.\nGood Luck!"
+		},
+		{
+			"id": "618194",
+			"property": "like-of",
+			"author": {
+				"name": "Jonathan Jenne",
+				"photo": "https://avatars.webmention.io/inhji.de/c77638d6105dafa0569476b70042d024af77b8b221df944dfabc0cd5610fc452.jpg",
+				"url": "https://inhji.de/"
+			},
+			"url": "https://inhji.de/likes/31",
+			"published": "2019-05-28T19:03:58",
+			"text": null
+		},
+		{
+			"id": "606110",
+			"property": "like-of",
+			"author": {
+				"name": "Darko.S",
+				"photo": "https://avatars.webmention.io/pbs.twimg.com/9fcef86fe7b8b432a3895b67d9c7ccd1c7b73dd3bec93d84d0b82545344c4501.jpg",
+				"url": "https://twitter.com/DarkosArtist"
+			},
+			"url": "https://twitter.com/wchadly/status/1103803489212354560#favorited-by-1056205073821417473",
+			"published": "2019-04-12T09:28:19Z",
+			"text": null
+		},
+		{
+			"id": "599153",
+			"property": "mention-of",
+			"author": {
+				"name": "joe jenett",
+				"photo": "https://avatars.webmention.io/secure.gravatar.com/f00b7396a9947c341394bfa154f3480908c7ec35f6d8eb3ba13099bdb3503621.png",
+				"url": "https://pointers.dailywebthing.com/"
+			},
+			"url": "https://pointers.dailywebthing.com/03-18-19/",
+			"published": "2019-03-18T09:11:08Z",
+			"text": "Another blog (new) 📌\n\n😁 Doggo For Hire (new) < <\n\nThe Primary Vivid Weblog"
+		},
+		{
+			"id": "596615",
+			"property": "repost-of",
+			"author": {
+				"name": "Ivan Storck",
+				"photo": "https://avatars.webmention.io/pbs.twimg.com/13a96a7f1066fbd352279f2e813bfd335832bb8cf48d3b369952c01af3996fc4.jpg",
+				"url": "https://twitter.com/ivanoats"
+			},
+			"url": "https://twitter.com/ivanoats/status/1104160118424260610",
+			"published": "2019-03-08T23:21:01+00:00",
+			"text": "How I dumped Disqus comments on my @gatsbyjs site in favor of @indiewebcamp WebMentions and created a source plugin along the way\n\n\n\nhttps://"
+		},
+		{
+			"id": "596614",
+			"property": "like-of",
+			"author": {
+				"name": "Ivan Storck",
+				"photo": "https://avatars.webmention.io/pbs.twimg.com/13a96a7f1066fbd352279f2e813bfd335832bb8cf48d3b369952c01af3996fc4.jpg",
+				"url": "https://twitter.com/ivanoats"
+			},
+			"url": "https://twitter.com/wchadly/status/1103803489212354560#favorited-by-13337",
+			"published": "2019-03-08T23:31:00Z",
+			"text": null
+		},
+		{
+			"id": "596601",
+			"property": "like-of",
+			"author": {
+				"name": "Loïc BOURG",
+				"photo": "https://avatars.webmention.io/pbs.twimg.com/d9034ec0cb09c8c17edfca49407308288c4e43336944c30d61eb1ae3ba8727eb.jpg",
+				"url": "https://twitter.com/LoicBourg63"
+			},
+			"url": "https://twitter.com/wchadly/status/1103803489212354560#favorited-by-2364059635",
+			"published": "2019-03-08T22:56:26Z",
+			"text": null
+		},
+		{
+			"id": "596600",
+			"property": "like-of",
+			"author": {
+				"name": "Tom Hermans 🤘",
+				"photo": "https://avatars.webmention.io/pbs.twimg.com/795f03301969b7eb3f47673dca199228325e3a925defe302d9653b3f3283823f.jpg",
+				"url": "https://twitter.com/tomhermans"
+			},
+			"url": "https://twitter.com/wchadly/status/1103803489212354560#favorited-by-10044152",
+			"published": "2019-03-08T22:56:25Z",
+			"text": null
+		},
+		{
+			"id": "596599",
+			"property": "in-reply-to",
+			"author": {
+				"name": "Jonathan LaCour",
+				"photo": "https://avatars.webmention.io/cleverdevil.io/abdf4969f052cb64177f73cda9be6a709931eb55607f8c1fb2c69eb135841acf.jpg",
+				"url": "https://cleverdevil.io/profile/cleverdevil"
+			},
+			"url": "https://cleverdevil.io/2019/great-approach-i-particularly-like-the-clean",
+			"published": "2019-03-08T22:29:40+00:00",
+			"text": "Great approach! I particularly like the clean styling and formatting of received webmentions. 🙌"
+		},
+		{
+			"id": "596595",
+			"property": "like-of",
+			"author": {
+				"name": "Lee Fisher",
+				"photo": "https://avatars.webmention.io/abs.twimg.com/0e6b2cd70aa5b35dec24ca4e1e63f8963f0118736d9ec3bba77e3a8c99a27bc2.png",
+				"url": "https://twitter.com/LeeFish14332535"
+			},
+			"url": "https://twitter.com/wchadly/status/1103803489212354560#favorited-by-934173056175665152",
+			"published": "2019-03-08T21:01:42Z",
+			"text": null
+		},
+		{
+			"id": "596577",
+			"property": "bookmark-of",
+			"author": {
+				"name": "Chris Aldrich",
+				"photo": "https://avatars.webmention.io/secure.gravatar.com/f5329269ffe65205eec710dad09b891b6f6f7f7795fc182197922f851b9d0a7e.jpg",
+				"url": "https://boffosocko.com/"
+			},
+			"url": "https://boffosocko.com/2019/03/07/embracing-the-indieweb-chad-lee/",
+			"published": "2019-03-07T21:36:30-08:00",
+			"text": "Read Embracing the IndieWeb by Chad Lee (chadly.net)\nI’ve used Disqus comments on this site for a long time. At the time I set it up, it was ubiquitous, easy to set up, and a no-brainer. However, after converting my site to Gatsby and getting the site to load Blazing Fast™, the Disqus embed code was the slowest thing on my site. It’s gotten fat over the years and like a bad husband, I’m finally dumping it.\n\n\nSyndicated copies to:"
+		},
+		{
+			"id": "596576",
+			"property": "bookmark-of",
+			"author": {
+				"name": "Aaron Parecki",
+				"photo": "https://avatars.webmention.io/aaronparecki.com/41061f9de825966faa22e9c42830e1d4a614a321213b4575b9488aa93f89817a.jpg",
+				"url": "https://aaronparecki.com/"
+			},
+			"url": "https://aaronparecki.com/2019/03/08/14/",
+			"published": "2019-03-08T11:26:52-08:00",
+			"text": null
+		},
+		{
+			"id": "596573",
+			"property": "like-of",
+			"author": {
+				"name": "Ryan Barrett",
+				"photo": "https://avatars.webmention.io/secure.gravatar.com/c0b31d7bbe47a775d32d364bde66f5ad59d507f03ae164635611401c06394fc4.png",
+				"url": "https://snarfed.org/"
+			},
+			"url": "https://snarfed.org/2019-03-08_embracing-the-indieweb-chad-lee",
+			"published": "2019-03-08T11:20:52-08:00",
+			"text": "likes Embracing the IndieWeb | Chad Lee"
+		},
+		{
+			"id": "596541",
+			"property": "like-of",
+			"author": {
+				"name": "Ron Chamberlain",
+				"photo": "https://avatars.webmention.io/pbs.twimg.com/c2a942f1b721adb14d1502f24fcbdfb7d8cbd09fc648d4b28e43630dc94c667f.jpg",
+				"url": "https://twitter.com/cstmizd"
+			},
+			"url": "https://twitter.com/wchadly/status/1103803489212354560#favorited-by-898188933917425664",
+			"published": "2019-03-08T17:02:58Z",
+			"text": null
+		},
+		{
+			"id": "596465",
+			"property": "repost-of",
+			"author": {
+				"name": "Alexandra Spalato",
+				"photo": "https://avatars.webmention.io/pbs.twimg.com/78b51218ebe00d0f2cc4a453a68db6724655da6aec6f67cfe3efec0c814731bd.jpg",
+				"url": "https://twitter.com/alexadark"
+			},
+			"url": "https://twitter.com/alexadark/status/1103999158896201729",
+			"published": "2019-03-08T12:41:25+00:00",
+			"text": "How I dumped Disqus comments on my @gatsbyjs site in favor of @indiewebcamp WebMentions and created a source plugin along the way\n\n\n\nhttps://"
+		},
+		{
+			"id": "596464",
+			"property": "like-of",
+			"author": {
+				"name": "Alexandra Spalato",
+				"photo": "https://avatars.webmention.io/pbs.twimg.com/78b51218ebe00d0f2cc4a453a68db6724655da6aec6f67cfe3efec0c814731bd.jpg",
+				"url": "https://twitter.com/alexadark"
+			},
+			"url": "https://twitter.com/wchadly/status/1103803489212354560#favorited-by-75569308",
+			"published": "2019-03-08T12:42:18Z",
+			"text": null
+		},
+		{
+			"id": "596376",
+			"property": "like-of",
+			"author": {
+				"name": "Chris Aldrich",
+				"photo": "https://avatars.webmention.io/secure.gravatar.com/f5329269ffe65205eec710dad09b891b6f6f7f7795fc182197922f851b9d0a7e.jpg",
+				"url": "https://boffosocko.com/"
+			},
+			"url": "https://boffosocko.com/2019/03/07/55745568/",
+			"published": "2019-03-07T21:38:08-08:00",
+			"text": "Liked Embracing the IndieWeb  by Chad Lee (chadly.net)\nI’ve used Disqus comments on this site for a long time. At the time I set it up, it was ubiquitous, easy to set up, and a no-brainer…\n\nHa! “[Disqus has] gotten fat over the years and like a bad husband, I’m finally dumping it.”\n\nSyndicated copies to: WordPress"
+		},
+		{
+			"id": "596365",
+			"property": "like-of",
+			"author": {
+				"name": "Andreas Keller",
+				"photo": "https://avatars.webmention.io/pbs.twimg.com/d8393ff74b12842687c7214e1743838def45bac48c9c0ac98bd90dfee6af63a8.jpg",
+				"url": "https://twitter.com/itsakeller"
+			},
+			"url": "https://twitter.com/wchadly/status/1103803489212354560#favorited-by-1925659644",
+			"published": "2019-03-08T04:32:47Z",
+			"text": null
+		},
+		{
+			"id": "596350",
+			"property": "like-of",
+			"author": {
+				"name": "Jeffrey Xavier",
+				"photo": "https://avatars.webmention.io/pbs.twimg.com/0fac47c45f94108685f7aee51067564218c90e1d336243098f76b31e86d5b0f8.jpg",
+				"url": "https://twitter.com/jeffreypxavier"
+			},
+			"url": "https://twitter.com/wchadly/status/1103803489212354560#favorited-by-33829181",
+			"published": "2019-03-08T03:20:53Z",
+			"text": null
+		},
+		{
+			"id": "596349",
+			"property": "like-of",
+			"author": {
+				"name": "Alanna Lee",
+				"photo": "https://avatars.webmention.io/pbs.twimg.com/4f08a13643eea6033353cb5b850b3e7ae4de072432a8492a5bcec559f306d9be.jpg",
+				"url": "https://twitter.com/lannaly"
+			},
+			"url": "https://twitter.com/wchadly/status/1103803489212354560#favorited-by-17088326",
+			"published": "2019-03-08T03:20:52Z",
+			"text": null
+		},
+		{
+			"id": "596345",
+			"property": "in-reply-to",
+			"author": {
+				"name": "Chad Lee",
+				"photo": "https://avatars.webmention.io/pbs.twimg.com/fc44dbffded76e27cf00478ce7515ada54f57ade26cb0ad9c6e6fdb45ad8bbf3.jpg",
+				"url": "https://twitter.com/wchadly"
+			},
+			"url": "https://twitter.com/wchadly/status/1103820626840698880",
+			"published": "2019-03-08T00:52:00+00:00",
+			"text": "Plugin worked great! Definitely the easiest part of the whole process."
+		},
+		{
+			"id": "596342",
+			"property": "in-reply-to",
+			"author": {
+				"name": "Chad Lee",
+				"photo": "https://avatars.webmention.io/pbs.twimg.com/fc44dbffded76e27cf00478ce7515ada54f57ade26cb0ad9c6e6fdb45ad8bbf3.jpg",
+				"url": "https://twitter.com/wchadly"
+			},
+			"url": "https://twitter.com/wchadly/status/1103848745026899969",
+			"published": "2019-03-08T02:43:43+00:00",
+			"text": "I was going to do that as well until I discovered the WebMention thing. It's a little more work to setup, but I feel like it opens a whole new world of possibilities."
+		},
+		{
+			"id": "596337",
+			"property": "like-of",
+			"author": {
+				"name": "Eddie Hinkle",
+				"photo": "https://avatars.webmention.io/eddiehinkle.com/cf9f85e26d4be531bc908d37f69bff1c50b50b87fd066b254f1332c3553df1a8.jpg",
+				"url": "https://eddiehinkle.com/"
+			},
+			"url": "https://eddiehinkle.com/2019/03/07/25/like/",
+			"published": "2019-03-07T21:32:18-05:00",
+			"text": null
+		},
+		{
+			"id": "596322",
+			"property": "in-reply-to",
+			"author": {
+				"name": "Greg McVerry",
+				"photo": "https://avatars.webmention.io/quickthoughts.jgregorymcverry.com/b27ef57bb70faa55fb963a3ef07b03e7d750cb4db99a2e523e72db8507770618.jpg",
+				"url": "https://quickthoughts.jgregorymcverry.com/profile/jgmac1106"
+			},
+			"url": "https://quickthoughts.jgregorymcverry.com/2019/03/08/writer-or-words-and-writer-of-code",
+			"published": "2019-03-08T01:55:35+00:00",
+			"text": "Writer or words and writer of code! Good job."
+		},
+		{
+			"id": "596321",
+			"property": "in-reply-to",
+			"author": {
+				"name": "Ryan Wiemer",
+				"photo": "https://avatars.webmention.io/pbs.twimg.com/a71a820d69e0eb2f223bd5729afc3724c7751e757167861f6e514fbe5768005d.jpg",
+				"url": "https://twitter.com/ryanwiemer"
+			},
+			"url": "https://twitter.com/ryanwiemer/status/1103831781428518912",
+			"published": "2019-03-08T01:36:19+00:00",
+			"text": "Nice approach. I recently took the easy solution that @dan_abramov does on his blog of just linking to a search on Twitter. I then tweet it out once linking to the post so the search returns something. It’s not perfect but it works for now. ryanwiemer.com/blog/"
+		},
+		{
+			"id": "596319",
+			"property": "in-reply-to",
+			"author": {
+				"name": "Darren Jennings",
+				"photo": "https://avatars.webmention.io/pbs.twimg.com/4aada7d629051aff6dc12f7c754d0ec01015c87f61087e6b2210267f9e5cc3d1.jpg",
+				"url": "https://twitter.com/darrenjennings"
+			},
+			"url": "https://twitter.com/darrenjennings/status/1103834157023555584",
+			"published": "2019-03-08T01:45:45+00:00",
+			"text": "Realizes Twitter is \"the comments\" in \"don't read the comments\""
+		},
+		{
+			"id": "596320",
+			"property": "like-of",
+			"author": {
+				"name": "Ryan Wiemer",
+				"photo": "https://avatars.webmention.io/pbs.twimg.com/a71a820d69e0eb2f223bd5729afc3724c7751e757167861f6e514fbe5768005d.jpg",
+				"url": "https://twitter.com/ryanwiemer"
+			},
+			"url": "https://twitter.com/wchadly/status/1103803489212354560#favorited-by-305247952",
+			"published": "2019-03-08T01:51:51Z",
+			"text": null
+		},
+		{
+			"id": "596318",
+			"property": "like-of",
+			"author": {
+				"name": "amberley",
+				"photo": "https://avatars.webmention.io/pbs.twimg.com/4bfc512bd53588937ec7e570fcf1e616fda5ea41180ce840ac5849125ad65ca9.jpg",
+				"url": "https://twitter.com/amber1ey"
+			},
+			"url": "https://twitter.com/wchadly/status/1103803489212354560#favorited-by-37289216",
+			"published": "2019-03-08T01:51:49Z",
+			"text": null
+		},
+		{
+			"id": "596304",
+			"property": "like-of",
+			"author": {
+				"name": "Aaron Parecki",
+				"photo": "https://avatars.webmention.io/pbs.twimg.com/f07249c434b454a7b67209ca9ea1ee9d32768a0d9c368561b128566c441c27aa.png",
+				"url": "https://twitter.com/aaronpk"
+			},
+			"url": "https://twitter.com/wchadly/status/1103803489212354560#favorited-by-14447132",
+			"published": "2019-03-08T01:24:06Z",
+			"text": null
+		},
+		{
+			"id": "596291",
+			"property": "like-of",
+			"author": {
+				"name": "Chris Aldrich",
+				"photo": "https://avatars.webmention.io/pbs.twimg.com/4410412a431cda5b1b79cd70d3a369571c2ab26e2b20a8c7d1a55796687a47ed.jpg",
+				"url": "https://twitter.com/ChrisAldrich"
+			},
+			"url": "https://twitter.com/wchadly/status/1103803489212354560#favorited-by-13645402",
+			"published": "2019-03-08T00:47:58Z",
+			"text": null
+		},
+		{
+			"id": "596289",
+			"property": "in-reply-to",
+			"author": {
+				"name": "Gatsby",
+				"photo": "https://avatars.webmention.io/pbs.twimg.com/a26282af0e38b32a076dcead61532ef47e55988c55a16244a1bc8601c96c5191.jpg",
+				"url": "https://twitter.com/gatsbyjs"
+			},
+			"url": "https://twitter.com/gatsbyjs/status/1103810448300756993",
+			"published": "2019-03-08T00:11:33+00:00",
+			"text": "/cc @chrisbiscardi 👌"
+		},
+		{
+			"id": "596290",
+			"property": "like-of",
+			"author": {
+				"name": "Gatsby",
+				"photo": "https://avatars.webmention.io/pbs.twimg.com/a26282af0e38b32a076dcead61532ef47e55988c55a16244a1bc8601c96c5191.jpg",
+				"url": "https://twitter.com/gatsbyjs"
+			},
+			"url": "https://twitter.com/wchadly/status/1103803489212354560#favorited-by-3227338044",
+			"published": "2019-03-08T00:17:44Z",
+			"text": null
+		},
+		{
+			"id": "596288",
+			"property": "repost-of",
+			"author": {
+				"name": ":party-corgi:",
+				"photo": "https://avatars.webmention.io/pbs.twimg.com/fb780c5e085dcfde441057a06e745b5a585985fa44bd2eefb42a379d0b8063be.jpg",
+				"url": "https://twitter.com/chrisbiscardi"
+			},
+			"url": "https://twitter.com/chrisbiscardi/status/1103811248410357760",
+			"published": "2019-03-08T00:14:44+00:00",
+			"text": "How I dumped Disqus comments on my @gatsbyjs site in favor of @indiewebcamp WebMentions and created a source plugin along the way\n\n\n\nhttps://"
+		},
+		{
+			"id": "596287",
+			"property": "in-reply-to",
+			"author": {
+				"name": ":party-corgi:",
+				"photo": "https://avatars.webmention.io/pbs.twimg.com/fb780c5e085dcfde441057a06e745b5a585985fa44bd2eefb42a379d0b8063be.jpg",
+				"url": "https://twitter.com/chrisbiscardi"
+			},
+			"url": "https://twitter.com/chrisbiscardi/status/1103811212872081409",
+			"published": "2019-03-08T00:14:35+00:00",
+			"text": "so cool!! How did using the plugin go?"
+		},
+		{
+			"id": "596286",
+			"property": "like-of",
+			"author": {
+				"name": ":party-corgi:",
+				"photo": "https://avatars.webmention.io/pbs.twimg.com/fb780c5e085dcfde441057a06e745b5a585985fa44bd2eefb42a379d0b8063be.jpg",
+				"url": "https://twitter.com/chrisbiscardi"
+			},
+			"url": "https://twitter.com/wchadly/status/1103803489212354560#favorited-by-240315182",
+			"published": "2019-03-08T00:17:41Z",
+			"text": null
+		}
+	],
+	"ghost-on-azure": [
+		{
+			"id": "595418",
+			"property": "like-of",
+			"author": {
+				"name": "Pascal Andy 🔥 📰",
+				"photo": "https://avatars.webmention.io/pbs.twimg.com/f93d23f660957dcde5308a692bad0819d7e64f097fed7fc53fdc7b0a92064b0d.jpg",
+				"url": "https://twitter.com/askpascalandy"
+			},
+			"url": "https://twitter.com/wchadly/status/897893849896321024#favorited-by-26153908",
+			"published": "2019-03-04T20:33:36Z",
+			"text": null
+		}
+	],
+	"git-bcompare": [
+		{
+			"id": "1533914",
+			"property": "mention-of",
+			"author": {
+				"name": "Anonymous",
+				"photo": null,
+				"url": null
+			},
+			"url": "https://udhampurupdate.com/all-the-things-you-should-know-about-online-dating-2/",
+			"published": "2022-10-06T18:08:38Z",
+			"text": "Are you searching to find a date in all the wrong places? That may look like a jaded country track, but nevertheless, it’s a sentiment that each single individual shares in keeping. A lot of people experienced a poor date at least one time inside their everyday lives.\n\nContact More Possible Matches: if you are not receiving anywhere with online dating, simply start delivering out communications kept and right. Exactly what is it necessary to lose? If you think someone’s from your league,  simply click the next website page just take a chance and  craigslist escorts deliver them a note. The greater amount of communications you send out, the bigger your odds of receiving one in return. There is a constant understand therefore start giving out those communications if you think your profile happens to be stagnant for so long.\nStep from the advantage – You could be the very best women in the planet. You are likable, great looking, enjoyable and pretty however, if that you do not move outside the field to  generally meet males then no-one will ever date you. The probability of finding that right man by sitting in your apartment watching Grey’s Anatomy is slim. Escape there and take to an craigslist escorts site or network with buddies to find just one blind date.\nTake things easy. Do not be overrun about the fact that you might be chatting and  Craigslist Escorts trading mails with guy that looks like the man inside hopes and dreams and fantasies. That you do not understand the person until such time you meet with the individual and communicate actually. Therefore just take things easy.\nThis way, it will be possible to locate through most of the competing guys on that site. This is a good method to judge how much competition there’s on the web dating site you have opted for and what sort of guys you’re up against.\nDating personals will allow a person to find a date in line with the criteria they choose. Anyone can do a general search of individual advertisements, but the majority sites need which you register just before see details.\nEven although you happen trading e-mails for a while, it’s still a good idea to keep back painful and sensitive information such as for example your full name, address or workplace. Free dating sites have actually their share of scammers so just hand out sensitive and painful information if you’re currently confident with the person.\nGet a totally free trial period. Many dating sites provide a free of charge trial duration. You will typically either have a short period with virtually all the features the site is offering or an extended (even indefinite) period but with restricted features. Use this to try the website and feel if it is good complement you. In reality, you need to join a free trial with an increase of than one site to be able to compare them."
+		}
+	],
+	"purpose-built-software": [
+		{
+			"id": "596081",
+			"property": "in-reply-to",
+			"author": {
+				"name": "Chad Lee",
+				"photo": "https://avatars.webmention.io/pbs.twimg.com/fc44dbffded76e27cf00478ce7515ada54f57ade26cb0ad9c6e6fdb45ad8bbf3.jpg",
+				"url": "https://twitter.com/wchadly"
+			},
+			"url": "https://twitter.com/wchadly/status/1081311998950998016",
+			"published": "2019-01-04T22:10:45+00:00",
+			"text": "🤷‍♂️"
+		},
+		{
+			"id": "596080",
+			"property": "in-reply-to",
+			"author": {
+				"name": "Marcel Mata",
+				"photo": "https://avatars.webmention.io/pbs.twimg.com/c47083bb06d46844aeafc763f5d58bcfc0c5296781f2ff8ec20fce7772734dc5.jpg",
+				"url": "https://twitter.com/mmgfish"
+			},
+			"url": "https://twitter.com/mmgfish/status/1081291202291470336",
+			"published": "2019-01-04T20:48:06+00:00",
+			"text": "You keep changing your shiitake"
+		},
+		{
+			"id": "595420",
+			"property": "like-of",
+			"author": {
+				"name": "Contentful",
+				"photo": "https://avatars.webmention.io/pbs.twimg.com/d8f366b4df2a5e900ac79c4453bc2226ea26a6c4fbe06646956932676a05173f.jpg",
+				"url": "https://twitter.com/contentful"
+			},
+			"url": "https://twitter.com/wchadly/status/1081285258207735808#favorited-by-164208193",
+			"published": "2019-03-04T20:34:56Z",
+			"text": null
+		},
+		{
+			"id": "595419",
+			"property": "like-of",
+			"author": {
+				"name": "Gatsby",
+				"photo": "https://avatars.webmention.io/pbs.twimg.com/a26282af0e38b32a076dcead61532ef47e55988c55a16244a1bc8601c96c5191.jpg",
+				"url": "https://twitter.com/gatsbyjs"
+			},
+			"url": "https://twitter.com/wchadly/status/1081285258207735808#favorited-by-3227338044",
+			"published": "2019-03-04T20:34:45Z",
+			"text": null
+		}
+	],
+	"unpublish-isnt-a-word": [
+		{
+			"id": "596183",
+			"property": "like-of",
+			"author": {
+				"name": "Kenneth J. Jaeger",
+				"photo": "https://avatars.webmention.io/pbs.twimg.com/447570070be7b10b2f9c90d66d38e8ee4760b0f61f3f4e8a952da8e6aaae814c.jpg",
+				"url": "https://twitter.com/kjjaeger"
+			},
+			"url": "https://twitter.com/wchadly/status/713150718304251904#favorited-by-1654119458",
+			"published": "2019-03-07T16:18:31Z",
+			"text": null
+		}
+	],
+	"user-experience-matters-more-than-you-think": [
+		{
+			"id": "596186",
+			"property": "like-of",
+			"author": {
+				"name": "Cynthia Hartwig",
+				"photo": "https://avatars.webmention.io/pbs.twimg.com/90c3578492c7352f12f5731d554fe5c45ca9712b8aa89487e2bae43ee192e7bd.jpg",
+				"url": "https://twitter.com/TwoPens2"
+			},
+			"url": "https://twitter.com/wchadly/status/391353545808556032#favorited-by-238764694",
+			"published": "2019-03-07T16:25:12Z",
+			"text": null
+		}
+	]
+}

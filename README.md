@@ -21,17 +21,11 @@ rename content while the server is running.
 - `content/author/` — bio + avatar
 - `content/external/posts.json` — posts published elsewhere, merged into the list + RSS
 - `content/disqus.xml` — archived Disqus comments, rendered statically
+- `content/webmentions.json` — archived [webmentions](https://indieweb.org/Webmention), rendered statically
 
-Comments are Disqus-archive + live [webmentions](https://indieweb.org/Webmention)
-(webmention.io), refreshed hourly via ISR.
-
-## Webmentions
-
-If you want to load webmentions while running locally, be sure to set the environment variable `WEBMENTIONS_TOKEN`. You can do that by creating a `.env` file with the contents:
-
-```
-WEBMENTIONS_TOKEN=my_token
-```
+Comments are a static archive (Disqus + webmentions); the site no longer
+accepts new ones. The webmention snapshot was taken from webmention.io with
+`node scripts/fetch-webmentions.mjs`.
 
 ## Deploying
 

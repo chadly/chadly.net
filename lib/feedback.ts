@@ -40,9 +40,9 @@ function nest(comments: DisqusComment[]): Comment[] {
 	return roots;
 }
 
-export async function getFeedback(post: Post): Promise<Feedback> {
+export function getFeedback(post: Post): Feedback {
 	const disqus = getDisqusComments(post.id);
-	const mentions = await getWebmentions([post.slug, ...post.redirectFrom]);
+	const mentions = getWebmentions(post.slug);
 
 	const wmComments: Comment[] = mentions
 		.filter(m => m.property === "in-reply-to")
