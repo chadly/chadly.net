@@ -40,6 +40,7 @@ typings/
 .next/
 next-env.d.ts
 content/generated/
+tsconfig.tsbuildinfo
 
 # APM dependencies (deployed from .apm/ via `apm install`)
 apm_modules/
