@@ -1,0 +1,110 @@
+{
+	"emoji": true,
+	"lowercaseTypes": true,
+	"endWithDot": false,
+	"types": [
+		{
+			"emoji": "🔧",
+			"type": "Chore",
+			"description": "Changes that affect the build system or external dependencies and moving files",
+			"argKeys": [
+				"c",
+				"chore"
+			]
+		},
+		{
+			"emoji": "👷",
+			"type": "CI",
+			"description": "Changes to our CI configuration files and scripts",
+			"argKeys": [
+				"ci"
+			]
+		},
+		{
+			"emoji": "📝",
+			"type": "Docs",
+			"description": "Documentation only changes",
+			"argKeys": [
+				"d",
+				"docs"
+			]
+		},
+		{
+			"emoji": "✨",
+			"type": "Feat",
+			"description": "New feature",
+			"argKeys": [
+				"f",
+				"feat",
+				"feature"
+			]
+		},
+		{
+			"emoji": "🐛",
+			"type": "Fix",
+			"description": "Bug fix",
+			"argKeys": [
+				"fi",
+				"fix",
+				"bug"
+			]
+		},
+		{
+			"emoji": "⚡️",
+			"type": "Perf",
+			"description": "Code change that improves performance",
+			"argKeys": [
+				"p",
+				"perf",
+				"performance"
+			]
+		},
+		{
+			"emoji": "🎨",
+			"type": "Style",
+			"description": "Visual changes, theming, and UI tweaks",
+			"argKeys": [
+				"st",
+				"style",
+				"ui"
+			]
+		},
+		{
+			"emoji": "🧪",
+			"type": "Test",
+			"description": "Adding or updating tests",
+			"argKeys": [
+				"t",
+				"test"
+			]
+		},
+		{
+			"emoji": "♻️",
+			"type": "Refactor",
+			"description": "Code change that neither fixes a bug nor adds a feature",
+			"argKeys": [
+				"r",
+				"refactor"
+			]
+		},
+		{
+			"emoji": "🚧",
+			"type": "WIP",
+			"description": "Work in progress",
+			"argKeys": [
+				"w",
+				"wip"
+			]
+		},
+		{
+			"emoji": "🔥",
+			"type": "Nuke",
+			"description": "Removing files, features, or folders",
+			"argKeys": [
+				"rm",
+				"nuke",
+				"delete"
+			]
+		}
+	]
+}

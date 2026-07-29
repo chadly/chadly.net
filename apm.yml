@@ -1,0 +1,25 @@
+name: blog
+version: 1.0.0
+description: APM project for blog
+author: Chad Lee
+# Which agent platforms to deploy to.
+# Resolution order: --target flag > this field > auto-detect from filesystem.
+# Accepted values: agent-skills, antigravity, claude, codex, copilot, cursor, gemini, kiro, opencode, windsurf
+targets:
+  - claude
+dependencies:
+  apm: []
+  mcp: []
+includes: auto
+scripts: {}
+devDependencies:
+  apm:
+    - microsoft/apm/packages/apm-guide#v0.26.0
+    - anthropics/claude-plugins-official/plugins/frontend-design
+    - chadly/skillz#v1.0.0
+    - dietrichgebert/ponytail#v4.8.4
+  mcp:
+    - name: vercel
+      registry: false
+      transport: http
+      url: https://mcp.vercel.com

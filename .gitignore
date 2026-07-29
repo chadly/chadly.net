@@ -40,3 +40,8 @@ typings/
 .next/
 next-env.d.ts
 content/generated/
+
+# APM dependencies (deployed from .apm/ via `apm install`)
+apm_modules/
+.claude/
+.mcp.json

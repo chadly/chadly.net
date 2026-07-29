@@ -1,0 +1,601 @@
+lockfile_version: '1'
+generated_at: '2026-07-29T15:03:27.949184+00:00'
+apm_version: 0.26.0
+dependencies:
+- repo_url: anthropics/claude-plugins-official
+  name: frontend-design
+  host: github.com
+  resolved_commit: 4ddfccb3152f1dd30c06350b0a8803f128a26304
+  version: 4ddfccb
+  virtual_path: plugins/frontend-design
+  is_virtual: true
+  package_type: marketplace_plugin
+  deployed_files:
+  - .claude/skills/frontend-design
+  - .claude/skills/frontend-design/LICENSE.txt
+  - .claude/skills/frontend-design/SKILL.md
+  deployed_file_hashes:
+    .claude/skills/frontend-design/LICENSE.txt: sha256:0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594
+    .claude/skills/frontend-design/SKILL.md: sha256:1608ea77fbb6fc30d13a97d12cfa8ebf31358d40f0dd97beed24829d6b3f45dd
+  content_hash: sha256:8142422c7161fc50ca3f9517197b990f0967b5b0e7afb66023c66ca23998a238
+  is_dev: true
+- repo_url: chadly/skillz
+  name: skillz
+  host: github.com
+  resolved_commit: 7b9f19e3184308faffad475eaab2fca387f0f6a3
+  resolved_ref: v1.0.0
+  version: 0.2.0
+  package_type: apm_package
+  deployed_files:
+  - .claude/skills/database
+  - .claude/skills/database/SKILL.md
+  - .claude/skills/git-commit
+  - .claude/skills/git-commit/SKILL.md
+  - .claude/skills/legal-docs
+  - .claude/skills/legal-docs/SKILL.md
+  - .claude/skills/legal-docs/privacy.md
+  - .claude/skills/legal-docs/terms.md
+  - .claude/skills/screenshots
+  - .claude/skills/screenshots/SKILL.md
+  - .claude/skills/tailwind
+  - .claude/skills/tailwind/.gitignore
+  - .claude/skills/tailwind/SKILL.md
+  - .claude/skills/tailwind/components.tar.gz
+  deployed_file_hashes:
+    .claude/skills/database/SKILL.md: sha256:299170e77c922d84eb1684a69494564b30a113132acdb4a247866b57cfe6ea16
+    .claude/skills/git-commit/SKILL.md: sha256:dd908ece99739bd7de236b6a94582b3604243ddcc9598572402badb008995366
+    .claude/skills/legal-docs/SKILL.md: sha256:52f3ba6330bbb011a9c205b8855179a44546e9c0dfcad5a38ab8f9e3aaddf9db
+    .claude/skills/legal-docs/privacy.md: sha256:ba033fce6c854b8b725267b0065f4d6acc4549167cc8758fec0b3962b80786c8
+    .claude/skills/legal-docs/terms.md: sha256:31bc8a2d645cca585eda272f3311cf42e182f64b2e0a593b904725d00ecd65ae
+    .claude/skills/screenshots/SKILL.md: sha256:57c147168bceae08e663c5c529a7faf27c6cf26d87a368e7b1ce79bfd99840cc
+    .claude/skills/tailwind/.gitignore: sha256:0964e1f909546f4124a9d2148c00d4d92fa8ca78d14f361d4d8b14dddc1fef4b
+    .claude/skills/tailwind/SKILL.md: sha256:885b03515aa849b71eb69a470adaa74c23c0ee40fbe30162e8b91be15f8cbfed
+    .claude/skills/tailwind/components.tar.gz: sha256:ff9e945793f04676019d8915bcaeb7908e3e132bbe213ac0cd198369ef011d1a
+  content_hash: sha256:1b09154812a80b3f87cea3f5678f8ca72921ee5bab84888b22d71a565702c60a
+  is_dev: true
+  declared_license: MIT
+- repo_url: dietrichgebert/ponytail
+  name: ponytail
+  host: github.com
+  resolved_commit: bc9ee949d5f439e8b9f3bb92c6d6d3d1e6ebd324
+  resolved_ref: v4.8.4
+  version: 4.8.4
+  package_type: marketplace_plugin
+  deployed_files:
+  - .claude/hooks/ponytail/hooks/package.json
+  - .claude/hooks/ponytail/hooks/ponytail-activate.js
+  - .claude/hooks/ponytail/hooks/ponytail-config.js
+  - .claude/hooks/ponytail/hooks/ponytail-instructions.js
+  - .claude/hooks/ponytail/hooks/ponytail-mode-tracker.js
+  - .claude/hooks/ponytail/hooks/ponytail-runtime.js
+  - .claude/hooks/ponytail/hooks/ponytail-statusline.ps1
+  - .claude/hooks/ponytail/hooks/ponytail-statusline.sh
+  - .claude/hooks/ponytail/hooks/ponytail-subagent.js
+  - .claude/skills/ponytail
+  - .claude/skills/ponytail-audit
+  - .claude/skills/ponytail-audit/SKILL.md
+  - .claude/skills/ponytail-debt
+  - .claude/skills/ponytail-debt/SKILL.md
+  - .claude/skills/ponytail-gain
+  - .claude/skills/ponytail-gain/SKILL.md
+  - .claude/skills/ponytail-help
+  - .claude/skills/ponytail-help/SKILL.md
+  - .claude/skills/ponytail-review
+  - .claude/skills/ponytail-review/SKILL.md
+  - .claude/skills/ponytail/SKILL.md
+  deployed_file_hashes:
+    .claude/hooks/ponytail/hooks/package.json: sha256:8005a3491db7d92f36ac66369861589f9c47123d3a7c71e643fc2c06168cd45a
+    .claude/hooks/ponytail/hooks/ponytail-activate.js: sha256:ff7c15a7f7a8c0fdb8c0a12654fb4d5d33ee745e1e8d37afae074eebef93085a
+    .claude/hooks/ponytail/hooks/ponytail-config.js: sha256:35f6632fc086d5d42211f23fcd72de72c7e56048808702c95690bc5f22e0b0d2
+    .claude/hooks/ponytail/hooks/ponytail-instructions.js: sha256:d935b7672409324c7be0be793a3299facb8b229a03de39ac6e861ef1455f6ba2
+    .claude/hooks/ponytail/hooks/ponytail-mode-tracker.js: sha256:97c12a9038636bc1d6e583f673f1e979070b1519bd8db43bfb69f92f37fe8f5b
+    .claude/hooks/ponytail/hooks/ponytail-runtime.js: sha256:20646e38f2923afb5767601a3c7919d5d1d8fae8d6699ab1903383a89dd5cebb
+    .claude/hooks/ponytail/hooks/ponytail-statusline.ps1: sha256:be9335c98dca581f5729886dc53a3d9b2ac3d652902e549b79c24351aa03a7da
+    .claude/hooks/ponytail/hooks/ponytail-statusline.sh: sha256:91b6733884f74d2b0a43d48c4c55fc97a9c768fd172ebb86511a1a3e01dece45
+    .claude/hooks/ponytail/hooks/ponytail-subagent.js: sha256:eb67677ca3c447a34cd01927534ef2c139fd7749264d745f035f43c1787ca8c3
+    .claude/skills/ponytail-audit/SKILL.md: sha256:5560b8e383dbe2ddfddc873a1e2bf2e586e23e0cd7d995537482b2315331f6d1
+    .claude/skills/ponytail-debt/SKILL.md: sha256:c84fba75f0ca12bfe83f9a78ea02fd125c5dd3f1fbb18124105a489937f284e6
+    .claude/skills/ponytail-gain/SKILL.md: sha256:24e01d1c9715cb136ba1c4f1e52a95940c0193558b876828e537736480d6408b
+    .claude/skills/ponytail-help/SKILL.md: sha256:23ee3856c727129f87ab850985f9e9ed6368f10449816aa7ff043bf2dd45ab4d
+    .claude/skills/ponytail-review/SKILL.md: sha256:40df33b58fc6ef889b93585733feb9566b76e9586efa7f376785c1e995197ac0
+    .claude/skills/ponytail/SKILL.md: sha256:d1ffcddbc486ab787d5797441e8b6e4717da3249c6786b83fc2abd2f12803c29
+  content_hash: sha256:cfddead8eddb75e915aff01e64eb241dd9f21275be87a4d7c39aff2720828587
+  is_dev: true
+  declared_license: MIT
+- repo_url: microsoft/apm
+  name: apm-guide
+  host: github.com
+  resolved_commit: 64a7fb51cfa2cb405cf4d46f69492c51d210b7c2
+  resolved_ref: v0.26.0
+  version: 1.0.0
+  virtual_path: packages/apm-guide
+  is_virtual: true
+  package_type: apm_package
+  deployed_files:
+  - .claude/agents/apm-expert.md
+  - .claude/skills/apm-usage
+  - .claude/skills/apm-usage/SKILL.md
+  - .claude/skills/apm-usage/authentication.md
+  - .claude/skills/apm-usage/commands.md
+  - .claude/skills/apm-usage/dependencies.md
+  - .claude/skills/apm-usage/governance.md
+  - .claude/skills/apm-usage/installation.md
+  - .claude/skills/apm-usage/package-authoring.md
+  - .claude/skills/apm-usage/troubleshooting.md
+  - .claude/skills/apm-usage/workflow.md
+  deployed_file_hashes:
+    .claude/agents/apm-expert.md: sha256:f6cded3e7eef97ad8fff06208bcfd5a0beafb9cfe810f78e10294c90e16fd8ae
+    .claude/skills/apm-usage/SKILL.md: sha256:e020dd84d578054403884e7d71aaf6b87fdac7835da9661923d9de8853cbf140
+    .claude/skills/apm-usage/authentication.md: sha256:d2f3fff27edfc55d39212a741d1e092fba7cbc293e3e3decc5280464c4405401
+    .claude/skills/apm-usage/commands.md: sha256:c465e3577393fe781d99822c047c40142fecdefc5239a0b0ff4aac4ab1c232c1
+    .claude/skills/apm-usage/dependencies.md: sha256:61313c0743b93a95e49322aa642b09c77bc80358f2d385bdd8ac74b98c83f815
+    .claude/skills/apm-usage/governance.md: sha256:cdf611f2e772ec524b22eb7111e292bdd0c319938b2b721b0030b6e461e2c000
+    .claude/skills/apm-usage/installation.md: sha256:8361fde8ce2deabbfdf02bc966704de52f14e9130f1422e6bf9dc9e8016d9e6e
+    .claude/skills/apm-usage/package-authoring.md: sha256:acf5b500725d91e406a68f1962ea1c8c4a5ce693c0fbd3206d332ac1ca4bf7bf
+    .claude/skills/apm-usage/troubleshooting.md: sha256:9ee88100a64857f25e9cb49d1a56d3921d8e69974158c11b0d9431f4ce68362d
+    .claude/skills/apm-usage/workflow.md: sha256:805207ce68f51ee84d967f95ae9a3c316dfb7da011ebc8f5cc18a1817333a64f
+  content_hash: sha256:8d432503f5acd6e0e9e0db6989c583171f8a67d91fbf94560c161c5416506aa6
+  is_dev: true
+  declared_license: MIT
+deployments:
+- kind: project-relative
+  target: claude
+  value: .claude/agents/apm-expert.md
+  runtime: null
+  scope: project
+  owners:
+  - microsoft/apm/packages/apm-guide
+  active_owner: microsoft/apm/packages/apm-guide
+  content_hash: sha256:f6cded3e7eef97ad8fff06208bcfd5a0beafb9cfe810f78e10294c90e16fd8ae
+- kind: project-relative
+  target: claude
+  value: .claude/hooks/ponytail/hooks/package.json
+  runtime: null
+  scope: project
+  owners:
+  - dietrichgebert/ponytail
+  active_owner: dietrichgebert/ponytail
+  content_hash: sha256:8005a3491db7d92f36ac66369861589f9c47123d3a7c71e643fc2c06168cd45a
+- kind: project-relative
+  target: claude
+  value: .claude/hooks/ponytail/hooks/ponytail-activate.js
+  runtime: null
+  scope: project
+  owners:
+  - dietrichgebert/ponytail
+  active_owner: dietrichgebert/ponytail
+  content_hash: sha256:ff7c15a7f7a8c0fdb8c0a12654fb4d5d33ee745e1e8d37afae074eebef93085a
+- kind: project-relative
+  target: claude
+  value: .claude/hooks/ponytail/hooks/ponytail-config.js
+  runtime: null
+  scope: project
+  owners:
+  - dietrichgebert/ponytail
+  active_owner: dietrichgebert/ponytail
+  content_hash: sha256:35f6632fc086d5d42211f23fcd72de72c7e56048808702c95690bc5f22e0b0d2
+- kind: project-relative
+  target: claude
+  value: .claude/hooks/ponytail/hooks/ponytail-instructions.js
+  runtime: null
+  scope: project
+  owners:
+  - dietrichgebert/ponytail
+  active_owner: dietrichgebert/ponytail
+  content_hash: sha256:d935b7672409324c7be0be793a3299facb8b229a03de39ac6e861ef1455f6ba2
+- kind: project-relative
+  target: claude
+  value: .claude/hooks/ponytail/hooks/ponytail-mode-tracker.js
+  runtime: null
+  scope: project
+  owners:
+  - dietrichgebert/ponytail
+  active_owner: dietrichgebert/ponytail
+  content_hash: sha256:97c12a9038636bc1d6e583f673f1e979070b1519bd8db43bfb69f92f37fe8f5b
+- kind: project-relative
+  target: claude
+  value: .claude/hooks/ponytail/hooks/ponytail-runtime.js
+  runtime: null
+  scope: project
+  owners:
+  - dietrichgebert/ponytail
+  active_owner: dietrichgebert/ponytail
+  content_hash: sha256:20646e38f2923afb5767601a3c7919d5d1d8fae8d6699ab1903383a89dd5cebb
+- kind: project-relative
+  target: claude
+  value: .claude/hooks/ponytail/hooks/ponytail-statusline.ps1
+  runtime: null
+  scope: project
+  owners:
+  - dietrichgebert/ponytail
+  active_owner: dietrichgebert/ponytail
+  content_hash: sha256:be9335c98dca581f5729886dc53a3d9b2ac3d652902e549b79c24351aa03a7da
+- kind: project-relative
+  target: claude
+  value: .claude/hooks/ponytail/hooks/ponytail-statusline.sh
+  runtime: null
+  scope: project
+  owners:
+  - dietrichgebert/ponytail
+  active_owner: dietrichgebert/ponytail
+  content_hash: sha256:91b6733884f74d2b0a43d48c4c55fc97a9c768fd172ebb86511a1a3e01dece45
+- kind: project-relative
+  target: claude
+  value: .claude/hooks/ponytail/hooks/ponytail-subagent.js
+  runtime: null
+  scope: project
+  owners:
+  - dietrichgebert/ponytail
+  active_owner: dietrichgebert/ponytail
+  content_hash: sha256:eb67677ca3c447a34cd01927534ef2c139fd7749264d745f035f43c1787ca8c3
+- kind: project-relative
+  target: claude
+  value: .claude/skills/apm-usage
+  runtime: null
+  scope: project
+  owners:
+  - microsoft/apm/packages/apm-guide
+  active_owner: microsoft/apm/packages/apm-guide
+  content_hash: null
+- kind: project-relative
+  target: claude
+  value: .claude/skills/apm-usage/SKILL.md
+  runtime: null
+  scope: project
+  owners:
+  - microsoft/apm/packages/apm-guide
+  active_owner: microsoft/apm/packages/apm-guide
+  content_hash: sha256:e020dd84d578054403884e7d71aaf6b87fdac7835da9661923d9de8853cbf140
+- kind: project-relative
+  target: claude
+  value: .claude/skills/apm-usage/authentication.md
+  runtime: null
+  scope: project
+  owners:
+  - microsoft/apm/packages/apm-guide
+  active_owner: microsoft/apm/packages/apm-guide
+  content_hash: sha256:d2f3fff27edfc55d39212a741d1e092fba7cbc293e3e3decc5280464c4405401
+- kind: project-relative
+  target: claude
+  value: .claude/skills/apm-usage/commands.md
+  runtime: null
+  scope: project
+  owners:
+  - microsoft/apm/packages/apm-guide
+  active_owner: microsoft/apm/packages/apm-guide
+  content_hash: sha256:c465e3577393fe781d99822c047c40142fecdefc5239a0b0ff4aac4ab1c232c1
+- kind: project-relative
+  target: claude
+  value: .claude/skills/apm-usage/dependencies.md
+  runtime: null
+  scope: project
+  owners:
+  - microsoft/apm/packages/apm-guide
+  active_owner: microsoft/apm/packages/apm-guide
+  content_hash: sha256:61313c0743b93a95e49322aa642b09c77bc80358f2d385bdd8ac74b98c83f815
+- kind: project-relative
+  target: claude
+  value: .claude/skills/apm-usage/governance.md
+  runtime: null
+  scope: project
+  owners:
+  - microsoft/apm/packages/apm-guide
+  active_owner: microsoft/apm/packages/apm-guide
+  content_hash: sha256:cdf611f2e772ec524b22eb7111e292bdd0c319938b2b721b0030b6e461e2c000
+- kind: project-relative
+  target: claude
+  value: .claude/skills/apm-usage/installation.md
+  runtime: null
+  scope: project
+  owners:
+  - microsoft/apm/packages/apm-guide
+  active_owner: microsoft/apm/packages/apm-guide
+  content_hash: sha256:8361fde8ce2deabbfdf02bc966704de52f14e9130f1422e6bf9dc9e8016d9e6e
+- kind: project-relative
+  target: claude
+  value: .claude/skills/apm-usage/package-authoring.md
+  runtime: null
+  scope: project
+  owners:
+  - microsoft/apm/packages/apm-guide
+  active_owner: microsoft/apm/packages/apm-guide
+  content_hash: sha256:acf5b500725d91e406a68f1962ea1c8c4a5ce693c0fbd3206d332ac1ca4bf7bf
+- kind: project-relative
+  target: claude
+  value: .claude/skills/apm-usage/troubleshooting.md
+  runtime: null
+  scope: project
+  owners:
+  - microsoft/apm/packages/apm-guide
+  active_owner: microsoft/apm/packages/apm-guide
+  content_hash: sha256:9ee88100a64857f25e9cb49d1a56d3921d8e69974158c11b0d9431f4ce68362d
+- kind: project-relative
+  target: claude
+  value: .claude/skills/apm-usage/workflow.md
+  runtime: null
+  scope: project
+  owners:
+  - microsoft/apm/packages/apm-guide
+  active_owner: microsoft/apm/packages/apm-guide
+  content_hash: sha256:805207ce68f51ee84d967f95ae9a3c316dfb7da011ebc8f5cc18a1817333a64f
+- kind: project-relative
+  target: claude
+  value: .claude/skills/database
+  runtime: null
+  scope: project
+  owners:
+  - chadly/skillz
+  active_owner: chadly/skillz
+  content_hash: null
+- kind: project-relative
+  target: claude
+  value: .claude/skills/database/SKILL.md
+  runtime: null
+  scope: project
+  owners:
+  - chadly/skillz
+  active_owner: chadly/skillz
+  content_hash: sha256:299170e77c922d84eb1684a69494564b30a113132acdb4a247866b57cfe6ea16
+- kind: project-relative
+  target: claude
+  value: .claude/skills/frontend-design
+  runtime: null
+  scope: project
+  owners:
+  - anthropics/claude-plugins-official/plugins/frontend-design
+  active_owner: anthropics/claude-plugins-official/plugins/frontend-design
+  content_hash: null
+- kind: project-relative
+  target: claude
+  value: .claude/skills/frontend-design/LICENSE.txt
+  runtime: null
+  scope: project
+  owners:
+  - anthropics/claude-plugins-official/plugins/frontend-design
+  active_owner: anthropics/claude-plugins-official/plugins/frontend-design
+  content_hash: sha256:0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594
+- kind: project-relative
+  target: claude
+  value: .claude/skills/frontend-design/SKILL.md
+  runtime: null
+  scope: project
+  owners:
+  - anthropics/claude-plugins-official/plugins/frontend-design
+  active_owner: anthropics/claude-plugins-official/plugins/frontend-design
+  content_hash: sha256:1608ea77fbb6fc30d13a97d12cfa8ebf31358d40f0dd97beed24829d6b3f45dd
+- kind: project-relative
+  target: claude
+  value: .claude/skills/git-commit
+  runtime: null
+  scope: project
+  owners:
+  - chadly/skillz
+  active_owner: chadly/skillz
+  content_hash: null
+- kind: project-relative
+  target: claude
+  value: .claude/skills/git-commit/SKILL.md
+  runtime: null
+  scope: project
+  owners:
+  - chadly/skillz
+  active_owner: chadly/skillz
+  content_hash: sha256:dd908ece99739bd7de236b6a94582b3604243ddcc9598572402badb008995366
+- kind: project-relative
+  target: claude
+  value: .claude/skills/legal-docs
+  runtime: null
+  scope: project
+  owners:
+  - chadly/skillz
+  active_owner: chadly/skillz
+  content_hash: null
+- kind: project-relative
+  target: claude
+  value: .claude/skills/legal-docs/SKILL.md
+  runtime: null
+  scope: project
+  owners:
+  - chadly/skillz
+  active_owner: chadly/skillz
+  content_hash: sha256:52f3ba6330bbb011a9c205b8855179a44546e9c0dfcad5a38ab8f9e3aaddf9db
+- kind: project-relative
+  target: claude
+  value: .claude/skills/legal-docs/privacy.md
+  runtime: null
+  scope: project
+  owners:
+  - chadly/skillz
+  active_owner: chadly/skillz
+  content_hash: sha256:ba033fce6c854b8b725267b0065f4d6acc4549167cc8758fec0b3962b80786c8
+- kind: project-relative
+  target: claude
+  value: .claude/skills/legal-docs/terms.md
+  runtime: null
+  scope: project
+  owners:
+  - chadly/skillz
+  active_owner: chadly/skillz
+  content_hash: sha256:31bc8a2d645cca585eda272f3311cf42e182f64b2e0a593b904725d00ecd65ae
+- kind: project-relative
+  target: claude
+  value: .claude/skills/ponytail
+  runtime: null
+  scope: project
+  owners:
+  - dietrichgebert/ponytail
+  active_owner: dietrichgebert/ponytail
+  content_hash: null
+- kind: project-relative
+  target: claude
+  value: .claude/skills/ponytail-audit
+  runtime: null
+  scope: project
+  owners:
+  - dietrichgebert/ponytail
+  active_owner: dietrichgebert/ponytail
+  content_hash: null
+- kind: project-relative
+  target: claude
+  value: .claude/skills/ponytail-audit/SKILL.md
+  runtime: null
+  scope: project
+  owners:
+  - dietrichgebert/ponytail
+  active_owner: dietrichgebert/ponytail
+  content_hash: sha256:5560b8e383dbe2ddfddc873a1e2bf2e586e23e0cd7d995537482b2315331f6d1
+- kind: project-relative
+  target: claude
+  value: .claude/skills/ponytail-debt
+  runtime: null
+  scope: project
+  owners:
+  - dietrichgebert/ponytail
+  active_owner: dietrichgebert/ponytail
+  content_hash: null
+- kind: project-relative
+  target: claude
+  value: .claude/skills/ponytail-debt/SKILL.md
+  runtime: null
+  scope: project
+  owners:
+  - dietrichgebert/ponytail
+  active_owner: dietrichgebert/ponytail
+  content_hash: sha256:c84fba75f0ca12bfe83f9a78ea02fd125c5dd3f1fbb18124105a489937f284e6
+- kind: project-relative
+  target: claude
+  value: .claude/skills/ponytail-gain
+  runtime: null
+  scope: project
+  owners:
+  - dietrichgebert/ponytail
+  active_owner: dietrichgebert/ponytail
+  content_hash: null
+- kind: project-relative
+  target: claude
+  value: .claude/skills/ponytail-gain/SKILL.md
+  runtime: null
+  scope: project
+  owners:
+  - dietrichgebert/ponytail
+  active_owner: dietrichgebert/ponytail
+  content_hash: sha256:24e01d1c9715cb136ba1c4f1e52a95940c0193558b876828e537736480d6408b
+- kind: project-relative
+  target: claude
+  value: .claude/skills/ponytail-help
+  runtime: null
+  scope: project
+  owners:
+  - dietrichgebert/ponytail
+  active_owner: dietrichgebert/ponytail
+  content_hash: null
+- kind: project-relative
+  target: claude
+  value: .claude/skills/ponytail-help/SKILL.md
+  runtime: null
+  scope: project
+  owners:
+  - dietrichgebert/ponytail
+  active_owner: dietrichgebert/ponytail
+  content_hash: sha256:23ee3856c727129f87ab850985f9e9ed6368f10449816aa7ff043bf2dd45ab4d
+- kind: project-relative
+  target: claude
+  value: .claude/skills/ponytail-review
+  runtime: null
+  scope: project
+  owners:
+  - dietrichgebert/ponytail
+  active_owner: dietrichgebert/ponytail
+  content_hash: null
+- kind: project-relative
+  target: claude
+  value: .claude/skills/ponytail-review/SKILL.md
+  runtime: null
+  scope: project
+  owners:
+  - dietrichgebert/ponytail
+  active_owner: dietrichgebert/ponytail
+  content_hash: sha256:40df33b58fc6ef889b93585733feb9566b76e9586efa7f376785c1e995197ac0
+- kind: project-relative
+  target: claude
+  value: .claude/skills/ponytail/SKILL.md
+  runtime: null
+  scope: project
+  owners:
+  - dietrichgebert/ponytail
+  active_owner: dietrichgebert/ponytail
+  content_hash: sha256:d1ffcddbc486ab787d5797441e8b6e4717da3249c6786b83fc2abd2f12803c29
+- kind: project-relative
+  target: claude
+  value: .claude/skills/screenshots
+  runtime: null
+  scope: project
+  owners:
+  - chadly/skillz
+  active_owner: chadly/skillz
+  content_hash: null
+- kind: project-relative
+  target: claude
+  value: .claude/skills/screenshots/SKILL.md
+  runtime: null
+  scope: project
+  owners:
+  - chadly/skillz
+  active_owner: chadly/skillz
+  content_hash: sha256:57c147168bceae08e663c5c529a7faf27c6cf26d87a368e7b1ce79bfd99840cc
+- kind: project-relative
+  target: claude
+  value: .claude/skills/tailwind
+  runtime: null
+  scope: project
+  owners:
+  - chadly/skillz
+  active_owner: chadly/skillz
+  content_hash: null
+- kind: project-relative
+  target: claude
+  value: .claude/skills/tailwind/.gitignore
+  runtime: null
+  scope: project
+  owners:
+  - chadly/skillz
+  active_owner: chadly/skillz
+  content_hash: sha256:0964e1f909546f4124a9d2148c00d4d92fa8ca78d14f361d4d8b14dddc1fef4b
+- kind: project-relative
+  target: claude
+  value: .claude/skills/tailwind/SKILL.md
+  runtime: null
+  scope: project
+  owners:
+  - chadly/skillz
+  active_owner: chadly/skillz
+  content_hash: sha256:885b03515aa849b71eb69a470adaa74c23c0ee40fbe30162e8b91be15f8cbfed
+- kind: project-relative
+  target: claude
+  value: .claude/skills/tailwind/components.tar.gz
+  runtime: null
+  scope: project
+  owners:
+  - chadly/skillz
+  active_owner: chadly/skillz
+  content_hash: sha256:ff9e945793f04676019d8915bcaeb7908e3e132bbe213ac0cd198369ef011d1a
+- kind: uri
+  target: mcp
+  value: vercel
+  runtime: claude
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: null
+mcp_servers:
+- vercel
+mcp_configs:
+  vercel:
+    name: vercel
+    transport: http
+    registry: false
+    url: https://mcp.vercel.com
+mcp_target_servers:
+  claude:
+  - vercel
